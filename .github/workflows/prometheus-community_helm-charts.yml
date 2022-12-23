@@ -3,7 +3,7 @@ name: Build and Deploy prometheus-community/helm-charts changelogs to Github Pag
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "0 */6 * * *"
 
 env:
   REPOSITORY: prometheus-community/helm-charts
@@ -73,3 +73,5 @@ jobs:
 
       - name: Build Jekyll for GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.4.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
