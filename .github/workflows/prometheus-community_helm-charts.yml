@@ -25,6 +25,10 @@ jobs:
         with:
           path: ${{ env.REPOSITORY }}
           repository: ${{ env.REPOSITORY }}
+          # The checkout action doesn't provide a way to get all commit history for a single branch
+          # So we use the magic number 2147483647 here which means infinite depth for git fetch
+          # See https://github.com/actions/checkout/issues/520, https://stackoverflow.com/a/6802238
+          fetch-depth: 2147483647
 
       - name: Generate Changelogs for ${{ env.REPOSITORY }}
         run: |
@@ -68,12 +72,4 @@ jobs:
             ${{ runner.os }}-gems-
 
       - name: Build Jekyll for GitHub Pages
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./_changelogs
-
-      - name: Upload to GitHub Pages artifacts
-        uses: actions/upload-pages-artifact@v1
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: jeffreytse/jekyll-deploy-action@v0.4.0
