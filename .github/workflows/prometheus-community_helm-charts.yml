@@ -1,0 +1,81 @@
+---
+name: Build and Deploy prometheus-community/helm-charts changelogs to Github Pages
+
+on:
+  schedule:
+    - cron: "0 */30 * * *"
+
+env:
+  REPOSITORY: prometheus-community/helm-charts
+  TYPE: helm
+  VERSION: 0.0.1
+
+jobs:
+  build_and_deploy:
+    name: Build and deploy site
+    runs-on: ubuntu-20.04
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: ${{ env.REPOSITORY }}
+          repository: ${{ env.REPOSITORY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Changelogs for ${{ env.REPOSITORY }}
+        run: |
+          # Download release ${VERSION} of helm-changelog
+          tmpdir=$(mktemp -d)
+          curl -fLsC - -o "$tmpdir/helm-changelog.tar.gz" "https://github.com/mogensen/helm-changelog/releases/download/v${VERSION}/helm-changelog_${VERSION}_linux_amd64.tar.gz"
+          tar zxvf "$tmpdir/helm-changelog.tar.gz" -C /usr/local/bin/ helm-changelog
+
+          cd ${REPOSITORY}
+          # Delete pre-existing changelogs
+          find . -type f -name Changelog.md -delete
+
+          # Generate new changelogs
+          helm-changelog
+
+          # Process and move Changelog.md files to a specific directory
+          mkdir -p "${GITHUB_WORKSPACE}/_changelogs"
+          rm -rf "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/"
+          find . -type f -name Changelog.md -not -empty | while read line; do
+            dn=$(dirname $line)
+            fn=$(basename $dn)
+            if [ ! -d "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/" ]; then
+                mkdir "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/"
+                echo -e "---\nredirect_from:\n  - /\nhas_children: true\n---\n# ${TYPE}\n" >"${GITHUB_WORKSPACE}/_changelogs/${TYPE}/index.md"
+            fi
+            if [ ! -d "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/" ]; then
+                mkdir "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/"
+                echo -e "---\nparent: ${TYPE}\nhas_children: true\n---\n# ${REPOSITORY}\n" >"${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/index.md"
+            fi
+            sed -i '1i---\nrender_with_liquid: false\nparent: '${REPOSITORY}'\ngrand_parent: '${TYPE}'\n---\n' $line
+            sed -i "s/^# Change Log$/# $fn/" $line
+            mv $line "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/$fn.md"
+          done
+        shell: bash
+
+      - uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Build Jekyll for GitHub Pages
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./_changelogs
+          destination: ./_site
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}

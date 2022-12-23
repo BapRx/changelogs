@@ -1,0 +1,14 @@
+title: Changelogs
+url: https://baprx.github.io/
+baseurl: /changelogs
+author: Baptiste ROUX
+source: ./_changelogs
+destination: ./_site
+theme: just-the-docs
+plugins:
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-target-blank
