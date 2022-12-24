@@ -75,20 +75,23 @@ jobs:
         run: |
           ls -la
           pwd
-          ls -la ..
+          find . -type d
         shell: bash
 
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          path: changelogs
 
       - name: Debug
         run: |
           ls -la
           pwd
-          ls -la ..
+          find . -type d
         shell: bash
 
       - name: Build Jekyll for GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.4.0
         with:
+          jekyll_src: changelogs
           token: ${{ secrets.GITHUB_TOKEN }}
