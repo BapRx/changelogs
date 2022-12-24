@@ -37,7 +37,6 @@ jobs:
           curl -fLsC - -o "$tmpdir/helm-changelog.tar.gz" "https://github.com/mogensen/helm-changelog/releases/download/v${VERSION}/helm-changelog_${VERSION}_linux_amd64.tar.gz"
           tar zxvf "$tmpdir/helm-changelog.tar.gz" -C /usr/local/bin/ helm-changelog
 
-          cd ${REPOSITORY}
           # Delete pre-existing changelogs
           find . -type f -name Changelog.md -delete
 
@@ -63,6 +62,7 @@ jobs:
             mv $line "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/$fn.md"
           done
         shell: bash
+        working-directory: ${{ env.REPOSITORY }}
 
       - uses: actions/cache@v3
         with:
