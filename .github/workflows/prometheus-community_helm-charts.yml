@@ -4,7 +4,7 @@ name: Build and Deploy prometheus-community/helm-charts changelogs to Github Pag
 on:
   push:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/30 * * * *"
 
 env:
   REPOSITORY: prometheus-community/helm-charts
@@ -74,13 +74,6 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-
-      - name: Debug
-        run: |
-          ls -la
-          pwd
-          find . -type d
-        shell: bash
 
       - name: Build Jekyll for GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.4.0
