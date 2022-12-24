@@ -22,7 +22,12 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: Checkout
+      - name: Checkout BapRx/changelogs
+        uses: actions/checkout@v3
+        with:
+          path: changelogs
+
+      - name: Checkout ${{ env.REPOSITORY }}
         uses: actions/checkout@v3
         with:
           path: ${{ env.REPOSITORY }}
@@ -44,22 +49,22 @@ jobs:
           helm-changelog
 
           # Process and move Changelog.md files to a specific directory
-          mkdir -p "${GITHUB_WORKSPACE}/_changelogs"
-          rm -rf "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/"
+          mkdir -p "${GITHUB_WORKSPACE}/changelogs/_changelogs"
+          rm -rf "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/"
           find . -type f -name Changelog.md -not -empty | while read line; do
             dn=$(dirname $line)
             fn=$(basename $dn)
-            if [ ! -d "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/" ]; then
-                mkdir "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/"
-                echo -e "---\nredirect_from:\n  - /\nhas_children: true\n---\n# ${TYPE}\n" >"${GITHUB_WORKSPACE}/_changelogs/${TYPE}/index.md"
+            if [ ! -d "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/" ]; then
+                mkdir "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/"
+                echo -e "---\nredirect_from:\n  - /\nhas_children: true\n---\n# ${TYPE}\n" >"${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/index.md"
             fi
-            if [ ! -d "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/" ]; then
-                mkdir "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/"
-                echo -e "---\nparent: ${TYPE}\nhas_children: true\n---\n# ${REPOSITORY}\n" >"${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/index.md"
+            if [ ! -d "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/" ]; then
+                mkdir "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/"
+                echo -e "---\nparent: ${TYPE}\nhas_children: true\n---\n# ${REPOSITORY}\n" >"${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/index.md"
             fi
             sed -i '1i---\nrender_with_liquid: false\nparent: '${REPOSITORY}'\ngrand_parent: '${TYPE}'\n---\n' $line
             sed -i "s/^# Change Log$/# $fn/" $line
-            mv $line "${GITHUB_WORKSPACE}/_changelogs/${TYPE}/${REPOSITORY//\//_}/$fn.md"
+            mv $line "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/$fn.md"
           done
         shell: bash
         working-directory: ${{ env.REPOSITORY }}
@@ -70,18 +75,6 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-
-      - name: Debug
-        run: |
-          ls -la
-          pwd
-          find . -type d
-        shell: bash
-
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          path: changelogs
 
       - name: Debug
         run: |
