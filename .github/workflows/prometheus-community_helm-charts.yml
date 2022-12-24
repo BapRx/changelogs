@@ -8,6 +8,7 @@ on:
 
 env:
   REPOSITORY: prometheus-community/helm-charts
+  BRANCH: main
   TYPE: helm
   VERSION: 0.0.1
 
@@ -26,10 +27,8 @@ jobs:
         with:
           path: ${{ env.REPOSITORY }}
           repository: ${{ env.REPOSITORY }}
-          # The checkout action doesn't provide a way to get all commit history for a single branch
-          # So we use the magic number 2147483647 here which means infinite depth for git fetch
-          # See https://github.com/actions/checkout/issues/520, https://stackoverflow.com/a/6802238
-          fetch-depth: 2147483647
+          ref: ${{ env.BRANCH }}
+          fetch-depth: 0
 
       - name: Generate Changelogs for ${{ env.REPOSITORY }}
         run: |
@@ -76,6 +75,17 @@ jobs:
         run: |
           ls -la
           pwd
+          ls -la ..
+        shell: bash
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Debug
+        run: |
+          ls -la
+          pwd
+          ls -la ..
         shell: bash
 
       - name: Build Jekyll for GitHub Pages
