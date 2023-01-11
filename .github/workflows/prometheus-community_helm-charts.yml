@@ -36,6 +36,12 @@ jobs:
 
       - name: Generate Changelogs for ${{ env.REPOSITORY }}
         run: |
+          # Skip run if no new commit since last Github Action job
+          now=$(date +%s)
+          lastcommit=$(git log -1 --format=%ct)
+          delta=$((now - lastcommit))
+          [[ "$delta" -ge "1800" ]] && exit 0 # 1800 -> 30 min
+
           # Download release ${VERSION} of helm-changelog
           tmpdir=$(mktemp -d)
           curl -fLsC - -o "$tmpdir/helm-changelog.tar.gz" "https://github.com/mogensen/helm-changelog/releases/download/v${VERSION}/helm-changelog_${VERSION}_linux_amd64.tar.gz"
