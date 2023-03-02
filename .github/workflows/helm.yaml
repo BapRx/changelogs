@@ -27,7 +27,6 @@ jobs:
       - name: Checkout BapRx/changelogs
         uses: actions/checkout@v3
         with:
-          path: changelogs
           submodules: recursive
 
       - name: Check if there are new commits since last Github Action job
@@ -64,13 +63,13 @@ jobs:
             directory_name=$(dirname $line)
             chart_name=$(basename $directory_name)
             repository=$(echo $directory_name | cut -d/ -f 2-3)
-            if [ ! -d "${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/" ]; then
-                mkdir "${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/"
-                echo -e "---\nhas_children: true\nlayout: default\npermalink: /${repository}\ntitle: ${repository}\n---\n\n# ${repository}" >"${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/index.md"
+            if [ ! -d "./_changelogs/${repository//\//_}/" ]; then
+                mkdir "./_changelogs/${repository//\//_}/"
+                echo -e "---\nhas_children: true\nlayout: default\npermalink: /${repository}\ntitle: ${repository}\n---\n\n# ${repository}" >"./_changelogs/${repository//\//_}/index.md"
             fi
             sed -i '1i---\nlayout: default\nparent: '${repository}'\npermalink: /'${repository}'/'${chart_name}'\nrender_with_liquid: false\ntitle: '${chart_name}'\n---\n' $line
             sed -i "s/^# Change Log$/# ${chart_name}/" $line
-            mv $line "${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/${chart_name}.md"
+            mv $line "./_changelogs/${repository//\//_}/${chart_name}.md"
           done
         working-directory: repositories
         if: ${{ steps.update_submodules.outputs.updated != 'false' }}
@@ -86,6 +85,6 @@ jobs:
       - name: Build Jekyll for GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.4.0
         with:
-          jekyll_src: changelogs
+          jekyll_src: ./
           token: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.update_submodules.outputs.updated != 'false' }}
