@@ -5,6 +5,7 @@
 _site/
 _changelogs/*
 !_changelogs/_includes
+!_changelogs/index.md
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
