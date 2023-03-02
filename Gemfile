@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.1.0"
-gem "webrick", "~> 1.7"
-gem "just-the-docs", "0.4.0.rc3"
+gem "jekyll", "~> 4.3"
+gem "webrick", "~> 1.8"
+gem "just-the-docs", "~> 0.4.1"
 gem 'jekyll-default-layout'
 gem 'jekyll-titles-from-headings'
 gem 'jekyll-feed'
