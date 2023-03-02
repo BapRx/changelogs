@@ -1,6 +1,8 @@
 [submodule "repositories/prometheus-community/helm-charts"]
 	path = repositories/prometheus-community/helm-charts
 	url = git@github.com:prometheus-community/helm-charts.git
+	branch = main
 [submodule "repositories/vmware-tanzu/helm-charts"]
 	path = repositories/vmware-tanzu/helm-charts
 	url = git@github.com:vmware-tanzu/helm-charts.git
+	branch = main
