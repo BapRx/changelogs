@@ -1,5 +1,5 @@
 ---
-name: Build and Deploy prometheus-community/helm-charts changelogs to Github Pages
+name: Build and Deploy changelogs to Github Pages
 
 on:
   push:
@@ -7,10 +7,7 @@ on:
     - cron: "*/30 * * * *"
 
 env:
-  REPOSITORY: prometheus-community/helm-charts
-  BRANCH: main
-  TYPE: helm
-  VERSION: 0.0.1
+  HELM_CHANGELOG_VERSION: 0.0.1
 
 jobs:
   build_and_deploy:
@@ -25,14 +22,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: changelogs
-
-      - name: Checkout ${{ env.REPOSITORY }}
-        uses: actions/checkout@v3
-        with:
-          path: ${{ env.REPOSITORY }}
-          repository: ${{ env.REPOSITORY }}
-          ref: ${{ env.BRANCH }}
-          fetch-depth: 0
+          submodules: recursive
 
       - name: Check if there are new commits since last Github Action job
         id: check-last-commit-date
@@ -48,37 +38,32 @@ jobs:
 
       - name: Generate Changelogs for ${{ env.REPOSITORY }}
         run: |
-          # Download release ${VERSION} of helm-changelog
+          # Download release ${HELM_CHANGELOG_VERSION} of helm-changelog
           tmpdir=$(mktemp -d)
-          curl -fLsC - -o "$tmpdir/helm-changelog.tar.gz" "https://github.com/mogensen/helm-changelog/releases/download/v${VERSION}/helm-changelog_${VERSION}_linux_amd64.tar.gz"
+          curl -fLsC - -o "$tmpdir/helm-changelog.tar.gz" "https://github.com/mogensen/helm-changelog/releases/download/v${HELM_CHANGELOG_VERSION}/helm-changelog_${HELM_CHANGELOG_VERSION}_linux_amd64.tar.gz"
           tar zxvf "$tmpdir/helm-changelog.tar.gz" -C /usr/local/bin/ helm-changelog
 
           # Delete pre-existing changelogs
           find . -type f -name Changelog.md -delete
 
           # Generate new changelogs
-          helm-changelog
+          git submodule foreach helm-changelog
 
           # Process and move Changelog.md files to a specific directory
-          mkdir -p "${GITHUB_WORKSPACE}/changelogs/_changelogs"
-          rm -rf "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/"
           find . -type f -name Changelog.md -not -empty | while read line; do
-            dn=$(dirname $line)
-            fn=$(basename $dn)
-            if [ ! -d "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/" ]; then
-                mkdir "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/"
-                echo -e "---\nredirect_from:\n  - /\nhas_children: true\n---\n# ${TYPE}\n" >"${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/index.md"
+            directory_name=$(dirname $line)
+            chart_name=$(basename $directory_name)
+            repository=$(echo $directory_name | cut -d/ -f 2-3)
+            if [ ! -d "${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/" ]; then
+                mkdir "${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/"
+                echo -e "---\nhas_children: true\nlayout: default\npermalink: /${repository}\ntitle: ${repository}\n---\n\n# ${repository}" >"${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/index.md"
             fi
-            if [ ! -d "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/" ]; then
-                mkdir "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/"
-                echo -e "---\nparent: ${TYPE}\nhas_children: true\n---\n# ${REPOSITORY}\n" >"${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/index.md"
-            fi
-            sed -i '1i---\nrender_with_liquid: false\nparent: '${REPOSITORY}'\ngrand_parent: '${TYPE}'\n---\n' $line
-            sed -i "s/^# Change Log$/# $fn/" $line
-            mv $line "${GITHUB_WORKSPACE}/changelogs/_changelogs/${TYPE}/${REPOSITORY//\//_}/$fn.md"
+            sed -i '1i---\nlayout: default\nparent: '${repository}'\npermalink: /'${repository}'/'${chart_name}'\nrender_with_liquid: false\ntitle: '${chart_name}'\n---\n' $line
+            sed -i "s/^# Change Log$/# ${chart_name}/" $line
+            mv $line "${GITHUB_WORKSPACE}/changelogs/_changelogs/${repository//\//_}/${chart_name}.md"
           done
         shell: bash
-        working-directory: ${{ env.REPOSITORY }}
+        working-directory: repositories
         if: ${{ steps.check-last-commit-date.outputs.updated != 'false' }}
 
       - uses: actions/cache@v3

@@ -1,5 +1,6 @@
 title: Changelogs
 url: https://baprx.github.io
+repository: BapRx/changelogs
 baseurl: /changelogs
 author: Baptiste ROUX
 source: ./_changelogs
