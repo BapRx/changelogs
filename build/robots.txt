@@ -1,1 +1,0 @@
-Sitemap: https://baprx.github.io/changelogs/sitemap.xml
