@@ -67,7 +67,7 @@ jobs:
             mv $line "${GITHUB_WORKSPACE}/_changelogs/${repository//\//_}/${chart_name}.md"
           done
         working-directory: repositories
-        if: ${{ steps.update_submodules.outputs.updated != 'false' }}
+        if: ${{ steps.update_submodules.outputs.updated != 'false' }} || ${{ github.event_name != 'schedule' }}
 
       - uses: actions/cache@v3
         with:
@@ -75,14 +75,14 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-        if: ${{ steps.update_submodules.outputs.updated != 'false' }}
+        if: ${{ steps.update_submodules.outputs.updated != 'false' }} || ${{ github.event_name != 'schedule' }}
 
       - name: Build Jekyll for GitHub Pages
         uses: jeffreytse/jekyll-deploy-action@v0.4.0
         with:
           jekyll_src: ./
           token: ${{ secrets.GITHUB_TOKEN }}
-        if: ${{ steps.update_submodules.outputs.updated != 'false' }}
+        if: ${{ steps.update_submodules.outputs.updated != 'false' }} || ${{ github.event_name != 'schedule' }}
 
       - name: Push updated submodules
         run: |
@@ -90,4 +90,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git add repositories/ && git commit -m "[bot] Update submodules"
           git push origin main
-        if: ${{ steps.update_submodules.outputs.updated != 'false' }}
+        if: ${{ steps.update_submodules.outputs.updated != 'false' }} || ${{ github.event_name != 'schedule' }}
