@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=jekyll
 
 ### Jekyll ###
+build/
 _site/
 _changelogs/*
 !_changelogs/_includes
