@@ -1,0 +1,548 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>prometheus-postgres-exporter | Changelogs</title> <meta name="generator" content="Jekyll v4.3.2" /> <meta property="og:title" content="prometheus-postgres-exporter" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" /> <meta property="og:url" content="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="prometheus-postgres-exporter" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"prometheus-postgres-exporter","url":"https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <a href="#" id="menu-button" class="site-button"> <svg viewbox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item active">
+<a href="#" class="nav-list-expander" aria-label="toggle links in prometheus-community/helm-charts category"> <svg viewbox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg> </a><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item active"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link active">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item "><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<a href="#" class="nav-list-expander" aria-label="toggle links in vmware-tanzu/helm-charts category"> <svg viewbox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg> </a><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item "><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div id="main-content-wrap" class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/prometheus-community/helm-charts">prometheus-community/helm-charts</a></li> <li class="breadcrumb-nav-list-item"><span>prometheus-postgres-exporter</span></li> </ol> </nav> <div id="main-content" class="main-content" role="main"> <h1 id="prometheus-postgres-exporter"> <a href="#prometheus-postgres-exporter" class="anchor-heading" aria-labelledby="prometheus-postgres-exporter"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> prometheus-postgres-exporter </h1> <h2 id="430"> <a href="#430" class="anchor-heading" aria-labelledby="430"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.3.0 </h2> <p><strong>Release date:</strong> 2023-03-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.11.1&amp;color=success&amp;logo=" alt="AppVersion: 0.11.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-blackbox-exporter] Update PSP-related templates (#3093)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Default values for prometheus-postgres-exporter.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+<span class="err">
+</span><span class="p">replicaCount: 1
+</span><span class="err">
+</span><span class="p">image:
+</span>  repository: quay.io/prometheuscommunity/postgres-exporter
+  tag: v0.11.1
+  pullPolicy: IfNotPresent
+<span class="err">
+</span>  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ##
+  # pullSecrets:
+  #   - myRegistrKeySecretName
+<span class="err">
+</span><span class="p">command: []
+</span><span class="err">
+</span><span class="p">service:
+</span>  type: ClusterIP
+  port: 80
+  targetPort: 9187
+  name: http
+  labels: {}
+  annotations: {}
+<span class="err">
+</span><span class="p">serviceMonitor:
+</span>  # When set true then use a ServiceMonitor to configure scraping
+  enabled: false
+  # Set the namespace the ServiceMonitor should be deployed
+  # namespace: monitoring
+  # Set how frequently Prometheus should scrape
+  # interval: 30s
+  # Set path to cloudwatch-exporter telemtery-path
+  # telemetryPath: /metrics
+  # Set labels for the ServiceMonitor, use this to define your scrape label for Prometheus Operator
+  # labels:
+  # Set timeout for scrape
+  # timeout: 10s
+  # Set of labels to transfer from the Kubernetes Service onto the target
+  # targetLabels: []
+  # MetricRelabelConfigs to apply to samples before ingestion
+  # metricRelabelings: []
+  # Set relabel_configs as per https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
+  # relabelings: []
+<span class="err">
+</span><span class="p">prometheusRule:
+</span>  enabled: false
+  additionalLabels: {}
+  namespace: ""
+  rules: []
+    ## These are just examples rules, please adapt them to your needs.
+    ## Make sure to constraint the rules to the current prometheus-postgres-exporter service.
+    # - alert: HugeReplicationLag
+    #   expr: pg_replication_lag{service="{{ template "prometheus-postgres-exporter.fullname" . }}"} / 3600 &gt; 1
+    #   for: 1m
+    #   labels:
+    #     severity: critical
+    #   annotations:
+    #     description: replication for {{ template "prometheus-postgres-exporter.fullname" . }} PostgreSQL is lagging by {{ "{{ $value }}" }} hour(s).
+    #     summary: PostgreSQL replication is lagging by {{ "{{ $value }}" }} hour(s).
+<span class="err">
+</span><span class="p">resources: {}
+</span>  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #    memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+<span class="err">
+</span><span class="p">rbac:
+</span>  # Specifies whether RBAC resources should be created
+  create: true
+  # Specifies whether a PodSecurityPolicy should be created
+  pspEnabled: true
+<span class="err">
+</span><span class="p">serviceAccount:
+</span>  # Specifies whether a ServiceAccount should be created
+  create: true
+  # The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+  # Add annotations to the ServiceAccount, useful for EKS IAM Roles for Service Accounts or Google Workload Identity.
+  annotations: {}
+<span class="err">
+</span># Add a default ingress to allow namespace access to service.targetPort
+# Helpful if other NetworkPolicies are configured in the namespace
+<span class="p">networkPolicy:
+</span>  # Specifies whether a NetworkPolicy should be created
+  enabled: false
+  # Set labels for the NetworkPolicy
+  labels: {}
+<span class="err">
+</span># The securityContext of the pod.
+# See https://kubernetes.io/docs/concepts/policy/security-context/ for more.
+<span class="p">podSecurityContext: {}
+</span>  # runAsUser: 1001
+  # runAsGroup: 1001
+  # runAsNonRoot: true
+  # seccompProfile:
+  #   type: RuntimeDefault
+<span class="err">
+</span># The securityContext of the container.
+# See https://kubernetes.io/docs/concepts/policy/security-context/ for more.
+<span class="p">securityContext: {}
+</span>  # runAsUser: 1001
+  # runAsGroup: 1001
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # allowPrivilegeEscalation: false
+  # capabilities:
+  #   drop: ["ALL"]
+  # seccompProfile:
+  #   type: RuntimeDefault
+<span class="err">
+</span><span class="p">hostAliases: []
+</span>  # Set Host Aliases as per https://kubernetes.io/docs/tasks/network/customize-hosts-file-for-pods/
+  # - ip: "127.0.0.1"
+  #   hostnames:
+  #   - "foo.local"
+  #   - "bar.local"
+<span class="err">
+</span><span class="p">config:
+</span>  datasource:
+    # Specify one of both datasource or datasourceSecret
+    host:
+    user: postgres
+    # Only one of password, passwordFile, passwordSecret and pgpassfile can be specified
+    password:
+    # Specify passwordFile if DB password is stored in a file.
+    # For example, to use with vault-injector from Hashicorp
+    passwordFile: ''
+    # Specify passwordSecret if DB password is stored in secret.
+    passwordSecret: {}
+    # Secret name
+    #  name:
+    # Password key inside secret
+    #  key:
+    pgpassfile: ''
+    # If pgpassfile is set, it is used to initialize the PGPASSFILE environment variable.
+    # See https://www.postgresql.org/docs/14/libpq-pgpass.html for more info.
+    port: "5432"
+    database: ''
+    sslmode: disable
+    extraParams: ''
+  datasourceSecret: {}
+    # Specifies if datasource should be sourced from secret value in format: postgresql://login:password@hostname:port/dbname?sslmode=disable
+    # Multiple Postgres databases can be configured by comma separated postgres connection strings
+    # Secret name
+    #  name:
+    # Connection string key inside secret
+    #  key:
+  disableCollectorDatabase: false
+  disableCollectorBgwriter: false
+  disableDefaultMetrics: false
+  disableSettingsMetrics: false
+  autoDiscoverDatabases: false
+  excludeDatabases: []
+  includeDatabases: []
+  constantLabels: {}
+  # possible values debug, info, warn, error, fatal
+  logLevel: ""
+  # possible values logfmt, json
+  logFormat: ""
+  extraArgs: []
+  # Enable queries from an external configmap, enable it will disable inline queries below
+  externalQueries:
+    enabled: false
+    configmap: postgresql-common-exporter-queries
+  # These are the default queries that the exporter will run, extracted from: https://github.com/prometheus-community/postgres_exporter/blob/master/queries.yaml
+  queries: |-
+    pg_replication:
+      query: "SELECT CASE WHEN NOT pg_is_in_recovery() THEN 0 ELSE GREATEST (0, EXTRACT(EPOCH FROM (now() - pg_last_xact_replay_timestamp()))) END AS lag"
+      master: true
+      metrics:
+        - lag:
+            usage: "GAUGE"
+            description: "Replication lag behind master in seconds"
+<span class="err">
+</span>    pg_postmaster:
+      query: "SELECT pg_postmaster_start_time as start_time_seconds from pg_postmaster_start_time()"
+      master: true
+      metrics:
+        - start_time_seconds:
+            usage: "GAUGE"
+            description: "Time at which postmaster started"
+<span class="err">
+</span>    pg_stat_user_tables:
+      query: |
+        SELECT
+          current_database() datname,
+          schemaname,
+          relname,
+          seq_scan,
+          seq_tup_read,
+          idx_scan,
+          idx_tup_fetch,
+          n_tup_ins,
+          n_tup_upd,
+          n_tup_del,
+          n_tup_hot_upd,
+          n_live_tup,
+          n_dead_tup,
+          n_mod_since_analyze,
+          COALESCE(last_vacuum, '1970-01-01Z') as last_vacuum,
+          COALESCE(last_autovacuum, '1970-01-01Z') as last_autovacuum,
+          COALESCE(last_analyze, '1970-01-01Z') as last_analyze,
+          COALESCE(last_autoanalyze, '1970-01-01Z') as last_autoanalyze,
+          vacuum_count,
+          autovacuum_count,
+          analyze_count,
+          autoanalyze_count
+        FROM
+          pg_stat_user_tables
+      metrics:
+        - datname:
+            usage: "LABEL"
+            description: "Name of current database"
+        - schemaname:
+            usage: "LABEL"
+            description: "Name of the schema that this table is in"
+        - relname:
+            usage: "LABEL"
+            description: "Name of this table"
+        - seq_scan:
+            usage: "COUNTER"
+            description: "Number of sequential scans initiated on this table"
+        - seq_tup_read:
+            usage: "COUNTER"
+            description: "Number of live rows fetched by sequential scans"
+        - idx_scan:
+            usage: "COUNTER"
+            description: "Number of index scans initiated on this table"
+        - idx_tup_fetch:
+            usage: "COUNTER"
+            description: "Number of live rows fetched by index scans"
+        - n_tup_ins:
+            usage: "COUNTER"
+            description: "Number of rows inserted"
+        - n_tup_upd:
+            usage: "COUNTER"
+            description: "Number of rows updated"
+        - n_tup_del:
+            usage: "COUNTER"
+            description: "Number of rows deleted"
+        - n_tup_hot_upd:
+            usage: "COUNTER"
+            description: "Number of rows HOT updated (i.e., with no separate index update required)"
+        - n_live_tup:
+            usage: "GAUGE"
+            description: "Estimated number of live rows"
+        - n_dead_tup:
+            usage: "GAUGE"
+            description: "Estimated number of dead rows"
+        - n_mod_since_analyze:
+            usage: "GAUGE"
+            description: "Estimated number of rows changed since last analyze"
+        - last_vacuum:
+            usage: "GAUGE"
+            description: "Last time at which this table was manually vacuumed (not counting VACUUM FULL)"
+        - last_autovacuum:
+            usage: "GAUGE"
+            description: "Last time at which this table was vacuumed by the autovacuum daemon"
+        - last_analyze:
+            usage: "GAUGE"
+            description: "Last time at which this table was manually analyzed"
+        - last_autoanalyze:
+            usage: "GAUGE"
+            description: "Last time at which this table was analyzed by the autovacuum daemon"
+        - vacuum_count:
+            usage: "COUNTER"
+            description: "Number of times this table has been manually vacuumed (not counting VACUUM FULL)"
+        - autovacuum_count:
+            usage: "COUNTER"
+            description: "Number of times this table has been vacuumed by the autovacuum daemon"
+        - analyze_count:
+            usage: "COUNTER"
+            description: "Number of times this table has been manually analyzed"
+        - autoanalyze_count:
+            usage: "COUNTER"
+            description: "Number of times this table has been analyzed by the autovacuum daemon"
+<span class="err">
+</span>    pg_statio_user_tables:
+      query: "SELECT current_database() datname, schemaname, relname, heap_blks_read, heap_blks_hit, idx_blks_read, idx_blks_hit, toast_blks_read, toast_blks_hit, tidx_blks_read, tidx_blks_hit FROM pg_statio_user_tables"
+      metrics:
+        - datname:
+            usage: "LABEL"
+            description: "Name of current database"
+        - schemaname:
+            usage: "LABEL"
+            description: "Name of the schema that this table is in"
+        - relname:
+            usage: "LABEL"
+            description: "Name of this table"
+        - heap_blks_read:
+            usage: "COUNTER"
+            description: "Number of disk blocks read from this table"
+        - heap_blks_hit:
+            usage: "COUNTER"
+            description: "Number of buffer hits in this table"
+        - idx_blks_read:
+            usage: "COUNTER"
+            description: "Number of disk blocks read from all indexes on this table"
+        - idx_blks_hit:
+            usage: "COUNTER"
+            description: "Number of buffer hits in all indexes on this table"
+        - toast_blks_read:
+            usage: "COUNTER"
+            description: "Number of disk blocks read from this table's TOAST table (if any)"
+        - toast_blks_hit:
+            usage: "COUNTER"
+            description: "Number of buffer hits in this table's TOAST table (if any)"
+        - tidx_blks_read:
+            usage: "COUNTER"
+            description: "Number of disk blocks read from this table's TOAST table indexes (if any)"
+        - tidx_blks_hit:
+            usage: "COUNTER"
+            description: "Number of buffer hits in this table's TOAST table indexes (if any)"
+<span class="err">
+</span>    # WARNING: This set of metrics can be very expensive on a busy server as every unique query executed will create an additional time series
+    pg_stat_statements:
+      query: "SELECT t2.rolname, t3.datname, queryid, calls, ( total_plan_time + total_exec_time ) / 1000 as total_time_seconds, ( min_plan_time + min_exec_time ) / 1000 as min_time_seconds, ( max_plan_time + max_exec_time ) / 1000 as max_time_seconds, ( mean_plan_time + mean_exec_time ) / 1000 as mean_time_seconds, ( stddev_plan_time + stddev_exec_time )  / 1000 as stddev_time_seconds, rows, shared_blks_hit, shared_blks_read, shared_blks_dirtied, shared_blks_written, local_blks_hit, local_blks_read, local_blks_dirtied, local_blks_written, temp_blks_read, temp_blks_written, blk_read_time / 1000 as blk_read_time_seconds, blk_write_time / 1000 as blk_write_time_seconds FROM pg_stat_statements t1 JOIN pg_roles t2 ON (t1.userid=t2.oid) JOIN pg_database t3 ON (t1.dbid=t3.oid) WHERE t2.rolname != 'rdsadmin' AND queryid IS NOT NULL"
+      master: true
+      metrics:
+        - rolname:
+            usage: "LABEL"
+            description: "Name of user"
+        - datname:
+            usage: "LABEL"
+            description: "Name of database"
+        - queryid:
+            usage: "LABEL"
+            description: "Query ID"
+        - calls:
+            usage: "COUNTER"
+            description: "Number of times executed"
+        - total_time_seconds:
+            usage: "COUNTER"
+            description: "Total time spent in the statement, in milliseconds"
+        - min_time_seconds:
+            usage: "GAUGE"
+            description: "Minimum time spent in the statement, in milliseconds"
+        - max_time_seconds:
+            usage: "GAUGE"
+            description: "Maximum time spent in the statement, in milliseconds"
+        - mean_time_seconds:
+            usage: "GAUGE"
+            description: "Mean time spent in the statement, in milliseconds"
+        - stddev_time_seconds:
+            usage: "GAUGE"
+            description: "Population standard deviation of time spent in the statement, in milliseconds"
+        - rows:
+            usage: "COUNTER"
+            description: "Total number of rows retrieved or affected by the statement"
+        - shared_blks_hit:
+            usage: "COUNTER"
+            description: "Total number of shared block cache hits by the statement"
+        - shared_blks_read:
+            usage: "COUNTER"
+            description: "Total number of shared blocks read by the statement"
+        - shared_blks_dirtied:
+            usage: "COUNTER"
+            description: "Total number of shared blocks dirtied by the statement"
+        - shared_blks_written:
+            usage: "COUNTER"
+            description: "Total number of shared blocks written by the statement"
+        - local_blks_hit:
+            usage: "COUNTER"
+            description: "Total number of local block cache hits by the statement"
+        - local_blks_read:
+            usage: "COUNTER"
+            description: "Total number of local blocks read by the statement"
+        - local_blks_dirtied:
+            usage: "COUNTER"
+            description: "Total number of local blocks dirtied by the statement"
+        - local_blks_written:
+            usage: "COUNTER"
+            description: "Total number of local blocks written by the statement"
+        - temp_blks_read:
+            usage: "COUNTER"
+            description: "Total number of temp blocks read by the statement"
+        - temp_blks_written:
+            usage: "COUNTER"
+            description: "Total number of temp blocks written by the statement"
+        - blk_read_time_seconds:
+            usage: "COUNTER"
+            description: "Total time the statement spent reading blocks, in milliseconds (if track_io_timing is enabled, otherwise zero)"
+        - blk_write_time_seconds:
+            usage: "COUNTER"
+            description: "Total time the statement spent writing blocks, in milliseconds (if track_io_timing is enabled, otherwise zero)"
+<span class="err">
+</span>    pg_stat_activity_idle:
+      query: |
+        WITH
+          metrics AS (
+            SELECT
+              application_name,
+              SUM(EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - state_change))::bigint)::float AS process_seconds_sum,
+              COUNT(*) AS process_seconds_count
+            FROM pg_stat_activity
+            WHERE state = 'idle'
+            GROUP BY application_name
+          ),
+          buckets AS (
+            SELECT
+              application_name,
+              le,
+              SUM(
+                CASE WHEN EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - state_change)) &lt;= le
+                  THEN 1
+                  ELSE 0
+                END
+              )::bigint AS bucket
+            FROM
+              pg_stat_activity,
+              UNNEST(ARRAY[1, 2, 5, 15, 30, 60, 90, 120, 300]) AS le
+            GROUP BY application_name, le
+            ORDER BY application_name, le
+          )
+        SELECT
+          application_name,
+          process_seconds_sum,
+          process_seconds_count,
+          ARRAY_AGG(le) AS process_seconds,
+          ARRAY_AGG(bucket) AS process_seconds_bucket
+        FROM metrics JOIN buckets USING (application_name)
+        GROUP BY 1, 2, 3
+      metrics:
+        - application_name:
+            usage: "LABEL"
+            description: "Application Name"
+        - process_seconds:
+            usage: "HISTOGRAM"
+            description: "Idle time of server processes"
+<span class="err">
+</span>  # These are user-specified queries that are deep merged with the queries above
+  userQueries: ""
+<span class="err">
+</span><span class="p">nodeSelector: {}
+</span><span class="err">
+</span><span class="p">tolerations: []
+</span><span class="err">
+</span><span class="p">affinity: {}
+</span><span class="err">
+</span><span class="p">annotations: {}
+</span><span class="err">
+</span><span class="p">podLabels: {}
+</span><span class="err">
+</span># Configurable health checks
+<span class="p">livenessProbe:
+</span>  initialDelaySeconds: 0
+  timeoutSeconds: 1
+<span class="err">
+</span><span class="p">readinessProbe:
+</span>  initialDelaySeconds: 0
+  timeoutSeconds: 1
+<span class="err">
+</span># ExtraEnvs
+<span class="p">extraEnvs: []
+</span>  # - name: EXTRA_ENV
+  #   value: value
+  # - name: POD_NAMESPACE
+  #   valueFrom:
+  #     fieldRef:
+  #       fieldPath: metadata.namespace
+<span class="err">
+</span># Init containers, e. g. for secrets creation before the exporter
+<span class="p">initContainers: []
+</span>  # - name:
+  #   image:
+  #   volumeMounts:
+  #     - name: creds
+  #       mountPath: /creds
+<span class="err">
+</span># Additional sidecar containers, e. g. for a database proxy, such as Google's cloudsql-proxy
+<span class="p">extraContainers: []
+</span><span class="err">
+</span># Additional volumes, e. g. for secrets used in an extraContainer
+<span class="p">extraVolumes: []
+</span># Uncomment for mounting custom ca-certificates
+#  - name: ssl-certs
+#    secret:
+#      defaultMode: 420
+#      items:
+#      - key: ca-certificates.crt
+#        path: ca-certificates.crt
+#      secretName: ssl-certs
+<span class="err">
+</span># Additional volume mounts
+<span class="p">extraVolumeMounts: []
+</span># Uncomment for mounting custom ca-certificates file into container
+#  - name: ssl-certs
+#    mountPath: /etc/ssl/certs/ca-certificates.crt
+#    subPath: ca-certificates.crt
+<span class="err">
+</span><span class="p">podDisruptionBudget:
+</span>  enabled: false
+  maxUnavailable: 1
+</code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </div> </div> <div class="search-overlay"></div> </div> </body> </html>
