@@ -28,6 +28,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
+          fetch-depth: 0
 
       - name: Check if there are new commits since last Github Action job
         id: update_submodules
@@ -90,4 +91,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git add repositories/ && git commit -m "[bot] Update submodules"
           git push origin main
-        if: ${{ steps.update_submodules.outputs.updated != 'false' }} || ${{ github.event_name != 'schedule' }}
+        if: ${{ steps.update_submodules.outputs.updated != 'false' }}
