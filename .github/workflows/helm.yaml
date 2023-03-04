@@ -4,7 +4,9 @@ name: Build and Deploy Helm changelogs to Github Pages
 on:
   push:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "0 0-8/2 * * *"
+    - cron: "*/30 9-19 * * *"
+    - cron: "0 20-23/2 * * *"
 
 env:
   HELM_CHANGELOG_VERSION: 0.0.1
