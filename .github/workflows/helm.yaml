@@ -62,13 +62,13 @@ jobs:
             directory_name=$(dirname $line)
             chart_name=$(basename $directory_name)
             repository=$(echo $directory_name | cut -d/ -f 2-3)
-            if [ ! -d "./_changelogs/${repository//\//_}/" ]; then
-                mkdir "./_changelogs/${repository//\//_}/"
-                echo -e "---\nhas_children: true\nlayout: default\npermalink: /${repository}\ntitle: ${repository}\n---\n\n# ${repository}" >"./_changelogs/${repository//\//_}/index.md"
+            if [ ! -d "${GITHUB_WORKSPACE}/_changelogs/${repository//\//_}/" ]; then
+                mkdir "${GITHUB_WORKSPACE}/_changelogs/${repository//\//_}/"
+                echo -e "---\nhas_children: true\nlayout: default\npermalink: /${repository}\ntitle: ${repository}\n---\n\n# ${repository}" >"${GITHUB_WORKSPACE}/_changelogs/${repository//\//_}/index.md"
             fi
             sed -i '1i---\nlayout: default\nparent: '${repository}'\npermalink: /'${repository}'/'${chart_name}'\nrender_with_liquid: false\ntitle: '${chart_name}'\n---\n' $line
             sed -i "s/^# Change Log$/# ${chart_name}/" $line
-            mv $line "./_changelogs/${repository//\//_}/${chart_name}.md"
+            mv $line "${GITHUB_WORKSPACE}/_changelogs/${repository//\//_}/${chart_name}.md"
           done
         working-directory: repositories
         if: ${{ steps.update_submodules.outputs.updated != 'false' }}
