@@ -51,7 +51,7 @@ jobs:
           find . -type f -name Changelog.md -delete
 
           # Generate new changelogs
-          git submodule foreach helm-changelog
+          git submodule foreach helm-changelog -v debug
 
           # Process and move Changelog.md files to a specific directory
           find . -type f -name Changelog.md -not -empty | while read line; do
