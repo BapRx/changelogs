@@ -10,7 +10,7 @@ env:
 
 jobs:
   test:
-    name: Build and deploy site
+    name: Build Helm changelogs
     runs-on: ubuntu-22.04
 
     defaults:
