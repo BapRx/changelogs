@@ -1,26 +1,17 @@
 ---
-name: Build and Deploy Helm changelogs to Github Pages
+name: Build Helm changelogs
 
 on:
-  push:
+  pull_request:
     branches: [main]
-  schedule:
-    - cron: "0 0-8/2 * * *"
-    - cron: "*/30 9-18 * * *"
-    - cron: "0 20-23/2 * * *"
 
 env:
   HELM_CHANGELOG_VERSION: 0.0.2
 
 jobs:
-  helm_changelogs:
-    name: Build and deploy site
+  test:
+    name: Build Helm changelogs
     runs-on: ubuntu-22.04
-    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-
-    permissions:
-      contents: write
-      id-token: write
 
     defaults:
       run:
@@ -32,17 +23,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-
-      - name: Check if there are new commits since last Github Action job
-        id: update_submodules
-        run: |
-          # Skip run if no new commit since last Github Action job
-          git submodule update --remote --recursive --init
-          git diff
-          if $(git diff --quiet)
-          then
-            echo "updated=false" >> $GITHUB_OUTPUT
-          fi
 
       - name: Generate Helm Changelogs
         run: |
@@ -71,27 +51,3 @@ jobs:
             mv $line "${GITHUB_WORKSPACE}/_changelogs/${repository//\//_}/${chart_name}.md"
           done
         working-directory: repositories
-        if: ${{ steps.update_submodules.outputs.updated != 'false' || github.event_name != 'schedule' }}
-
-      - uses: actions/cache@v3
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-        if: ${{ steps.update_submodules.outputs.updated != 'false' || github.event_name != 'schedule' }}
-
-      - name: Build Jekyll for GitHub Pages
-        uses: jeffreytse/jekyll-deploy-action@v0.4.0
-        with:
-          jekyll_src: ./
-          token: ${{ secrets.GITHUB_TOKEN }}
-        if: ${{ steps.update_submodules.outputs.updated != 'false' || github.event_name != 'schedule' }}
-
-      - name: Push updated submodules
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
-          git add repositories/ && git commit -m "[bot] Update submodules"
-          git push origin main
-        if: ${{ steps.update_submodules.outputs.updated != 'false' }}

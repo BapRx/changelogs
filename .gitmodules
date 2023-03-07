@@ -6,3 +6,7 @@
 	path = repositories/vmware-tanzu/helm-charts
 	url = git@github.com:vmware-tanzu/helm-charts.git
 	branch = main
+[submodule "repositories/argoproj/argo-helm"]
+	path = repositories/argoproj/argo-helm
+	url = git@github.com:argoproj/argo-helm.git
+	branch = main
