@@ -9,7 +9,7 @@ on:
     - cron: "0 20-23/2 * * *"
 
 env:
-  HELM_CHANGELOG_VERSION: 0.0.1
+  HELM_CHANGELOG_VERSION: 0.0.2
 
 jobs:
   helm_changelogs:
@@ -47,7 +47,7 @@ jobs:
         run: |
           # Download release ${HELM_CHANGELOG_VERSION} of helm-changelog
           tmpdir=$(mktemp -d)
-          curl -fLsC - -o "$tmpdir/helm-changelog.tar.gz" "https://github.com/mogensen/helm-changelog/releases/download/v${HELM_CHANGELOG_VERSION}/helm-changelog_${HELM_CHANGELOG_VERSION}_linux_amd64.tar.gz"
+          curl -fLsC - -o "$tmpdir/helm-changelog.tar.gz" "https://github.com/BapRx/helm-changelog/releases/download/v${HELM_CHANGELOG_VERSION}/helm-changelog_${HELM_CHANGELOG_VERSION}_linux_amd64.tar.gz"
           tar zxvf "$tmpdir/helm-changelog.tar.gz" -C /usr/local/bin/ helm-changelog
 
           # Delete pre-existing changelogs
