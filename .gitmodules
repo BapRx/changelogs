@@ -10,3 +10,7 @@
 	path = repositories/argoproj/argo-helm
 	url = git@github.com:argoproj/argo-helm.git
 	branch = main
+[submodule "repositories/kubernetes/ingress-nginx"]
+	path = repositories/kubernetes/ingress-nginx
+	url = git@github.com:kubernetes/ingress-nginx.git
+	branch = main
