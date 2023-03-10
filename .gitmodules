@@ -14,3 +14,7 @@
 	path = repositories/kubernetes/ingress-nginx
 	url = git@github.com:kubernetes/ingress-nginx.git
 	branch = main
+[submodule "repositories/grafana/helm-charts"]
+	path = repositories/grafana/helm-charts
+	url = git@github.com:grafana/helm-charts.git
+	branch = main
