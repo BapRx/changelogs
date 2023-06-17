@@ -10,7 +10,7 @@ on:
     - cron: "0 20-23/2 * * *"
 
 env:
-  HELM_CHANGELOG_VERSION: 0.0.2
+  HELM_CHANGELOG_VERSION: 0.1.1
 
 jobs:
   helm_changelogs:

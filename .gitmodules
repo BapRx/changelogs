@@ -1,3 +1,27 @@
+[submodule "repositories/argoproj/argo-helm"]
+	path = repositories/argoproj/argo-helm
+	url = git@github.com:argoproj/argo-helm.git
+	branch = main
+[submodule "repositories/authelia/chartrepo"]
+	path = repositories/authelia/chartrepo
+	url = git@github.com:authelia/chartrepo.git
+	branch = master
+[submodule "repositories/bitnami/charts"]
+	path = repositories/bitnami/charts
+	url = git@github.com:bitnami/charts.git
+	branch = main
+[submodule "repositories/grafana/helm-charts"]
+	path = repositories/grafana/helm-charts
+	url = git@github.com:grafana/helm-charts.git
+	branch = main
+[submodule "repositories/kubernetes/ingress-nginx"]
+	path = repositories/kubernetes/ingress-nginx
+	url = git@github.com:kubernetes/ingress-nginx.git
+	branch = main
+[submodule "repositories/minio/operator"]
+	path = repositories/minio/operator
+	url = git@github.com:minio/operator.git
+	branch = master
 [submodule "repositories/prometheus-community/helm-charts"]
 	path = repositories/prometheus-community/helm-charts
 	url = git@github.com:prometheus-community/helm-charts.git
@@ -6,15 +30,7 @@
 	path = repositories/vmware-tanzu/helm-charts
 	url = git@github.com:vmware-tanzu/helm-charts.git
 	branch = main
-[submodule "repositories/argoproj/argo-helm"]
-	path = repositories/argoproj/argo-helm
-	url = git@github.com:argoproj/argo-helm.git
-	branch = main
-[submodule "repositories/kubernetes/ingress-nginx"]
-	path = repositories/kubernetes/ingress-nginx
-	url = git@github.com:kubernetes/ingress-nginx.git
-	branch = main
-[submodule "repositories/grafana/helm-charts"]
-	path = repositories/grafana/helm-charts
-	url = git@github.com:grafana/helm-charts.git
-	branch = main
+[submodule "repositories/traefik/traefik-helm-chart"]
+	path = repositories/traefik/traefik-helm-chart
+	url = git@github.com:traefik/traefik-helm-chart.git
+	branch = master

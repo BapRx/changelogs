@@ -15,3 +15,4 @@ _changelogs/*
 vendor/
 
 # End of https://www.toptal.com/developers/gitignore/api/jekyll
+tmp/
