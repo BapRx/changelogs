@@ -92,5 +92,5 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git add repositories/ && git commit -m "[bot] Update submodules" && git push origin main
+          git add repositories/ && git commit -m "[bot] Update submodules" && git push origin main || true
         if: ${{ steps.update_submodules.outputs.updated != 'false' }}
