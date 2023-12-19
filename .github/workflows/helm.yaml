@@ -82,7 +82,7 @@ jobs:
         if: ${{ steps.update_submodules.outputs.updated != 'false' || github.event_name != 'schedule' }}
 
       - name: Build Jekyll for GitHub Pages
-        uses: jeffreytse/jekyll-deploy-action@v0.5.0
+        uses: jeffreytse/jekyll-deploy-action@v0.5.1
         with:
           jekyll_src: ./
           token: ${{ secrets.GITHUB_TOKEN }}
