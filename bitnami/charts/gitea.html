@@ -1,0 +1,2171 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(29)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(29) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(29) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(29) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>gitea | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="gitea" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/bitnami/charts/gitea" /> <meta property="og:url" content="https://baprx.github.io/changelogs/bitnami/charts/gitea" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="gitea" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"gitea","url":"https://baprx.github.io/changelogs/bitnami/charts/gitea"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/bitnami/charts">bitnami/charts</a></li> <li class="breadcrumb-nav-list-item"><span>gitea</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="gitea"> <a href="#gitea" class="anchor-heading" aria-labelledby="gitea"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> gitea </h1> <h2 id="145"> <a href="#145" class="anchor-heading" aria-labelledby="145"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.5 </h2> <p><strong>Release date:</strong> 2024-01-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.4.5 updating components versions (#22921)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index cb1f52fd1d..7a371dcfe4 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.4-debian-11-r4
+</span><span class="gi">+  tag: 1.21.4-debian-11-r5
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="144"> <a href="#144" class="anchor-heading" aria-labelledby="144"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.4 </h2> <p><strong>Release date:</strong> 2024-01-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.4.4 updating components versions (#22910)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 0011f8adc7..cb1f52fd1d 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.4-debian-11-r3
+</span><span class="gi">+  tag: 1.21.4-debian-11-r4
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="143"> <a href="#143" class="anchor-heading" aria-labelledby="143"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.3 </h2> <p><strong>Release date:</strong> 2024-01-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.4.3 updating components versions (#22847)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index d74f569815..0011f8adc7 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.4-debian-11-r2
+</span><span class="gi">+  tag: 1.21.4-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="142"> <a href="#142" class="anchor-heading" aria-labelledby="142"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.2 </h2> <p><strong>Release date:</strong> 2024-01-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.4.2 updating components versions (#22776)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 3df2b0a7a1..d74f569815 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.4-debian-11-r0
+</span><span class="gi">+  tag: 1.21.4-debian-11-r2
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -659,7 +659,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r94
+</span><span class="gi">+    tag: 11-debian-11-r95
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="141"> <a href="#141" class="anchor-heading" aria-labelledby="141"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.1 </h2> <p><strong>Release date:</strong> 2024-01-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] fix: :bug: Set seLinuxOptions to null for Openshift compatibility (#22591)</li> <li>[bitnami/*] Move documentation sections from docs.bitnami.com back to the README (#22203)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 64eea86a41..3df2b0a7a1 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -304,7 +304,7 @@</span> podSecurityContext:
+ ## Configure Container Security Context (only main container)
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+ ## @param containerSecurityContext.enabled Enabled containers' Security Context
+<span class="gd">-## @param containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span><span class="gi">+## @param containerSecurityContext.seLinuxOptions [object,nullable] Set SELinux options in container
+</span> ## @param containerSecurityContext.runAsUser Set containers' Security Context runAsUser
+ ## @param containerSecurityContext.runAsNonRoot Set container's Security Context runAsNonRoot
+ ## @param containerSecurityContext.privileged Set container's Security Context privileged
+<span class="p">@@ -315,7 +315,7 @@</span> podSecurityContext:
+ ##
+ containerSecurityContext:
+   enabled: true
+<span class="gd">-  seLinuxOptions: {}
+</span><span class="gi">+  seLinuxOptions: null
+</span>   runAsUser: 1001
+   runAsNonRoot: true
+   privileged: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="140"> <a href="#140" class="anchor-heading" aria-labelledby="140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.0 </h2> <p><strong>Release date:</strong> 2024-01-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] fix: :lock: Move service-account token auto-mount to pod declaration (#22403)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index a833bdd498..64eea86a41 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -132,6 +132,9 @@</span> schedulerName: ""
+ ## The value is evaluated as a template
+ ##
+ topologySpreadConstraints: []
+<span class="gi">+## @param automountServiceAccountToken Mount Service Account token in pod
++##
++automountServiceAccountToken: false
+</span> ## @param hostAliases [array] Add deployment host aliases
+ ## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
+ ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="132"> <a href="#132" class="anchor-heading" aria-labelledby="132"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.2 </h2> <p><strong>Release date:</strong> 2024-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.3.2 updating components versions (#22274)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="131"> <a href="#131" class="anchor-heading" aria-labelledby="131"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.1 </h2> <p><strong>Release date:</strong> 2024-01-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.4&amp;color=success" alt="AppVersion: 1.21.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.3.1 updating components versions (#22241)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 1ae0c2a552..a833bdd498 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.3-debian-11-r3
+</span><span class="gi">+  tag: 1.21.4-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -656,7 +656,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r93
+</span><span class="gi">+    tag: 11-debian-11-r94
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="130"> <a href="#130" class="anchor-heading" aria-labelledby="130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.0 </h2> <p><strong>Release date:</strong> 2024-01-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.3&amp;color=success" alt="AppVersion: 1.21.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] fix: :lock: Improve podSecurityContext and containerSecurityContext with essential security fields (#22122)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 52a0873624..1ae0c2a552 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -287,14 +287,21 @@</span> resources:
+ ## Configure Pods Security Context
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+ ## @param podSecurityContext.enabled Enable Gitea pods' Security Context
+<span class="gi">+## @param podSecurityContext.fsGroupChangePolicy Set filesystem group change policy
++## @param podSecurityContext.sysctls Set kernel settings using the sysctl interface
++## @param podSecurityContext.supplementalGroups Set filesystem extra groups
+</span> ## @param podSecurityContext.fsGroup Gitea pods' group ID
+ ##
+ podSecurityContext:
+   enabled: true
+<span class="gi">+  fsGroupChangePolicy: Always
++  sysctls: []
++  supplementalGroups: []
+</span>   fsGroup: 1001
+ ## Configure Container Security Context (only main container)
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+ ## @param containerSecurityContext.enabled Enabled containers' Security Context
+<span class="gi">+## @param containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span> ## @param containerSecurityContext.runAsUser Set containers' Security Context runAsUser
+ ## @param containerSecurityContext.runAsNonRoot Set container's Security Context runAsNonRoot
+ ## @param containerSecurityContext.privileged Set container's Security Context privileged
+<span class="p">@@ -305,6 +312,7 @@</span> podSecurityContext:
+ ##
+ containerSecurityContext:
+   enabled: true
+<span class="gi">+  seLinuxOptions: {}
+</span>   runAsUser: 1001
+   runAsNonRoot: true
+   privileged: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="1211"> <a href="#1211" class="anchor-heading" aria-labelledby="1211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.11 </h2> <p><strong>Release date:</strong> 2024-01-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.3&amp;color=success" alt="AppVersion: 1.21.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] fix: :lock: Do not automount the service account token unless necessary (#22041)</li> <li>[bitnami/*] Fix ref links (in comments) (#21822)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 81bf0e9a9d..52a0873624 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> image:
+   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
+</span>   ##
+   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+<span class="p">@@ -192,7 +192,7 @@</span> containerPorts:
+   http: 3000
+   ssh: 2222
+ ## Enable persistence using Persistent Volume Claims
+<span class="gd">-## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
+</span><span class="gi">+## ref: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+</span> ##
+ persistence:
+   ## @param persistence.enabled Enable persistence using PVC
+<span class="p">@@ -273,11 +273,11 @@</span> nodeAffinityPreset:
+ ##
+ affinity: {}
+ ## @param nodeSelector Node labels for pod assignment. Evaluated as a template.
+<span class="gd">-## ref: https://kubernetes.io/docs/user-guide/node-selection/
+</span><span class="gi">+## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
+</span> ##
+ nodeSelector: {}
+ ## Gitea container's resource requests and limits
+<span class="gd">-## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+</span><span class="gi">+## ref: http://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+</span> ## @param resources.requests [object] The requested resources for the init container
+ ## @param resources.limits The resources limits for the init container
+ ##
+<span class="p">@@ -424,7 +424,7 @@</span> service:
+   ##
+   loadBalancerSourceRanges: []
+   ## @param service.loadBalancerIP loadBalancerIP for the Gitea Service (optional, cloud specific)
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/services/#type-loadbalancer
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-loadbalancer
+</span>   ##
+   loadBalancerIP: ""
+   ## @param service.nodePorts [object] Kubernetes node port
+<span class="p">@@ -463,7 +463,7 @@</span> service:
+   sessionAffinityConfig: {}
+ ## Configure the ingress resource that allows you to access the
+ ## Gitea installation. Set up the URL
+<span class="gd">-## ref: https://kubernetes.io/docs/user-guide/ingress/
+</span><span class="gi">+## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
+</span> ##
+ ingress:
+   ## @param ingress.enabled Enable ingress controller resource
+<span class="p">@@ -490,7 +490,7 @@</span> ingress:
+   path: /
+   ## @param ingress.annotations Additional annotations for the Ingress resource. To enable certificate autogeneration, place here your cert-manager annotations.
+   ## For a full list of possible ingress annotations, please see
+<span class="gd">-  ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
+</span><span class="gi">+  ## ref: https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md
+</span>   ## Use this parameter to set the required annotations for cert-manager, see
+   ## ref: https://cert-manager.io/docs/usage/ingress/#supported-annotations
+   ##
+<span class="p">@@ -579,7 +579,7 @@</span> serviceAccount:
+   ## @param serviceAccount.automountServiceAccountToken Allows auto mount of ServiceAccountToken on the serviceAccount created
+   ## Can be set to false if pods using this serviceAccount do not need to use K8s API
+   ##
+<span class="gd">-  automountServiceAccountToken: true
+</span><span class="gi">+  automountServiceAccountToken: false
+</span>   ## @param serviceAccount.annotations Additional custom annotations for the ServiceAccount
+   ##
+   annotations: {}
+<span class="p">@@ -660,7 +660,7 @@</span> volumePermissions:
+     ##
+     pullSecrets: []
+   ## Init containers' resource requests and limits
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+</span>   ## We usually recommend not to specify default resources and to leave this as a conscious
+   ## choice for the user. This also increases chances charts run on environments with little
+   ## resources, such as Minikube. If you do want to specify resources, uncomment the following
+<span class="err">
+</span></code></pre></div></div> <h2 id="1210"> <a href="#1210" class="anchor-heading" aria-labelledby="1210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.10 </h2> <p><strong>Release date:</strong> 2024-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.3&amp;color=success" alt="AppVersion: 1.21.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.10 updating components versions (#21941)</li> <li>[bitnami/*] Fix docs.bitnami.com broken links (#21901)</li> <li>[bitnami/*] Update copyright: Year and company (#21815)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 8eca78bb57..81bf0e9a9d 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.3-debian-11-r0
+</span><span class="gi">+  tag: 1.21.3-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -648,7 +648,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r92
+</span><span class="gi">+    tag: 11-debian-11-r93
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="129"> <a href="#129" class="anchor-heading" aria-labelledby="129"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.9 </h2> <p><strong>Release date:</strong> 2023-12-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.3&amp;color=success" alt="AppVersion: 1.21.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.9 updating components versions (#21715)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 4309c0f28f..8eca78bb57 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.2-debian-11-r0
+</span><span class="gi">+  tag: 1.21.3-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="128"> <a href="#128" class="anchor-heading" aria-labelledby="128"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.8 </h2> <p><strong>Release date:</strong> 2023-12-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.2&amp;color=success" alt="AppVersion: 1.21.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.8 updating components versions (#21536)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 87a80e4519..4309c0f28f 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.1-debian-11-r2
+</span><span class="gi">+  tag: 1.21.2-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -648,7 +648,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r91
+</span><span class="gi">+    tag: 11-debian-11-r92
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="127"> <a href="#127" class="anchor-heading" aria-labelledby="127"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.7 </h2> <p><strong>Release date:</strong> 2023-12-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.1&amp;color=success" alt="AppVersion: 1.21.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.7 updating components versions (#21446)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 27ad8e7697..87a80e4519 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.1-debian-11-r0
+</span><span class="gi">+  tag: 1.21.1-debian-11-r2
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="126"> <a href="#126" class="anchor-heading" aria-labelledby="126"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.6 </h2> <p><strong>Release date:</strong> 2023-11-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.1&amp;color=success" alt="AppVersion: 1.21.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.6 updating components versions (#21259)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 0571b990b4..27ad8e7697 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.21.0-debian-11-r1
+</span><span class="gi">+  tag: 1.21.1-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="125"> <a href="#125" class="anchor-heading" aria-labelledby="125"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.5 </h2> <p><strong>Release date:</strong> 2023-11-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.0&amp;color=success" alt="AppVersion: 1.21.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.5 (#21220)</li> <li>[bitnami/*] Rename solutions to “Bitnami package for …” (#21038)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 5a6649f88c..0571b990b4 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r0
+</span><span class="gi">+  tag: 1.21.0-debian-11-r1
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="124"> <a href="#124" class="anchor-heading" aria-labelledby="124"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.4 </h2> <p><strong>Release date:</strong> 2023-11-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.21.0&amp;color=success" alt="AppVersion: 1.21.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.4 updating components versions (#21048)</li> <li>[bitnami/*] Remove relative links to non-README sections, add verification for that and update TL;DR section (#20967)</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 5616387cbb..5a6649f88c 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r8
+</span><span class="gi">+  tag: 1.20.5-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -648,7 +648,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r90
+</span><span class="gi">+    tag: 11-debian-11-r91
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="123"> <a href="#123" class="anchor-heading" aria-labelledby="123"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.3 </h2> <p><strong>Release date:</strong> 2023-11-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.3 updating components versions (#20859)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 5b7f2046b7..5616387cbb 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r7
+</span><span class="gi">+  tag: 1.20.5-debian-11-r8
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="122"> <a href="#122" class="anchor-heading" aria-labelledby="122"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.2 </h2> <p><strong>Release date:</strong> 2023-11-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.2 updating components versions (#20833)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 1295970512..5b7f2046b7 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r6
+</span><span class="gi">+  tag: 1.20.5-debian-11-r7
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="121"> <a href="#121" class="anchor-heading" aria-labelledby="121"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.1 </h2> <p><strong>Release date:</strong> 2023-11-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.2.1 updating components versions (#20729)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="120"> <a href="#120" class="anchor-heading" aria-labelledby="120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.0 </h2> <p><strong>Release date:</strong> 2023-11-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Remove HA support (#20526)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 7d293d792e..1295970512 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -80,9 +80,6 @@</span> image:
+   ## Set to true if you would like to see extra information on logs
+   ##
+   debug: false
+<span class="gd">-## @param replicaCount Number of Gitea Pods to run (requires ReadWriteMany PVC support)
+-##
+-replicaCount: 1
+</span> ## @param adminUsername User of the application
+ ## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
+ ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="110"> <a href="#110" class="anchor-heading" aria-labelledby="110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.0 </h2> <p><strong>Release date:</strong> 2023-10-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] feat: :sparkles: Add support for PSA restricted policy (#20442)</li> <li>[bitnami/*] Rename VMware Application Catalog (#20361)</li> <li>[bitnami/*] Skip image’s tag in the README files of the Bitnami Charts (#19841)</li> <li>[bitnami/*] Standardize documentation (#19835)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 15221c817e..7d293d792e 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -51,9 +51,9 @@</span> extraDeploy: []
+ 
+ ## Bitnami Gitea image version
+ ## ref: https://hub.docker.com/r/bitnami/gitea/tags/
+<span class="gd">-## @param image.registry Gitea image registry
+-## @param image.repository Gitea Image name
+-## @param image.tag Gitea Image tag
+</span><span class="gi">+## @param image.registry [default: REGISTRY_NAME] Gitea image registry
++## @param image.repository [default: REPOSITORY_NAME/gitea] Gitea Image name
++## @skip image.tag Gitea Image tag
+</span> ## @param image.digest Gitea image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+ ## @param image.pullPolicy Gitea image pull policy
+ ## @param image.pullSecrets Specify docker-registry secret names as an array
+<span class="p">@@ -297,14 +297,27 @@</span> podSecurityContext:
+   fsGroup: 1001
+ ## Configure Container Security Context (only main container)
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+<span class="gd">-## @param containerSecurityContext.enabled Enable Gitea containers' Security Context
+-## @param containerSecurityContext.runAsUser Gitea containers' Security Context
+-## @param containerSecurityContext.runAsNonRoot Set Controller container's Security Context runAsNonRoot
+</span><span class="gi">+## @param containerSecurityContext.enabled Enabled containers' Security Context
++## @param containerSecurityContext.runAsUser Set containers' Security Context runAsUser
++## @param containerSecurityContext.runAsNonRoot Set container's Security Context runAsNonRoot
++## @param containerSecurityContext.privileged Set container's Security Context privileged
++## @param containerSecurityContext.readOnlyRootFilesystem Set container's Security Context readOnlyRootFilesystem
++## @param containerSecurityContext.allowPrivilegeEscalation Set container's Security Context allowPrivilegeEscalation
++## @param containerSecurityContext.capabilities.drop List of capabilities to be dropped
++## @param containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
+</span> ##
+ containerSecurityContext:
+   enabled: true
+   runAsUser: 1001
+   runAsNonRoot: true
+<span class="gi">+  privileged: false
++  readOnlyRootFilesystem: false
++  allowPrivilegeEscalation: false
++  capabilities:
++    drop: ["ALL"]
++  seccompProfile:
++    type: "RuntimeDefault"
++
+</span> ## Configure extra options for startup probe
+ ## Gitea core exposes / to unauthenticated requests, making it a good
+ ## default startup and readiness path. However, that may not always be the
+<span class="p">@@ -628,9 +641,9 @@</span> volumePermissions:
+   ## @param volumePermissions.enabled Enable init container that changes volume permissions in the data directory (for cases where the default k8s `runAsUser` and `fsUser` values do not work)
+   ##
+   enabled: false
+<span class="gd">-  ## @param volumePermissions.image.registry Init container volume-permissions image registry
+-  ## @param volumePermissions.image.repository Init container volume-permissions image name
+-  ## @param volumePermissions.image.tag Init container volume-permissions image tag
+</span><span class="gi">+  ## @param volumePermissions.image.registry [default: REGISTRY_NAME] Init container volume-permissions image registry
++  ## @param volumePermissions.image.repository [default: REPOSITORY_NAME/os-shell] Init container volume-permissions image name
++  ## @skip volumePermissions.image.tag Init container volume-permissions image tag
+</span>   ## @param volumePermissions.image.digest Init container volume-permissions image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+   ## @param volumePermissions.image.pullPolicy Init container volume-permissions image pull policy
+   ## @param volumePermissions.image.pullSecrets Specify docker-registry secret names as an array
+<span class="err">
+</span></code></pre></div></div> <h2 id="106"> <a href="#106" class="anchor-heading" aria-labelledby="106"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.6 </h2> <p><strong>Release date:</strong> 2023-10-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.0.6 (#20131)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index e17a822c4f..15221c817e 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r5
+</span><span class="gi">+  tag: 1.20.5-debian-11-r6
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r89
+</span><span class="gi">+    tag: 11-debian-11-r90
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="105"> <a href="#105" class="anchor-heading" aria-labelledby="105"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.5 </h2> <p><strong>Release date:</strong> 2023-10-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.0.5 (#20039)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index da1fb97543..e17a822c4f 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r3
+</span><span class="gi">+  tag: 1.20.5-debian-11-r5
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="104"> <a href="#104" class="anchor-heading" aria-labelledby="104"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.4 </h2> <p><strong>Release date:</strong> 2023-10-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.0.4 (#19908)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 98d5479b18..da1fb97543 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r86
+</span><span class="gi">+    tag: 11-debian-11-r89
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="103"> <a href="#103" class="anchor-heading" aria-labelledby="103"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.3 </h2> <p><strong>Release date:</strong> 2023-10-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.0.3 (#19823)</li> <li>[bitnami/*] Update Helm charts prerequisites (#19745)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 1bbf84ac50..98d5479b18 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r2
+</span><span class="gi">+  tag: 1.20.5-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="102"> <a href="#102" class="anchor-heading" aria-labelledby="102"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.2 </h2> <p><strong>Release date:</strong> 2023-10-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.0.2 (#19764)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index b20075d0e9..1bbf84ac50 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.5-debian-11-r0
+</span><span class="gi">+  tag: 1.20.5-debian-11-r2
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="101"> <a href="#101" class="anchor-heading" aria-labelledby="101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.1 </h2> <p><strong>Release date:</strong> 2023-10-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.5&amp;color=success" alt="AppVersion: 1.20.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 1.0.1 (#19709)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index e5986b6a5c..b20075d0e9 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.4-debian-11-r17
+</span><span class="gi">+  tag: 1.20.5-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r77
+</span><span class="gi">+    tag: 11-debian-11-r86
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="100"> <a href="#100" class="anchor-heading" aria-labelledby="100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.0 </h2> <p><strong>Release date:</strong> 2023-09-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.4&amp;color=success" alt="AppVersion: 1.20.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Update dependencies (#19613)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="043"> <a href="#043" class="anchor-heading" aria-labelledby="043"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.3 </h2> <p><strong>Release date:</strong> 2023-09-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.4&amp;color=success" alt="AppVersion: 1.20.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.4.3 (#19544)</li> <li>[bitnami/*] Update readme files (#19277)</li> <li>Revert “Autogenerate schema files (#19194)” (#19335)</li> <li>Autogenerate schema files (#19194)</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 157c0d3bfb..e5986b6a5c 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.4-debian-11-r0
+</span><span class="gi">+  tag: 1.20.4-debian-11-r17
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r60
+</span><span class="gi">+    tag: 11-debian-11-r77
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="042"> <a href="#042" class="anchor-heading" aria-labelledby="042"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.2 </h2> <p><strong>Release date:</strong> 2023-09-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.4&amp;color=success" alt="AppVersion: 1.20.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.4.2 (#19198)</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 3ec9e9fa0a..157c0d3bfb 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.3-debian-11-r0
+</span><span class="gi">+  tag: 1.20.4-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r43
+</span><span class="gi">+    tag: 11-debian-11-r60
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="041"> <a href="#041" class="anchor-heading" aria-labelledby="041"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.1 </h2> <p><strong>Release date:</strong> 2023-09-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.3&amp;color=success" alt="AppVersion: 1.20.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="040"> <a href="#040" class="anchor-heading" aria-labelledby="040"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.0 </h2> <p><strong>Release date:</strong> 2023-08-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.3&amp;color=success" alt="AppVersion: 1.20.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Support for customizing standard labels (#18486)</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="039"> <a href="#039" class="anchor-heading" aria-labelledby="039"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.9 </h2> <p><strong>Release date:</strong> 2023-08-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.3&amp;color=success" alt="AppVersion: 1.20.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.9 (#18763)</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 906976e244..3ec9e9fa0a 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.2-debian-11-r17
+</span><span class="gi">+  tag: 1.20.3-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r40
+</span><span class="gi">+    tag: 11-debian-11-r43
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="038"> <a href="#038" class="anchor-heading" aria-labelledby="038"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.8 </h2> <p><strong>Release date:</strong> 2023-08-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.2&amp;color=success" alt="AppVersion: 1.20.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.8 (#18520)</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index b154a5e55e..906976e244 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.20.2-debian-11-r0
+</span><span class="gi">+  tag: 1.20.2-debian-11-r17
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r22
+</span><span class="gi">+    tag: 11-debian-11-r40
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="037"> <a href="#037" class="anchor-heading" aria-labelledby="037"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.7 </h2> <p><strong>Release date:</strong> 2023-07-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.20.2&amp;color=success" alt="AppVersion: 1.20.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.7 (#18032)</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index b4d2679971..b154a5e55e 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.4-debian-11-r3
+</span><span class="gi">+  tag: 1.20.2-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -638,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/os-shell
+<span class="gd">-    tag: 11-debian-11-r2
+</span><span class="gi">+    tag: 11-debian-11-r22
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="036"> <a href="#036" class="anchor-heading" aria-labelledby="036"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.6 </h2> <p><strong>Release date:</strong> 2023-07-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.4&amp;color=success" alt="AppVersion: 1.19.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0 (#17607)</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 87ae407330..b4d2679971 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -62,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.4-debian-11-r0
+</span><span class="gi">+  tag: 1.19.4-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -637,8 +637,8 @@</span> volumePermissions:
+   ##
+   image:
+     registry: docker.io
+<span class="gd">-    repository: bitnami/bitnami-shell
+-    tag: 11-debian-11-r132
+</span><span class="gi">+    repository: bitnami/os-shell
++    tag: 11-debian-11-r2
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="035"> <a href="#035" class="anchor-heading" aria-labelledby="035"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.5 </h2> <p><strong>Release date:</strong> 2023-07-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.4&amp;color=success" alt="AppVersion: 1.19.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.5 (#17480)</li> <li>Add copyright header (#17300)</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 4b0d96677d..87ae407330 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -1,3 +1,6 @@</span>
+<span class="gi">+# Copyright VMware, Inc.
++# SPDX-License-Identifier: APACHE-2.0
++
+</span> ## @section Global parameters
+ ## Global Docker image parameters
+ ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+<span class="p">@@ -59,7 +62,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.3-debian-11-r17
+</span><span class="gi">+  tag: 1.19.4-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +638,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r128
+</span><span class="gi">+    tag: 11-debian-11-r132
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="034"> <a href="#034" class="anchor-heading" aria-labelledby="034"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.4 </h2> <p><strong>Release date:</strong> 2023-06-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.3&amp;color=success" alt="AppVersion: 1.19.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.4 (#17312)</li> <li>Update charts readme (#17217)</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index fb90cdf8e2..4b0d96677d 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.3-debian-11-r15
+</span><span class="gi">+  tag: 1.19.3-debian-11-r17
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r127
+</span><span class="gi">+    tag: 11-debian-11-r128
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="033"> <a href="#033" class="anchor-heading" aria-labelledby="033"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.3 </h2> <p><strong>Release date:</strong> 2023-06-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.3&amp;color=success" alt="AppVersion: 1.19.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.3 (#17206)</li> <li>[bitnami/*] Change copyright section in READMEs (#17006)</li> <li>[bitnami/several] Change copyright section in READMEs (#16989)</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 32fbcd79c0..fb90cdf8e2 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.3-debian-11-r6
+</span><span class="gi">+  tag: 1.19.3-debian-11-r15
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r118
+</span><span class="gi">+    tag: 11-debian-11-r127
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="032"> <a href="#032" class="anchor-heading" aria-labelledby="032"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.2 </h2> <p><strong>Release date:</strong> 2023-05-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.3&amp;color=success" alt="AppVersion: 1.19.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.2 (#16765)</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 4018aafbde..32fbcd79c0 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.3-debian-11-r5
+</span><span class="gi">+  tag: 1.19.3-debian-11-r6
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r116
+</span><span class="gi">+    tag: 11-debian-11-r118
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="031"> <a href="#031" class="anchor-heading" aria-labelledby="031"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.1 </h2> <p><strong>Release date:</strong> 2023-05-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.3&amp;color=success" alt="AppVersion: 1.19.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.3.1 (#16685)</li> <li>Add wording for enterprise page (#16560)</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 3ae78aee7b..4018aafbde 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.3-debian-11-r1
+</span><span class="gi">+  tag: 1.19.3-debian-11-r5
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r113
+</span><span class="gi">+    tag: 11-debian-11-r116
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2023-05-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.3&amp;color=success" alt="AppVersion: 1.19.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/several] Adapt Chart.yaml to set desired OCI annotations (#16546)</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="023"> <a href="#023" class="anchor-heading" aria-labelledby="023"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.3 </h2> <p><strong>Release date:</strong> 2023-05-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.3&amp;color=success" alt="AppVersion: 1.19.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.2.3 (#16451)</li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 9bacfb0d7e..3ae78aee7b 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.3-debian-11-r0
+</span><span class="gi">+  tag: 1.19.3-debian-11-r1
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r112
+</span><span class="gi">+    tag: 11-debian-11-r113
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="022"> <a href="#022" class="anchor-heading" aria-labelledby="022"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.2 </h2> <p><strong>Release date:</strong> 2023-05-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.3&amp;color=success" alt="AppVersion: 1.19.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.2.2 (#16368)</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index ed2592b361..9bacfb0d7e 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.2-debian-11-r0
+</span><span class="gi">+  tag: 1.19.3-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r110
+</span><span class="gi">+    tag: 11-debian-11-r112
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="021"> <a href="#021" class="anchor-heading" aria-labelledby="021"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.1 </h2> <p><strong>Release date:</strong> 2023-04-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.2&amp;color=success" alt="AppVersion: 1.19.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.2.1 (#16270)</li> </ul> <h3 id="default-value-changes-45"> <a href="#default-value-changes-45" class="anchor-heading" aria-labelledby="default-value-changes-45"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 430fc36574..ed2592b361 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.1-debian-11-r0
+</span><span class="gi">+  tag: 1.19.2-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r105
+</span><span class="gi">+    tag: 11-debian-11-r110
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2023-04-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.1&amp;color=success" alt="AppVersion: 1.19.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/*] Make Helm charts 100% OCI (#15998)</li> </ul> <h3 id="default-value-changes-46"> <a href="#default-value-changes-46" class="anchor-heading" aria-labelledby="default-value-changes-46"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0119"> <a href="#0119" class="anchor-heading" aria-labelledby="0119"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.19 </h2> <p><strong>Release date:</strong> 2023-04-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.1&amp;color=success" alt="AppVersion: 1.19.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.19 (#16039)</li> </ul> <h3 id="default-value-changes-47"> <a href="#default-value-changes-47" class="anchor-heading" aria-labelledby="default-value-changes-47"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index a990590e4c..430fc36574 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.0-debian-11-r2
+</span><span class="gi">+  tag: 1.19.1-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r102
+</span><span class="gi">+    tag: 11-debian-11-r105
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0118"> <a href="#0118" class="anchor-heading" aria-labelledby="0118"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.18 </h2> <p><strong>Release date:</strong> 2023-04-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.0&amp;color=success" alt="AppVersion: 1.19.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.18 (#15849)</li> </ul> <h3 id="default-value-changes-48"> <a href="#default-value-changes-48" class="anchor-heading" aria-labelledby="default-value-changes-48"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index e878e941d3..a990590e4c 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.0-debian-11-r1
+</span><span class="gi">+  tag: 1.19.0-debian-11-r2
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r101
+</span><span class="gi">+    tag: 11-debian-11-r102
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0117"> <a href="#0117" class="anchor-heading" aria-labelledby="0117"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.17 </h2> <p><strong>Release date:</strong> 2023-03-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.0&amp;color=success" alt="AppVersion: 1.19.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.17 (#15815)</li> </ul> <h3 id="default-value-changes-49"> <a href="#default-value-changes-49" class="anchor-heading" aria-labelledby="default-value-changes-49"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 57cf12fa85..e878e941d3 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.19.0-debian-11-r0
+</span><span class="gi">+  tag: 1.19.0-debian-11-r1
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="0116"> <a href="#0116" class="anchor-heading" aria-labelledby="0116"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.16 </h2> <p><strong>Release date:</strong> 2023-03-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.19.0&amp;color=success" alt="AppVersion: 1.19.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.16 (#15789)</li> </ul> <h3 id="default-value-changes-50"> <a href="#default-value-changes-50" class="anchor-heading" aria-labelledby="default-value-changes-50"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 89a6741727..57cf12fa85 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.5-debian-11-r8
+</span><span class="gi">+  tag: 1.19.0-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r98
+</span><span class="gi">+    tag: 11-debian-11-r101
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0115"> <a href="#0115" class="anchor-heading" aria-labelledby="0115"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.15 </h2> <p><strong>Release date:</strong> 2023-03-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.5&amp;color=success" alt="AppVersion: 1.18.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.15 (#15579)</li> </ul> <h3 id="default-value-changes-51"> <a href="#default-value-changes-51" class="anchor-heading" aria-labelledby="default-value-changes-51"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index f43421bd0f..89a6741727 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.5-debian-11-r4
+</span><span class="gi">+  tag: 1.18.5-debian-11-r8
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r93
+</span><span class="gi">+    tag: 11-debian-11-r98
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0114"> <a href="#0114" class="anchor-heading" aria-labelledby="0114"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.14 </h2> <p><strong>Release date:</strong> 2023-03-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.5&amp;color=success" alt="AppVersion: 1.18.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.14 (#15367)</li> <li>[bitnami/charts] Apply linter to README files (#15357)</li> </ul> <h3 id="default-value-changes-52"> <a href="#default-value-changes-52" class="anchor-heading" aria-labelledby="default-value-changes-52"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index e5f5b01115..f43421bd0f 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.5-debian-11-r2
+</span><span class="gi">+  tag: 1.18.5-debian-11-r4
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r90
+</span><span class="gi">+    tag: 11-debian-11-r93
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0113"> <a href="#0113" class="anchor-heading" aria-labelledby="0113"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.13 </h2> <p><strong>Release date:</strong> 2023-03-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.5&amp;color=success" alt="AppVersion: 1.18.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.13 (#15236)</li> </ul> <h3 id="default-value-changes-53"> <a href="#default-value-changes-53" class="anchor-heading" aria-labelledby="default-value-changes-53"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 9e25f88a69..e5f5b01115 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.5-debian-11-r0
+</span><span class="gi">+  tag: 1.18.5-debian-11-r2
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r87
+</span><span class="gi">+    tag: 11-debian-11-r90
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0112"> <a href="#0112" class="anchor-heading" aria-labelledby="0112"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.12 </h2> <p><strong>Release date:</strong> 2023-02-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.5&amp;color=success" alt="AppVersion: 1.18.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.12 (#15113)</li> </ul> <h3 id="default-value-changes-54"> <a href="#default-value-changes-54" class="anchor-heading" aria-labelledby="default-value-changes-54"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 9b6eb72683..9e25f88a69 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.4-debian-11-r0
+</span><span class="gi">+  tag: 1.18.5-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r86
+</span><span class="gi">+    tag: 11-debian-11-r87
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0111"> <a href="#0111" class="anchor-heading" aria-labelledby="0111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.11 </h2> <p><strong>Release date:</strong> 2023-02-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.4&amp;color=success" alt="AppVersion: 1.18.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.11 (#15059)</li> </ul> <h3 id="default-value-changes-55"> <a href="#default-value-changes-55" class="anchor-heading" aria-labelledby="default-value-changes-55"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 2f7ff53e97..9b6eb72683 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.3-debian-11-r9
+</span><span class="gi">+  tag: 1.18.4-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="0110"> <a href="#0110" class="anchor-heading" aria-labelledby="0110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.10 </h2> <p><strong>Release date:</strong> 2023-02-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.3&amp;color=success" alt="AppVersion: 1.18.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.10 (#14955)</li> <li>[bitnami/*] Fix markdown linter issues 2 (#14890)</li> <li>[bitnami/*] Fix markdown linter issues (#14874)</li> <li>[bitnami/*] Remove unexpected extra spaces (#14873)</li> </ul> <h3 id="default-value-changes-56"> <a href="#default-value-changes-56" class="anchor-heading" aria-labelledby="default-value-changes-56"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index b90cca38d2..2f7ff53e97 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.3-debian-11-r0
+</span><span class="gi">+  tag: 1.18.3-debian-11-r9
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r75
+</span><span class="gi">+    tag: 11-debian-11-r86
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="019"> <a href="#019" class="anchor-heading" aria-labelledby="019"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.9 </h2> <p><strong>Release date:</strong> 2023-02-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.3&amp;color=success" alt="AppVersion: 1.18.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Don’t regenerate self-signed certs on upgrade (#14622)</li> <li>[bitnami/*] Change copyright date (#14682)</li> </ul> <h3 id="default-value-changes-57"> <a href="#default-value-changes-57" class="anchor-heading" aria-labelledby="default-value-changes-57"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="018"> <a href="#018" class="anchor-heading" aria-labelledby="018"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.8 </h2> <p><strong>Release date:</strong> 2023-01-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.3&amp;color=success" alt="AppVersion: 1.18.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.8 (#14506)</li> </ul> <h3 id="default-value-changes-58"> <a href="#default-value-changes-58" class="anchor-heading" aria-labelledby="default-value-changes-58"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index ad65af2027..b90cca38d2 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.2-debian-11-r0
+</span><span class="gi">+  tag: 1.18.3-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r74
+</span><span class="gi">+    tag: 11-debian-11-r75
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="017"> <a href="#017" class="anchor-heading" aria-labelledby="017"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.7 </h2> <p><strong>Release date:</strong> 2023-01-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.2&amp;color=success" alt="AppVersion: 1.18.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.7 (#14458)</li> <li>[bitnami/*] Unify READMEs (#14472)</li> </ul> <h3 id="default-value-changes-59"> <a href="#default-value-changes-59" class="anchor-heading" aria-labelledby="default-value-changes-59"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 5a642228b1..ad65af2027 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.1-debian-11-r0
+</span><span class="gi">+  tag: 1.18.2-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r73
+</span><span class="gi">+    tag: 11-debian-11-r74
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="016"> <a href="#016" class="anchor-heading" aria-labelledby="016"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.6 </h2> <p><strong>Release date:</strong> 2023-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.1&amp;color=success" alt="AppVersion: 1.18.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.6 (#14413)</li> <li>[bitnami/*] Change licenses annotation format (#14377)</li> <li>[bitnami/*] Add license annotation and remove obsolete engine parameter (#14293)</li> </ul> <h3 id="default-value-changes-60"> <a href="#default-value-changes-60" class="anchor-heading" aria-labelledby="default-value-changes-60"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 3949b23398..5a642228b1 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.0-debian-11-r5
+</span><span class="gi">+  tag: 1.18.1-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r70
+</span><span class="gi">+    tag: 11-debian-11-r73
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="015"> <a href="#015" class="anchor-heading" aria-labelledby="015"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.5 </h2> <p><strong>Release date:</strong> 2023-01-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Bump version chart to force new publish (#14288)</li> </ul> <h3 id="default-value-changes-61"> <a href="#default-value-changes-61" class="anchor-heading" aria-labelledby="default-value-changes-61"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="014"> <a href="#014" class="anchor-heading" aria-labelledby="014"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.4 </h2> <p><strong>Release date:</strong> 2023-01-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.4 (#14284)</li> </ul> <h3 id="default-value-changes-62"> <a href="#default-value-changes-62" class="anchor-heading" aria-labelledby="default-value-changes-62"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 9df851bca0..3949b23398 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.18.0-debian-11-r0
+</span><span class="gi">+  tag: 1.18.0-debian-11-r5
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r66
+</span><span class="gi">+    tag: 11-debian-11-r70
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="013"> <a href="#013" class="anchor-heading" aria-labelledby="013"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.3 </h2> <p><strong>Release date:</strong> 2022-12-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.3 (#14136)</li> </ul> <h3 id="default-value-changes-63"> <a href="#default-value-changes-63" class="anchor-heading" aria-labelledby="default-value-changes-63"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 25814f6ba0..9df851bca0 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.17.4-debian-11-r0
+</span><span class="gi">+  tag: 1.18.0-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r64
+</span><span class="gi">+    tag: 11-debian-11-r66
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="012"> <a href="#012" class="anchor-heading" aria-labelledby="012"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.2 </h2> <p><strong>Release date:</strong> 2022-12-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.4&amp;color=success" alt="AppVersion: 1.17.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.2 (#14066)</li> </ul> <h3 id="default-value-changes-64"> <a href="#default-value-changes-64" class="anchor-heading" aria-labelledby="default-value-changes-64"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index 8248c35d55..25814f6ba0 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.17.3-debian-11-r3
+</span><span class="gi">+  tag: 1.17.4-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r56
+</span><span class="gi">+    tag: 11-debian-11-r64
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2022-11-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.3&amp;color=success" alt="AppVersion: 1.17.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] Release 0.1.1 (#13721)</li> </ul> <h3 id="default-value-changes-65"> <a href="#default-value-changes-65" class="anchor-heading" aria-labelledby="default-value-changes-65"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/gitea/values.yaml b/bitnami/gitea/values.yaml
+index a439526eb4..8248c35d55 100644
+</span><span class="gd">--- a/bitnami/gitea/values.yaml
+</span><span class="gi">+++ b/bitnami/gitea/values.yaml
+</span><span class="p">@@ -59,7 +59,7 @@</span> extraDeploy: []
+ image:
+   registry: docker.io
+   repository: bitnami/gitea
+<span class="gd">-  tag: 1.17.3-debian-11-r1
+</span><span class="gi">+  tag: 1.17.3-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="p">@@ -635,7 +635,7 @@</span> volumePermissions:
+   image:
+     registry: docker.io
+     repository: bitnami/bitnami-shell
+<span class="gd">-    tag: 11-debian-11-r45
+</span><span class="gi">+    tag: 11-debian-11-r56
+</span>     digest: ""
+     pullPolicy: IfNotPresent
+     ## Optionally specify an array of imagePullSecrets.
+<span class="err">
+</span></code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2022-11-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.3&amp;color=success" alt="AppVersion: 1.17.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/gitea] feat: :tada: Add chart (#13690)</li> </ul> <h3 id="default-value-changes-66"> <a href="#default-value-changes-66" class="anchor-heading" aria-labelledby="default-value-changes-66"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## @section Global parameters
+## Global Docker image parameters
+## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+## Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
+##
+<span class="err">
+</span>## @param global.imageRegistry Global Docker image registry
+## @param global.imagePullSecrets Global Docker registry secret names as an array
+## @param global.storageClass Global StorageClass for Persistent Volume(s)
+##
+<span class="p">global:
+</span>  imageRegistry: ""
+  ## E.g.
+  ## imagePullSecrets:
+  ##   - myRegistryKeySecretName
+  ##
+  imagePullSecrets: []
+  storageClass: ""
+<span class="err">
+</span>## @section Common parameters
+##
+<span class="err">
+</span>## @param kubeVersion Force target Kubernetes version (using Helm capabilities if not set)
+##
+<span class="p">kubeVersion: ""
+</span>## @param nameOverride String to partially override gitea.fullname template (will maintain the release name)
+##
+<span class="p">nameOverride: ""
+</span>## @param fullnameOverride String to fully override gitea.fullname template
+##
+<span class="p">fullnameOverride: ""
+</span>## @param namespaceOverride String to fully override common.names.namespace
+##
+<span class="p">namespaceOverride: ""
+</span>## @param commonAnnotations Common annotations to add to all Gitea resources (sub-charts are not considered). Evaluated as a template
+##
+<span class="p">commonAnnotations: {}
+</span>## @param commonLabels Common labels to add to all Gitea resources (sub-charts are not considered). Evaluated as a template
+##
+<span class="p">commonLabels: {}
+</span><span class="err">
+</span>## @param extraDeploy Array of extra objects to deploy with the release (evaluated as a template).
+##
+<span class="p">extraDeploy: []
+</span><span class="err">
+</span>## @section Gitea parameters
+##
+<span class="err">
+</span>## Bitnami Gitea image version
+## ref: https://hub.docker.com/r/bitnami/gitea/tags/
+## @param image.registry Gitea image registry
+## @param image.repository Gitea Image name
+## @param image.tag Gitea Image tag
+## @param image.digest Gitea image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+## @param image.pullPolicy Gitea image pull policy
+## @param image.pullSecrets Specify docker-registry secret names as an array
+## @param image.debug Specify if debug logs should be enabled
+##
+<span class="p">image:
+</span>  registry: docker.io
+  repository: bitnami/gitea
+  tag: 1.17.3-debian-11-r1
+  digest: ""
+  ## Specify a imagePullPolicy
+  ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+  ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+  ##
+  pullPolicy: IfNotPresent
+  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ## e.g:
+  ## pullSecrets:
+  ##   - myRegistryKeySecretName
+  ##
+  pullSecrets: []
+  ## Set to true if you would like to see extra information on logs
+  ##
+  debug: false
+## @param replicaCount Number of Gitea Pods to run (requires ReadWriteMany PVC support)
+##
+<span class="p">replicaCount: 1
+</span>## @param adminUsername User of the application
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
+##
+<span class="p">adminUsername: bn_user
+</span>## @param adminPassword Application password
+## Defaults to a random 10-character alphanumeric string if not set
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
+##
+<span class="p">adminPassword: ""
+</span>## @param adminEmail Admin email
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
+##
+<span class="p">adminEmail: user@example.com
+</span>## @param appName Gitea application name
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
+##
+<span class="p">appName: example
+</span>## @param runMode Gitea application host
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
+##
+<span class="p">runMode: prod
+</span>## @param exposeSSH Make the SSH server accesible
+##
+<span class="p">exposeSSH: true
+</span>## @param rootURL UI Root URL (for link generation)
+##
+<span class="p">rootURL: ""
+</span>## @param command Override default container command (useful when using custom images)
+##
+<span class="p">command: []
+</span>## @param args Override default container args (useful when using custom images)
+##
+<span class="p">args: []
+</span>## @param updateStrategy.type Update strategy - only really applicable for deployments with RWO PVs attached
+## If replicas = 1, an update can get "stuck", as the previous pod remains attached to the
+## PV, and the "incoming" pod can never start. Changing the strategy to "Recreate" will
+## terminate the single previous pod, so that the new, incoming pod can attach to the PV
+##
+<span class="p">updateStrategy:
+</span>  type: RollingUpdate
+## @param priorityClassName Gitea pods' priorityClassName
+##
+<span class="p">priorityClassName: ""
+</span>## @param schedulerName Name of the k8s scheduler (other than default)
+## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
+##
+<span class="p">schedulerName: ""
+</span>## @param topologySpreadConstraints Topology Spread Constraints for pod assignment
+## https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+## The value is evaluated as a template
+##
+<span class="p">topologySpreadConstraints: []
+</span>## @param hostAliases [array] Add deployment host aliases
+## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
+##
+<span class="p">hostAliases: []
+</span>## @param extraEnvVars Extra environment variables
+## For example:
+##
+<span class="p">extraEnvVars: []
+</span>#  - name: BEARER_AUTH
+#    value: true
+## @param extraEnvVarsCM ConfigMap containing extra env vars
+##
+<span class="p">extraEnvVarsCM: ""
+</span>## @param extraEnvVarsSecret Secret containing extra env vars (in case of sensitive data)
+##
+<span class="p">extraEnvVarsSecret: ""
+</span>## @param extraVolumes Array of extra volumes to be added to the deployment (evaluated as template). Requires setting `extraVolumeMounts`
+##
+<span class="p">extraVolumes: []
+</span>## @param extraVolumeMounts Array of extra volume mounts to be added to the container (evaluated as template). Normally used with `extraVolumes`.
+##
+<span class="p">extraVolumeMounts: []
+</span>## @param initContainers Add additional init containers to the pod (evaluated as a template)
+##
+<span class="p">initContainers: []
+</span>## @param sidecars Attach additional containers to the pod (evaluated as a template)
+##
+<span class="p">sidecars: []
+</span>## @param tolerations Tolerations for pod assignment
+## Ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+##
+<span class="p">tolerations: []
+</span>## @param existingSecret Name of a secret with the application password
+##
+<span class="p">existingSecret: ""
+</span>## @param existingSecretKey Key inside the existing secret containing the password
+##
+<span class="p">existingSecretKey: "admin-password"
+</span>## SMTP mail delivery configuration
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea/#smtp-configuration
+## @param smtpHost SMTP host
+## @param smtpPort SMTP port
+## @param smtpUser SMTP user
+## @param smtpPassword SMTP password
+##
+<span class="p">smtpHost: ""
+smtpPort: ""
+smtpUser: ""
+smtpPassword: ""
+</span>## @param smtpExistingSecret The name of an existing secret with SMTP credentials
+## NOTE: Must contain key `smtp-password`
+## NOTE: When it's set, the `smtpPassword` parameter is ignored
+##
+<span class="p">smtpExistingSecret: ""
+</span>## @param containerPorts [object] Container ports
+##
+<span class="p">containerPorts:
+</span>  http: 3000
+  ssh: 2222
+## Enable persistence using Persistent Volume Claims
+## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
+##
+<span class="p">persistence:
+</span>  ## @param persistence.enabled Enable persistence using PVC
+  ##
+  enabled: true
+  ## @param persistence.storageClass PVC Storage Class for Gitea volume
+  ## If defined, storageClassName: &lt;storageClass&gt;
+  ## If set to "-", storageClassName: "", which disables dynamic provisioning
+  ## If undefined (the default) or set to null, no storageClassName spec is
+  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+  ##   GKE, AWS &amp; OpenStack)
+  ##
+  storageClass: ""
+  ## @param persistence.accessModes PVC Access Mode for Gitea volume
+  ## Requires persistence.enabled: true
+  ## If defined, PVC must be created manually before volume will be bound
+  ##
+  accessModes:
+    - ReadWriteOnce
+  ## @param persistence.size PVC Storage Request for Gitea volume
+  ##
+  size: 8Gi
+  ## @param persistence.dataSource Custom PVC data source
+  ##
+  dataSource: {}
+  ## @param persistence.existingClaim A manually managed Persistent Volume Claim
+  ## Requires persistence.enabled: true
+  ## If defined, PVC must be created manually before volume will be bound
+  ##
+  existingClaim: ""
+  ## @param persistence.hostPath If defined, the gitea-data volume will mount to the specified hostPath.
+  ## Requires persistence.enabled: true
+  ## Requires persistence.existingClaim: nil|false
+  ## Default: nil.
+  ##
+  hostPath: ""
+  ## @param persistence.annotations Persistent Volume Claim annotations
+  ##
+  annotations: {}
+  ## @param persistence.selector Selector to match an existing Persistent Volume for Gitea data PVC
+  ## If set, the PVC can't have a PV dynamically provisioned for it
+  ## E.g.
+  ## selector:
+  ##   matchLabels:
+  ##     app: my-app
+  ##
+  selector: {}
+<span class="err">
+</span>## @param podAffinityPreset Pod affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+##
+<span class="p">podAffinityPreset: ""
+</span>## @param podAntiAffinityPreset Pod anti-affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+##
+<span class="p">podAntiAffinityPreset: soft
+</span>## Node affinity preset
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
+## @param nodeAffinityPreset.type Node affinity preset type. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+## @param nodeAffinityPreset.key Node label key to match Ignored if `affinity` is set.
+## @param nodeAffinityPreset.values Node label values to match. Ignored if `affinity` is set.
+##
+<span class="p">nodeAffinityPreset:
+</span>  type: ""
+  ## E.g.
+  ## key: "kubernetes.io/e2e-az-name"
+  ##
+  key: ""
+  ## E.g.
+  ## values:
+  ##   - e2e-az1
+  ##   - e2e-az2
+  ##
+  values: []
+## @param affinity Affinity for pod assignment
+## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+## Note: podAffinityPreset, podAntiAffinityPreset, and nodeAffinityPreset will be ignored when it's set
+##
+<span class="p">affinity: {}
+</span>## @param nodeSelector Node labels for pod assignment. Evaluated as a template.
+## ref: https://kubernetes.io/docs/user-guide/node-selection/
+##
+<span class="p">nodeSelector: {}
+</span>## Gitea container's resource requests and limits
+## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+## @param resources.requests [object] The requested resources for the init container
+## @param resources.limits The resources limits for the init container
+##
+<span class="p">resources:
+</span>  limits: {}
+  requests: {}
+## Configure Pods Security Context
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+## @param podSecurityContext.enabled Enable Gitea pods' Security Context
+## @param podSecurityContext.fsGroup Gitea pods' group ID
+##
+<span class="p">podSecurityContext:
+</span>  enabled: true
+  fsGroup: 1001
+## Configure Container Security Context (only main container)
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+## @param containerSecurityContext.enabled Enable Gitea containers' Security Context
+## @param containerSecurityContext.runAsUser Gitea containers' Security Context
+## @param containerSecurityContext.runAsNonRoot Set Controller container's Security Context runAsNonRoot
+##
+<span class="p">containerSecurityContext:
+</span>  enabled: true
+  runAsUser: 1001
+  runAsNonRoot: true
+## Configure extra options for startup probe
+## Gitea core exposes / to unauthenticated requests, making it a good
+## default startup and readiness path. However, that may not always be the
+## case. For example, if the image value is overridden to an image containing a
+## module that alters that route, or an image that does not auto-install Gitea.
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
+## @param startupProbe.enabled Enable startupProbe
+## @param startupProbe.path Request path for startupProbe
+## @param startupProbe.initialDelaySeconds Initial delay seconds for startupProbe
+## @param startupProbe.periodSeconds Period seconds for startupProbe
+## @param startupProbe.timeoutSeconds Timeout seconds for startupProbe
+## @param startupProbe.failureThreshold Failure threshold for startupProbe
+## @param startupProbe.successThreshold Success threshold for startupProbe
+##
+<span class="p">startupProbe:
+</span>  enabled: false
+  path: /
+  initialDelaySeconds: 600
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 5
+  successThreshold: 1
+## Configure extra options for liveness probe
+## Gitea core exposes / to unauthenticated requests, making it a good
+## default liveness and readiness path. However, that may not always be the
+## case. For example, if the image value is overridden to an image containing a
+## module that alters that route, or an image that does not auto-install Gitea.
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
+## @param livenessProbe.enabled Enable livenessProbe
+## @param livenessProbe.path Request path for livenessProbe
+## @param livenessProbe.initialDelaySeconds Initial delay seconds for livenessProbe
+## @param livenessProbe.periodSeconds Period seconds for livenessProbe
+## @param livenessProbe.timeoutSeconds Timeout seconds for livenessProbe
+## @param livenessProbe.failureThreshold Failure threshold for livenessProbe
+## @param livenessProbe.successThreshold Success threshold for livenessProbe
+##
+<span class="p">livenessProbe:
+</span>  enabled: true
+  path: /
+  initialDelaySeconds: 600
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 5
+  successThreshold: 1
+## Configure extra options for readiness probe
+## Gitea core exposes / to unauthenticated requests, making it a good
+## default liveness and readiness path. However, that may not always be the
+## case. For example, if the image value is overridden to an image containing a
+## module that alters that route, or an image that does not auto-install Gitea.
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
+## @param readinessProbe.enabled Enable readinessProbe
+## @param readinessProbe.path Request path for readinessProbe
+## @param readinessProbe.initialDelaySeconds Initial delay seconds for readinessProbe
+## @param readinessProbe.periodSeconds Period seconds for readinessProbe
+## @param readinessProbe.timeoutSeconds Timeout seconds for readinessProbe
+## @param readinessProbe.failureThreshold Failure threshold for readinessProbe
+## @param readinessProbe.successThreshold Success threshold for readinessProbe
+##
+<span class="p">readinessProbe:
+</span>  enabled: true
+  path: /
+  initialDelaySeconds: 30
+  periodSeconds: 5
+  timeoutSeconds: 1
+  failureThreshold: 5
+  successThreshold: 1
+## @param customStartupProbe Override default startup probe
+##
+<span class="p">customStartupProbe: {}
+</span>## @param customLivenessProbe Override default liveness probe
+##
+<span class="p">customLivenessProbe: {}
+</span>## @param customReadinessProbe Override default readiness probe
+##
+<span class="p">customReadinessProbe: {}
+</span>## @param lifecycleHooks LifecycleHook to set additional configuration at startup Evaluated as a template
+##
+<span class="p">lifecycleHooks: {}
+</span>## @param podAnnotations Pod annotations
+## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+##
+<span class="p">podAnnotations: {}
+</span>## @param podLabels Add additional labels to the pod (evaluated as a template)
+## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+##
+<span class="p">podLabels: {}
+</span><span class="err">
+</span>## @section Traffic Exposure Parameters
+##
+<span class="err">
+</span>## Kubernetes configuration. For minikube, set this to NodePort, elsewhere use LoadBalancer
+##
+<span class="p">service:
+</span>  ## @param service.type Kubernetes Service type
+  ##
+  type: LoadBalancer
+  ## @param service.ports.http Service HTTP port
+  ## @param service.ports.ssh Service SSH port
+  ##
+  ports:
+    http: 80
+    ssh: 22
+  ## @param service.loadBalancerSourceRanges Restricts access for LoadBalancer (only with `service.type: LoadBalancer`)
+  ## e.g:
+  ## loadBalancerSourceRanges:
+  ##   - 0.0.0.0/0
+  ##
+  loadBalancerSourceRanges: []
+  ## @param service.loadBalancerIP loadBalancerIP for the Gitea Service (optional, cloud specific)
+  ## ref: https://kubernetes.io/docs/user-guide/services/#type-loadbalancer
+  ##
+  loadBalancerIP: ""
+  ## @param service.nodePorts [object] Kubernetes node port
+  ## nodePorts:
+  ##   http: &lt;to set explicitly, choose port between 30000-32767&gt;
+  ##   https: &lt;to set explicitly, choose port between 30000-32767&gt;
+  ##
+  nodePorts:
+    http: ""
+    ssh: ""
+  ## @param service.externalTrafficPolicy Enable client source IP preservation
+  ## ref https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip
+  ##
+  externalTrafficPolicy: Cluster
+  ## @param service.clusterIP Gitea service Cluster IP
+  ## e.g.:
+  ## clusterIP: None
+  ##
+  clusterIP: ""
+  ## @param service.extraPorts Extra ports to expose (normally used with the `sidecar` value)
+  ##
+  extraPorts: []
+  ## @param service.annotations Additional custom annotations for Gitea service
+  ##
+  annotations: {}
+  ## @param service.sessionAffinity Session Affinity for Kubernetes service, can be "None" or "ClientIP"
+  ## If "ClientIP", consecutive client requests will be directed to the same Pod
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+  ##
+  sessionAffinity: None
+  ## @param service.sessionAffinityConfig Additional settings for the sessionAffinity
+  ## sessionAffinityConfig:
+  ##   clientIP:
+  ##     timeoutSeconds: 300
+  ##
+  sessionAffinityConfig: {}
+## Configure the ingress resource that allows you to access the
+## Gitea installation. Set up the URL
+## ref: https://kubernetes.io/docs/user-guide/ingress/
+##
+<span class="p">ingress:
+</span>  ## @param ingress.enabled Enable ingress controller resource
+  ##
+  enabled: false
+<span class="err">
+</span>  ## @param ingress.pathType Ingress Path type
+  ##
+  pathType: ImplementationSpecific
+  ## @param ingress.apiVersion Override API Version (automatically detected if not set)
+  ##
+  apiVersion: ""
+  ## @param ingress.ingressClassName IngressClass that will be be used to implement the Ingress (Kubernetes 1.18+)
+  ## This is supported in Kubernetes 1.18+ and required if you have more than one IngressClass marked as the default for your cluster .
+  ## ref: https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/
+  ##
+  ingressClassName: ""
+  ## @param ingress.hostname Default host for the ingress resource
+  ##
+  hostname: "gitea.local"
+  ## @param ingress.path The Path to Gitea. You may need to set this to '/*' in order to use this
+  ## with ALB ingress controllers.
+  ##
+  path: /
+  ## @param ingress.annotations Additional annotations for the Ingress resource. To enable certificate autogeneration, place here your cert-manager annotations.
+  ## For a full list of possible ingress annotations, please see
+  ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
+  ## Use this parameter to set the required annotations for cert-manager, see
+  ## ref: https://cert-manager.io/docs/usage/ingress/#supported-annotations
+  ##
+  ## e.g:
+  ## annotations:
+  ##   kubernetes.io/ingress.class: nginx
+  ##   cert-manager.io/cluster-issuer: cluster-issuer-name
+  ##
+  annotations: {}
+  ## @param ingress.tls Enable TLS configuration for the hostname defined at ingress.hostname parameter
+  ## TLS certificates will be retrieved from a TLS secret with name: {{- printf "%s-tls" .Values.ingress.hostname }}
+  ## You can use the ingress.secrets parameter to create this TLS secret or relay on cert-manager to create it
+  ##
+  tls: false
+  ## @param ingress.selfSigned Create a TLS secret for this ingress record using self-signed certificates generated by Helm
+  ##
+  selfSigned: false
+  ## @param ingress.extraHosts The list of additional hostnames to be covered with this ingress record.
+  ## Most likely the hostname above will be enough, but in the event more hosts are needed, this is an array
+  ## extraHosts:
+  ## - name: gitea.local
+  ##   path: /
+  ##
+  extraHosts: []
+  ## @param ingress.extraPaths Any additional arbitrary paths that may need to be added to the ingress under the main host.
+  ## For example: The ALB ingress controller requires a special rule for handling SSL redirection.
+  ## extraPaths:
+  ## - path: /*
+  ##   backend:
+  ##     serviceName: ssl-redirect
+  ##     servicePort: use-annotation
+  ##
+  extraPaths: []
+  ## @param ingress.extraTls The tls configuration for additional hostnames to be covered with this ingress record.
+  ## see: https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
+  ## extraTls:
+  ## - hosts:
+  ##     - gitea.local
+  ##   secretName: gitea.local-tls
+  ##
+  extraTls: []
+  ## @param ingress.secrets If you're providing your own certificates, please use this to add the certificates as secrets
+  ## key and certificate should start with -----BEGIN CERTIFICATE----- or
+  ## -----BEGIN RSA PRIVATE KEY-----
+  ##
+  ## name should line up with a tlsSecret set further up
+  ## If you're using cert-manager, this is unneeded, as it will create the secret for you if it is not set
+  ##
+  ## It is also possible to create and manage the certificates outside of this helm chart
+  ## Please see README.md for more information
+  ## Example:
+  ## - name: gitea.local-tls
+  ##   key:
+  ##   certificate:
+  ##
+  secrets: []
+  ## @param ingress.extraRules Additional rules to be covered with this ingress record
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules
+  ## e.g:
+  ## extraRules:
+  ## - host: example.local
+  ##     http:
+  ##       path: /
+  ##       backend:
+  ##         service:
+  ##           name: example-svc
+  ##           port:
+  ##             name: http
+  ##
+  extraRules: []
+<span class="err">
+</span>## @section Other Parameters
+##
+<span class="err">
+</span>## Service account for Gitea to use.
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+##
+<span class="p">serviceAccount:
+</span>  ## @param serviceAccount.create Enable creation of ServiceAccount for Gitea pod
+  ##
+  create: true
+  ## @param serviceAccount.name The name of the ServiceAccount to use.
+  ## If not set and create is true, a name is generated using the common.names.fullname template
+  ##
+  name: ""
+  ## @param serviceAccount.automountServiceAccountToken Allows auto mount of ServiceAccountToken on the serviceAccount created
+  ## Can be set to false if pods using this serviceAccount do not need to use K8s API
+  ##
+  automountServiceAccountToken: true
+  ## @param serviceAccount.annotations Additional custom annotations for the ServiceAccount
+  ##
+  annotations: {}
+<span class="err">
+</span>## @section Database parameters
+##
+<span class="err">
+</span>## PostgreSQL chart configuration
+## ref: https://github.com/bitnami/charts/blob/main/bitnami/postgresql/values.yaml
+## @param postgresql.enabled Switch to enable or disable the PostgreSQL helm chart
+## @param postgresql.auth.username Name for a custom user to create
+## @param postgresql.auth.password Password for the custom user to create
+## @param postgresql.auth.database Name for a custom database to create
+## @param postgresql.auth.existingSecret Name of existing secret to use for PostgreSQL credentials
+## @param postgresql.architecture PostgreSQL architecture (`standalone` or `replication`)
+## @param postgresql.service.ports.postgresql PostgreSQL service port
+##
+<span class="p">postgresql:
+</span>  enabled: true
+  auth:
+    username: bn_gitea
+    password: ""
+    database: bitnami_gitea
+    existingSecret: ""
+  architecture: standalone
+  service:
+    ports:
+      postgresql: 5432
+<span class="err">
+</span>## External PostgreSQL configuration
+## All of these values are only used when postgresql.enabled is set to false
+## @param externalDatabase.host Database host
+## @param externalDatabase.port Database port number
+## @param externalDatabase.user Non-root username for JupyterHub
+## @param externalDatabase.password Password for the non-root username for JupyterHub
+## @param externalDatabase.database JupyterHub database name
+## @param externalDatabase.existingSecret Name of an existing secret resource containing the database credentials
+## @param externalDatabase.existingSecretPasswordKey Name of an existing secret key containing the database credentials
+##
+<span class="p">externalDatabase:
+</span>  host: ""
+  port: 5432
+  user: postgres
+  database: gitea
+  password: ""
+  existingSecret: ""
+  existingSecretPasswordKey: "db-password"
+<span class="err">
+</span>## @section Volume Permissions parameters
+##
+<span class="err">
+</span>## Init containers parameters:
+## volumePermissions: Change the owner and group of the persistent volume mountpoint to runAsUser:fsGroup values from the securityContext section.
+##
+<span class="p">volumePermissions:
+</span>  ## @param volumePermissions.enabled Enable init container that changes volume permissions in the data directory (for cases where the default k8s `runAsUser` and `fsUser` values do not work)
+  ##
+  enabled: false
+  ## @param volumePermissions.image.registry Init container volume-permissions image registry
+  ## @param volumePermissions.image.repository Init container volume-permissions image name
+  ## @param volumePermissions.image.tag Init container volume-permissions image tag
+  ## @param volumePermissions.image.digest Init container volume-permissions image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+  ## @param volumePermissions.image.pullPolicy Init container volume-permissions image pull policy
+  ## @param volumePermissions.image.pullSecrets Specify docker-registry secret names as an array
+  ##
+  image:
+    registry: docker.io
+    repository: bitnami/bitnami-shell
+    tag: 11-debian-11-r45
+    digest: ""
+    pullPolicy: IfNotPresent
+    ## Optionally specify an array of imagePullSecrets.
+    ## Secrets must be manually created in the namespace.
+    ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+    ## e.g:
+    ## pullSecrets:
+    ##   - myRegistryKeySecretName
+    ##
+    pullSecrets: []
+  ## Init containers' resource requests and limits
+  ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+  ## We usually recommend not to specify default resources and to leave this as a conscious
+  ## choice for the user. This also increases chances charts run on environments with little
+  ## resources, such as Minikube. If you do want to specify resources, uncomment the following
+  ## lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  ## @param volumePermissions.resources.limits The resources limits for the container
+  ## @param volumePermissions.resources.requests The requested resources for the container
+  ##
+  resources:
+    ## Example:
+    ## limits:
+    ##    cpu: 100m
+    ##    memory: 128Mi
+    ##
+    limits: {}
+    ## Examples:
+    ## requests:
+    ##    cpu: 100m
+    ##    memory: 128Mi
+    ##
+    requests: {}
+<span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

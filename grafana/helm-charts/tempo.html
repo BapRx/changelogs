@@ -1,0 +1,1882 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(15)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(15) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(4) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(15) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list > li.nav-list-item:nth-child(15) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>tempo | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="tempo" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/grafana/helm-charts/tempo" /> <meta property="og:url" content="https://baprx.github.io/changelogs/grafana/helm-charts/tempo" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="tempo" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"tempo","url":"https://baprx.github.io/changelogs/grafana/helm-charts/tempo"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/grafana/helm-charts">grafana/helm-charts</a></li> <li class="breadcrumb-nav-list-item"><span>tempo</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="tempo"> <a href="#tempo" class="anchor-heading" aria-labelledby="tempo"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> tempo </h1> <h2 id="171"> <a href="#171" class="anchor-heading" aria-labelledby="171"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.7.1 </h2> <p><strong>Release date:</strong> 2023-11-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.3.0&amp;color=success" alt="AppVersion: 2.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into fix/k8s-lables-template</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 7fe2512c..e0a521d8 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -15,7 +15,7 @@</span> annotations: {}
+ 
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: null
+</span><span class="gi">+  tag: ""
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="170"> <a href="#170" class="anchor-heading" aria-labelledby="170"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.7.0 </h2> <p><strong>Release date:</strong> 2023-11-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.3.0&amp;color=success" alt="AppVersion: 2.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>upgrade to 2.3.0</li> <li>run helm-docs</li> <li>fix: change tag default value</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="164"> <a href="#164" class="anchor-heading" aria-labelledby="164"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.4 </h2> <p><strong>Release date:</strong> 2023-10-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.3&amp;color=success" alt="AppVersion: 2.2.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump version to 1.6.4</li> <li>fix: remove digest from image tag in label</li> <li>run helm-docs</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="163"> <a href="#163" class="anchor-heading" aria-labelledby="163"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.3 </h2> <p><strong>Release date:</strong> 2023-10-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.3&amp;color=success" alt="AppVersion: 2.2.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bumped version</li> <li>Add extraLabels entry</li> <li>Add extraLabels entry</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 9fa15fa4..7fe2512c 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -277,6 +277,9 @@</span> podAnnotations: {}
+ # -- Pod (extra) Labels
+ podLabels: {}
+ 
+<span class="gi">+# Apply extra labels to common labels.
++extraLabels: {}
++
+</span> # -- Volumes to add
+ extraVolumes: []
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="162"> <a href="#162" class="anchor-heading" aria-labelledby="162"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.2 </h2> <p><strong>Release date:</strong> 2023-09-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.3&amp;color=success" alt="AppVersion: 2.2.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] bump tempo version to 2.2.3</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="161"> <a href="#161" class="anchor-heading" aria-labelledby="161"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.1 </h2> <p><strong>Release date:</strong> 2023-09-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] bump tempo version to 2.2.2</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="160"> <a href="#160" class="anchor-heading" aria-labelledby="160"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.0 </h2> <p><strong>Release date:</strong> 2023-08-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.1&amp;color=success" alt="AppVersion: 2.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into main</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="151"> <a href="#151" class="anchor-heading" aria-labelledby="151"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.5.1 </h2> <p><strong>Release date:</strong> 2023-08-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.1&amp;color=success" alt="AppVersion: 2.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Upgrade tempo to 2.2.1</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="160-1"> <a href="#160-1" class="anchor-heading" aria-labelledby="160-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.0 </h2> <p><strong>Release date:</strong> 2023-08-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.0&amp;color=success" alt="AppVersion: 2.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>update version</li> <li>dongjiang, support imagePullSecrets</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="150"> <a href="#150" class="anchor-heading" aria-labelledby="150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.5.0 </h2> <p><strong>Release date:</strong> 2023-08-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.0&amp;color=success" alt="AppVersion: 2.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: allow changing the default revisionHistoryLimit</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 0ef3ad5e..9fa15fa4 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,6 +7,9 @@</span> fullnameOverride: ""
+ # -- Define the amount of instances
+ replicas: 1
+ 
+<span class="gi">+# -- Number of old history to retain to allow rollback (If not set, default Kubernetes value is set to 10)
++# revisionHistoryLimit: 1
++
+</span> # -- Annotations for the StatefulSet
+ annotations: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="140"> <a href="#140" class="anchor-heading" aria-labelledby="140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.0 </h2> <p><strong>Release date:</strong> 2023-07-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.0&amp;color=success" alt="AppVersion: 2.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Upgraded to 2.2</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="131"> <a href="#131" class="anchor-heading" aria-labelledby="131"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.1 </h2> <p><strong>Release date:</strong> 2023-05-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.1&amp;color=success" alt="AppVersion: 2.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>adding http legacy port in tempo stateful set</li> <li>rm quotes, update docs</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="130"> <a href="#130" class="anchor-heading" aria-labelledby="130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.0 </h2> <p><strong>Release date:</strong> 2023-05-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.1&amp;color=success" alt="AppVersion: 2.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>upped chart version</li> <li>use chart app version instead of tag</li> <li>updated for 2.1.1</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index b7904030..0ef3ad5e 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -12,7 +12,7 @@</span> annotations: {}
+ 
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 2.0.1
+</span><span class="gi">+  tag: null
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -150,7 +150,7 @@</span> config: |
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 2.0.1
+</span><span class="gi">+  tag: null
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="121"> <a href="#121" class="anchor-heading" aria-labelledby="121"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.1 </h2> <p><strong>Release date:</strong> 2023-05-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.1&amp;color=success" alt="AppVersion: 2.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Disable tempo-query by default</li> <li>use tempo 2.1.1</li> <li>Add upgrade remarks in readme</li> <li>update docs</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index ea04e7c7..b7904030 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -160,7 +160,7 @@</span> tempoQuery:
+   #   - myRegistryKeySecretName
+ 
+   # -- if False the tempo-query container is not deployed
+<span class="gd">-  enabled: true
+</span><span class="gi">+  enabled: false
+</span> 
+   service:
+     port: 16686
+<span class="err">
+</span></code></pre></div></div> <h2 id="120"> <a href="#120" class="anchor-heading" aria-labelledby="120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.0 </h2> <p><strong>Release date:</strong> 2023-04-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.0&amp;color=success" alt="AppVersion: 2.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>use tempo 2.1</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="110"> <a href="#110" class="anchor-heading" aria-labelledby="110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.0 </h2> <p><strong>Release date:</strong> 2023-04-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.0.1&amp;color=success" alt="AppVersion: 2.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into main</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 0f143a86..ea04e7c7 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -162,6 +162,47 @@</span> tempoQuery:
+   # -- if False the tempo-query container is not deployed
+   enabled: true
+ 
+<span class="gi">+  service:
++    port: 16686
++
++  ingress:
++    enabled: false
++    # For Kubernetes &gt;= 1.18 you should specify the ingress-controller via the field ingressClassName
++    # See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
++    # ingressClassName: nginx
++    # Values can be templated
++    annotations: {}
++    # kubernetes.io/ingress.class: nginx
++    # kubernetes.io/tls-acme: "true"
++    labels: {}
++    path: /
++
++    # pathType is only for k8s &gt;= 1.1=
++    pathType: Prefix
++
++    hosts:
++      - query.tempo.example.com
++    ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
++    extraPaths: []
++    # - path: /*
++    #   backend:
++    #     serviceName: ssl-redirect
++    #     servicePort: use-annotation
++    ## Or for k8s &gt; 1.19
++    # - path: /*
++    #   pathType: Prefix
++    #   backend:
++    #     service:
++    #       name: ssl-redirect
++    #       port:
++    #         name: use-annotation
++
++
++    tls: []
++    #  - secretName: tempo-query-tls
++    #    hosts:
++    #      - query.tempo.example.com
++
+</span>   resources: {}
+   #  requests:
+   #    cpu: 1000m
+<span class="err">
+</span></code></pre></div></div> <h2 id="103"> <a href="#103" class="anchor-heading" aria-labelledby="103"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.3 </h2> <p><strong>Release date:</strong> 2023-03-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.0.1&amp;color=success" alt="AppVersion: 2.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] fix storage trace comment</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 09006cdb..0f143a86 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -58,7 +58,7 @@</span> tempo:
+   storage:
+     trace:
+       # tempo storage backend
+<span class="gd">-      # refer https://github.com/grafana/tempo/tree/master/docs/tempo/website/configuration
+</span><span class="gi">+      # refer https://grafana.com/docs/tempo/latest/configuration/
+</span>       ## Use s3 for example
+       # backend: s3
+       # store traces in s3
+<span class="err">
+</span></code></pre></div></div> <h2 id="102"> <a href="#102" class="anchor-heading" aria-labelledby="102"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.2 </h2> <p><strong>Release date:</strong> 2023-03-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.0.1&amp;color=success" alt="AppVersion: 2.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Make tmp directory read/write when using metricsGenerator</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="101"> <a href="#101" class="anchor-heading" aria-labelledby="101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.1 </h2> <p><strong>Release date:</strong> 2023-03-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.0.1&amp;color=success" alt="AppVersion: 2.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>2.0.1</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index e7ef22ad..09006cdb 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -12,7 +12,7 @@</span> annotations: {}
+ 
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 2.0.0
+</span><span class="gi">+  tag: 2.0.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -150,7 +150,7 @@</span> config: |
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 2.0.0
+</span><span class="gi">+  tag: 2.0.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="100"> <a href="#100" class="anchor-heading" aria-labelledby="100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.0 </h2> <p><strong>Release date:</strong> 2023-01-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.0.0&amp;color=success" alt="AppVersion: 2.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Added upgrade notes</li> <li>helm docs</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0170"> <a href="#0170" class="anchor-heading" aria-labelledby="0170"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.17.0 </h2> <p><strong>Release date:</strong> 2023-01-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.0.0&amp;color=success" alt="AppVersion: 2.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>2.0 cleanup</li> <li>[tempo] add ingress for jaeger ui in tempo chart</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 931cea9d..e7ef22ad 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -12,7 +12,7 @@</span> annotations: {}
+ 
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.5.0
+</span><span class="gi">+  tag: 2.0.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -32,8 +32,6 @@</span> tempo:
+ 
+   memBallastSizeMbs: 1024
+   multitenancyEnabled: false
+<span class="gd">-  # -- If true, enables Tempo's native search
+-  searchEnabled: false
+</span>   # -- If true, Tempo will report anonymous usage data about the shape of a deployment to Grafana Labs
+   reportingEnabled: true
+   metricsGenerator:
+<span class="p">@@ -119,10 +117,8 @@</span> tempo:
+ # @default -- Dynamically generated tempo configmap
+ config: |
+     multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
+<span class="gd">-    search_enabled: {{ .Values.tempo.searchEnabled }}
+</span>     usage_report:
+       reporting_enabled: {{ .Values.tempo.reportingEnabled }}
+<span class="gd">-    metrics_generator_enabled: {{ .Values.tempo.metricsGenerator.enabled }}
+</span>     compactor:
+       compaction:
+         block_retention: {{ .Values.tempo.retention }}
+<span class="p">@@ -154,7 +150,7 @@</span> config: |
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 1.5.0
+</span><span class="gi">+  tag: 2.0.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="01610"> <a href="#01610" class="anchor-heading" aria-labelledby="01610"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.10 </h2> <p><strong>Release date:</strong> 2023-01-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] add ingress for jaeger ui in tempo chart</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 931cea9d..ecd076de 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -166,6 +166,47 @@</span> tempoQuery:
+   # -- if False the tempo-query container is not deployed
+   enabled: true
+ 
+<span class="gi">+  service:
++    port: 16686
++
++  ingress:
++    enabled: true
++    # For Kubernetes &gt;= 1.18 you should specify the ingress-controller via the field ingressClassName
++    # See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
++    # ingressClassName: nginx
++    # Values can be templated
++    annotations: {}
++    # kubernetes.io/ingress.class: nginx
++    # kubernetes.io/tls-acme: "true"
++    labels: {}
++    path: /
++
++    # pathType is only for k8s &gt;= 1.1=
++    pathType: Prefix
++
++    hosts:
++      - query.tempo.example.com
++    ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
++    extraPaths: []
++    # - path: /*
++    #   backend:
++    #     serviceName: ssl-redirect
++    #     servicePort: use-annotation
++    ## Or for k8s &gt; 1.19
++    # - path: /*
++    #   pathType: Prefix
++    #   backend:
++    #     service:
++    #       name: ssl-redirect
++    #       port:
++    #         name: use-annotation
++
++
++    tls: []
++    #  - secretName: tempo-query-tls
++    #    hosts:
++    #      - query.tempo.example.com
++
+</span>   resources: {}
+   #  requests:
+   #    cpu: 1000m
+<span class="err">
+</span></code></pre></div></div> <h2 id="0169"> <a href="#0169" class="anchor-heading" aria-labelledby="0169"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.9 </h2> <p><strong>Release date:</strong> 2023-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] add missing resources section to values file in tempo chart</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 9f948cdb..931cea9d 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -165,6 +165,15 @@</span> tempoQuery:
+ 
+   # -- if False the tempo-query container is not deployed
+   enabled: true
+<span class="gi">+
++  resources: {}
++  #  requests:
++  #    cpu: 1000m
++  #    memory: 4Gi
++  #  limits:
++  #    cpu: 2000m
++  #    memory: 6Gi
++
+</span>   ## Additional container arguments
+   extraArgs: {}
+   # -- Environment variables to add
+<span class="err">
+</span></code></pre></div></div> <h2 id="0168"> <a href="#0168" class="anchor-heading" aria-labelledby="0168"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.8 </h2> <p><strong>Release date:</strong> 2022-12-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Allow adding additional ServiceAccount labels</li> <li>Merge branch ‘main’ into main</li> <li>Update README.md</li> <li>Update values.yaml</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index c8a8c468..9f948cdb 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -34,6 +34,12 @@</span> tempo:
+   multitenancyEnabled: false
+   # -- If true, enables Tempo's native search
+   searchEnabled: false
+<span class="gi">+  # -- If true, Tempo will report anonymous usage data about the shape of a deployment to Grafana Labs
++  reportingEnabled: true
++  metricsGenerator:
++    # -- If true, enables Tempo's metrics generator (https://grafana.com/docs/tempo/next/metrics-generator/)
++    enabled: false
++    remoteWriteUrl: "http://prometheus.monitoring:9090/api/v1/write"
+</span>   # -- Configuration options for the ingester
+   ingester: {}
+   # -- Configuration options for the querier
+<span class="p">@@ -100,6 +106,8 @@</span> tempo:
+   extraArgs: {}
+   # -- Environment variables to add
+   extraEnv: []
+<span class="gi">+  # -- Environment variables from secrets or configmaps to add to the ingester pods
++  extraEnvFrom: []
+</span>   # -- Volume mounts to add
+   extraVolumeMounts: []
+   # - name: extra-volume
+<span class="p">@@ -108,13 +116,16 @@</span> tempo:
+   #   existingClaim: volume-claim
+ 
+ # -- Tempo configuration file contents
+<span class="gd">-# @default -- See `values.yaml`
+</span><span class="gi">+# @default -- Dynamically generated tempo configmap
+</span> config: |
+     multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
+     search_enabled: {{ .Values.tempo.searchEnabled }}
+<span class="gi">+    usage_report:
++      reporting_enabled: {{ .Values.tempo.reportingEnabled }}
++    metrics_generator_enabled: {{ .Values.tempo.metricsGenerator.enabled }}
+</span>     compactor:
+       compaction:
+<span class="gd">-        compacted_block_retention: {{ .Values.tempo.retention }}
+</span><span class="gi">+        block_retention: {{ .Values.tempo.retention }}
+</span>     distributor:
+       receivers:
+         {{- toYaml .Values.tempo.receivers | nindent 8 }}
+<span class="p">@@ -130,6 +141,16 @@</span> config: |
+       {{- toYaml .Values.tempo.queryFrontend | nindent 6 }}
+     overrides:
+       {{- toYaml .Values.tempo.global_overrides | nindent 6 }}
+<span class="gi">+      {{- if .Values.tempo.metricsGenerator.enabled }}
++          metrics_generator_processors:
++          - 'service-graphs'
++          - 'span-metrics'
++    metrics_generator:
++          storage:
++            path: "/tmp/tempo"
++            remote_write:
++              - url: {{ .Values.tempo.metricsGenerator.remoteWriteUrl }}
++      {{- end }}
+</span> 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="p">@@ -161,7 +182,7 @@</span> tempoQuery:
+     #    - ALL
+     # readOnlyRootFilesystem: false # fails if true, do not enable
+ 
+<span class="gd">-# -- Add container securityContext
+</span><span class="gi">+# -- securityContext for container
+</span> securityContext: {}
+   # runAsUser: 65532
+   # runAsGroup: 65532
+<span class="p">@@ -178,6 +199,9 @@</span> serviceAccount:
+   imagePullSecrets: []
+   # -- Annotations for the service account
+   annotations: {}
+<span class="gi">+  # -- Labels for the service account
++  labels: {}
++  automountServiceAccountToken: true
+</span> 
+ service:
+   type: ClusterIP
+<span class="p">@@ -207,19 +231,13 @@</span> podLabels: {}
+ # -- Volumes to add
+ extraVolumes: []
+ 
+<span class="gd">-# -- Node labels for pod assignment
+-## ref: https://kubernetes.io/docs/user-guide/node-selection/
+-#
+</span><span class="gi">+# -- Node labels for pod assignment. See: https://kubernetes.io/docs/user-guide/node-selection/
+</span> nodeSelector: {}
+ 
+<span class="gd">-# -- Tolerations for pod assignment
+-## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+-##
+</span><span class="gi">+# -- Tolerations for pod assignment. See: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+</span> tolerations: []
+ 
+<span class="gd">-# -- Affinity for pod assignment
+-## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+-##
+</span><span class="gi">+# -- Affinity for pod assignment. See: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+</span> affinity: {}
+ 
+ # -- The name of the PriorityClass
+<span class="err">
+</span></code></pre></div></div> <h2 id="0167"> <a href="#0167" class="anchor-heading" aria-labelledby="0167"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.7 </h2> <p><strong>Release date:</strong> 2022-12-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update values.yaml to generate proper README.md Bump version in Chart.yaml</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index e22a66d7..c8a8c468 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -4,7 +4,12 @@</span> nameOverride: ""
+ # -- Overrides the chart's computed fullname
+ fullnameOverride: ""
+ 
+<span class="gi">+# -- Define the amount of instances
+</span> replicas: 1
+<span class="gi">+
++# -- Annotations for the StatefulSet
++annotations: {}
++
+</span> tempo:
+   repository: grafana/tempo
+   tag: 1.5.0
+<span class="p">@@ -103,6 +108,7 @@</span> tempo:
+   #   existingClaim: volume-claim
+ 
+ # -- Tempo configuration file contents
+<span class="gi">+# @default -- See `values.yaml`
+</span> config: |
+     multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
+     search_enabled: {{ .Values.tempo.searchEnabled }}
+<span class="p">@@ -155,7 +161,7 @@</span> tempoQuery:
+     #    - ALL
+     # readOnlyRootFilesystem: false # fails if true, do not enable
+ 
+<span class="gd">-# Add container securityContext
+</span><span class="gi">+# -- Add container securityContext
+</span> securityContext: {}
+   # runAsUser: 65532
+   # runAsGroup: 65532
+<span class="p">@@ -192,26 +198,26 @@</span> persistence:
+     - ReadWriteOnce
+   size: 10Gi
+ 
+<span class="gd">-## Pod Annotations
+</span><span class="gi">+# -- Pod Annotations
+</span> podAnnotations: {}
+ 
+<span class="gd">-## Pod (extra) Labels
+</span><span class="gi">+# -- Pod (extra) Labels
+</span> podLabels: {}
+ 
+ # -- Volumes to add
+ extraVolumes: []
+ 
+<span class="gd">-## Node labels for pod assignment
+</span><span class="gi">+# -- Node labels for pod assignment
+</span> ## ref: https://kubernetes.io/docs/user-guide/node-selection/
+ #
+ nodeSelector: {}
+ 
+<span class="gd">-## Tolerations for pod assignment
+</span><span class="gi">+# -- Tolerations for pod assignment
+</span> ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+ ##
+ tolerations: []
+ 
+<span class="gd">-## Affinity for pod assignment
+</span><span class="gi">+# -- Affinity for pod assignment
+</span> ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+ ##
+ affinity: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="0166"> <a href="#0166" class="anchor-heading" aria-labelledby="0166"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.6 </h2> <p><strong>Release date:</strong> 2022-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into tempo-fix-retention-mapping</li> <li>Update README.md</li> <li>Update README.md</li> <li>Merge branch ‘main’ into feat/tempo-env-from</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 8770ca69..2c3600f9 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -29,6 +29,8 @@</span> tempo:
+   multitenancyEnabled: false
+   # -- If true, enables Tempo's native search
+   searchEnabled: false
+<span class="gi">+  # -- If true, Tempo will report anonymous usage data about the shape of a deployment to Grafana Labs
++  reportingEnabled: true
+</span>   metricsGenerator:
+     # -- If true, enables Tempo's metrics generator (https://grafana.com/docs/tempo/next/metrics-generator/)
+     enabled: false
+<span class="p">@@ -113,10 +115,12 @@</span> tempo:
+ config: |
+     multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
+     search_enabled: {{ .Values.tempo.searchEnabled }}
+<span class="gi">+    usage_report:
++      reporting_enabled: {{ .Values.tempo.reportingEnabled }}
+</span>     metrics_generator_enabled: {{ .Values.tempo.metricsGenerator.enabled }}
+     compactor:
+       compaction:
+<span class="gd">-        compacted_block_retention: {{ .Values.tempo.retention }}
+</span><span class="gi">+        block_retention: {{ .Values.tempo.retention }}
+</span>     distributor:
+       receivers:
+         {{- toYaml .Values.tempo.receivers | nindent 8 }}
+<span class="err">
+</span></code></pre></div></div> <h2 id="0165"> <a href="#0165" class="anchor-heading" aria-labelledby="0165"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.5 </h2> <p><strong>Release date:</strong> 2022-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update Chart.yaml</li> <li>feat: make tempo’s reporting configurable</li> <li>update docs</li> <li>[tempo] use block_retention instead of compacted_block_retention</li> <li>Fix: indentation for extra environment variables</li> <li>Fix: documentation</li> <li>Update charts/tempo/templates/statefulset.yaml</li> <li>Update charts/tempo/templates/statefulset.yaml</li> <li>Update README.md</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0164"> <a href="#0164" class="anchor-heading" aria-labelledby="0164"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.4 </h2> <p><strong>Release date:</strong> 2022-10-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update Chart.yaml</li> <li>Add: load environment variables from Secrets</li> <li>[tempo] add installation guide to tempo chart</li> <li>[tempo] add installation guide to tempo chart</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 2be61bbc..8770ca69 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -99,6 +99,8 @@</span> tempo:
+   extraArgs: {}
+   # -- Environment variables to add
+   extraEnv: []
+<span class="gi">+  # -- Environment variables from secrets or configmaps to add to the ingester pods
++  extraEnvFrom: []
+</span>   # -- Volume mounts to add
+   extraVolumeMounts: []
+   # - name: extra-volume
+<span class="err">
+</span></code></pre></div></div> <h2 id="0163"> <a href="#0163" class="anchor-heading" aria-labelledby="0163"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.3 </h2> <p><strong>Release date:</strong> 2022-09-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>add installation guide to tempo chart</li> <li>update helm-docs</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0162"> <a href="#0162" class="anchor-heading" aria-labelledby="0162"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.2 </h2> <p><strong>Release date:</strong> 2022-09-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>make tempo automountServiceAccountToken configurable</li> <li>update</li> <li>Update README.md</li> <li>Update README.md</li> <li>Merge branch ‘main’ into main</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 51853aec..2be61bbc 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.4.1
+</span><span class="gi">+  tag: 1.5.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -35,6 +35,10 @@</span> tempo:
+     remoteWriteUrl: "http://prometheus.monitoring:9090/api/v1/write"
+   # -- Configuration options for the ingester
+   ingester: {}
+<span class="gi">+  # -- Configuration options for the querier
++  querier: {}
++  # -- Configuration options for the query-fronted
++  queryFrontend: {}
+</span>   retention: 24h
+   # Global overrides
+   global_overrides:
+<span class="p">@@ -120,6 +124,10 @@</span> config: |
+       {{- toYaml .Values.tempo.server | nindent 6 }}
+     storage:
+       {{- toYaml .Values.tempo.storage | nindent 6 }}
+<span class="gi">+    querier:
++      {{- toYaml .Values.tempo.querier | nindent 6 }}
++    query_frontend:
++      {{- toYaml .Values.tempo.queryFrontend | nindent 6 }}
+</span>     overrides:
+       {{- toYaml .Values.tempo.global_overrides | nindent 6 }}
+       {{- if .Values.tempo.metricsGenerator.enabled }}
+<span class="p">@@ -135,7 +143,7 @@</span> config: |
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 1.4.1
+</span><span class="gi">+  tag: 1.5.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -180,6 +188,7 @@</span> serviceAccount:
+   imagePullSecrets: []
+   # -- Annotations for the service account
+   annotations: {}
+<span class="gi">+  automountServiceAccountToken: true
+</span> 
+ service:
+   type: ClusterIP
+<span class="err">
+</span></code></pre></div></div> <h2 id="0161"> <a href="#0161" class="anchor-heading" aria-labelledby="0161"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.1 </h2> <p><strong>Release date:</strong> 2022-08-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>update</li> <li>update</li> <li>Merge branch ‘main’ into main</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index dd0da4a2..51853aec 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -29,6 +29,11 @@</span> tempo:
+   multitenancyEnabled: false
+   # -- If true, enables Tempo's native search
+   searchEnabled: false
+<span class="gi">+  metricsGenerator:
++    # -- If true, enables Tempo's metrics generator (https://grafana.com/docs/tempo/next/metrics-generator/)
++    enabled: false
++    remoteWriteUrl: "http://prometheus.monitoring:9090/api/v1/write"
++  # -- Configuration options for the ingester
+</span>   ingester: {}
+   retention: 24h
+   # Global overrides
+<span class="p">@@ -98,9 +103,11 @@</span> tempo:
+   #   existingClaim: volume-claim
+ 
+ # -- Tempo configuration file contents
+<span class="gi">+# @default -- Dynamically generated tempo configmap
+</span> config: |
+     multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
+     search_enabled: {{ .Values.tempo.searchEnabled }}
+<span class="gi">+    metrics_generator_enabled: {{ .Values.tempo.metricsGenerator.enabled }}
+</span>     compactor:
+       compaction:
+         compacted_block_retention: {{ .Values.tempo.retention }}
+<span class="p">@@ -115,6 +122,16 @@</span> config: |
+       {{- toYaml .Values.tempo.storage | nindent 6 }}
+     overrides:
+       {{- toYaml .Values.tempo.global_overrides | nindent 6 }}
+<span class="gi">+      {{- if .Values.tempo.metricsGenerator.enabled }}
++          metrics_generator_processors:
++          - 'service-graphs'
++          - 'span-metrics'
++    metrics_generator:
++          storage:
++            path: "/tmp/tempo"
++            remote_write:
++              - url: {{ .Values.tempo.metricsGenerator.remoteWriteUrl }}
++      {{- end }}
+</span> 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="p">@@ -146,7 +163,7 @@</span> tempoQuery:
+     #    - ALL
+     # readOnlyRootFilesystem: false # fails if true, do not enable
+ 
+<span class="gd">-# Add container securityContext
+</span><span class="gi">+# -- securityContext for container
+</span> securityContext: {}
+   # runAsUser: 65532
+   # runAsGroup: 65532
+<span class="p">@@ -183,28 +200,22 @@</span> persistence:
+     - ReadWriteOnce
+   size: 10Gi
+ 
+<span class="gd">-## Pod Annotations
+</span><span class="gi">+# -- Pod Annotations
+</span> podAnnotations: {}
+ 
+<span class="gd">-## Pod (extra) Labels
+</span><span class="gi">+# -- Pod (extra) Labels
+</span> podLabels: {}
+ 
+ # -- Volumes to add
+ extraVolumes: []
+ 
+<span class="gd">-## Node labels for pod assignment
+-## ref: https://kubernetes.io/docs/user-guide/node-selection/
+-#
+</span><span class="gi">+# -- Node labels for pod assignment. See: https://kubernetes.io/docs/user-guide/node-selection/
+</span> nodeSelector: {}
+ 
+<span class="gd">-## Tolerations for pod assignment
+-## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+-##
+</span><span class="gi">+# -- Tolerations for pod assignment. See: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+</span> tolerations: []
+ 
+<span class="gd">-## Affinity for pod assignment
+-## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+-##
+</span><span class="gi">+# -- Affinity for pod assignment. See: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+</span> affinity: {}
+ 
+ # -- The name of the PriorityClass
+<span class="err">
+</span></code></pre></div></div> <h2 id="0160"> <a href="#0160" class="anchor-heading" aria-labelledby="0160"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.0 </h2> <p><strong>Release date:</strong> 2022-08-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>1.5.0</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 4f78f798..e22a66d7 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.4.1
+</span><span class="gi">+  tag: 1.5.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -127,7 +127,7 @@</span> config: |
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 1.4.1
+</span><span class="gi">+  tag: 1.5.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="01510"> <a href="#01510" class="anchor-heading" aria-labelledby="01510"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.10 </h2> <p><strong>Release date:</strong> 2022-08-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Automatically restart pods on config changes</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0159"> <a href="#0159" class="anchor-heading" aria-labelledby="0159"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.9 </h2> <p><strong>Release date:</strong> 2022-08-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Add values section for querier and query-frontend</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index dd0da4a2..4f78f798 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -29,7 +29,12 @@</span> tempo:
+   multitenancyEnabled: false
+   # -- If true, enables Tempo's native search
+   searchEnabled: false
+<span class="gi">+  # -- Configuration options for the ingester
+</span>   ingester: {}
+<span class="gi">+  # -- Configuration options for the querier
++  querier: {}
++  # -- Configuration options for the query-fronted
++  queryFrontend: {}
+</span>   retention: 24h
+   # Global overrides
+   global_overrides:
+<span class="p">@@ -113,6 +118,10 @@</span> config: |
+       {{- toYaml .Values.tempo.server | nindent 6 }}
+     storage:
+       {{- toYaml .Values.tempo.storage | nindent 6 }}
+<span class="gi">+    querier:
++      {{- toYaml .Values.tempo.querier | nindent 6 }}
++    query_frontend:
++      {{- toYaml .Values.tempo.queryFrontend | nindent 6 }}
+</span>     overrides:
+       {{- toYaml .Values.tempo.global_overrides | nindent 6 }}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="0160-1"> <a href="#0160-1" class="anchor-heading" aria-labelledby="0160-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.0 </h2> <p><strong>Release date:</strong> 2022-08-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into main</li> <li>regenerate docs</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index dd0da4a2..54c2d8fd 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -29,6 +29,10 @@</span> tempo:
+   multitenancyEnabled: false
+   # -- If true, enables Tempo's native search
+   searchEnabled: false
+<span class="gi">+  metricsGenerator:
++    # -- If true, enables Tempo's metrics generator (https://grafana.com/docs/tempo/next/metrics-generator/)
++    enabled: false
++    remoteWriteUrl: "http://prometheus.monitoring:9090/api/v1/write"
+</span>   ingester: {}
+   retention: 24h
+   # Global overrides
+<span class="p">@@ -98,9 +102,11 @@</span> tempo:
+   #   existingClaim: volume-claim
+ 
+ # -- Tempo configuration file contents
+<span class="gi">+# @default -- Dynamically generated tempo configmap
+</span> config: |
+     multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
+     search_enabled: {{ .Values.tempo.searchEnabled }}
+<span class="gi">+    metrics_generator_enabled: {{ .Values.tempo.metricsGenerator.enabled }}
+</span>     compactor:
+       compaction:
+         compacted_block_retention: {{ .Values.tempo.retention }}
+<span class="p">@@ -115,6 +121,16 @@</span> config: |
+       {{- toYaml .Values.tempo.storage | nindent 6 }}
+     overrides:
+       {{- toYaml .Values.tempo.global_overrides | nindent 6 }}
+<span class="gi">+      {{- if .Values.tempo.metricsGenerator.enabled }}
++          metrics_generator_processors:
++          - 'service-graphs'
++          - 'span-metrics'
++    metrics_generator:
++          storage:
++            path: "/tmp/tempo"
++            remote_write:
++              - url: {{ .Values.tempo.metricsGenerator.remoteWriteUrl }}
++      {{- end }}
+</span> 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="err">
+</span></code></pre></div></div> <h2 id="0158"> <a href="#0158" class="anchor-heading" aria-labelledby="0158"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.8 </h2> <p><strong>Release date:</strong> 2022-08-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump chart version</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0157"> <a href="#0157" class="anchor-heading" aria-labelledby="0157"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.7 </h2> <p><strong>Release date:</strong> 2022-08-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Make query volume optional</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0158-1"> <a href="#0158-1" class="anchor-heading" aria-labelledby="0158-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.8 </h2> <p><strong>Release date:</strong> 2022-08-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump Chart.yaml</li> <li>Update statefulset.yaml</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0157-1"> <a href="#0157-1" class="anchor-heading" aria-labelledby="0157-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.7 </h2> <p><strong>Release date:</strong> 2022-08-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] allow setting priorityClassName</li> <li>fix README.md helm-docs generated default</li> <li>switch around for better diff</li> <li>fix docs</li> <li>fix values</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index ebebb8bc..dd0da4a2 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -206,3 +206,6 @@</span> tolerations: []
+ ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+ ##
+ affinity: {}
+<span class="gi">+
++# -- The name of the PriorityClass
++priorityClassName: null
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="0160-2"> <a href="#0160-2" class="anchor-heading" aria-labelledby="0160-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.16.0 </h2> <p><strong>Release date:</strong> 2022-07-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>minor bump</li> <li>disable first</li> <li>feat: add metrics generator to chart</li> <li>Merge branch ‘main’ into main</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index ebebb8bc..f4f93df3 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -29,6 +29,10 @@</span> tempo:
+   multitenancyEnabled: false
+   # -- If true, enables Tempo's native search
+   searchEnabled: false
+<span class="gi">+    # -- If true, enables Tempo's metrics generator (https://grafana.com/docs/tempo/next/metrics-generator/)
++  metricsGenerator:
++    enabled: false
++    remoteWriteUrl: "http://prometheus-kube-prometheus-prometheus.monitoring:9090/api/v1/write"
+</span>   ingester: {}
+   retention: 24h
+   # Global overrides
+<span class="p">@@ -99,6 +103,7 @@</span> tempo:
+ 
+ # -- Tempo configuration file contents
+ config: |
+<span class="gi">+    metrics_generator_enabled: {{ .Values.tempo.metricsGenerator.enabled }}
+</span>     multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
+     search_enabled: {{ .Values.tempo.searchEnabled }}
+     compactor:
+<span class="p">@@ -115,6 +120,16 @@</span> config: |
+       {{- toYaml .Values.tempo.storage | nindent 6 }}
+     overrides:
+       {{- toYaml .Values.tempo.global_overrides | nindent 6 }}
+<span class="gi">+      {{- if .Values.tempo.metricsGenerator.enabled }}
++          metrics_generator_processors: 
++          - 'service-graphs'
++          - 'span-metrics'
++    metrics_generator:
++          storage:
++            path: "/tmp/tempo"
++            remote_write:
++              - url: {{ .Values.tempo.metricsGenerator.remoteWriteUrl }}
++      {{- end }}
+</span> 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="err">
+</span></code></pre></div></div> <h2 id="0156"> <a href="#0156" class="anchor-heading" aria-labelledby="0156"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.6 </h2> <p><strong>Release date:</strong> 2022-07-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump chart.yaml</li> <li>Merge branch ‘main’ of https://github.com/gruppferi/helm-charts into main</li> <li>push</li> <li>Update README.md</li> <li>Update README.md</li> <li>Merge branch ‘main’ into patch-1</li> <li>Update README.md</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 0d8857a7..ebebb8bc 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -46,7 +46,8 @@</span> tempo:
+       # tempo storage backend
+       # refer https://github.com/grafana/tempo/tree/master/docs/tempo/website/configuration
+       ## Use s3 for example
+<span class="gd">-      # backend: s3                                         # store traces in s3
+</span><span class="gi">+      # backend: s3
++      # store traces in s3
+</span>       # s3:
+       #   bucket: tempo                                   # store traces in this bucket
+       #   endpoint: s3.dualstack.us-east-2.amazonaws.com  # api endpoint
+<span class="err">
+</span></code></pre></div></div> <h2 id="0155"> <a href="#0155" class="anchor-heading" aria-labelledby="0155"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.5 </h2> <p><strong>Release date:</strong> 2022-06-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Signed-off-by: Ferdows Shahryar s.ferdows@hotmail.com</li> <li>enhance comment regarding failing readOnlyRootFilesystem in tempo-query</li> <li>update docs</li> <li>remove ‘if not tempo.searchEnabled’</li> <li>fix helm-docs</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 6738a2d0..0d8857a7 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -41,19 +41,18 @@</span> tempo:
+   server:
+     # -- HTTP server listen port
+     http_listen_port: 3100
+<span class="gd">-  # tempo storage backend
+-  # refer https://github.com/grafana/tempo/tree/master/docs/tempo/website/configuration
+-  ## Use s3 for example
+-  # backend: s3                                         # store traces in s3
+-  #  s3:
+-  #    bucket: tempo                                   # store traces in this bucket
+-  #    endpoint: s3.dualstack.us-east-2.amazonaws.com  # api endpoint
+-  #    access_key: ...                                 # optional. access key when using static credentials.
+-  #    secret_key: ...                                 # optional. secret key when using static credentials.
+-  #    insecure: false                                 # optional. enable if endpoint is http
+-  ## end
+</span>   storage:
+     trace:
+<span class="gi">+      # tempo storage backend
++      # refer https://github.com/grafana/tempo/tree/master/docs/tempo/website/configuration
++      ## Use s3 for example
++      # backend: s3                                         # store traces in s3
++      # s3:
++      #   bucket: tempo                                   # store traces in this bucket
++      #   endpoint: s3.dualstack.us-east-2.amazonaws.com  # api endpoint
++      #   access_key: ...                                 # optional. access key when using static credentials.
++      #   secret_key: ...                                 # optional. secret key when using static credentials.
++      #   insecure: false                                 # optional. enable if endpoint is http
+</span>       backend: local
+       local:
+         path: /var/tempo/traces
+<span class="p">@@ -127,7 +126,7 @@</span> tempoQuery:
+   # pullSecrets:
+   #   - myRegistryKeySecretName
+ 
+<span class="gd">-  ## remove tempo-query container if tempo.searchEnabled = true and tempoQuery.enabled = false
+</span><span class="gi">+  # -- if False the tempo-query container is not deployed
+</span>   enabled: true
+   ## Additional container arguments
+   extraArgs: {}
+<span class="p">@@ -144,7 +143,7 @@</span> tempoQuery:
+     #  capabilities:
+     #    drop:
+     #    - ALL
+<span class="gd">-    # # readOnlyRootFilesystem: true # fails, do not enable
+</span><span class="gi">+    # readOnlyRootFilesystem: false # fails if true, do not enable
+</span> 
+ # Add container securityContext
+ securityContext: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="0154"> <a href="#0154" class="anchor-heading" aria-labelledby="0154"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.4 </h2> <p><strong>Release date:</strong> 2022-06-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bumped version to 0.15.4</li> <li>add securityContext &amp; enable removing tempoQuery container</li> <li>fix windows newline endings resulted from helm docs in readme.md</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 7e42df3a..6738a2d0 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -80,6 +80,12 @@</span> tempo:
+           endpoint: "0.0.0.0:4317"
+         http:
+           endpoint: "0.0.0.0:4318"
+<span class="gi">+  securityContext: {}
++    # allowPrivilegeEscalation: false
++    #  capabilities:
++    #    drop:
++    #    - ALL
++    # readOnlyRootFilesystem: true
+</span>   ## Additional container arguments
+   extraArgs: {}
+   # -- Environment variables to add
+<span class="p">@@ -120,6 +126,9 @@</span> tempoQuery:
+   ##
+   # pullSecrets:
+   #   - myRegistryKeySecretName
+<span class="gi">+
++  ## remove tempo-query container if tempo.searchEnabled = true and tempoQuery.enabled = false
++  enabled: true
+</span>   ## Additional container arguments
+   extraArgs: {}
+   # -- Environment variables to add
+<span class="p">@@ -130,6 +139,19 @@</span> tempoQuery:
+   #   mountPath: /mnt/volume
+   #   readOnly: true
+   #   existingClaim: volume-claim
+<span class="gi">+  securityContext: {}
++    # allowPrivilegeEscalation: false
++    #  capabilities:
++    #    drop:
++    #    - ALL
++    # # readOnlyRootFilesystem: true # fails, do not enable
++
++# Add container securityContext
++securityContext: {}
++  # runAsUser: 65532
++  # runAsGroup: 65532
++  # fsGroup: 65532
++  # runAsNonRoot: true
+</span> 
+ serviceAccount:
+   # -- Specifies whether a ServiceAccount should be created
+<span class="err">
+</span></code></pre></div></div> <h2 id="0153"> <a href="#0153" class="anchor-heading" aria-labelledby="0153"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.3 </h2> <p><strong>Release date:</strong> 2022-05-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Allow tempo-single-binary helm chart full config overriding through Values.config</li> <li>[tempo] Fix docs</li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index af8bc18c..7e42df3a 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -80,7 +80,6 @@</span> tempo:
+           endpoint: "0.0.0.0:4317"
+         http:
+           endpoint: "0.0.0.0:4318"
+<span class="gd">-
+</span>   ## Additional container arguments
+   extraArgs: {}
+   # -- Environment variables to add
+<span class="p">@@ -92,6 +91,25 @@</span> tempo:
+   #   readOnly: true
+   #   existingClaim: volume-claim
+ 
+<span class="gi">+# -- Tempo configuration file contents
++config: |
++    multitenancy_enabled: {{ .Values.tempo.multitenancyEnabled }}
++    search_enabled: {{ .Values.tempo.searchEnabled }}
++    compactor:
++      compaction:
++        compacted_block_retention: {{ .Values.tempo.retention }}
++    distributor:
++      receivers:
++        {{- toYaml .Values.tempo.receivers | nindent 8 }}
++    ingester:
++      {{- toYaml .Values.tempo.ingester | nindent 6 }}
++    server:
++      {{- toYaml .Values.tempo.server | nindent 6 }}
++    storage:
++      {{- toYaml .Values.tempo.storage | nindent 6 }}
++    overrides:
++      {{- toYaml .Values.tempo.global_overrides | nindent 6 }}
++
+</span> tempoQuery:
+   repository: grafana/tempo-query
+   tag: 1.4.1
+<span class="err">
+</span></code></pre></div></div> <h2 id="0152"> <a href="#0152" class="anchor-heading" aria-labelledby="0152"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.2 </h2> <p><strong>Release date:</strong> 2022-05-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Bump version</li> <li>[tempo] Fix overrides</li> <li>tempo query</li> <li>update tempo query</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index fd7fe8cd..af8bc18c 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -31,6 +31,9 @@</span> tempo:
+   searchEnabled: false
+   ingester: {}
+   retention: 24h
+<span class="gi">+  # Global overrides
++  global_overrides:
++    per_tenant_override_config: /conf/overrides.yaml
+</span>   overrides: {}
+ 
+   # Tempo server configuration
+<span class="p">@@ -91,7 +94,7 @@</span> tempo:
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 1.0.1
+</span><span class="gi">+  tag: 1.4.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0151"> <a href="#0151" class="anchor-heading" aria-labelledby="0151"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.1 </h2> <p><strong>Release date:</strong> 2022-05-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump chart version</li> <li>tempo 1.4.1</li> </ul> <h3 id="default-value-changes-45"> <a href="#default-value-changes-45" class="anchor-heading" aria-labelledby="default-value-changes-45"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 41b18aaa..fd7fe8cd 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.4.0
+</span><span class="gi">+  tag: 1.4.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0150"> <a href="#0150" class="anchor-heading" aria-labelledby="0150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.15.0 </h2> <p><strong>Release date:</strong> 2022-04-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.0&amp;color=success" alt="AppVersion: 1.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>tempo 1.4.0</li> </ul> <h3 id="default-value-changes-46"> <a href="#default-value-changes-46" class="anchor-heading" aria-labelledby="default-value-changes-46"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 63ac274d..41b18aaa 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.3.2
+</span><span class="gi">+  tag: 1.4.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0142"> <a href="#0142" class="anchor-heading" aria-labelledby="0142"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.14.2 </h2> <p><strong>Release date:</strong> 2022-02-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.2&amp;color=success" alt="AppVersion: 1.3.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chart version</li> <li>1.3.1 =&gt; 1.3.2</li> </ul> <h3 id="default-value-changes-47"> <a href="#default-value-changes-47" class="anchor-heading" aria-labelledby="default-value-changes-47"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 46494285..63ac274d 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.3.1
+</span><span class="gi">+  tag: 1.3.2
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0141"> <a href="#0141" class="anchor-heading" aria-labelledby="0141"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.14.1 </h2> <p><strong>Release date:</strong> 2022-02-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.1&amp;color=success" alt="AppVersion: 1.3.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Deploy tempo ServiceAccount in release namespace</li> </ul> <h3 id="default-value-changes-48"> <a href="#default-value-changes-48" class="anchor-heading" aria-labelledby="default-value-changes-48"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0140"> <a href="#0140" class="anchor-heading" aria-labelledby="0140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.14.0 </h2> <p><strong>Release date:</strong> 2022-02-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.1&amp;color=success" alt="AppVersion: 1.3.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump tempo chart to v0.14.0</li> <li>use grpc as suffix instead of prefix for tempo service</li> <li>Regenerate docs</li> </ul> <h3 id="default-value-changes-49"> <a href="#default-value-changes-49" class="anchor-heading" aria-labelledby="default-value-changes-49"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0132"> <a href="#0132" class="anchor-heading" aria-labelledby="0132"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.13.2 </h2> <p><strong>Release date:</strong> 2022-02-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.1&amp;color=success" alt="AppVersion: 1.3.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump Tempo charts to v1.3.1</li> <li>fix lint error</li> </ul> <h3 id="default-value-changes-50"> <a href="#default-value-changes-50" class="anchor-heading" aria-labelledby="default-value-changes-50"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 285b09eb..46494285 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.3.0
+</span><span class="gi">+  tag: 1.3.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0131"> <a href="#0131" class="anchor-heading" aria-labelledby="0131"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.13.1 </h2> <p><strong>Release date:</strong> 2022-01-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Make setting service annotations works correctly</li> <li>helm-docs</li> </ul> <h3 id="default-value-changes-51"> <a href="#default-value-changes-51" class="anchor-heading" aria-labelledby="default-value-changes-51"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0130"> <a href="#0130" class="anchor-heading" aria-labelledby="0130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.13.0 </h2> <p><strong>Release date:</strong> 2022-01-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>1.3.0</li> </ul> <h3 id="default-value-changes-52"> <a href="#default-value-changes-52" class="anchor-heading" aria-labelledby="default-value-changes-52"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index ae9a739a..285b09eb 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.2.1
+</span><span class="gi">+  tag: 1.3.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0123"> <a href="#0123" class="anchor-heading" aria-labelledby="0123"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.12.3 </h2> <p><strong>Release date:</strong> 2022-01-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] authEnabled -&gt; multitenancyEnabled</li> </ul> <h3 id="default-value-changes-53"> <a href="#default-value-changes-53" class="anchor-heading" aria-labelledby="default-value-changes-53"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 4e121f25..ae9a739a 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -26,7 +26,7 @@</span> tempo:
+   #    memory: 6Gi
+ 
+   memBallastSizeMbs: 1024
+<span class="gd">-  authEnabled: false
+</span><span class="gi">+  multitenancyEnabled: false
+</span>   # -- If true, enables Tempo's native search
+   searchEnabled: false
+   ingester: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="0122"> <a href="#0122" class="anchor-heading" aria-labelledby="0122"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.12.2 </h2> <p><strong>Release date:</strong> 2021-12-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: fix tempo-oltp-http ports</li> </ul> <h3 id="default-value-changes-54"> <a href="#default-value-changes-54" class="anchor-heading" aria-labelledby="default-value-changes-54"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0121"> <a href="#0121" class="anchor-heading" aria-labelledby="0121"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.12.1 </h2> <p><strong>Release date:</strong> 2021-12-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add overrides to Tempo</li> </ul> <h3 id="default-value-changes-55"> <a href="#default-value-changes-55" class="anchor-heading" aria-labelledby="default-value-changes-55"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 22d4c56a..4e121f25 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -31,6 +31,7 @@</span> tempo:
+   searchEnabled: false
+   ingester: {}
+   retention: 24h
+<span class="gi">+  overrides: {}
+</span> 
+   # Tempo server configuration
+   # Refers to https://grafana.com/docs/tempo/latest/configuration/#server
+<span class="err">
+</span></code></pre></div></div> <h2 id="0120"> <a href="#0120" class="anchor-heading" aria-labelledby="0120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.12.0 </h2> <p><strong>Release date:</strong> 2021-11-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Bump tempo chart version</li> </ul> <h3 id="default-value-changes-56"> <a href="#default-value-changes-56" class="anchor-heading" aria-labelledby="default-value-changes-56"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0111"> <a href="#0111" class="anchor-heading" aria-labelledby="0111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.11.1 </h2> <p><strong>Release date:</strong> 2021-11-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump chart version</li> <li>Fix server.http_listen_port in tempo-query backend config</li> <li>Align service with tempo default config</li> <li>fix: helm docs</li> <li>Merge branch ‘main’ into jleloup/tempo-server-config</li> </ul> <h3 id="default-value-changes-57"> <a href="#default-value-changes-57" class="anchor-heading" aria-labelledby="default-value-changes-57"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 742b58ce..22d4c56a 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.2.0
+</span><span class="gi">+  tag: 1.2.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0110"> <a href="#0110" class="anchor-heading" aria-labelledby="0110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.11.0 </h2> <p><strong>Release date:</strong> 2021-11-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: helm documentation</li> </ul> <h3 id="default-value-changes-58"> <a href="#default-value-changes-58" class="anchor-heading" aria-labelledby="default-value-changes-58"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 432ecdcb..742b58ce 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -31,8 +31,12 @@</span> tempo:
+   searchEnabled: false
+   ingester: {}
+   retention: 24h
+<span class="gi">+
++  # Tempo server configuration
++  # Refers to https://grafana.com/docs/tempo/latest/configuration/#server
+</span>   server:
+<span class="gd">-    httpListenPort: 3100
+</span><span class="gi">+    # -- HTTP server listen port
++    http_listen_port: 3100
+</span>   # tempo storage backend
+   # refer https://github.com/grafana/tempo/tree/master/docs/tempo/website/configuration
+   ## Use s3 for example
+<span class="err">
+</span></code></pre></div></div> <h2 id="0102"> <a href="#0102" class="anchor-heading" aria-labelledby="0102"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.10.2 </h2> <p><strong>Release date:</strong> 2021-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Fix affinity toYaml call</li> </ul> <h3 id="default-value-changes-59"> <a href="#default-value-changes-59" class="anchor-heading" aria-labelledby="default-value-changes-59"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 432ecdcb..e472925a 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.2.0
+</span><span class="gi">+  tag: 1.2.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="0110-1"> <a href="#0110-1" class="anchor-heading" aria-labelledby="0110-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.11.0 </h2> <p><strong>Release date:</strong> 2021-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: minor rev bump instead of patch</li> <li>Update tempo to v1.2.1</li> </ul> <h3 id="default-value-changes-60"> <a href="#default-value-changes-60" class="anchor-heading" aria-labelledby="default-value-changes-60"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0101"> <a href="#0101" class="anchor-heading" aria-labelledby="0101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.10.1 </h2> <p><strong>Release date:</strong> 2021-11-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(tempo): allow custom configuration of Tempo server</li> </ul> <h3 id="default-value-changes-61"> <a href="#default-value-changes-61" class="anchor-heading" aria-labelledby="default-value-changes-61"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 432ecdcb..4c034bdc 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -1,8 +1,8 @@</span>
+ # -- Overrides the chart's name
+<span class="gd">-nameOverride: ""
+</span><span class="gi">+nameOverride: ''
+</span> 
+ # -- Overrides the chart's computed fullname
+<span class="gd">-fullnameOverride: ""
+</span><span class="gi">+fullnameOverride: ''
+</span> 
+ replicas: 1
+ tempo:
+<span class="p">@@ -31,8 +31,11 @@</span> tempo:
+   searchEnabled: false
+   ingester: {}
+   retention: 24h
+<span class="gi">+
++  # Tempo server configuration
++  # Refers to https://grafana.com/docs/tempo/latest/configuration/#server
+</span>   server:
+<span class="gd">-    httpListenPort: 3100
+</span><span class="gi">+    http_listen_port: 3100
+</span>   # tempo storage backend
+   # refer https://github.com/grafana/tempo/tree/master/docs/tempo/website/configuration
+   ## Use s3 for example
+<span class="p">@@ -69,9 +72,9 @@</span> tempo:
+     otlp:
+       protocols:
+         grpc:
+<span class="gd">-          endpoint: "0.0.0.0:4317"
+</span><span class="gi">+          endpoint: '0.0.0.0:4317'
+</span>         http:
+<span class="gd">-          endpoint: "0.0.0.0:4318"
+</span><span class="gi">+          endpoint: '0.0.0.0:4318'
+</span> 
+   ## Additional container arguments
+   extraArgs: {}
+<span class="p">@@ -123,7 +126,7 @@</span> service:
+ 
+ serviceMonitor:
+   enabled: false
+<span class="gd">-  interval: ""
+</span><span class="gi">+  interval: ''
+</span>   additionalLabels: {}
+   annotations: {}
+   # scrapeTimeout: 10s
+<span class="err">
+</span></code></pre></div></div> <h2 id="0100"> <a href="#0100" class="anchor-heading" aria-labelledby="0100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.10.0 </h2> <p><strong>Release date:</strong> 2021-11-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add possibility to configure Tempo’s native search</li> </ul> <h3 id="default-value-changes-62"> <a href="#default-value-changes-62" class="anchor-heading" aria-labelledby="default-value-changes-62"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index ca6436d1..432ecdcb 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -27,6 +27,8 @@</span> tempo:
+ 
+   memBallastSizeMbs: 1024
+   authEnabled: false
+<span class="gi">+  # -- If true, enables Tempo's native search
++  searchEnabled: false
+</span>   ingester: {}
+   retention: 24h
+   server:
+<span class="err">
+</span></code></pre></div></div> <h2 id="090"> <a href="#090" class="anchor-heading" aria-labelledby="090"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.9.0 </h2> <p><strong>Release date:</strong> 2021-11-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>helm-docs</li> </ul> <h3 id="default-value-changes-63"> <a href="#default-value-changes-63" class="anchor-heading" aria-labelledby="default-value-changes-63"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 9ccae2e3..ca6436d1 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.1.0
+</span><span class="gi">+  tag: 1.2.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="081"> <a href="#081" class="anchor-heading" aria-labelledby="081"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.8.1 </h2> <p><strong>Release date:</strong> 2021-11-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Fix podLabels</li> <li>docs(tempo): adapt README.md for changes</li> <li>feat(tempo): do not add equal sign for extraArgs if no value is supplied</li> <li>feat(tempo): activate otpl prtocol by default</li> </ul> <h3 id="default-value-changes-64"> <a href="#default-value-changes-64" class="anchor-heading" aria-labelledby="default-value-changes-64"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 72445d32..9ccae2e3 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -64,6 +64,13 @@</span> tempo:
+         thrift_http:
+           endpoint: 0.0.0.0:14268
+     opencensus:
+<span class="gi">+    otlp:
++      protocols:
++        grpc:
++          endpoint: "0.0.0.0:4317"
++        http:
++          endpoint: "0.0.0.0:4318"
++
+</span>   ## Additional container arguments
+   extraArgs: {}
+   # -- Environment variables to add
+<span class="p">@@ -129,6 +136,9 @@</span> persistence:
+ ## Pod Annotations
+ podAnnotations: {}
+ 
+<span class="gi">+## Pod (extra) Labels
++podLabels: {}
++
+</span> # -- Volumes to add
+ extraVolumes: []
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="080"> <a href="#080" class="anchor-heading" aria-labelledby="080"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.8.0 </h2> <p><strong>Release date:</strong> 2021-10-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(tempo): add optional serviceMonitor object</li> </ul> <h3 id="default-value-changes-65"> <a href="#default-value-changes-65" class="anchor-heading" aria-labelledby="default-value-changes-65"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 613f790d..72445d32 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -112,6 +112,13 @@</span> service:
+   annotations: {}
+   labels: {}
+ 
+<span class="gi">+serviceMonitor:
++  enabled: false
++  interval: ""
++  additionalLabels: {}
++  annotations: {}
++  # scrapeTimeout: 10s
++
+</span> persistence:
+   enabled: false
+   # storageClassName: local-path
+<span class="err">
+</span></code></pre></div></div> <h2 id="077"> <a href="#077" class="anchor-heading" aria-labelledby="077"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.7 </h2> <p><strong>Release date:</strong> 2021-09-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fixed podAnnotations</li> <li>helm docs</li> <li>fixed versions</li> </ul> <h3 id="default-value-changes-66"> <a href="#default-value-changes-66" class="anchor-heading" aria-labelledby="default-value-changes-66"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index adbf70fa..613f790d 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.1
+</span><span class="gi">+  tag: 1.1.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -120,7 +120,7 @@</span> persistence:
+   size: 10Gi
+ 
+ ## Pod Annotations
+<span class="gd">-podAnnotations: []
+</span><span class="gi">+podAnnotations: {}
+</span> 
+ # -- Volumes to add
+ extraVolumes: []
+<span class="err">
+</span></code></pre></div></div> <h2 id="076"> <a href="#076" class="anchor-heading" aria-labelledby="076"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.6 </h2> <p><strong>Release date:</strong> 2021-09-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1&amp;color=success" alt="AppVersion: v1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Updated to 1.1</li> </ul> <h3 id="default-value-changes-67"> <a href="#default-value-changes-67" class="anchor-heading" aria-labelledby="default-value-changes-67"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 17e3ff36..adbf70fa 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.0.1
+</span><span class="gi">+  tag: 1.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="075"> <a href="#075" class="anchor-heading" aria-labelledby="075"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.5 </h2> <p><strong>Release date:</strong> 2021-08-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.1&amp;color=success" alt="AppVersion: v1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Increment chart version and ran helm-docs</li> <li>Enabled the opencensus receive in the default Helm template for Tempo</li> <li>Fixing unnecessary tpl in affinity definition</li> </ul> <h3 id="default-value-changes-68"> <a href="#default-value-changes-68" class="anchor-heading" aria-labelledby="default-value-changes-68"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index f81d5270..17e3ff36 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -63,6 +63,7 @@</span> tempo:
+           endpoint: 0.0.0.0:6831
+         thrift_http:
+           endpoint: 0.0.0.0:14268
+<span class="gi">+    opencensus:
+</span>   ## Additional container arguments
+   extraArgs: {}
+   # -- Environment variables to add
+<span class="err">
+</span></code></pre></div></div> <h2 id="074"> <a href="#074" class="anchor-heading" aria-labelledby="074"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.4 </h2> <p><strong>Release date:</strong> 2021-07-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.1&amp;color=success" alt="AppVersion: v1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Enabling affinity, nodeSelector and tolerations for tempo statefulset</li> </ul> <h3 id="default-value-changes-69"> <a href="#default-value-changes-69" class="anchor-heading" aria-labelledby="default-value-changes-69"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="073"> <a href="#073" class="anchor-heading" aria-labelledby="073"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.3 </h2> <p><strong>Release date:</strong> 2021-06-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.1&amp;color=success" alt="AppVersion: v1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>incremented helm chart and tempo version</li> </ul> <h3 id="default-value-changes-70"> <a href="#default-value-changes-70" class="anchor-heading" aria-labelledby="default-value-changes-70"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index cce1952d..f81d5270 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 1.0.0
+</span><span class="gi">+  tag: 1.0.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -76,7 +76,7 @@</span> tempo:
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 1.0.0
+</span><span class="gi">+  tag: 1.0.1
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="072"> <a href="#072" class="anchor-heading" aria-labelledby="072"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.2 </h2> <p><strong>Release date:</strong> 2021-06-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.0&amp;color=success" alt="AppVersion: v1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Bump default appversion to 1.0.0</li> </ul> <h3 id="default-value-changes-71"> <a href="#default-value-changes-71" class="anchor-heading" aria-labelledby="default-value-changes-71"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 0b66ce16..cce1952d 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 0.7.0
+</span><span class="gi">+  tag: 1.0.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -76,7 +76,7 @@</span> tempo:
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 0.7.0
+</span><span class="gi">+  tag: 1.0.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="071"> <a href="#071" class="anchor-heading" aria-labelledby="071"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.1 </h2> <p><strong>Release date:</strong> 2021-04-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.7.0&amp;color=success" alt="AppVersion: v0.7.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Upgraded to 0.7.0</li> <li>added template</li> </ul> <h3 id="default-value-changes-72"> <a href="#default-value-changes-72" class="anchor-heading" aria-labelledby="default-value-changes-72"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index dfaf110b..0b66ce16 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 0.6.0
+</span><span class="gi">+  tag: 0.7.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -76,7 +76,7 @@</span> tempo:
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: 0.6.0
+</span><span class="gi">+  tag: 0.7.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="070"> <a href="#070" class="anchor-heading" aria-labelledby="070"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.0 </h2> <p><strong>Release date:</strong> 2021-04-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Added gotmpl and upgrade instructions from pre 0.7.0</li> </ul> <h3 id="default-value-changes-73"> <a href="#default-value-changes-73" class="anchor-heading" aria-labelledby="default-value-changes-73"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="069"> <a href="#069" class="anchor-heading" aria-labelledby="069"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.9 </h2> <p><strong>Release date:</strong> 2021-04-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Updated version</li> <li>Corrected path</li> <li>Merge branch ‘main’ of https://github.com/grafana/helm-charts into feature/otlp_ports</li> </ul> <h3 id="default-value-changes-74"> <a href="#default-value-changes-74" class="anchor-heading" aria-labelledby="default-value-changes-74"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 9b10fa44..dfaf110b 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -46,7 +46,7 @@</span> tempo:
+     trace:
+       backend: local
+       local:
+<span class="gd">-        path: /tmp/tempo/traces
+</span><span class="gi">+        path: /var/tempo/traces
+</span>       wal:
+         path: /var/tempo/wal
+   # this configuration will listen on all ports and protocols that tempo is capable of.
+<span class="err">
+</span></code></pre></div></div> <h2 id="068"> <a href="#068" class="anchor-heading" aria-labelledby="068"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.8 </h2> <p><strong>Release date:</strong> 2021-03-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>add additional otlp ports</li> </ul> <h3 id="default-value-changes-75"> <a href="#default-value-changes-75" class="anchor-heading" aria-labelledby="default-value-changes-75"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="067"> <a href="#067" class="anchor-heading" aria-labelledby="067"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.7 </h2> <p><strong>Release date:</strong> 2021-03-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] update maintainers</li> <li>[tempo] Add missing extraVolumes</li> </ul> <h3 id="default-value-changes-76"> <a href="#default-value-changes-76" class="anchor-heading" aria-labelledby="default-value-changes-76"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="066"> <a href="#066" class="anchor-heading" aria-labelledby="066"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.6 </h2> <p><strong>Release date:</strong> 2021-03-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Bump tempo chart version</li> <li>[tempo] Remove empty line when extraVolumeMounts is enabled</li> <li>[tempo] Fix indent for extraVolumeMounts</li> </ul> <h3 id="default-value-changes-77"> <a href="#default-value-changes-77" class="anchor-heading" aria-labelledby="default-value-changes-77"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="065"> <a href="#065" class="anchor-heading" aria-labelledby="065"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.5 </h2> <p><strong>Release date:</strong> 2021-03-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Use specific tag for tempo-query image</li> </ul> <h3 id="default-value-changes-78"> <a href="#default-value-changes-78" class="anchor-heading" aria-labelledby="default-value-changes-78"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index ea5a6324..9b10fa44 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -76,7 +76,7 @@</span> tempo:
+ 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="gd">-  tag: latest
+</span><span class="gi">+  tag: 0.6.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="064"> <a href="#064" class="anchor-heading" aria-labelledby="064"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.4 </h2> <p><strong>Release date:</strong> 2021-03-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Adding missing STS ports</li> </ul> <h3 id="default-value-changes-79"> <a href="#default-value-changes-79" class="anchor-heading" aria-labelledby="default-value-changes-79"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="063"> <a href="#063" class="anchor-heading" aria-labelledby="063"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.3 </h2> <p><strong>Release date:</strong> 2021-03-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] Upgrade chart version</li> <li>[tempo] Fix indentation on volumeClaimTemplates</li> <li>Fix persistent volume configuration</li> <li>Upgrade README to show latest Tempo Chart version</li> </ul> <h3 id="default-value-changes-80"> <a href="#default-value-changes-80" class="anchor-heading" aria-labelledby="default-value-changes-80"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="062"> <a href="#062" class="anchor-heading" aria-labelledby="062"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.2 </h2> <p><strong>Release date:</strong> 2021-03-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add Service Account to Tempo Chart. Fix <code class="language-plaintext highlighter-rouge">persistence.enabled</code> variable use on statefulset file. Fix commented resource requests and limits on values file</li> </ul> <h3 id="default-value-changes-81"> <a href="#default-value-changes-81" class="anchor-heading" aria-labelledby="default-value-changes-81"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index c13fc463..ea5a6324 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -18,10 +18,10 @@</span> tempo:
+ 
+   updateStrategy: RollingUpdate
+   resources: {}
+<span class="gd">-  #  limits:
+</span><span class="gi">+  #  requests:
+</span>   #    cpu: 1000m
+   #    memory: 4Gi
+<span class="gd">-  #  requests:
+</span><span class="gi">+  #  limits:
+</span>   #    cpu: 2000m
+   #    memory: 6Gi
+ 
+<span class="p">@@ -95,6 +95,17 @@</span> tempoQuery:
+   #   readOnly: true
+   #   existingClaim: volume-claim
+ 
+<span class="gi">+serviceAccount:
++  # -- Specifies whether a ServiceAccount should be created
++  create: true
++  # -- The name of the ServiceAccount to use.
++  # If not set and create is true, a name is generated using the fullname template
++  name: null
++  # -- Image pull secrets for the service account
++  imagePullSecrets: []
++  # -- Annotations for the service account
++  annotations: {}
++
+</span> service:
+   type: ClusterIP
+   annotations: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="061"> <a href="#061" class="anchor-heading" aria-labelledby="061"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.1 </h2> <p><strong>Release date:</strong> 2021-02-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[tempo] add extra args envs volumeMounts</li> <li>regenned docs to match CI</li> <li>default to 0.6.0</li> </ul> <h3 id="default-value-changes-82"> <a href="#default-value-changes-82" class="anchor-heading" aria-labelledby="default-value-changes-82"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 7b4c5d01..c13fc463 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: null
+</span><span class="gi">+  tag: 0.6.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="p">@@ -63,6 +63,16 @@</span> tempo:
+           endpoint: 0.0.0.0:6831
+         thrift_http:
+           endpoint: 0.0.0.0:14268
+<span class="gi">+  ## Additional container arguments
++  extraArgs: {}
++  # -- Environment variables to add
++  extraEnv: []
++  # -- Volume mounts to add
++  extraVolumeMounts: []
++  # - name: extra-volume
++  #   mountPath: /mnt/volume
++  #   readOnly: true
++  #   existingClaim: volume-claim
+</span> 
+ tempoQuery:
+   repository: grafana/tempo-query
+<span class="p">@@ -74,6 +84,16 @@</span> tempoQuery:
+   ##
+   # pullSecrets:
+   #   - myRegistryKeySecretName
+<span class="gi">+  ## Additional container arguments
++  extraArgs: {}
++  # -- Environment variables to add
++  extraEnv: []
++  # -- Volume mounts to add
++  extraVolumeMounts: []
++  # - name: extra-volume
++  #   mountPath: /mnt/volume
++  #   readOnly: true
++  #   existingClaim: volume-claim
+</span> 
+ service:
+   type: ClusterIP
+<span class="p">@@ -87,16 +107,8 @@</span> persistence:
+     - ReadWriteOnce
+   size: 10Gi
+ 
+<span class="gd">-# -- Environment variables to add
+-extraEnv: []
+-# -- Environment variables from secrets or configmaps to add
+-extraEnvFrom: []
+-# -- Volume mounts to add
+-extraVolumeMounts: []
+-# - name: extra-volume
+-#   mountPath: /mnt/volume
+-#   readOnly: true
+-#   existingClaim: volume-claim
+</span><span class="gi">+## Pod Annotations
++podAnnotations: []
+</span> 
+ # -- Volumes to add
+ extraVolumes: []
+<span class="err">
+</span></code></pre></div></div> <h2 id="060"> <a href="#060" class="anchor-heading" aria-labelledby="060"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.0 </h2> <p><strong>Release date:</strong> 2021-02-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.6.0&amp;color=success" alt="AppVersion: v0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>updated to 0.6.0</li> <li>updated versions in docs</li> </ul> <h3 id="default-value-changes-83"> <a href="#default-value-changes-83" class="anchor-heading" aria-labelledby="default-value-changes-83"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 8583d4f4..7b4c5d01 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: 0.5.0
+</span><span class="gi">+  tag: null
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="050"> <a href="#050" class="anchor-heading" aria-labelledby="050"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.0 </h2> <p><strong>Release date:</strong> 2021-02-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.5.0&amp;color=success" alt="AppVersion: v0.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>updated versions and docs</li> <li>pin to 0.5.0</li> </ul> <h3 id="default-value-changes-84"> <a href="#default-value-changes-84" class="anchor-heading" aria-labelledby="default-value-changes-84"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/tempo/values.yaml b/charts/tempo/values.yaml
+index 826d538f..8583d4f4 100644
+</span><span class="gd">--- a/charts/tempo/values.yaml
+</span><span class="gi">+++ b/charts/tempo/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> fullnameOverride: ""
+ replicas: 1
+ tempo:
+   repository: grafana/tempo
+<span class="gd">-  tag: latest
+</span><span class="gi">+  tag: 0.5.0
+</span>   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+   ## Secrets must be manually created in the namespace.
+<span class="err">
+</span></code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2021-01-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.2.0&amp;color=success" alt="AppVersion: v0.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>tempo: add single mode</li> </ul> <h3 id="default-value-changes-85"> <a href="#default-value-changes-85" class="anchor-heading" aria-labelledby="default-value-changes-85"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -- Overrides the chart's name
+<span class="p">nameOverride: ""
+</span><span class="err">
+</span># -- Overrides the chart's computed fullname
+<span class="p">fullnameOverride: ""
+</span><span class="err">
+</span><span class="p">replicas: 1
+tempo:
+</span>  repository: grafana/tempo
+  tag: latest
+  pullPolicy: IfNotPresent
+  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ##
+  # pullSecrets:
+  #   - myRegistryKeySecretName
+<span class="err">
+</span>  updateStrategy: RollingUpdate
+  resources: {}
+  #  limits:
+  #    cpu: 1000m
+  #    memory: 4Gi
+  #  requests:
+  #    cpu: 2000m
+  #    memory: 6Gi
+<span class="err">
+</span>  memBallastSizeMbs: 1024
+  authEnabled: false
+  ingester: {}
+  retention: 24h
+  server:
+    httpListenPort: 3100
+  # tempo storage backend
+  # refer https://github.com/grafana/tempo/tree/master/docs/tempo/website/configuration
+  ## Use s3 for example
+  # backend: s3                                         # store traces in s3
+  #  s3:
+  #    bucket: tempo                                   # store traces in this bucket
+  #    endpoint: s3.dualstack.us-east-2.amazonaws.com  # api endpoint
+  #    access_key: ...                                 # optional. access key when using static credentials.
+  #    secret_key: ...                                 # optional. secret key when using static credentials.
+  #    insecure: false                                 # optional. enable if endpoint is http
+  ## end
+  storage:
+    trace:
+      backend: local
+      local:
+        path: /tmp/tempo/traces
+      wal:
+        path: /var/tempo/wal
+  # this configuration will listen on all ports and protocols that tempo is capable of.
+  # the receives all come from the OpenTelemetry collector.  more configuration information can
+  # be found there: https://github.com/open-telemetry/opentelemetry-collector/tree/master/receiver
+  receivers:
+    jaeger:
+      protocols:
+        grpc:
+          endpoint: 0.0.0.0:14250
+        thrift_binary:
+          endpoint: 0.0.0.0:6832
+        thrift_compact:
+          endpoint: 0.0.0.0:6831
+        thrift_http:
+          endpoint: 0.0.0.0:14268
+<span class="err">
+</span><span class="p">tempoQuery:
+</span>  repository: grafana/tempo-query
+  tag: latest
+  pullPolicy: IfNotPresent
+  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ##
+  # pullSecrets:
+  #   - myRegistryKeySecretName
+<span class="err">
+</span><span class="p">service:
+</span>  type: ClusterIP
+  annotations: {}
+  labels: {}
+<span class="err">
+</span><span class="p">persistence:
+</span>  enabled: false
+  # storageClassName: local-path
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+<span class="err">
+</span># -- Environment variables to add
+<span class="p">extraEnv: []
+</span># -- Environment variables from secrets or configmaps to add
+<span class="p">extraEnvFrom: []
+</span># -- Volume mounts to add
+<span class="p">extraVolumeMounts: []
+</span># - name: extra-volume
+#   mountPath: /mnt/volume
+#   readOnly: true
+#   existingClaim: volume-claim
+<span class="err">
+</span># -- Volumes to add
+<span class="p">extraVolumes: []
+</span><span class="err">
+</span>## Node labels for pod assignment
+## ref: https://kubernetes.io/docs/user-guide/node-selection/
+#
+<span class="p">nodeSelector: {}
+</span><span class="err">
+</span>## Tolerations for pod assignment
+## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+##
+<span class="p">tolerations: []
+</span><span class="err">
+</span>## Affinity for pod assignment
+## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+##
+<span class="p">affinity: {}
+</span><span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

@@ -1,0 +1,1672 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(3)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(1) > ul > li:nth-child(3) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(1) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(1) > ul > li:nth-child(3) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(1) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(1) > ul.nav-list > li.nav-list-item:nth-child(3) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>argo-rollouts | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="argo-rollouts" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/argoproj/argo-helm/argo-rollouts" /> <meta property="og:url" content="https://baprx.github.io/changelogs/argoproj/argo-helm/argo-rollouts" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="argo-rollouts" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"argo-rollouts","url":"https://baprx.github.io/changelogs/argoproj/argo-helm/argo-rollouts"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/argoproj/argo-helm">argoproj/argo-helm</a></li> <li class="breadcrumb-nav-list-item"><span>argo-rollouts</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="argo-rollouts"> <a href="#argo-rollouts" class="anchor-heading" aria-labelledby="argo-rollouts"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> argo-rollouts </h1> <h2 id="2342"> <a href="#2342" class="anchor-heading" aria-labelledby="2342"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.34.2 </h2> <p><strong>Release date:</strong> 2024-01-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.5&amp;color=success" alt="AppVersion: v1.6.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Update dependency argoproj/argo-rollouts to v1.6.5 (#2453)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2341"> <a href="#2341" class="anchor-heading" aria-labelledby="2341"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.34.1 </h2> <p><strong>Release date:</strong> 2024-01-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.4&amp;color=success" alt="AppVersion: v1.6.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add rollout plugin gloo platform rbac (#2404)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index e7a5f133..19ab340e 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -271,6 +271,8 @@</span> providerRBAC:
+     apisix: true
+     # -- Adds RBAC rules for the Contour provider, see `https://github.com/argoproj-labs/rollouts-plugin-trafficrouter-contour/blob/main/README.md`
+     contour: true
+<span class="gi">+    # -- Adds RBAC rules for the Gloo Platform provider, see `https://github.com/argoproj-labs/rollouts-plugin-trafficrouter-glooplatform/blob/main/README.md`
++    glooPlatform: true
+</span> 
+ dashboard:
+   # -- Deploy dashboard server
+<span class="err">
+</span></code></pre></div></div> <h2 id="2340"> <a href="#2340" class="anchor-heading" aria-labelledby="2340"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.34.0 </h2> <p><strong>Release date:</strong> 2023-12-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.4&amp;color=success" alt="AppVersion: v1.6.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): add args for dashboard logs (#2388)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 6eb48b9c..e7a5f133 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -289,6 +289,11 @@</span> dashboard:
+   tolerations: []
+   # -- Assign custom [affinity] rules to the deployment
+   affinity: {}
+<span class="gi">+  logging:
++    # -- Set the logging level (one of: `debug`, `info`, `warn`, `error`)
++    level: info
++    # -- Set the klog logging level
++    kloglevel: "0"
+</span> 
+   # -- Assign custom [TopologySpreadConstraints] rules to the dashboard server
+   ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+<span class="err">
+</span></code></pre></div></div> <h2 id="2330"> <a href="#2330" class="anchor-heading" aria-labelledby="2330"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.33.0 </h2> <p><strong>Release date:</strong> 2023-12-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.4&amp;color=success" alt="AppVersion: v1.6.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): allow setting log config for rollouts (#2386)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 34c5a286..6eb48b9c 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -55,6 +55,13 @@</span> controller:
+   tolerations: []
+   # -- Assign custom [affinity] rules to the deployment
+   affinity: {}
+<span class="gi">+  logging:
++    # -- Set the logging level (one of: `debug`, `info`, `warn`, `error`)
++    level: info
++    # -- Set the klog logging level
++    kloglevel: "0"
++    # -- Set the logging format (one of: `text`, `json`)
++    format: "text"
+</span> 
+   # -- Assign custom [TopologySpreadConstraints] rules to the controller
+   ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+<span class="err">
+</span></code></pre></div></div> <h2 id="2328"> <a href="#2328" class="anchor-heading" aria-labelledby="2328"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.8 </h2> <p><strong>Release date:</strong> 2023-12-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.4&amp;color=success" alt="AppVersion: v1.6.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Update dependency argoproj/argo-rollouts to v1.6.4 (#2385)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2327"> <a href="#2327" class="anchor-heading" aria-labelledby="2327"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.7 </h2> <p><strong>Release date:</strong> 2023-12-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.3&amp;color=success" alt="AppVersion: v1.6.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Update dependency argoproj/argo-rollouts to v1.6.3 (#2374)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2326"> <a href="#2326" class="anchor-heading" aria-labelledby="2326"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.6 </h2> <p><strong>Release date:</strong> 2023-12-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.2&amp;color=success" alt="AppVersion: v1.6.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): add rollout plugin contour rbac (#2371)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index b711ee37..34c5a286 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -262,6 +262,8 @@</span> providerRBAC:
+     traefik: true
+     # -- Adds RBAC rules for the Apisix provider
+     apisix: true
+<span class="gi">+    # -- Adds RBAC rules for the Contour provider, see `https://github.com/argoproj-labs/rollouts-plugin-trafficrouter-contour/blob/main/README.md`
++    contour: true
+</span> 
+ dashboard:
+   # -- Deploy dashboard server
+<span class="err">
+</span></code></pre></div></div> <h2 id="2325"> <a href="#2325" class="anchor-heading" aria-labelledby="2325"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.5 </h2> <p><strong>Release date:</strong> 2023-11-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.2&amp;color=success" alt="AppVersion: v1.6.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Update all rollout CRDs to match upstream (#2361)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2324"> <a href="#2324" class="anchor-heading" aria-labelledby="2324"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.4 </h2> <p><strong>Release date:</strong> 2023-11-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.2&amp;color=success" alt="AppVersion: v1.6.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Bump rollouts to 1.6.2 (#2347)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2323"> <a href="#2323" class="anchor-heading" aria-labelledby="2323"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.3 </h2> <p><strong>Release date:</strong> 2023-11-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.1&amp;color=success" alt="AppVersion: v1.6.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Bump rollouts to 1.6.1 (#2345)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2322"> <a href="#2322" class="anchor-heading" aria-labelledby="2322"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.2 </h2> <p><strong>Release date:</strong> 2023-10-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.0&amp;color=success" alt="AppVersion: v1.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Update AnalysisRun CRD to match upstream (#2320)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2321"> <a href="#2321" class="anchor-heading" aria-labelledby="2321"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.1 </h2> <p><strong>Release date:</strong> 2023-10-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.0&amp;color=success" alt="AppVersion: v1.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): controller replicas count comparison (#2309)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2320"> <a href="#2320" class="anchor-heading" aria-labelledby="2320"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.32.0 </h2> <p><strong>Release date:</strong> 2023-09-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.0&amp;color=success" alt="AppVersion: v1.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Upgrade Argo Rollouts to v1.6.0 (#2252)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2316"> <a href="#2316" class="anchor-heading" aria-labelledby="2316"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.31.6 </h2> <p><strong>Release date:</strong> 2023-08-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): update servicemonitor.yaml to allow for namespace to be set (#2222)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index f9d8e1cf..b711ee37 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -132,6 +132,8 @@</span> controller:
+     serviceMonitor:
+       # -- Enable a prometheus ServiceMonitor
+       enabled: false
+<span class="gi">+      # -- Namespace to be used for the ServiceMonitor
++      namespace: ""
+</span>       # -- Labels to be added to the ServiceMonitor
+       additionalLabels: {}
+       # -- Annotations to be added to the ServiceMonitor
+<span class="err">
+</span></code></pre></div></div> <h2 id="2315"> <a href="#2315" class="anchor-heading" aria-labelledby="2315"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.31.5 </h2> <p><strong>Release date:</strong> 2023-08-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): add CI for enabling extra objects for argo-rollouts (#2198)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2314"> <a href="#2314" class="anchor-heading" aria-labelledby="2314"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.31.4 </h2> <p><strong>Release date:</strong> 2023-08-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Add required ingress permission (#2207)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2313"> <a href="#2313" class="anchor-heading" aria-labelledby="2313"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.31.3 </h2> <p><strong>Release date:</strong> 2023-08-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): fix helm lint error when extraObjects is defined (#2196)</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2312"> <a href="#2312" class="anchor-heading" aria-labelledby="2312"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.31.2 </h2> <p><strong>Release date:</strong> 2023-07-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Use annotation cont metrics (#2184)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index b81ee53a..f9d8e1cf 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -127,6 +127,8 @@</span> controller:
+       portName: metrics
+       # -- Metrics service port
+       port: 8090
+<span class="gi">+      # -- Service annotations
++      annotations: {}
+</span>     serviceMonitor:
+       # -- Enable a prometheus ServiceMonitor
+       enabled: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="2311"> <a href="#2311" class="anchor-heading" aria-labelledby="2311"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.31.1 </h2> <p><strong>Release date:</strong> 2023-07-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Upgrade Argo Rollouts to v1.5.1 (#2174)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2310"> <a href="#2310" class="anchor-heading" aria-labelledby="2310"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.31.0 </h2> <p><strong>Release date:</strong> 2023-06-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Support Traffic Router Plugins (#2090)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 6a533eaf..b81ee53a 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -194,6 +194,13 @@</span> controller:
+     #   - name: "argoproj-labs/sample-prometheus" # name of the plugin, it must match the name required by the plugin so that it can find its configuration
+     #     location: "file://./my-custom-plugin" # supports http(s):// urls and file://
+ 
+<span class="gi">+  # -- Configures 3rd party traffic router plugins for controller
++  ## Ref: https://argo-rollouts.readthedocs.io/en/stable/features/traffic-management/plugins/
++  trafficRouterPlugins: {}
++    # trafficRouterPlugins: |-
++    #   - name: "argoproj-labs/sample-nginx" # name of the plugin, it must match the name required by the plugin so it can find it's configuration
++    #     location: "file://./my-custom-plugin" # supports http(s):// urls and file://
++
+</span> serviceAccount:
+   # -- Specifies whether a service account should be created
+   create: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="2301"> <a href="#2301" class="anchor-heading" aria-labelledby="2301"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.30.1 </h2> <p><strong>Release date:</strong> 2023-05-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Fix cluster role missing access in argo rollouts dashboard (#2081)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2300"> <a href="#2300" class="anchor-heading" aria-labelledby="2300"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.30.0 </h2> <p><strong>Release date:</strong> 2023-05-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): add deployment annotations for controller (#2048)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 2ea4fbb4..6a533eaf 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -38,9 +38,15 @@</span> extraObjects: []
+   #     api-key: &lt;datadog-api-key&gt;
+   #     app-key: &lt;datadog-app-key&gt;
+ 
+<span class="gi">+global:
++  # -- Annotations for all deployed Deployments
++  deploymentAnnotations: {}
++
+</span> controller:
+   # -- Value of label `app.kubernetes.io/component`
+   component: rollouts-controller
+<span class="gi">+  # -- Annotations to be added to the controller deployment
++  deploymentAnnotations: {}
+</span>   # -- Annotations to be added to application controller pods
+   podAnnotations: {}
+   # -- [Node selector]
+<span class="p">@@ -253,6 +259,8 @@</span> dashboard:
+   readonly: false
+   # -- Value of label `app.kubernetes.io/component`
+   component: rollouts-dashboard
+<span class="gi">+  # -- Annotations to be added to the dashboard deployment
++  deploymentAnnotations: {}
+</span>   # -- Annotations to be added to application dashboard pods
+   podAnnotations: {}
+   # -- [Node selector]
+<span class="err">
+</span></code></pre></div></div> <h2 id="2290"> <a href="#2290" class="anchor-heading" aria-labelledby="2290"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.29.0 </h2> <p><strong>Release date:</strong> 2023-05-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add possibility to configure healthz and metrics ports to be compatible with Istio (#1976)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index d1c91e30..2ea4fbb4 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -106,9 +106,21 @@</span> controller:
+   # -- flag to enable creation of cluster controller role (requires cluster RBAC)
+   createClusterRole: true
+ 
+<span class="gi">+  # Controller container ports
++  containerPorts:
++    # -- Metrics container port
++    metrics: 8090
++    # -- Healthz container port
++    healthz: 8080
++
+</span>   metrics:
+     # -- Deploy metrics service
+     enabled: false
+<span class="gi">+    service:
++      # -- Metrics service port name
++      portName: metrics
++      # -- Metrics service port
++      port: 8090
+</span>     serviceMonitor:
+       # -- Enable a prometheus ServiceMonitor
+       enabled: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="2280"> <a href="#2280" class="anchor-heading" aria-labelledby="2280"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.28.0 </h2> <p><strong>Release date:</strong> 2023-05-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Upgrade Argo Rollouts to v1.5.0 (#2039)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 28a6f1f8..d1c91e30 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -169,6 +169,13 @@</span> controller:
+     # - mountPath: /etc/ssl/certs
+     #   name: my-certs
+ 
+<span class="gi">+  # -- Configures 3rd party metric providers for controller
++  ## Ref: https://argo-rollouts.readthedocs.io/en/stable/analysis/plugins/
++  metricProviderPlugins: {}
++    # metricProviderPlugins: |-
++    #   - name: "argoproj-labs/sample-prometheus" # name of the plugin, it must match the name required by the plugin so that it can find its configuration
++    #     location: "file://./my-custom-plugin" # supports http(s):// urls and file://
++
+</span> serviceAccount:
+   # -- Specifies whether a service account should be created
+   create: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="2270"> <a href="#2270" class="anchor-heading" aria-labelledby="2270"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.27.0 </h2> <p><strong>Release date:</strong> 2023-05-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): allow extraObjects to contain string template (#1996)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2261"> <a href="#2261" class="anchor-heading" aria-labelledby="2261"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.26.1 </h2> <p><strong>Release date:</strong> 2023-04-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Added missing permissions for argo rollouts dashboard cluster role (#1988)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2260"> <a href="#2260" class="anchor-heading" aria-labelledby="2260"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.26.0 </h2> <p><strong>Release date:</strong> 2023-04-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): add service monitor relabeling configs (#1972)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index e451602f..28a6f1f8 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -116,6 +116,10 @@</span> controller:
+       additionalLabels: {}
+       # -- Annotations to be added to the ServiceMonitor
+       additionalAnnotations: {}
+<span class="gi">+      # -- RelabelConfigs to apply to samples before scraping
++      relabelings: []
++      # -- MetricRelabelConfigs to apply to samples before ingestion
++      metricRelabelings: []
+</span> 
+   # -- Configure liveness [probe] for the controller
+   # @default -- See [values.yaml]
+<span class="err">
+</span></code></pre></div></div> <h2 id="2250"> <a href="#2250" class="anchor-heading" aria-labelledby="2250"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.25.0 </h2> <p><strong>Release date:</strong> 2023-04-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add ability to provide additional volumes (#1965)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index d92e9304..e451602f 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -154,6 +154,17 @@</span> controller:
+     # -- Maximum number / percentage of pods that may be made unavailable
+     maxUnavailable: # 0
+ 
+<span class="gi">+  # -- Additional volumes to add to the controller pod
++  volumes: []
++    # - configMap:
++    #     name: my-certs-cm
++    #   name: my-certs
++
++  # -- Additional volumeMounts to add to the controller container
++  volumeMounts: []
++    # - mountPath: /etc/ssl/certs
++    #   name: my-certs
++
+</span> serviceAccount:
+   # -- Specifies whether a service account should be created
+   create: true
+<span class="p">@@ -355,6 +366,12 @@</span> dashboard:
+       #   hosts:
+       #     - argorollouts.example.com
+ 
+<span class="gi">+  # -- Additional volumes to add to the dashboard pod
++  volumes: []
++
++  # -- Additional volumeMounts to add to the dashboard container
++  volumeMounts: []
++
+</span> notifications:
+   secret:
+     # -- Whether to create notifications secret
+<span class="err">
+</span></code></pre></div></div> <h2 id="2240"> <a href="#2240" class="anchor-heading" aria-labelledby="2240"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.24.0 </h2> <p><strong>Release date:</strong> 2023-04-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): add namespace field for namespace scoped resources (#1960)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2230"> <a href="#2230" class="anchor-heading" aria-labelledby="2230"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.23.0 </h2> <p><strong>Release date:</strong> 2023-03-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): support setting pod annotations separately on controller and dashboard (#1928)</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index eb077221..d92e9304 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -41,6 +41,8 @@</span> extraObjects: []
+ controller:
+   # -- Value of label `app.kubernetes.io/component`
+   component: rollouts-controller
+<span class="gi">+  # -- Annotations to be added to application controller pods
++  podAnnotations: {}
+</span>   # -- [Node selector]
+   nodeSelector: {}
+   # -- [Tolerations] for use with node taints
+<span class="p">@@ -164,7 +166,7 @@</span> serviceAccount:
+ # -- Annotations to be added to all CRDs
+ crdAnnotations: {}
+ 
+<span class="gd">-# -- Annotations to be added to the Rollout pods
+</span><span class="gi">+# -- Annotations for the all deployed pods
+</span> podAnnotations: {}
+ 
+ # -- Security Context to set on pod level
+<span class="p">@@ -217,6 +219,8 @@</span> dashboard:
+   readonly: false
+   # -- Value of label `app.kubernetes.io/component`
+   component: rollouts-dashboard
+<span class="gi">+  # -- Annotations to be added to application dashboard pods
++  podAnnotations: {}
+</span>   # -- [Node selector]
+   nodeSelector: {}
+   # -- [Tolerations] for use with node taints
+<span class="err">
+</span></code></pre></div></div> <h2 id="2223"> <a href="#2223" class="anchor-heading" aria-labelledby="2223"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.22.3 </h2> <p><strong>Release date:</strong> 2023-03-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Upgrade Argo Rollouts to v.1.4.1 (#1877)</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2222"> <a href="#2222" class="anchor-heading" aria-labelledby="2222"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.22.2 </h2> <p><strong>Release date:</strong> 2023-01-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.0&amp;color=success" alt="AppVersion: v1.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Align changelog structure (#1814)</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2221"> <a href="#2221" class="anchor-heading" aria-labelledby="2221"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.22.1 </h2> <p><strong>Release date:</strong> 2023-01-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.0&amp;color=success" alt="AppVersion: v1.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Added flags to toggle provider-specific RBAC (#1777)</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 43d322c2..eb077221 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -190,6 +190,26 @@</span> podLabels: {}
+ imagePullSecrets: []
+ # - name: argo-pull-secret
+ 
+<span class="gi">+providerRBAC:
++  # -- Toggles addition of provider-specific RBAC rules to the controller Role and ClusterRole
++  enabled: true
++  # providerRBAC.enabled must be true in order to toggle the individual providers
++  providers:
++    # -- Adds RBAC rules for the Istio provider
++    istio: true
++    # -- Adds RBAC rules for the SMI provider
++    smi: true
++    # -- Adds RBAC rules for the Ambassador provider
++    ambassador: true
++    # -- Adds RBAC rules for the AWS Load Balancer Controller provider
++    awsLoadBalancerController: true
++    # -- Adds RBAC rules for the AWS App Mesh provider
++    awsAppMesh: true
++    # -- Adds RBAC rules for the Traefik provider
++    traefik: true
++    # -- Adds RBAC rules for the Apisix provider
++    apisix: true
++
+</span> dashboard:
+   # -- Deploy dashboard server
+   enabled: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="2220"> <a href="#2220" class="anchor-heading" aria-labelledby="2220"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.22.0 </h2> <p><strong>Release date:</strong> 2023-01-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.0&amp;color=success" alt="AppVersion: v1.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Upgrade argo-rollouts to 1.4.0 (#1774)</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2213"> <a href="#2213" class="anchor-heading" aria-labelledby="2213"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.21.3 </h2> <p><strong>Release date:</strong> 2023-01-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.1&amp;color=success" alt="AppVersion: v1.3.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): avoid label exceeding maximum length (#1694)</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2212"> <a href="#2212" class="anchor-heading" aria-labelledby="2212"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.21.2 </h2> <p><strong>Release date:</strong> 2023-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.1&amp;color=success" alt="AppVersion: v1.3.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add support for topologySpreadConstraints (#1755)</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index f74ed7a1..43d322c2 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -47,6 +47,15 @@</span> controller:
+   tolerations: []
+   # -- Assign custom [affinity] rules to the deployment
+   affinity: {}
+<span class="gi">+
++  # -- Assign custom [TopologySpreadConstraints] rules to the controller
++  ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
++  ## If labelSelector is left out, it will default to the labelSelector configuration of the deployment
++  topologySpreadConstraints: []
++  # - maxSkew: 1
++  #   topologyKey: topology.kubernetes.io/zone
++  #   whenUnsatisfiable: DoNotSchedule
++
+</span>   # -- [priorityClassName] for the controller
+   priorityClassName: ""
+   # -- The number of controller pods to run
+<span class="p">@@ -194,6 +203,15 @@</span> dashboard:
+   tolerations: []
+   # -- Assign custom [affinity] rules to the deployment
+   affinity: {}
+<span class="gi">+
++  # -- Assign custom [TopologySpreadConstraints] rules to the dashboard server
++  ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
++  ## If labelSelector is left out, it will default to the labelSelector configuration of the deployment
++  topologySpreadConstraints: []
++  # - maxSkew: 1
++  #   topologyKey: topology.kubernetes.io/zone
++  #   whenUnsatisfiable: DoNotSchedule
++
+</span>   # -- [priorityClassName] for the dashboard server
+   priorityClassName: ""
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="2211"> <a href="#2211" class="anchor-heading" aria-labelledby="2211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.21.1 </h2> <p><strong>Release date:</strong> 2022-09-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.1&amp;color=success" alt="AppVersion: v1.3.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Upgrade argo-rollouts to 1.3.1 (#1500)</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2210"> <a href="#2210" class="anchor-heading" aria-labelledby="2210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.21.0 </h2> <p><strong>Release date:</strong> 2022-09-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts) Upgrade to argo-rollouts 1.3.0 (#1466)</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2200"> <a href="#2200" class="anchor-heading" aria-labelledby="2200"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.20.0 </h2> <p><strong>Release date:</strong> 2022-08-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.2&amp;color=success" alt="AppVersion: v1.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add initContainers to controller pod, allow secrets to be manipulated (#1410)</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index ae24b660..f74ed7a1 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -74,6 +74,15 @@</span> controller:
+   ## This will be rendered as the literal yaml
+   extraContainers: []
+ 
+<span class="gi">+  # -- Init containers to add to the rollouts controller pod
++  ## This will be rendered as the literal yaml
++  initContainers: []
++  #  - name: download-tools
++  #    image: alpine:3.8
++  #    command: [sh, -c]
++  #    args:
++  #      -  ls
++
+</span>   # -- Resource limits and requests for the controller pods.
+   resources: {}
+   #  limits:
+<span class="err">
+</span></code></pre></div></div> <h2 id="2192"> <a href="#2192" class="anchor-heading" aria-labelledby="2192"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.19.2 </h2> <p><strong>Release date:</strong> 2022-08-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.2&amp;color=success" alt="AppVersion: v1.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(maintainers): Change helm chart maintainers to argoproj (#1426)</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2190"> <a href="#2190" class="anchor-heading" aria-labelledby="2190"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.19.0 </h2> <p><strong>Release date:</strong> 2022-08-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): flag to disable clusterrole/clusterrolebinding creation (#1388)</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index b8ebfc49..ae24b660 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -6,6 +6,9 @@</span> keepCRDs: true
+ # -- `false` runs controller in namespaced mode (does not require cluster RBAC)
+ clusterInstall: true
+ 
+<span class="gi">+# -- flag to enable creation of cluster aggregate roles (requires cluster RBAC)
++createClusterAggregateRoles: true
++
+</span> # -- String to partially override "argo-rollouts.fullname" template
+ nameOverride:
+ 
+<span class="p">@@ -80,6 +83,9 @@</span> controller:
+   #    cpu: 50m
+   #    memory: 64Mi
+ 
+<span class="gi">+  # -- flag to enable creation of cluster controller role (requires cluster RBAC)
++  createClusterRole: true
++
+</span>   metrics:
+     # -- Deploy metrics service
+     enabled: false
+<span class="p">@@ -181,6 +187,10 @@</span> dashboard:
+   affinity: {}
+   # -- [priorityClassName] for the dashboard server
+   priorityClassName: ""
+<span class="gi">+
++  # -- flag to enable creation of dashbord cluster role (requires cluster RBAC)
++  createClusterRole: true
++
+</span>   # -- The number of dashboard pods to run
+   replicas: 1
+   image:
+<span class="err">
+</span></code></pre></div></div> <h2 id="2180"> <a href="#2180" class="anchor-heading" aria-labelledby="2180"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.18.0 </h2> <p><strong>Release date:</strong> 2022-07-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add extra manifests option to chart (#1366)</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index aa98cbb8..b8ebfc49 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -22,6 +22,19 @@</span> apiVersionOverrides:
+ # -- Override the Kubernetes version, which is used to evaluate certain manifests
+ kubeVersionOverride: ""
+ 
+<span class="gi">+# -- Additional manifests to deploy within the chart. A list of objects.
++## Can be used to add secrets for Analysis with 3rd-party monitoring solutions.
++extraObjects: []
++  # - apiVersion: v1
++  #   kind: Secret
++  #   metadata:
++  #     name: datadog
++  #   type: Opaque
++  #   data:
++  #     address: https://api.datadoghq.com
++  #     api-key: &lt;datadog-api-key&gt;
++  #     app-key: &lt;datadog-app-key&gt;
++
+</span> controller:
+   # -- Value of label `app.kubernetes.io/component`
+   component: rollouts-controller
+<span class="err">
+</span></code></pre></div></div> <h2 id="2170"> <a href="#2170" class="anchor-heading" aria-labelledby="2170"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.17.0 </h2> <p><strong>Release date:</strong> 2022-06-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts) Add controller.extraEnv (#1333)</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 99d43d4e..aa98cbb8 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -48,6 +48,11 @@</span> controller:
+   # -- Additional command line arguments to pass to rollouts-controller.  A list of flags.
+   extraArgs: []
+ 
+<span class="gi">+  # -- Additional environment variables for rollouts-controller. A list of name/value maps.
++  extraEnv: []
++    # - name: AWS_REGION
++    #   value: us-east-1
++
+</span>   # -- Literal yaml for extra containers to be added to controller deployment.
+   ## Additional containers to add to the rollouts controller deployment
+   ## This will be rendered as the literal yaml
+<span class="p">@@ -176,6 +181,10 @@</span> dashboard:
+     pullPolicy: IfNotPresent
+   # -- Additional command line arguments to pass to rollouts-dashboard. A list of flags.
+   extraArgs: []
+<span class="gi">+  # -- Additional environment variables for rollouts-dashboard. A list of name/value maps.
++  extraEnv: []
++    # - name: FOO
++    #   value: bar
+</span>   # -- Resource limits and requests for the dashboard pods.
+   resources: {}
+   # -- Security Context to set on pod level
+<span class="err">
+</span></code></pre></div></div> <h2 id="2160"> <a href="#2160" class="anchor-heading" aria-labelledby="2160"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.16.0 </h2> <p><strong>Release date:</strong> 2022-06-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): readonly dashboard (#1304)</li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 46a64593..99d43d4e 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -151,6 +151,8 @@</span> imagePullSecrets: []
+ dashboard:
+   # -- Deploy dashboard server
+   enabled: false
+<span class="gi">+  # -- Set cluster role to readonly
++  readonly: false
+</span>   # -- Value of label `app.kubernetes.io/component`
+   component: rollouts-dashboard
+   # -- [Node selector]
+<span class="err">
+</span></code></pre></div></div> <h2 id="2150"> <a href="#2150" class="anchor-heading" aria-labelledby="2150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.15.0 </h2> <p><strong>Release date:</strong> 2022-05-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add PDB option to controller and dashboard (#1294)</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index c9ec9a99..46a64593 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -97,6 +97,19 @@</span> controller:
+     successThreshold: 1
+     timeoutSeconds: 4
+ 
+<span class="gi">+  ## Configure Pod Disruption Budget for the controller
++  pdb:
++    # -- Labels to be added to controller [Pod Disruption Budget]
++    labels: {}
++    # -- Annotations to be added to controller [Pod Disruption Budget]
++    annotations: {}
++    # -- Deploy a [Pod Disruption Budget] for the controller
++    enabled: false
++    # -- Minimum number / percentage of pods that should remain scheduled
++    minAvailable: # 1
++    # -- Maximum number / percentage of pods that may be made unavailable
++    maxUnavailable: # 0
++
+</span> serviceAccount:
+   # -- Specifies whether a service account should be created
+   create: true
+<span class="p">@@ -198,6 +211,19 @@</span> dashboard:
+     # If not set and create is true, a name is generated using the fullname template
+     name: ""
+ 
+<span class="gi">+  ## Configure Pod Disruption Budget for the dashboard
++  pdb:
++    # -- Labels to be added to dashboard [Pod Disruption Budget]
++    labels: {}
++    # -- Annotations to be added to dashboard [Pod Disruption Budget]
++    annotations: {}
++    # -- Deploy a [Pod Disruption Budget] for the dashboard
++    enabled: false
++    # -- Minimum number / percentage of pods that should remain scheduled
++    minAvailable: # 1
++    # -- Maximum number / percentage of pods that may be made unavailable
++    maxUnavailable: # 0
++
+</span>   ## Ingress configuration.
+   ## ref: https://kubernetes.io/docs/user-guide/ingress/
+   ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="2141"> <a href="#2141" class="anchor-heading" aria-labelledby="2141"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.14.1 </h2> <p><strong>Release date:</strong> 2022-05-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add replicas option to dashboard (#1286)</li> </ul> <h3 id="default-value-changes-45"> <a href="#default-value-changes-45" class="anchor-heading" aria-labelledby="default-value-changes-45"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index b5c9f576..c9ec9a99 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -148,6 +148,8 @@</span> dashboard:
+   affinity: {}
+   # -- [priorityClassName] for the dashboard server
+   priorityClassName: ""
+<span class="gi">+  # -- The number of dashboard pods to run
++  replicas: 1
+</span>   image:
+     # -- Registry to use
+     registry: quay.io
+<span class="err">
+</span></code></pre></div></div> <h2 id="2140"> <a href="#2140" class="anchor-heading" aria-labelledby="2140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.14.0 </h2> <p><strong>Release date:</strong> 2022-04-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Allow defining priorityClassName (#1212)</li> </ul> <h3 id="default-value-changes-46"> <a href="#default-value-changes-46" class="anchor-heading" aria-labelledby="default-value-changes-46"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index f99af0bb..b5c9f576 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -31,6 +31,8 @@</span> controller:
+   tolerations: []
+   # -- Assign custom [affinity] rules to the deployment
+   affinity: {}
+<span class="gi">+  # -- [priorityClassName] for the controller
++  priorityClassName: ""
+</span>   # -- The number of controller pods to run
+   replicas: 2
+   image:
+<span class="p">@@ -144,6 +146,8 @@</span> dashboard:
+   tolerations: []
+   # -- Assign custom [affinity] rules to the deployment
+   affinity: {}
+<span class="gi">+  # -- [priorityClassName] for the dashboard server
++  priorityClassName: ""
+</span>   image:
+     # -- Registry to use
+     registry: quay.io
+<span class="err">
+</span></code></pre></div></div> <h2 id="2130"> <a href="#2130" class="anchor-heading" aria-labelledby="2130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.13.0 </h2> <p><strong>Release date:</strong> 2022-03-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): add dashboard permission on Deployments (#1202)</li> </ul> <h3 id="default-value-changes-47"> <a href="#default-value-changes-47" class="anchor-heading" aria-labelledby="default-value-changes-47"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="2120"> <a href="#2120" class="anchor-heading" aria-labelledby="2120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.12.0 </h2> <p><strong>Release date:</strong> 2022-03-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): upgrade to v1.2.0 (#1135)</li> </ul> <h3 id="default-value-changes-48"> <a href="#default-value-changes-48" class="anchor-heading" aria-labelledby="default-value-changes-48"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 42d32de0..f99af0bb 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -32,7 +32,7 @@</span> controller:
+   # -- Assign custom [affinity] rules to the deployment
+   affinity: {}
+   # -- The number of controller pods to run
+<span class="gd">-  replicas: 1
+</span><span class="gi">+  replicas: 2
+</span>   image:
+     # -- Registry to use
+     registry: quay.io
+<span class="p">@@ -75,8 +75,8 @@</span> controller:
+   # @default -- See [values.yaml]
+   livenessProbe:
+     httpGet:
+<span class="gd">-      path: /metrics
+-      port: 8090
+</span><span class="gi">+      path: /healthz
++      port: healthz
+</span>     initialDelaySeconds: 30
+     periodSeconds: 20
+     failureThreshold: 3
+<span class="p">@@ -88,7 +88,7 @@</span> controller:
+   readinessProbe:
+     httpGet:
+       path: /metrics
+<span class="gd">-      port: 8090
+</span><span class="gi">+      port: metrics
+</span>     initialDelaySeconds: 15
+     periodSeconds: 5
+     failureThreshold: 3
+<span class="err">
+</span></code></pre></div></div> <h2 id="2110"> <a href="#2110" class="anchor-heading" aria-labelledby="2110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.11.0 </h2> <p><strong>Release date:</strong> 2022-03-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.1&amp;color=success" alt="AppVersion: v1.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add notification secret and configmap (#1163)</li> </ul> <h3 id="default-value-changes-49"> <a href="#default-value-changes-49" class="anchor-heading" aria-labelledby="default-value-changes-49"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 94e80379..42d32de0 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -237,3 +237,34 @@</span> dashboard:
+       # - secretName: argorollouts-example-tls
+       #   hosts:
+       #     - argorollouts.example.com
+<span class="gi">+
++notifications:
++  secret:
++    # -- Whether to create notifications secret
++    create: false
++    # -- Generic key:value pairs to be inserted into the notifications secret
++    items: {}
++      # slack-token:
++
++  # -- Configures notification services
++  notifiers: {}
++    # service.slack: |
++    #   token: $slack-token
++
++  # -- Notification templates
++  templates: {}
++    # template.my-purple-template: |
++    #   message: |
++    #     Rollout {{.rollout.metadata.name}} has purple image
++    #   slack:
++    #       attachments: |
++    #           [{
++    #             "title": "{{ .rollout.metadata.name}}",
++    #             "color": "#800080"
++    #           }]
++
++  # -- The trigger defines the condition when the notification should be sent
++  triggers: {}
++    # trigger.on-purple: |
++    #   - send: [my-purple-template]
++    #     when: rollout.spec.template.spec.containers[0].image == 'argoproj/rollouts-demo:purple'
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="2100"> <a href="#2100" class="anchor-heading" aria-labelledby="2100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.10.0 </h2> <p><strong>Release date:</strong> 2022-02-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.1&amp;color=success" alt="AppVersion: v1.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add ability to define dashboard service node port (#1138)</li> </ul> <h3 id="default-value-changes-50"> <a href="#default-value-changes-50" class="anchor-heading" aria-labelledby="default-value-changes-50"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 53b94bf7..94e80379 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -181,6 +181,8 @@</span> dashboard:
+     port: 3100
+     # -- Service target port
+     targetPort: 3100
+<span class="gi">+    # -- (int) Service nodePort
++    nodePort:
+</span>   serviceAccount:
+     # -- Specifies whether a dashboard service account should be created
+     create: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="293"> <a href="#293" class="anchor-heading" aria-labelledby="293"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.9.3 </h2> <p><strong>Release date:</strong> 2022-01-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.1&amp;color=success" alt="AppVersion: v1.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Use helm-docs to generate README.md (#1100)</li> </ul> <h3 id="default-value-changes-51"> <a href="#default-value-changes-51" class="anchor-heading" aria-labelledby="default-value-changes-51"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index dbe0c2ca..53b94bf7 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -1,50 +1,57 @@</span>
+<span class="gi">+# -- Install and upgrade CRDs
+</span> installCRDs: true
+<span class="gi">+# -- Keep CRD's on helm uninstall
+</span> keepCRDs: true
+ 
+<span class="gi">+# -- `false` runs controller in namespaced mode (does not require cluster RBAC)
+</span> clusterInstall: true
+ 
+<span class="gd">-## String to partially override "argo-rollouts.fullname" template
+-##
+</span><span class="gi">+# -- String to partially override "argo-rollouts.fullname" template
+</span> nameOverride:
+ 
+<span class="gd">-## String to fully override "argo-rollouts.fullname" template
+-##
+</span><span class="gi">+# -- String to fully override "argo-rollouts.fullname" template
+</span> fullnameOverride:
+ 
+ ## Override APIVersions
+ ## If you want to template helm charts but cannot access k8s API server
+ ## you can set api versions here
+ apiVersionOverrides:
+<span class="gd">-  # String to override apiVersion of ingresses rendered by this helm chart
+</span><span class="gi">+  # -- String to override apiVersion of ingresses rendered by this helm chart
+</span>   ingress: "" # networking.k8s.io/v1beta1
+ 
+<span class="gd">-## Override the Kubernetes version, which is used to evaluate certain manifests
+-##
+</span><span class="gi">+# -- Override the Kubernetes version, which is used to evaluate certain manifests
+</span> kubeVersionOverride: ""
+ 
+ controller:
+<span class="gi">+  # -- Value of label `app.kubernetes.io/component`
+</span>   component: rollouts-controller
+<span class="gd">-  ## Node selectors and tolerations for server scheduling to nodes with taints
+-  ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+-  ##
+</span><span class="gi">+  # -- [Node selector]
+</span>   nodeSelector: {}
+<span class="gi">+  # -- [Tolerations] for use with node taints
+</span>   tolerations: []
+<span class="gi">+  # -- Assign custom [affinity] rules to the deployment
+</span>   affinity: {}
+<span class="gi">+  # -- The number of controller pods to run
+</span>   replicas: 1
+   image:
+<span class="gi">+    # -- Registry to use
+</span>     registry: quay.io
+<span class="gi">+    # -- Repository to use
+</span>     repository: argoproj/argo-rollouts
+<span class="gi">+    # -- Overrides the image tag (default is the chart appVersion)
+</span>     tag: ""
+<span class="gi">+    # -- Image pull policy
+</span>     pullPolicy: IfNotPresent
+ 
+<span class="gd">-  ## Additional command line arguments to pass to rollouts-controller
+-  ##
+</span><span class="gi">+  # -- Additional command line arguments to pass to rollouts-controller.  A list of flags.
+</span>   extraArgs: []
+ 
+<span class="gi">+  # -- Literal yaml for extra containers to be added to controller deployment.
+</span>   ## Additional containers to add to the rollouts controller deployment
+   ## This will be rendered as the literal yaml
+   extraContainers: []
+ 
+<span class="gi">+  # -- Resource limits and requests for the controller pods.
+</span>   resources: {}
+   #  limits:
+   #    cpu: 100m
+<span class="p">@@ -54,13 +61,18 @@</span> controller:
+   #    memory: 64Mi
+ 
+   metrics:
+<span class="gi">+    # -- Deploy metrics service
+</span>     enabled: false
+     serviceMonitor:
+<span class="gi">+      # -- Enable a prometheus ServiceMonitor
+</span>       enabled: false
+<span class="gi">+      # -- Labels to be added to the ServiceMonitor
+</span>       additionalLabels: {}
+<span class="gi">+      # -- Annotations to be added to the ServiceMonitor
+</span>       additionalAnnotations: {}
+ 
+<span class="gd">-  ## Readiness and liveness probes for rollouts controller
+</span><span class="gi">+  # -- Configure liveness [probe] for the controller
++  # @default -- See [values.yaml]
+</span>   livenessProbe:
+     httpGet:
+       path: /metrics
+<span class="p">@@ -70,6 +82,9 @@</span> controller:
+     failureThreshold: 3
+     successThreshold: 1
+     timeoutSeconds: 10
+<span class="gi">+
++  # -- Configure readiness [probe] for the controller
++  # @default -- See [values.yaml]
+</span>   readinessProbe:
+     httpGet:
+       path: /metrics
+<span class="p">@@ -81,29 +96,25 @@</span> controller:
+     timeoutSeconds: 4
+ 
+ serviceAccount:
+<span class="gd">-  # Specifies whether a service account should be created
+</span><span class="gi">+  # -- Specifies whether a service account should be created
+</span>   create: true
+<span class="gd">-  # Annotations to add to the service account
+</span><span class="gi">+  # -- Annotations to add to the service account
+</span>   annotations: {}
+<span class="gd">-  # The name of the service account to use.
+</span><span class="gi">+  # -- The name of the service account to use.
+</span>   # If not set and create is true, a name is generated using the fullname template
+   name: ""
+ 
+<span class="gd">-## Annotations to be added to all CRDs
+-##
+</span><span class="gi">+# -- Annotations to be added to all CRDs
+</span> crdAnnotations: {}
+ 
+<span class="gd">-## Annotations to be added to the Rollout pods
+-##
+</span><span class="gi">+# -- Annotations to be added to the Rollout pods
+</span> podAnnotations: {}
+ 
+<span class="gd">-## Security Context to set on pod level
+-##
+</span><span class="gi">+# -- Security Context to set on pod level
+</span> podSecurityContext:
+   runAsNonRoot: true
+ 
+<span class="gd">-## Security Context to set on container level
+-##
+</span><span class="gi">+# -- Security Context to set on container level
+</span> containerSecurityContext: {}
+   # capabilities:
+   #   drop:
+<span class="p">@@ -112,40 +123,47 @@</span> containerSecurityContext: {}
+   # runAsNonRoot: true
+   # runAsUser: 1000
+ 
+<span class="gd">-## Annotations to be added to the Rollout service
+-##
+</span><span class="gi">+# -- Annotations to be added to the Rollout service
+</span> serviceAnnotations: {}
+ 
+<span class="gd">-## Labels to be added to the Rollout pods
+-##
+</span><span class="gi">+# -- Labels to be added to the Rollout pods
+</span> podLabels: {}
+ 
+<span class="gd">-# Secrets with credentials to pull images from a private registry
+</span><span class="gi">+# -- Secrets with credentials to pull images from a private registry. Registry secret names as an array.
+</span> imagePullSecrets: []
+ # - name: argo-pull-secret
+ 
+ dashboard:
+<span class="gi">+  # -- Deploy dashboard server
+</span>   enabled: false
+<span class="gi">+  # -- Value of label `app.kubernetes.io/component`
+</span>   component: rollouts-dashboard
+<span class="gd">-  ## Node selectors and tolerations for server scheduling to nodes with taints
+-  ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+-  ##
+</span><span class="gi">+  # -- [Node selector]
+</span>   nodeSelector: {}
+<span class="gi">+  # -- [Tolerations] for use with node taints
+</span>   tolerations: []
+<span class="gi">+  # -- Assign custom [affinity] rules to the deployment
+</span>   affinity: {}
+   image:
+<span class="gi">+    # -- Registry to use
+</span>     registry: quay.io
+<span class="gi">+    # --  Repository to use
+</span>     repository: argoproj/kubectl-argo-rollouts
+<span class="gi">+    # -- Overrides the image tag (default is the chart appVersion)
+</span>     tag: ""
+<span class="gi">+    # -- Image pull policy
+</span>     pullPolicy: IfNotPresent
+<span class="gd">-  ## Additional command line arguments to pass to rollouts-dashboard
+-  ##
+</span><span class="gi">+  # -- Additional command line arguments to pass to rollouts-dashboard. A list of flags.
+</span>   extraArgs: []
+<span class="gi">+  # -- Resource limits and requests for the dashboard pods.
+</span>   resources: {}
+<span class="gi">+  # -- Security Context to set on pod level
+</span>   podSecurityContext:
+     runAsNonRoot: true
+<span class="gi">+  # -- Security Context to set on container level
+</span>   containerSecurityContext: {}
+   service:
+<span class="gi">+    # -- Sets the type of the Service
+</span>     type: ClusterIP
+     # -- LoadBalancer will get created with the IP specified in this field
+     loadBalancerIP: ""
+<span class="p">@@ -164,29 +182,40 @@</span> dashboard:
+     # -- Service target port
+     targetPort: 3100
+   serviceAccount:
+<span class="gi">+    # -- Specifies whether a dashboard service account should be created
+</span>     create: true
+<span class="gi">+    # -- Annotations to add to the dashboard service account
+</span>     annotations: {}
+<span class="gd">-    # The name of the service account to use.
+</span><span class="gi">+    # -- The name of the service account to use.
+</span>     # If not set and create is true, a name is generated using the fullname template
+     name: ""
+<span class="gi">+
+</span>   ## Ingress configuration.
+   ## ref: https://kubernetes.io/docs/user-guide/ingress/
+   ##
+   ingress:
+<span class="gi">+    # -- Enable dashboard ingress support
+</span>     enabled: false
+<span class="gi">+    # -- Dashboard ingress annotations
+</span>     annotations: {}
+<span class="gi">+    # -- Dashboard ingress labels
+</span>     labels: {}
+<span class="gi">+    # -- Dashboard ingress class name
+</span>     ingressClassName: ""
+ 
+<span class="gi">+    # -- Dashboard ingress hosts
+</span>     ## Argo Rollouts Dashboard Ingress.
+     ## Hostnames must be provided if Ingress is enabled.
+     ## Secrets must be manually created in the namespace
+<span class="gd">-    ##
+</span>     hosts: []
+       # - argorollouts.example.com
+<span class="gi">+
++    # -- Dashboard ingress paths
+</span>     paths:
+       - /
+<span class="gi">+    # -- Dashboard ingress path type
+</span>     pathType: Prefix
+<span class="gi">+    # -- Dashboard ingress extra paths
+</span>     extraPaths: []
+       # - path: /*
+       #   backend:
+<span class="p">@@ -200,6 +229,8 @@</span> dashboard:
+       #       name: ssl-redirect
+       #       port:
+       #         name: use-annotation
+<span class="gi">+
++    # -- Dashboard ingress tls
+</span>     tls: []
+       # - secretName: argorollouts-example-tls
+       #   hosts:
+<span class="err">
+</span></code></pre></div></div> <h2 id="292"> <a href="#292" class="anchor-heading" aria-labelledby="292"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.9.2 </h2> <p><strong>Release date:</strong> 2022-01-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.1&amp;color=success" alt="AppVersion: v1.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(all): Add Documentation Guidelines (#1099)</li> </ul> <h3 id="default-value-changes-52"> <a href="#default-value-changes-52" class="anchor-heading" aria-labelledby="default-value-changes-52"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="291"> <a href="#291" class="anchor-heading" aria-labelledby="291"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.9.1 </h2> <p><strong>Release date:</strong> 2022-01-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.1&amp;color=success" alt="AppVersion: v1.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Fix service name for ingress rollouts dashboard (#1084)</li> </ul> <h3 id="default-value-changes-53"> <a href="#default-value-changes-53" class="anchor-heading" aria-labelledby="default-value-changes-53"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="290"> <a href="#290" class="anchor-heading" aria-labelledby="290"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.9.0 </h2> <p><strong>Release date:</strong> 2022-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.1&amp;color=success" alt="AppVersion: v1.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add rollouts dashboard ingress support (#870)</li> </ul> <h3 id="default-value-changes-54"> <a href="#default-value-changes-54" class="anchor-heading" aria-labelledby="default-value-changes-54"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 08148d85..dbe0c2ca 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -3,6 +3,25 @@</span> keepCRDs: true
+ 
+ clusterInstall: true
+ 
+<span class="gi">+## String to partially override "argo-rollouts.fullname" template
++##
++nameOverride:
++
++## String to fully override "argo-rollouts.fullname" template
++##
++fullnameOverride:
++
++## Override APIVersions
++## If you want to template helm charts but cannot access k8s API server
++## you can set api versions here
++apiVersionOverrides:
++  # String to override apiVersion of ingresses rendered by this helm chart
++  ingress: "" # networking.k8s.io/v1beta1
++
++## Override the Kubernetes version, which is used to evaluate certain manifests
++##
++kubeVersionOverride: ""
++
+</span> controller:
+   component: rollouts-controller
+   ## Node selectors and tolerations for server scheduling to nodes with taints
+<span class="p">@@ -134,9 +153,54 @@</span> dashboard:
+     loadBalancerSourceRanges: []
+     # -- Dashboard service external IPs
+     externalIPs: []
+<span class="gi">+    # -- Service annotations
++    annotations: {}
++    # -- Service labels
++    labels: {}
++    # -- Service port name
++    portName: dashboard
++    # -- Service port
++    port: 3100
++    # -- Service target port
++    targetPort: 3100
+</span>   serviceAccount:
+     create: true
+     annotations: {}
+     # The name of the service account to use.
+     # If not set and create is true, a name is generated using the fullname template
+     name: ""
+<span class="gi">+  ## Ingress configuration.
++  ## ref: https://kubernetes.io/docs/user-guide/ingress/
++  ##
++  ingress:
++    enabled: false
++    annotations: {}
++    labels: {}
++    ingressClassName: ""
++
++    ## Argo Rollouts Dashboard Ingress.
++    ## Hostnames must be provided if Ingress is enabled.
++    ## Secrets must be manually created in the namespace
++    ##
++    hosts: []
++      # - argorollouts.example.com
++    paths:
++      - /
++    pathType: Prefix
++    extraPaths: []
++      # - path: /*
++      #   backend:
++      #     serviceName: ssl-redirect
++      #     servicePort: use-annotation
++      ## for Kubernetes &gt;=1.19 (when "networking.k8s.io/v1" is used)
++      # - path: /*
++      #   pathType: Prefix
++      #   backend:
++      #     service
++      #       name: ssl-redirect
++      #       port:
++      #         name: use-annotation
++    tls: []
++      # - secretName: argorollouts-example-tls
++      #   hosts:
++      #     - argorollouts.example.com
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="281"> <a href="#281" class="anchor-heading" aria-labelledby="281"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.8.1 </h2> <p><strong>Release date:</strong> 2022-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.1&amp;color=success" alt="AppVersion: v1.1.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): bump to v1.1.1 (#1080)</li> </ul> <h3 id="default-value-changes-55"> <a href="#default-value-changes-55" class="anchor-heading" aria-labelledby="default-value-changes-55"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="280"> <a href="#280" class="anchor-heading" aria-labelledby="280"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.8.0 </h2> <p><strong>Release date:</strong> 2022-01-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Support LoadBalancer settings for dashboard Service (#1074)</li> </ul> <h3 id="default-value-changes-56"> <a href="#default-value-changes-56" class="anchor-heading" aria-labelledby="default-value-changes-56"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 8988bbdb..08148d85 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -128,6 +128,12 @@</span> dashboard:
+   containerSecurityContext: {}
+   service:
+     type: ClusterIP
+<span class="gi">+    # -- LoadBalancer will get created with the IP specified in this field
++    loadBalancerIP: ""
++    # -- Source IP ranges to allow access to service from
++    loadBalancerSourceRanges: []
++    # -- Dashboard service external IPs
++    externalIPs: []
+</span>   serviceAccount:
+     create: true
+     annotations: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="270"> <a href="#270" class="anchor-heading" aria-labelledby="270"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.7.0 </h2> <p><strong>Release date:</strong> 2021-12-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Support HA mode for controller with multiple replicas (#1016)</li> </ul> <h3 id="default-value-changes-57"> <a href="#default-value-changes-57" class="anchor-heading" aria-labelledby="default-value-changes-57"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index a598ad05..8988bbdb 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -11,6 +11,7 @@</span> controller:
+   nodeSelector: {}
+   tolerations: []
+   affinity: {}
+<span class="gi">+  replicas: 1
+</span>   image:
+     registry: quay.io
+     repository: argoproj/argo-rollouts
+<span class="err">
+</span></code></pre></div></div> <h2 id="260"> <a href="#260" class="anchor-heading" aria-labelledby="260"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.6.0 </h2> <p><strong>Release date:</strong> 2021-12-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Allow setting the type for the dashboard service (#973)</li> </ul> <h3 id="default-value-changes-58"> <a href="#default-value-changes-58" class="anchor-heading" aria-labelledby="default-value-changes-58"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index caef4d0d..a598ad05 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -125,6 +125,8 @@</span> dashboard:
+   podSecurityContext:
+     runAsNonRoot: true
+   containerSecurityContext: {}
+<span class="gi">+  service:
++    type: ClusterIP
+</span>   serviceAccount:
+     create: true
+     annotations: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="250"> <a href="#250" class="anchor-heading" aria-labelledby="250"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.5.0 </h2> <p><strong>Release date:</strong> 2021-11-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Update ClusterRole with new rules (#993)</li> </ul> <h3 id="default-value-changes-59"> <a href="#default-value-changes-59" class="anchor-heading" aria-labelledby="default-value-changes-59"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="240"> <a href="#240" class="anchor-heading" aria-labelledby="240"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.0 </h2> <p><strong>Release date:</strong> 2021-11-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Allow additional containers in controller deployment (#999)</li> </ul> <h3 id="default-value-changes-60"> <a href="#default-value-changes-60" class="anchor-heading" aria-labelledby="default-value-changes-60"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index c009bbd4..caef4d0d 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -21,6 +21,10 @@</span> controller:
+   ##
+   extraArgs: []
+ 
+<span class="gi">+  ## Additional containers to add to the rollouts controller deployment
++  ## This will be rendered as the literal yaml
++  extraContainers: []
++
+</span>   resources: {}
+   #  limits:
+   #    cpu: 100m
+<span class="err">
+</span></code></pre></div></div> <h2 id="230"> <a href="#230" class="anchor-heading" aria-labelledby="230"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.3.0 </h2> <p><strong>Release date:</strong> 2021-10-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Support extraArgs for controller and dashboard (#978)</li> </ul> <h3 id="default-value-changes-61"> <a href="#default-value-changes-61" class="anchor-heading" aria-labelledby="default-value-changes-61"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index f706f1e8..c009bbd4 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -17,6 +17,10 @@</span> controller:
+     tag: ""
+     pullPolicy: IfNotPresent
+ 
+<span class="gi">+  ## Additional command line arguments to pass to rollouts-controller
++  ##
++  extraArgs: []
++
+</span>   resources: {}
+   #  limits:
+   #    cpu: 100m
+<span class="p">@@ -110,6 +114,9 @@</span> dashboard:
+     repository: argoproj/kubectl-argo-rollouts
+     tag: ""
+     pullPolicy: IfNotPresent
+<span class="gi">+  ## Additional command line arguments to pass to rollouts-dashboard
++  ##
++  extraArgs: []
+</span>   resources: {}
+   podSecurityContext:
+     runAsNonRoot: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="221"> <a href="#221" class="anchor-heading" aria-labelledby="221"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.1 </h2> <p><strong>Release date:</strong> 2021-10-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Reorganize files in repo (#976)</li> </ul> <h3 id="default-value-changes-62"> <a href="#default-value-changes-62" class="anchor-heading" aria-labelledby="default-value-changes-62"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="220"> <a href="#220" class="anchor-heading" aria-labelledby="220"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.0 </h2> <p><strong>Release date:</strong> 2021-10-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore: update rollouts to v1.1.0 (#966)</li> </ul> <h3 id="default-value-changes-63"> <a href="#default-value-changes-63" class="anchor-heading" aria-labelledby="default-value-changes-63"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="211"> <a href="#211" class="anchor-heading" aria-labelledby="211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.1 </h2> <p><strong>Release date:</strong> 2021-09-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(argo-rollouts): Define 2 separate tests (#949)</li> </ul> <h3 id="default-value-changes-64"> <a href="#default-value-changes-64" class="anchor-heading" aria-labelledby="default-value-changes-64"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="210"> <a href="#210" class="anchor-heading" aria-labelledby="210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.0 </h2> <p><strong>Release date:</strong> 2021-09-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Default to keeping CRD’s on helm uninstall (#922)</li> </ul> <h3 id="default-value-changes-65"> <a href="#default-value-changes-65" class="anchor-heading" aria-labelledby="default-value-changes-65"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 4c288b98..f706f1e8 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -1,4 +1,5 @@</span>
+ installCRDs: true
+<span class="gi">+keepCRDs: true
+</span> 
+ clusterInstall: true
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="202"> <a href="#202" class="anchor-heading" aria-labelledby="202"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.2 </h2> <p><strong>Release date:</strong> 2021-09-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): use <code class="language-plaintext highlighter-rouge">image.tag</code> in labels if provided (#913)</li> </ul> <h3 id="default-value-changes-66"> <a href="#default-value-changes-66" class="anchor-heading" aria-labelledby="default-value-changes-66"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="201"> <a href="#201" class="anchor-heading" aria-labelledby="201"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.1 </h2> <p><strong>Release date:</strong> 2021-08-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Also use ‘controller.component’ parameter in ServiceMonitor (#912)</li> </ul> <h3 id="default-value-changes-67"> <a href="#default-value-changes-67" class="anchor-heading" aria-labelledby="default-value-changes-67"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="200"> <a href="#200" class="anchor-heading" aria-labelledby="200"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.0 </h2> <p><strong>Release date:</strong> 2021-08-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): add dashboard (#798)</li> </ul> <h3 id="default-value-changes-68"> <a href="#default-value-changes-68" class="anchor-heading" aria-labelledby="default-value-changes-68"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index e52e8902..4c288b98 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -94,3 +94,28 @@</span> podLabels: {}
+ # Secrets with credentials to pull images from a private registry
+ imagePullSecrets: []
+ # - name: argo-pull-secret
+<span class="gi">+
++dashboard:
++  enabled: false
++  component: rollouts-dashboard
++  ## Node selectors and tolerations for server scheduling to nodes with taints
++  ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
++  ##
++  nodeSelector: {}
++  tolerations: []
++  affinity: {}
++  image:
++    registry: quay.io
++    repository: argoproj/kubectl-argo-rollouts
++    tag: ""
++    pullPolicy: IfNotPresent
++  resources: {}
++  podSecurityContext:
++    runAsNonRoot: true
++  containerSecurityContext: {}
++  serviceAccount:
++    create: true
++    annotations: {}
++    # The name of the service account to use.
++    # If not set and create is true, a name is generated using the fullname template
++    name: ""
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="104"> <a href="#104" class="anchor-heading" aria-labelledby="104"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.4 </h2> <p><strong>Release date:</strong> 2021-08-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Add missing liveness and readiness probe (#860)</li> </ul> <h3 id="default-value-changes-69"> <a href="#default-value-changes-69" class="anchor-heading" aria-labelledby="default-value-changes-69"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index e778377f..e52e8902 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -31,6 +31,26 @@</span> controller:
+       additionalLabels: {}
+       additionalAnnotations: {}
+ 
+<span class="gi">+  ## Readiness and liveness probes for rollouts controller
++  livenessProbe:
++    httpGet:
++      path: /metrics
++      port: 8090
++    initialDelaySeconds: 30
++    periodSeconds: 20
++    failureThreshold: 3
++    successThreshold: 1
++    timeoutSeconds: 10
++  readinessProbe:
++    httpGet:
++      path: /metrics
++      port: 8090
++    initialDelaySeconds: 15
++    periodSeconds: 5
++    failureThreshold: 3
++    successThreshold: 1
++    timeoutSeconds: 4
++
+</span> serviceAccount:
+   # Specifies whether a service account should be created
+   create: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="103"> <a href="#103" class="anchor-heading" aria-labelledby="103"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.3 </h2> <p><strong>Release date:</strong> 2021-07-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat!: Improve Pull Request Template &amp; Contributing Guidelines (#750)</li> </ul> <h3 id="default-value-changes-70"> <a href="#default-value-changes-70" class="anchor-heading" aria-labelledby="default-value-changes-70"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="102"> <a href="#102" class="anchor-heading" aria-labelledby="102"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.2 </h2> <p><strong>Release date:</strong> 2021-07-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.2&amp;color=success" alt="AppVersion: v1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Add ConfigMap read access to support notification-engine (#812)</li> </ul> <h3 id="default-value-changes-71"> <a href="#default-value-changes-71" class="anchor-heading" aria-labelledby="default-value-changes-71"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="101"> <a href="#101" class="anchor-heading" aria-labelledby="101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.1 </h2> <p><strong>Release date:</strong> 2021-05-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.1&amp;color=success" alt="AppVersion: v1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: Allow metrics service without CoreOS Service Monitor (#775)</li> </ul> <h3 id="default-value-changes-72"> <a href="#default-value-changes-72" class="anchor-heading" aria-labelledby="default-value-changes-72"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 3e2a4769..e778377f 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -25,6 +25,7 @@</span> controller:
+   #    memory: 64Mi
+ 
+   metrics:
+<span class="gi">+    enabled: false
+</span>     serviceMonitor:
+       enabled: false
+       additionalLabels: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="100"> <a href="#100" class="anchor-heading" aria-labelledby="100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.0 </h2> <p><strong>Release date:</strong> 2021-05-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.0.1&amp;color=success" alt="AppVersion: v1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Update manifests for v1.0.1 (#752)</li> </ul> <h3 id="default-value-changes-73"> <a href="#default-value-changes-73" class="anchor-heading" aria-labelledby="default-value-changes-73"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index a3200728..3e2a4769 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -3,7 +3,6 @@</span> installCRDs: true
+ clusterInstall: true
+ 
+ controller:
+<span class="gd">-  name: argo-rollouts
+</span>   component: rollouts-controller
+   ## Node selectors and tolerations for server scheduling to nodes with taints
+   ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+<span class="p">@@ -12,8 +11,9 @@</span> controller:
+   tolerations: []
+   affinity: {}
+   image:
+<span class="gi">+    registry: quay.io
+</span>     repository: argoproj/argo-rollouts
+<span class="gd">-    tag: v0.10.2
+</span><span class="gi">+    tag: ""
+</span>     pullPolicy: IfNotPresent
+ 
+   resources: {}
+<span class="p">@@ -31,7 +31,13 @@</span> controller:
+       additionalAnnotations: {}
+ 
+ serviceAccount:
+<span class="gd">-  name: argo-rollouts
+</span><span class="gi">+  # Specifies whether a service account should be created
++  create: true
++  # Annotations to add to the service account
++  annotations: {}
++  # The name of the service account to use.
++  # If not set and create is true, a name is generated using the fullname template
++  name: ""
+</span> 
+ ## Annotations to be added to all CRDs
+ ##
+<span class="p">@@ -41,6 +47,21 @@</span> crdAnnotations: {}
+ ##
+ podAnnotations: {}
+ 
+<span class="gi">+## Security Context to set on pod level
++##
++podSecurityContext:
++  runAsNonRoot: true
++
++## Security Context to set on container level
++##
++containerSecurityContext: {}
++  # capabilities:
++  #   drop:
++  #   - ALL
++  # readOnlyRootFilesystem: true
++  # runAsNonRoot: true
++  # runAsUser: 1000
++
+</span> ## Annotations to be added to the Rollout service
+ ##
+ serviceAnnotations: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="055"> <a href="#055" class="anchor-heading" aria-labelledby="055"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.5 </h2> <p><strong>Release date:</strong> 2021-05-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Removed duplicated resources declaration (#757)</li> </ul> <h3 id="default-value-changes-74"> <a href="#default-value-changes-74" class="anchor-heading" aria-labelledby="default-value-changes-74"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="054"> <a href="#054" class="anchor-heading" aria-labelledby="054"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.4 </h2> <p><strong>Release date:</strong> 2021-05-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): add labels to crd to identify the rollout crds (#738)</li> </ul> <h3 id="default-value-changes-75"> <a href="#default-value-changes-75" class="anchor-heading" aria-labelledby="default-value-changes-75"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="053"> <a href="#053" class="anchor-heading" aria-labelledby="053"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.3 </h2> <p><strong>Release date:</strong> 2021-05-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore!: Chart Publications via Github Workflow (#741)</li> </ul> <h3 id="default-value-changes-76"> <a href="#default-value-changes-76" class="anchor-heading" aria-labelledby="default-value-changes-76"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="052"> <a href="#052" class="anchor-heading" aria-labelledby="052"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.2 </h2> <p><strong>Release date:</strong> 2021-05-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: add resources to argo-rollouts deployment (#711)</li> </ul> <h3 id="default-value-changes-77"> <a href="#default-value-changes-77" class="anchor-heading" aria-labelledby="default-value-changes-77"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="051"> <a href="#051" class="anchor-heading" aria-labelledby="051"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.1 </h2> <p><strong>Release date:</strong> 2021-05-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: spec.preserveUnknownFields must be set to false to allow upgrades from v1beta1 (#709)</li> </ul> <h3 id="default-value-changes-78"> <a href="#default-value-changes-78" class="anchor-heading" aria-labelledby="default-value-changes-78"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="050"> <a href="#050" class="anchor-heading" aria-labelledby="050"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.0 </h2> <p><strong>Release date:</strong> 2021-04-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Match autogenerated/tested CRDs in upstream argo-rollouts (#638)</li> </ul> <h3 id="default-value-changes-79"> <a href="#default-value-changes-79" class="anchor-heading" aria-labelledby="default-value-changes-79"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 4e11b693..a3200728 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -30,10 +30,13 @@</span> controller:
+       additionalLabels: {}
+       additionalAnnotations: {}
+ 
+<span class="gd">-
+</span> serviceAccount:
+   name: argo-rollouts
+ 
+<span class="gi">+## Annotations to be added to all CRDs
++##
++crdAnnotations: {}
++
+</span> ## Annotations to be added to the Rollout pods
+ ##
+ podAnnotations: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="043"> <a href="#043" class="anchor-heading" aria-labelledby="043"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.3 </h2> <p><strong>Release date:</strong> 2021-02-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): update crd schemas to current version (#589)</li> </ul> <h3 id="default-value-changes-80"> <a href="#default-value-changes-80" class="anchor-heading" aria-labelledby="default-value-changes-80"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="042"> <a href="#042" class="anchor-heading" aria-labelledby="042"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.2 </h2> <p><strong>Release date:</strong> 2021-02-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): undo apiversion update (#583)</li> </ul> <h3 id="default-value-changes-81"> <a href="#default-value-changes-81" class="anchor-heading" aria-labelledby="default-value-changes-81"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="041"> <a href="#041" class="anchor-heading" aria-labelledby="041"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.1 </h2> <p><strong>Release date:</strong> 2021-01-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(argo-rollouts): Fix critical deployment schema bug (#552)</li> </ul> <h3 id="default-value-changes-82"> <a href="#default-value-changes-82" class="anchor-heading" aria-labelledby="default-value-changes-82"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="040"> <a href="#040" class="anchor-heading" aria-labelledby="040"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.0 </h2> <p><strong>Release date:</strong> 2021-01-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.10.2&amp;color=success" alt="AppVersion: 0.10.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Feat(argo-rollouts): Update argo-rollouts to v0.10.2 (#538)</li> </ul> <h3 id="default-value-changes-83"> <a href="#default-value-changes-83" class="anchor-heading" aria-labelledby="default-value-changes-83"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index a488e6ec..4e11b693 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -13,7 +13,7 @@</span> controller:
+   affinity: {}
+   image:
+     repository: argoproj/argo-rollouts
+<span class="gd">-    tag: v0.9.1
+</span><span class="gi">+    tag: v0.10.2
+</span>     pullPolicy: IfNotPresent
+ 
+   resources: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="0310"> <a href="#0310" class="anchor-heading" aria-labelledby="0310"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.10 </h2> <p><strong>Release date:</strong> 2020-12-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.9.1&amp;color=success" alt="AppVersion: 0.9.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: apply podannotations to the controller pod template (#510)</li> </ul> <h3 id="default-value-changes-84"> <a href="#default-value-changes-84" class="anchor-heading" aria-labelledby="default-value-changes-84"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="039"> <a href="#039" class="anchor-heading" aria-labelledby="039"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.9 </h2> <p><strong>Release date:</strong> 2020-12-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.9.1&amp;color=success" alt="AppVersion: 0.9.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: (argo-rollouts) Add clusterInstall conditional around aggregate ClusterRoles (#484)</li> </ul> <h3 id="default-value-changes-85"> <a href="#default-value-changes-85" class="anchor-heading" aria-labelledby="default-value-changes-85"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="038"> <a href="#038" class="anchor-heading" aria-labelledby="038"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.8 </h2> <p><strong>Release date:</strong> 2020-10-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.9.1&amp;color=success" alt="AppVersion: 0.9.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add service monitor (#474)</li> <li>fix: Add Ocp clusterrole (#341)</li> </ul> <h3 id="default-value-changes-86"> <a href="#default-value-changes-86" class="anchor-heading" aria-labelledby="default-value-changes-86"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index ed242ff1..a488e6ec 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -24,6 +24,12 @@</span> controller:
+   #    cpu: 50m
+   #    memory: 64Mi
+ 
+<span class="gi">+  metrics:
++    serviceMonitor:
++      enabled: false
++      additionalLabels: {}
++      additionalAnnotations: {}
++
+</span> 
+ serviceAccount:
+   name: argo-rollouts
+<span class="err">
+</span></code></pre></div></div> <h2 id="037"> <a href="#037" class="anchor-heading" aria-labelledby="037"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.7 </h2> <p><strong>Release date:</strong> 2020-10-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.9.1&amp;color=success" alt="AppVersion: 0.9.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: bump to v0.9.1 (#464)</li> </ul> <h3 id="default-value-changes-87"> <a href="#default-value-changes-87" class="anchor-heading" aria-labelledby="default-value-changes-87"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 9e2011d2..ed242ff1 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -13,7 +13,7 @@</span> controller:
+   affinity: {}
+   image:
+     repository: argoproj/argo-rollouts
+<span class="gd">-    tag: v0.8.3
+</span><span class="gi">+    tag: v0.9.1
+</span>     pullPolicy: IfNotPresent
+ 
+   resources: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="036"> <a href="#036" class="anchor-heading" aria-labelledby="036"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.6 </h2> <p><strong>Release date:</strong> 2020-08-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.3&amp;color=success" alt="AppVersion: 0.8.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: imagePullSecrets for servers and controllers (#361)</li> </ul> <h3 id="default-value-changes-88"> <a href="#default-value-changes-88" class="anchor-heading" aria-labelledby="default-value-changes-88"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index fbb2f68b..9e2011d2 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -40,4 +40,6 @@</span> serviceAnnotations: {}
+ ##
+ podLabels: {}
+ 
+<span class="gi">+# Secrets with credentials to pull images from a private registry
+</span> imagePullSecrets: []
+<span class="gi">+# - name: argo-pull-secret
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="035"> <a href="#035" class="anchor-heading" aria-labelledby="035"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.5 </h2> <p><strong>Release date:</strong> 2020-08-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.3&amp;color=success" alt="AppVersion: 0.8.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(argo-rollouts): Add configurable annotation to the metrics service (#421)</li> </ul> <h3 id="default-value-changes-89"> <a href="#default-value-changes-89" class="anchor-heading" aria-labelledby="default-value-changes-89"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index fda9bf7a..fbb2f68b 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -28,11 +28,15 @@</span> controller:
+ serviceAccount:
+   name: argo-rollouts
+ 
+<span class="gd">-## Annotations to be added to the Redis server pods
+</span><span class="gi">+## Annotations to be added to the Rollout pods
+</span> ##
+ podAnnotations: {}
+ 
+<span class="gd">-## Labels to be added to the Redis server pods
+</span><span class="gi">+## Annotations to be added to the Rollout service
++##
++serviceAnnotations: {}
++
++## Labels to be added to the Rollout pods
+</span> ##
+ podLabels: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="034"> <a href="#034" class="anchor-heading" aria-labelledby="034"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.4 </h2> <p><strong>Release date:</strong> 2020-08-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.3&amp;color=success" alt="AppVersion: 0.8.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore: argo-rollouts bump to 0.3.4 (v0.8.3) (#415)</li> </ul> <h3 id="default-value-changes-90"> <a href="#default-value-changes-90" class="anchor-heading" aria-labelledby="default-value-changes-90"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index fcb2d198..fda9bf7a 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -13,7 +13,7 @@</span> controller:
+   affinity: {}
+   image:
+     repository: argoproj/argo-rollouts
+<span class="gd">-    tag: v0.8.0
+</span><span class="gi">+    tag: v0.8.3
+</span>     pullPolicy: IfNotPresent
+ 
+   resources: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="033"> <a href="#033" class="anchor-heading" aria-labelledby="033"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.3 </h2> <p><strong>Release date:</strong> 2020-08-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.0&amp;color=success" alt="AppVersion: 0.8.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: Add missing verbs for pods to cluster role to support rollout restarts (#422)</li> </ul> <h3 id="default-value-changes-91"> <a href="#default-value-changes-91" class="anchor-heading" aria-labelledby="default-value-changes-91"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="032"> <a href="#032" class="anchor-heading" aria-labelledby="032"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.2 </h2> <p><strong>Release date:</strong> 2020-07-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.0&amp;color=success" alt="AppVersion: 0.8.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Added tolerations, nodeSelectors and affinity to argo-rollouts (#387)</li> </ul> <h3 id="default-value-changes-92"> <a href="#default-value-changes-92" class="anchor-heading" aria-labelledby="default-value-changes-92"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 01bb547a..fcb2d198 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -5,6 +5,12 @@</span> clusterInstall: true
+ controller:
+   name: argo-rollouts
+   component: rollouts-controller
+<span class="gi">+  ## Node selectors and tolerations for server scheduling to nodes with taints
++  ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
++  ##
++  nodeSelector: {}
++  tolerations: []
++  affinity: {}
+</span>   image:
+     repository: argoproj/argo-rollouts
+     tag: v0.8.0
+<span class="err">
+</span></code></pre></div></div> <h2 id="031"> <a href="#031" class="anchor-heading" aria-labelledby="031"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.1 </h2> <p><strong>Release date:</strong> 2020-07-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.0&amp;color=success" alt="AppVersion: 0.8.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: argo-rollouts resources in helm values (#385)</li> </ul> <h3 id="default-value-changes-93"> <a href="#default-value-changes-93" class="anchor-heading" aria-labelledby="default-value-changes-93"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 18b7dff4..01bb547a 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -10,6 +10,15 @@</span> controller:
+     tag: v0.8.0
+     pullPolicy: IfNotPresent
+ 
+<span class="gi">+  resources: {}
++  #  limits:
++  #    cpu: 100m
++  #    memory: 128Mi
++  #  requests:
++  #    cpu: 50m
++  #    memory: 64Mi
++
++
+</span> serviceAccount:
+   name: argo-rollouts
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2020-04-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.0&amp;color=success" alt="AppVersion: 0.8.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: upgrade Argo Rollouts to v0.8.0 (#315)</li> </ul> <h3 id="default-value-changes-94"> <a href="#default-value-changes-94" class="anchor-heading" aria-labelledby="default-value-changes-94"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 2464b287..18b7dff4 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -7,7 +7,7 @@</span> controller:
+   component: rollouts-controller
+   image:
+     repository: argoproj/argo-rollouts
+<span class="gd">-    tag: v0.7.0
+</span><span class="gi">+    tag: v0.8.0
+</span>     pullPolicy: IfNotPresent
+ 
+ serviceAccount:
+<span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2020-03-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.7&amp;color=success" alt="AppVersion: 0.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: add imagePullSecrets, labels, annotations and update CRDs (#268)</li> </ul> <h3 id="default-value-changes-95"> <a href="#default-value-changes-95" class="anchor-heading" aria-labelledby="default-value-changes-95"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/argo-rollouts/values.yaml b/charts/argo-rollouts/values.yaml
+index 1cb707b4..2464b287 100644
+</span><span class="gd">--- a/charts/argo-rollouts/values.yaml
+</span><span class="gi">+++ b/charts/argo-rollouts/values.yaml
+</span><span class="p">@@ -12,3 +12,13 @@</span> controller:
+ 
+ serviceAccount:
+   name: argo-rollouts
+<span class="gi">+
++## Annotations to be added to the Redis server pods
++##
++podAnnotations: {}
++
++## Labels to be added to the Redis server pods
++##
++podLabels: {}
++
++imagePullSecrets: []
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2020-02-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.7&amp;color=success" alt="AppVersion: 0.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: adding readme (#241)</li> </ul> <h3 id="default-value-changes-96"> <a href="#default-value-changes-96" class="anchor-heading" aria-labelledby="default-value-changes-96"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2020-02-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.7&amp;color=success" alt="AppVersion: 0.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat: Add chart for argo-rollouts (#226)</li> </ul> <h3 id="default-value-changes-97"> <a href="#default-value-changes-97" class="anchor-heading" aria-labelledby="default-value-changes-97"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">installCRDs: true
+</span><span class="err">
+</span><span class="p">clusterInstall: true
+</span><span class="err">
+</span><span class="p">controller:
+</span>  name: argo-rollouts
+  component: rollouts-controller
+  image:
+    repository: argoproj/argo-rollouts
+    tag: v0.7.0
+    pullPolicy: IfNotPresent
+<span class="err">
+</span><span class="p">serviceAccount:
+</span>  name: argo-rollouts
+<span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

@@ -1,0 +1,1209 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(1)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(1) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(4) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(1) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>agent-operator | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="agent-operator" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/grafana/helm-charts/agent-operator" /> <meta property="og:url" content="https://baprx.github.io/changelogs/grafana/helm-charts/agent-operator" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="agent-operator" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"agent-operator","url":"https://baprx.github.io/changelogs/grafana/helm-charts/agent-operator"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/grafana/helm-charts">grafana/helm-charts</a></li> <li class="breadcrumb-nav-list-item"><span>agent-operator</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="agent-operator"> <a href="#agent-operator" class="anchor-heading" aria-labelledby="agent-operator"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> agent-operator </h1> <h2 id="0315"> <a href="#0315" class="anchor-heading" aria-labelledby="0315"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.15 </h2> <p><strong>Release date:</strong> 2024-01-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.39.1&amp;color=success" alt="AppVersion: 0.39.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] v0.39.1</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 0d0c491d..4df24277 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.39.0
+</span><span class="gi">+  tag: v0.39.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0314"> <a href="#0314" class="anchor-heading" aria-labelledby="0314"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.14 </h2> <p><strong>Release date:</strong> 2024-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.39.0&amp;color=success" alt="AppVersion: 0.39.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump version</li> <li>Bump agent version to v0.39</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index fb770e2f..0d0c491d 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.37.4
+</span><span class="gi">+  tag: v0.39.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0313"> <a href="#0313" class="anchor-heading" aria-labelledby="0313"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.13 </h2> <p><strong>Release date:</strong> 2024-01-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.38.1&amp;color=success" alt="AppVersion: 0.38.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] update links to CRDs (#2891)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0312"> <a href="#0312" class="anchor-heading" aria-labelledby="0312"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.12 </h2> <p><strong>Release date:</strong> 2023-11-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.38.1&amp;color=success" alt="AppVersion: 0.38.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] bump to Grafana Agent v0.38.1 (#2812)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0311"> <a href="#0311" class="anchor-heading" aria-labelledby="0311"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.11 </h2> <p><strong>Release date:</strong> 2023-11-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.38.0&amp;color=success" alt="AppVersion: 0.38.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] bump to Grafana Agent v0.38.0 (#2796)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0310"> <a href="#0310" class="anchor-heading" aria-labelledby="0310"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.10 </h2> <p><strong>Release date:</strong> 2023-11-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.37.4&amp;color=success" alt="AppVersion: 0.37.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] update helm chart for grafana agent v0.37.4 (#2770)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index ef218762..fb770e2f 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.37.3
+</span><span class="gi">+  tag: v0.37.4
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="039"> <a href="#039" class="anchor-heading" aria-labelledby="039"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.9 </h2> <p><strong>Release date:</strong> 2023-10-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.37.3&amp;color=success" alt="AppVersion: 0.37.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] update helm chart for grafana agent v0.37.3 (#2742)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 56a7670d..ef218762 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.37.2
+</span><span class="gi">+  tag: v0.37.3
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="038"> <a href="#038" class="anchor-heading" aria-labelledby="038"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.8 </h2> <p><strong>Release date:</strong> 2023-10-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.37.2&amp;color=success" alt="AppVersion: 0.37.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] update helm chart for grafana agent v0.37.2 (#2720)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 1a894104..56a7670d 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.37.1
+</span><span class="gi">+  tag: v0.37.2
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="037"> <a href="#037" class="anchor-heading" aria-labelledby="037"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.7 </h2> <p><strong>Release date:</strong> 2023-10-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.37.1&amp;color=success" alt="AppVersion: 0.37.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Resolved merge conflicts</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 60ede534..1a894104 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.36.2
+</span><span class="gi">+  tag: v0.37.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="036"> <a href="#036" class="anchor-heading" aria-labelledby="036"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.6 </h2> <p><strong>Release date:</strong> 2023-10-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.36.2&amp;color=success" alt="AppVersion: 0.36.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Updated the version in Chart.yaml and Readme.md</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="035"> <a href="#035" class="anchor-heading" aria-labelledby="035"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.5 </h2> <p><strong>Release date:</strong> 2023-10-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.36.2&amp;color=success" alt="AppVersion: 0.36.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fixed Helm chart should template namespace Signed-off-by: Sheikh-Abubaker <a href="mailto:sheikhabubaker761@gmail.com">sheikhabubaker761@gmail.com</a>
+</li> <li>Rerun ‘helm-docs’</li> <li>Bump to v0.37.1</li> <li>Run ‘helm-docs’</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="036-1"> <a href="#036-1" class="anchor-heading" aria-labelledby="036-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.6 </h2> <p><strong>Release date:</strong> 2023-10-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.37.0&amp;color=success" alt="AppVersion: 0.37.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump Chart version</li> <li>[agent-operator] update helm chart for grafana agent v0.37</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 60ede534..caf700ef 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.36.2
+</span><span class="gi">+  tag: v0.37.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="035-1"> <a href="#035-1" class="anchor-heading" aria-labelledby="035-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.5 </h2> <p><strong>Release date:</strong> 2023-09-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.36.2&amp;color=success" alt="AppVersion: 0.36.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update agent-operator to agent v0.36.2</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 9e151236..60ede534 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.36.1
+</span><span class="gi">+  tag: v0.36.2
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="034"> <a href="#034" class="anchor-heading" aria-labelledby="034"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.4 </h2> <p><strong>Release date:</strong> 2023-09-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.36.1&amp;color=success" alt="AppVersion: 0.36.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump agent-operator helm chart version</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 6a9d0b84..9e151236 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.36.0
+</span><span class="gi">+  tag: v0.36.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="033"> <a href="#033" class="anchor-heading" aria-labelledby="033"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.3 </h2> <p><strong>Release date:</strong> 2023-08-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.36.0&amp;color=success" alt="AppVersion: 0.36.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>udpate agent-operator</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index df8d08ec..6a9d0b84 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.35.4
+</span><span class="gi">+  tag: v0.36.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="032"> <a href="#032" class="anchor-heading" aria-labelledby="032"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.2 </h2> <p><strong>Release date:</strong> 2023-08-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.35.4&amp;color=success" alt="AppVersion: 0.35.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update helm chart to v0.35.4</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 0558bcde..df8d08ec 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.35.3
+</span><span class="gi">+  tag: v0.35.4
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="031"> <a href="#031" class="anchor-heading" aria-labelledby="031"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.1 </h2> <p><strong>Release date:</strong> 2023-08-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.35.3&amp;color=success" alt="AppVersion: 0.35.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] update helm chart for new patch version v0.35.3</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 0683f29b..0558bcde 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.35.2
+</span><span class="gi">+  tag: v0.35.3
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2023-07-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.35.2&amp;color=success" alt="AppVersion: 0.35.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into hostAliases_for_agent-operator</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 044ac947..0683f29b 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -43,6 +43,12 @@</span> image:
+   # -- Image pull secrets
+   pullSecrets: []
+ 
+<span class="gi">+# -- hostAliases to add
++hostAliases: []
++#  - ip: 1.2.3.4
++#    hostnames:
++#      - domain.tld
++
+</span> # -- If both are set, Agent Operator will create and maintain a service for scraping kubelets
+ # https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
+ kubeletService:
+<span class="err">
+</span></code></pre></div></div> <h2 id="0219"> <a href="#0219" class="anchor-heading" aria-labelledby="0219"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.19 </h2> <p><strong>Release date:</strong> 2023-07-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.35.2&amp;color=success" alt="AppVersion: 0.35.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] Bump Grafana Agent Operator version to v0.35.2 (#2554)</li> <li>regenerate docs</li> <li>apply suggestions</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 8515d569..044ac947 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.35.1
+</span><span class="gi">+  tag: v0.35.2
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="030-1"> <a href="#030-1" class="anchor-heading" aria-labelledby="030-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2023-07-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.35.1&amp;color=success" alt="AppVersion: 0.35.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump version</li> <li>add hostAliases</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 8515d569..1eb4e23b 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -43,6 +43,12 @@</span> image:
+   # -- Image pull secrets
+   pullSecrets: []
+ 
+<span class="gi">+# -- hostAliases to add
++hostAliases: []
++#  - ip: 1.2.3.4
++#    hostnames:
++#      - domain.tld
++
+</span> # -- If both are set, Agent Operator will create and maintain a service for scraping kubelets
+ # https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
+ kubeletService:
+<span class="err">
+</span></code></pre></div></div> <h2 id="0218"> <a href="#0218" class="anchor-heading" aria-labelledby="0218"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.18 </h2> <p><strong>Release date:</strong> 2023-07-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.35.1&amp;color=success" alt="AppVersion: 0.35.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update Agent to version 0.35.1</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 6732a1f0..8515d569 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.35.0
+</span><span class="gi">+  tag: v0.35.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0217"> <a href="#0217" class="anchor-heading" aria-labelledby="0217"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.17 </h2> <p><strong>Release date:</strong> 2023-07-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.35.0&amp;color=success" alt="AppVersion: 0.35.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump to v0.35</li> <li>fix: update version in Chart.yaml</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 0b401a70..6732a1f0 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.34.1
+</span><span class="gi">+  tag: v0.35.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0216"> <a href="#0216" class="anchor-heading" aria-labelledby="0216"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.16 </h2> <p><strong>Release date:</strong> 2023-06-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.34.1&amp;color=success" alt="AppVersion: 0.34.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(agent-operator): update to latest version</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 936d045e..0b401a70 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.32.1
+</span><span class="gi">+  tag: v0.34.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0215"> <a href="#0215" class="anchor-heading" aria-labelledby="0215"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.15 </h2> <p><strong>Release date:</strong> 2023-03-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.32.1&amp;color=success" alt="AppVersion: 0.32.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>add priorityClassName to operator’s pods</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0214"> <a href="#0214" class="anchor-heading" aria-labelledby="0214"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.14 </h2> <p><strong>Release date:</strong> 2023-03-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.32.1&amp;color=success" alt="AppVersion: 0.32.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] update helm chart for new agent version v0.32.1 (#2265)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 5140f8fd..936d045e 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.32.0
+</span><span class="gi">+  tag: v0.32.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0213"> <a href="#0213" class="anchor-heading" aria-labelledby="0213"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.13 </h2> <p><strong>Release date:</strong> 2023-02-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.32.0&amp;color=success" alt="AppVersion: 0.32.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] update helm chart for new agent version (#2233)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index cb03b7cd..5140f8fd 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.31.3
+</span><span class="gi">+  tag: v0.32.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0212"> <a href="#0212" class="anchor-heading" aria-labelledby="0212"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.12 </h2> <p><strong>Release date:</strong> 2023-02-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.31.3&amp;color=success" alt="AppVersion: 0.31.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump agent-operator Helm chart for Agent v0.31.3 (#2201)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index be3f1f75..cb03b7cd 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.31.2
+</span><span class="gi">+  tag: v0.31.3
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0211"> <a href="#0211" class="anchor-heading" aria-labelledby="0211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.11 </h2> <p><strong>Release date:</strong> 2023-02-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.31.2&amp;color=success" alt="AppVersion: 0.31.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update to version 0.31.2</li> <li>Update CRDs</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 9a166c0d..be3f1f75 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.31.0
+</span><span class="gi">+  tag: v0.31.2
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0210"> <a href="#0210" class="anchor-heading" aria-labelledby="0210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.10 </h2> <p><strong>Release date:</strong> 2023-02-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.31.0&amp;color=success" alt="AppVersion: 0.31.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update operator version to 0.31.0</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 1d0c1d65..9a166c0d 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.30.2
+</span><span class="gi">+  tag: v0.31.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="029"> <a href="#029" class="anchor-heading" aria-labelledby="029"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.9 </h2> <p><strong>Release date:</strong> 2023-01-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.30.2&amp;color=success" alt="AppVersion: 0.30.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] Update app version to 0.30.2</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 67541f69..1d0c1d65 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.28.0
+</span><span class="gi">+  tag: v0.30.2
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="028"> <a href="#028" class="anchor-heading" aria-labelledby="028"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.8 </h2> <p><strong>Release date:</strong> 2022-10-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.28.0&amp;color=success" alt="AppVersion: 0.28.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(agent-operator): bump appVersion to 0.28.0 and version to 0.2.8</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 9f8f6854..67541f69 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -37,7 +37,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.27.1
+</span><span class="gi">+  tag: v0.28.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="027"> <a href="#027" class="anchor-heading" aria-labelledby="027"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.7 </h2> <p><strong>Release date:</strong> 2022-09-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.27.1&amp;color=success" alt="AppVersion: 0.27.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] Add container SecurityContext (#1829)</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index b9ca8ed0..9f8f6854 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -16,6 +16,9 @@</span> podLabels: {}
+ # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+ 
+<span class="gi">+# -- Container security context (allowPrivilegeEscalation, etc.)
++containerSecurityContext: {}
++
+</span> rbac:
+   # -- Toggle to create ClusterRole and ClusterRoleBinding
+   create: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="026"> <a href="#026" class="anchor-heading" aria-labelledby="026"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.6 </h2> <p><strong>Release date:</strong> 2022-09-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.27.1&amp;color=success" alt="AppVersion: 0.27.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] Allow using PodSecurityPolicy (#1830)</li> <li>helm-docs at right version</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index b19c273d..b9ca8ed0 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -16,9 +16,11 @@</span> podLabels: {}
+ # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+ 
+<span class="gd">-# -- Toggle to create ClusterRole and ClusterRoleBinding
+</span> rbac:
+<span class="gi">+  # -- Toggle to create ClusterRole and ClusterRoleBinding
+</span>   create: true
+<span class="gi">+  # -- Name of a PodSecurityPolicy to use in the ClusterRole. If unset, no PodSecurityPolicy is used.
++  podSecurityPolicyName: ''
+</span> 
+ serviceAccount:
+   # -- Toggle to create ServiceAccount
+<span class="err">
+</span></code></pre></div></div> <h2 id="025"> <a href="#025" class="anchor-heading" aria-labelledby="025"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.5 </h2> <p><strong>Release date:</strong> 2022-09-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.27.1&amp;color=success" alt="AppVersion: 0.27.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump version</li> <li>update agent-operator app to 0.27.1</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index f544bf2c..b19c273d 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -32,7 +32,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.26.1
+</span><span class="gi">+  tag: v0.27.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="024"> <a href="#024" class="anchor-heading" aria-labelledby="024"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.4 </h2> <p><strong>Release date:</strong> 2022-08-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.26.1&amp;color=success" alt="AppVersion: 0.26.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>chore(agent-operator): bump appVersion to 0.26.1 and version to 0.2.4</li> <li>Merge branch ‘main’ into main</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index c2e39607..f544bf2c 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -10,6 +10,9 @@</span> annotations: {}
+ # -- Annotations for the Deployment Pods
+ podAnnotations: {}
+ 
+<span class="gi">+# -- Annotations for the Deployment Pods
++podLabels: {}
++
+</span> # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+ 
+<span class="p">@@ -29,18 +32,21 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.22.0
+</span><span class="gi">+  tag: v0.26.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+   pullSecrets: []
+ 
+ # -- If both are set, Agent Operator will create and maintain a service for scraping kubelets
+<span class="gd">-# -- https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
+</span><span class="gi">+# https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
+</span> kubeletService:
+   namespace: default
+   serviceName: kubelet
+ 
+<span class="gi">+# -- List of additional cli arguments to configure agent-operator (example: `--log.level`)
++extraArgs: []
++
+</span> # -- Resource limits and requests config
+ resources: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="023"> <a href="#023" class="anchor-heading" aria-labelledby="023"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.3 </h2> <p><strong>Release date:</strong> 2022-07-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.25.1&amp;color=success" alt="AppVersion: 0.25.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump Chart.yaml version</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="022"> <a href="#022" class="anchor-heading" aria-labelledby="022"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.2 </h2> <p><strong>Release date:</strong> 2022-06-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.25.1&amp;color=success" alt="AppVersion: 0.25.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] bump appVersion to v0.25.1 (#1516)</li> <li>Updated README.md using helm docs</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index bbc86451..3d69c607 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -32,7 +32,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.24.2
+</span><span class="gi">+  tag: v0.25.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="021"> <a href="#021" class="anchor-heading" aria-labelledby="021"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.1 </h2> <p><strong>Release date:</strong> 2022-06-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into graphana-agent-operator-podlabels</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 0a72f79e..bbc86451 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -10,9 +10,8 @@</span> annotations: {}
+ # -- Annotations for the Deployment Pods
+ podAnnotations: {}
+ 
+<span class="gd">-# -- Additional labels to add to all resources
+-customLabels: {}
+-  # app: grafana-agent-operator
+</span><span class="gi">+# -- Annotations for the Deployment Pods
++podLabels: {}
+</span> 
+ # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2022-06-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Refactor extraArgs feature template.</li> <li>Merge branch ‘graphana-agent-operator-podlabels’ of https://github.com/praveenjindal62/grafana-helm-charts into graphana-agent-operator-podlabels</li> <li>Updated README with helm docs</li> <li>Merge branch ‘main’ into graphana-agent-operator-podlabels</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 9b75c007..0a72f79e 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -10,6 +10,10 @@</span> annotations: {}
+ # -- Annotations for the Deployment Pods
+ podAnnotations: {}
+ 
+<span class="gi">+# -- Additional labels to add to all resources
++customLabels: {}
++  # app: grafana-agent-operator
++
+</span> # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+ 
+<span class="p">@@ -41,6 +45,9 @@</span> kubeletService:
+   namespace: default
+   serviceName: kubelet
+ 
+<span class="gi">+# -- List of additional cli arguments to configure agent-operator (example: `--log.level`)
++extraArgs: []
++
+</span> # -- Resource limits and requests config
+ resources: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="0114"> <a href="#0114" class="anchor-heading" aria-labelledby="0114"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.14 </h2> <p><strong>Release date:</strong> 2022-06-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bumped up chart version</li> <li>updated documentation</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0113"> <a href="#0113" class="anchor-heading" aria-labelledby="0113"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.13 </h2> <p><strong>Release date:</strong> 2022-06-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Added podLabels to agent-operator deployment pods</li> <li>Fix with helm-docs</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 9b75c007..bc698529 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -10,6 +10,9 @@</span> annotations: {}
+ # -- Annotations for the Deployment Pods
+ podAnnotations: {}
+ 
+<span class="gi">+# -- Annotations for the Deployment Pods
++podLabels: {}
++
+</span> # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="020-1"> <a href="#020-1" class="anchor-heading" aria-labelledby="020-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2022-06-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump up minor version.</li> <li>Add extraArgs to configure the agent operator.</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 35ea450a..fdc64112 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -45,6 +45,10 @@</span> kubeletService:
+   namespace: default
+   serviceName: kubelet
+ 
+<span class="gi">+# List of additional cli arguments to configure grafana-agent-operator
++# for example: --log.level, etc.
++extraArgs: []
++
+</span> # -- Resource limits and requests config
+ resources: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="0114-1"> <a href="#0114-1" class="anchor-heading" aria-labelledby="0114-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.14 </h2> <p><strong>Release date:</strong> 2022-06-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into main</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 9b75c007..35ea450a 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -10,6 +10,10 @@</span> annotations: {}
+ # -- Annotations for the Deployment Pods
+ podAnnotations: {}
+ 
+<span class="gi">+# -- Additional labels to add to all resources
++customLabels: {}
++  # app: grafana-agent-operator
++
+</span> # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="0113-1"> <a href="#0113-1" class="anchor-heading" aria-labelledby="0113-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.13 </h2> <p><strong>Release date:</strong> 2022-06-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] Add missing helm hook for test resource (#1470)</li> <li>Fix template identation</li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="020-2"> <a href="#020-2" class="anchor-heading" aria-labelledby="020-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2022-06-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add: Kubernetes custom labels</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 9b75c007..35ea450a 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -10,6 +10,10 @@</span> annotations: {}
+ # -- Annotations for the Deployment Pods
+ podAnnotations: {}
+ 
+<span class="gi">+# -- Additional labels to add to all resources
++customLabels: {}
++  # app: grafana-agent-operator
++
+</span> # -- Pod security context (runAsUser, etc.)
+ podSecurityContext: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="0112"> <a href="#0112" class="anchor-heading" aria-labelledby="0112"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.12 </h2> <p><strong>Release date:</strong> 2022-05-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.2&amp;color=success" alt="AppVersion: 0.24.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] bump appVersion to v0.24.2 (#1344)</li> <li>Reduce /finalizers RBAC verbs scope</li> </ul> <h3 id="default-value-changes-45"> <a href="#default-value-changes-45" class="anchor-heading" aria-labelledby="default-value-changes-45"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 3eb41a73..9b75c007 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -29,7 +29,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.24.1
+</span><span class="gi">+  tag: v0.24.2
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="0111"> <a href="#0111" class="anchor-heading" aria-labelledby="0111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.11 </h2> <p><strong>Release date:</strong> 2022-05-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.1&amp;color=success" alt="AppVersion: 0.24.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix Grafana Agent finalizers errors on OpenShift See https://github.com/grafana/agent/issues/1660</li> </ul> <h3 id="default-value-changes-46"> <a href="#default-value-changes-46" class="anchor-heading" aria-labelledby="default-value-changes-46"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0110"> <a href="#0110" class="anchor-heading" aria-labelledby="0110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.10 </h2> <p><strong>Release date:</strong> 2022-04-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.1&amp;color=success" alt="AppVersion: 0.24.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump helm-docs use in agent-operator to 1.8.1</li> </ul> <h3 id="default-value-changes-47"> <a href="#default-value-changes-47" class="anchor-heading" aria-labelledby="default-value-changes-47"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index d42c456e..3eb41a73 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -36,7 +36,7 @@</span> image:
+   pullSecrets: []
+ 
+ # -- If both are set, Agent Operator will create and maintain a service for scraping kubelets
+<span class="gd">-# -- https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
+</span><span class="gi">+# https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
+</span> kubeletService:
+   namespace: default
+   serviceName: kubelet
+<span class="err">
+</span></code></pre></div></div> <h2 id="019"> <a href="#019" class="anchor-heading" aria-labelledby="019"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.9 </h2> <p><strong>Release date:</strong> 2022-04-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.1&amp;color=success" alt="AppVersion: 0.24.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] bump appVersion to v0.24.1 (#1243)</li> </ul> <h3 id="default-value-changes-48"> <a href="#default-value-changes-48" class="anchor-heading" aria-labelledby="default-value-changes-48"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 0ef62ea2..d42c456e 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -29,7 +29,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.24.0
+</span><span class="gi">+  tag: v0.24.1
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="018"> <a href="#018" class="anchor-heading" aria-labelledby="018"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.8 </h2> <p><strong>Release date:</strong> 2022-04-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.24.0&amp;color=success" alt="AppVersion: 0.24.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>agent-operator: bump to version to 0.1.8, appVersion to v0.24.0 (#1235)</li> </ul> <h3 id="default-value-changes-49"> <a href="#default-value-changes-49" class="anchor-heading" aria-labelledby="default-value-changes-49"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 8b07cab4..0ef62ea2 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -29,7 +29,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.23.0
+</span><span class="gi">+  tag: v0.24.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="017"> <a href="#017" class="anchor-heading" aria-labelledby="017"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.7 </h2> <p><strong>Release date:</strong> 2022-03-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.23.0&amp;color=success" alt="AppVersion: 0.23.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[agent-operator] Fix image pull secrets templating</li> <li>Add maintainer</li> <li>Bump operator version and clean up selector labels</li> </ul> <h3 id="default-value-changes-50"> <a href="#default-value-changes-50" class="anchor-heading" aria-labelledby="default-value-changes-50"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index c2e39607..8b07cab4 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -29,7 +29,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.22.0
+</span><span class="gi">+  tag: v0.23.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="016"> <a href="#016" class="anchor-heading" aria-labelledby="016"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.6 </h2> <p><strong>Release date:</strong> 2022-02-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.22.0&amp;color=success" alt="AppVersion: 0.22.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Merge branch ‘main’ into main</li> <li>bool fix</li> <li>add enableConfigReadAPI crd update</li> <li>Update svc name</li> <li>Bump operator version to v0.22.0</li> <li>use kubebuilder args defaults</li> </ul> <h3 id="default-value-changes-51"> <a href="#default-value-changes-51" class="anchor-heading" aria-labelledby="default-value-changes-51"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index c9be386e..c2e39607 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -29,7 +29,7 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.20.0
+</span><span class="gi">+  tag: v0.22.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="015"> <a href="#015" class="anchor-heading" aria-labelledby="015"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.5 </h2> <p><strong>Release date:</strong> 2022-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.20.0&amp;color=success" alt="AppVersion: 0.20.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>update version</li> <li>add args</li> </ul> <h3 id="default-value-changes-52"> <a href="#default-value-changes-52" class="anchor-heading" aria-labelledby="default-value-changes-52"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="014"> <a href="#014" class="anchor-heading" aria-labelledby="014"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.4 </h2> <p><strong>Release date:</strong> 2021-11-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.20.0&amp;color=success" alt="AppVersion: 0.20.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bumped chart to 0.1.4 and re-generated README.md</li> <li>Fix indentation on podAnnotations</li> <li>Add hook-delete-policy in agent-operator tests</li> </ul> <h3 id="default-value-changes-53"> <a href="#default-value-changes-53" class="anchor-heading" aria-labelledby="default-value-changes-53"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="013"> <a href="#013" class="anchor-heading" aria-labelledby="013"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.3 </h2> <p><strong>Release date:</strong> 2021-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.20.0&amp;color=success" alt="AppVersion: 0.20.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Set an empty MetricsInstance spec in agent-operator tests</li> <li>Run helm-docs</li> <li>Expose kubelet svc name in values.yaml</li> </ul> <h3 id="default-value-changes-54"> <a href="#default-value-changes-54" class="anchor-heading" aria-labelledby="default-value-changes-54"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 2cbf0422..c9be386e 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -35,11 +35,11 @@</span> image:
+   # -- Image pull secrets
+   pullSecrets: []
+ 
+<span class="gd">-# -- If true, Agent Operator will create and maintain a service for scraping kubelets
+</span><span class="gi">+# -- If both are set, Agent Operator will create and maintain a service for scraping kubelets
+</span> # -- https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
+ kubeletService:
+<span class="gd">-  enabled: true
+</span>   namespace: default
+<span class="gi">+  serviceName: kubelet
+</span> 
+ # -- Resource limits and requests config
+ resources: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="012"> <a href="#012" class="anchor-heading" aria-labelledby="012"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.2 </h2> <p><strong>Release date:</strong> 2021-11-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.20.0&amp;color=success" alt="AppVersion: 0.20.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update Operator to v0.20.0</li> </ul> <h3 id="default-value-changes-55"> <a href="#default-value-changes-55" class="anchor-heading" aria-labelledby="default-value-changes-55"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 5e467bc8..2cbf0422 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -29,12 +29,18 @@</span> image:
+   # -- Image repo
+   repository: grafana/agent-operator
+   # -- Image tag
+<span class="gd">-  tag: v0.19.0
+</span><span class="gi">+  tag: v0.20.0
+</span>   # -- Image pull policy
+   pullPolicy: IfNotPresent
+   # -- Image pull secrets
+   pullSecrets: []
+ 
+<span class="gi">+# -- If true, Agent Operator will create and maintain a service for scraping kubelets
++# -- https://grafana.com/docs/agent/latest/operator/getting-started/#monitor-kubelets
++kubeletService:
++  enabled: true
++  namespace: default
++
+</span> # -- Resource limits and requests config
+ resources: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2021-10-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.19.0&amp;color=success" alt="AppVersion: 0.19.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add warning to README</li> <li>Update README</li> <li>Review changes</li> <li>Add dummy MetricsInstance</li> <li>Update operator CR</li> <li>Update to v0.19.0</li> <li>Expand GrafanaAgent permissions in Helm test</li> <li>Add GrafanaAgent health probe</li> <li>Update chart name in README</li> <li>Update README</li> <li>Docs improvements</li> <li>Rename chart</li> <li>Add README</li> <li>Add CRDs and bump version</li> <li>DCO</li> <li>Remove GrafanaAgent and MetricsInstance scope from Chart</li> </ul> <h3 id="default-value-changes-56"> <a href="#default-value-changes-56" class="anchor-heading" aria-labelledby="default-value-changes-56"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/agent-operator/values.yaml b/charts/agent-operator/values.yaml
+index 95c089c5..5e467bc8 100644
+</span><span class="gd">--- a/charts/agent-operator/values.yaml
+</span><span class="gi">+++ b/charts/agent-operator/values.yaml
+</span><span class="p">@@ -1,126 +1,48 @@</span>
+<span class="gd">-# Default values for agent-operator.
+-# This is a YAML-formatted file.
+-# Declare variables to be passed into your templates.
+-
+</span><span class="gi">+# -- Overrides the chart's name
+</span> nameOverride: ""
+<span class="gd">-fullnameOverride: ""
+-
+-operator:
+-  rbac:
+-    create: true
+-  
+-  serviceAccount:
+-    create: true
+-    name:
+-  
+-  image:
+-    repository: grafana/agent-operator
+-    tag: v0.16.1
+-    pullPolicy: IfNotPresent
+-
+-grafanaAgent:
+-  rbac:
+-    create: true
+-  
+-  serviceAccount:
+-    create: true
+-    name:    
+-
+-  image:
+-    repository: grafana/agent
+-    tag: v0.15.0
+-
+-  logLevel: info
+-
+-  metrics:
+-    enabled: true
+-    replicas: 1
+-    shards: 1
+</span> 
+<span class="gd">-    remoteWriteURL: 
+-    
+-    existingSecret:
+-
+-    username: 
+-    password: 
+-
+-    # Supply an empty namespace selector to look in all namespaces. Remove
+-    # this to only look in the same namespace.
+-    serviceMonitorNamespaceSelector: {}
+-    serviceMonitorSelector:
+-      matchLabels:
+-        instance: primary
+-    
+-    # Supply an empty namespace selector to look in all namespaces. Remove
+-    # this to only look in the same namespace.
+-    podMonitorNamespaceSelector: {}
+-    podMonitorSelector:
+-      matchLabels:
+-        instance: primary
+</span><span class="gi">+# -- Overrides the chart's computed fullname
++fullnameOverride: ""
+</span> 
+<span class="gd">-    # Supply an empty namespace selector to look in all namespaces. Remove
+-    # this to only look in the same namespace.
+-    probeNamespaceSelector: {}
+-    probeSelector:
+-      matchLabels:
+-        instance: primary
+-    
+-# TODO: reuse some of defaults below
+</span><span class="gi">+# -- Annotations for the Deployment
++annotations: {}
+</span> 
+<span class="gi">+# -- Annotations for the Deployment Pods
+</span> podAnnotations: {}
+ 
+<span class="gi">+# -- Pod security context (runAsUser, etc.)
+</span> podSecurityContext: {}
+<span class="gd">-  # fsGroup: 2000
+-
+-securityContext: {}
+-  # capabilities:
+-  #   drop:
+-  #   - ALL
+-  # readOnlyRootFilesystem: true
+-  # runAsNonRoot: true
+-  # runAsUser: 1000
+-
+-service:
+-  type: ClusterIP
+-  port: 80
+-
+-ingress:
+-  enabled: false
+-  className: ""
+-  annotations: {}
+-    # kubernetes.io/ingress.class: nginx
+-    # kubernetes.io/tls-acme: "true"
+-  hosts:
+-    - host: chart-example.local
+-      paths:
+-        - path: /
+-          pathType: ImplementationSpecific
+-  tls: []
+-  #  - secretName: chart-example-tls
+-  #    hosts:
+-  #      - chart-example.local
+</span> 
+<span class="gi">+# -- Toggle to create ClusterRole and ClusterRoleBinding
++rbac:
++  create: true
++
++serviceAccount:
++  # -- Toggle to create ServiceAccount
++  create: true
++  # -- Service account name
++  name:
++
++image:
++  # -- Image registry
++  registry: docker.io
++  # -- Image repo
++  repository: grafana/agent-operator
++  # -- Image tag
++  tag: v0.19.0
++  # -- Image pull policy
++  pullPolicy: IfNotPresent
++  # -- Image pull secrets
++  pullSecrets: []
++
++# -- Resource limits and requests config
+</span> resources: {}
+<span class="gd">-  # We usually recommend not to specify default resources and to leave this as a conscious
+-  # choice for the user. This also increases chances charts run on environments with little
+-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+-  # limits:
+-  #   cpu: 100m
+-  #   memory: 128Mi
+-  # requests:
+-  #   cpu: 100m
+-  #   memory: 128Mi
+-
+-autoscaling:
+-  enabled: false
+-  minReplicas: 1
+-  maxReplicas: 100
+-  targetCPUUtilizationPercentage: 80
+-  # targetMemoryUtilizationPercentage: 80
+</span> 
+<span class="gi">+# -- nodeSelector configuration
+</span> nodeSelector: {}
+ 
+<span class="gi">+# -- Tolerations applied to Pods
+</span> tolerations: []
+ 
+<span class="gi">+# -- Pod affinity configuration
+</span> affinity: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2021-08-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.16.1&amp;color=success" alt="AppVersion: 0.16.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Initial commit</li> </ul> <h3 id="default-value-changes-57"> <a href="#default-value-changes-57" class="anchor-heading" aria-labelledby="default-value-changes-57"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Default values for agent-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+<span class="err">
+</span><span class="p">nameOverride: ""
+fullnameOverride: ""
+</span><span class="err">
+</span><span class="p">operator:
+</span>  rbac:
+    create: true
+  
+  serviceAccount:
+    create: true
+    name:
+  
+  image:
+    repository: grafana/agent-operator
+    tag: v0.16.1
+    pullPolicy: IfNotPresent
+<span class="err">
+</span><span class="p">grafanaAgent:
+</span>  rbac:
+    create: true
+  
+  serviceAccount:
+    create: true
+    name:    
+<span class="err">
+</span>  image:
+    repository: grafana/agent
+    tag: v0.15.0
+<span class="err">
+</span>  logLevel: info
+<span class="err">
+</span>  metrics:
+    enabled: true
+    replicas: 1
+    shards: 1
+<span class="err">
+</span>    remoteWriteURL: 
+    
+    existingSecret:
+<span class="err">
+</span>    username: 
+    password: 
+<span class="err">
+</span>    # Supply an empty namespace selector to look in all namespaces. Remove
+    # this to only look in the same namespace.
+    serviceMonitorNamespaceSelector: {}
+    serviceMonitorSelector:
+      matchLabels:
+        instance: primary
+    
+    # Supply an empty namespace selector to look in all namespaces. Remove
+    # this to only look in the same namespace.
+    podMonitorNamespaceSelector: {}
+    podMonitorSelector:
+      matchLabels:
+        instance: primary
+<span class="err">
+</span>    # Supply an empty namespace selector to look in all namespaces. Remove
+    # this to only look in the same namespace.
+    probeNamespaceSelector: {}
+    probeSelector:
+      matchLabels:
+        instance: primary
+    
+# TODO: reuse some of defaults below
+<span class="err">
+</span><span class="p">podAnnotations: {}
+</span><span class="err">
+</span><span class="p">podSecurityContext: {}
+</span>  # fsGroup: 2000
+<span class="err">
+</span><span class="p">securityContext: {}
+</span>  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+<span class="err">
+</span><span class="p">service:
+</span>  type: ClusterIP
+  port: 80
+<span class="err">
+</span><span class="p">ingress:
+</span>  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+<span class="err">
+</span><span class="p">resources: {}
+</span>  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+<span class="err">
+</span><span class="p">autoscaling:
+</span>  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+<span class="err">
+</span><span class="p">nodeSelector: {}
+</span><span class="err">
+</span><span class="p">tolerations: []
+</span><span class="err">
+</span><span class="p">affinity: {}
+</span><span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

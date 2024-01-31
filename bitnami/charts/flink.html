@@ -1,0 +1,1472 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(24)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(24) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(24) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(24) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>flink | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="flink" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/bitnami/charts/flink" /> <meta property="og:url" content="https://baprx.github.io/changelogs/bitnami/charts/flink" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="flink" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"flink","url":"https://baprx.github.io/changelogs/bitnami/charts/flink"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/bitnami/charts">bitnami/charts</a></li> <li class="breadcrumb-nav-list-item"><span>flink</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="flink"> <a href="#flink" class="anchor-heading" aria-labelledby="flink"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> flink </h1> <h2 id="073"> <a href="#073" class="anchor-heading" aria-labelledby="073"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.3 </h2> <p><strong>Release date:</strong> 2024-01-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.1&amp;color=success" alt="AppVersion: 1.18.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.7.3 updating components versions (#22841)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 5eeeea5535..5112f63778 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.18.1-debian-11-r0
+</span><span class="gi">+  tag: 1.18.1-debian-11-r1
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="072"> <a href="#072" class="anchor-heading" aria-labelledby="072"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.2 </h2> <p><strong>Release date:</strong> 2024-01-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.1&amp;color=success" alt="AppVersion: 1.18.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.7.2 updating components versions (#22775)</li> <li>[bitnami/*] Move documentation sections from docs.bitnami.com back to the README (#22203)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 6f90df0bda..5eeeea5535 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.18.0-debian-11-r3
+</span><span class="gi">+  tag: 1.18.1-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="071"> <a href="#071" class="anchor-heading" aria-labelledby="071"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.1 </h2> <p><strong>Release date:</strong> 2024-01-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] fix: :bug: Set seLinuxOptions to null for Openshift compatibility (#22586)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index c348e1e526..6f90df0bda 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -322,7 +322,7 @@</span> jobmanager:
+   ## Configure Container Security Context (only main container)
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+   ## @param jobmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+<span class="gd">-  ## @param jobmanager.containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span><span class="gi">+  ## @param jobmanager.containerSecurityContext.seLinuxOptions [object,nullable] Set SELinux options in container
+</span>   ## @param jobmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+   ## @param jobmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+   ## @param jobmanager.containerSecurityContext.allowPrivilegeEscalation Allows privilege escalation
+<span class="p">@@ -332,7 +332,7 @@</span> jobmanager:
+   ##
+   containerSecurityContext:
+     enabled: true
+<span class="gd">-    seLinuxOptions: {}
+</span><span class="gi">+    seLinuxOptions: null
+</span>     runAsUser: 1001
+     runAsNonRoot: true
+     allowPrivilegeEscalation: false
+<span class="p">@@ -638,7 +638,7 @@</span> taskmanager:
+   ## Configure Container Security Context (only main container)
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+   ## @param taskmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+<span class="gd">-  ## @param taskmanager.containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span><span class="gi">+  ## @param taskmanager.containerSecurityContext.seLinuxOptions [object,nullable] Set SELinux options in container
+</span>   ## @param taskmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+   ## @param taskmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+   ## @param taskmanager.containerSecurityContext.privileged Set primary container's Security Context privileged
+<span class="p">@@ -648,7 +648,7 @@</span> taskmanager:
+   ##
+   containerSecurityContext:
+     enabled: true
+<span class="gd">-    seLinuxOptions: {}
+</span><span class="gi">+    seLinuxOptions: null
+</span>     runAsUser: 1001
+     runAsNonRoot: true
+     privileged: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="070"> <a href="#070" class="anchor-heading" aria-labelledby="070"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.0 </h2> <p><strong>Release date:</strong> 2024-01-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] fix: :lock: Move service-account token auto-mount to pod declaration (#22483)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index f9f89fcc88..c348e1e526 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -104,6 +104,13 @@</span> jobmanager:
+   ## @param jobmanager.lifecycleHooks [object] Override default etcd container hooks
+   ##
+   lifecycleHooks: {}
+<span class="gi">+  ## @param jobmanager.automountServiceAccountToken Mount Service Account token in pod
++  ##
++  automountServiceAccountToken: false
++  ## @param jobmanager.hostAliases Set pod host aliases
++  ## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
++  ##
++  hostAliases: []
+</span>   ## @param jobmanager.extraEnvVars Extra environment variables to be set on flink container
+   ## For example:
+   ##  - name: FOO
+<span class="p">@@ -423,6 +430,13 @@</span> taskmanager:
+   ## @param taskmanager.lifecycleHooks [object] Override default etcd container hooks
+   ##
+   lifecycleHooks: {}
+<span class="gi">+  ## @param taskmanager.automountServiceAccountToken Mount Service Account token in pod
++  ##
++  automountServiceAccountToken: false
++  ## @param taskmanager.hostAliases Set pod host aliases
++  ## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
++  ##
++  hostAliases: []
+</span>   ## @param taskmanager.extraEnvVars Extra environment variables to be set on flink container
+   ## For example:
+   ##  - name: FOO
+<span class="err">
+</span></code></pre></div></div> <h2 id="061"> <a href="#061" class="anchor-heading" aria-labelledby="061"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.1 </h2> <p><strong>Release date:</strong> 2024-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.6.1 updating components versions (#22347)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="060"> <a href="#060" class="anchor-heading" aria-labelledby="060"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.0 </h2> <p><strong>Release date:</strong> 2024-01-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] fix: :lock: Improve podSecurityContext and containerSecurityContext with essential security fields (#22117)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 20990db964..f9f89fcc88 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -301,14 +301,21 @@</span> jobmanager:
+   ## Pod security context
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param jobmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+<span class="gi">+  ## @param jobmanager.podSecurityContext.fsGroupChangePolicy Set filesystem group change policy
++  ## @param jobmanager.podSecurityContext.sysctls Set kernel settings using the sysctl interface
++  ## @param jobmanager.podSecurityContext.supplementalGroups Set filesystem extra groups
+</span>   ## @param jobmanager.podSecurityContext.fsGroup Set Apache Flink pod's Security Context fsGroup
+   ##
+   podSecurityContext:
+     enabled: true
+<span class="gi">+    fsGroupChangePolicy: Always
++    sysctls: []
++    supplementalGroups: []
+</span>     fsGroup: 1001
+   ## Configure Container Security Context (only main container)
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+   ## @param jobmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+<span class="gi">+  ## @param jobmanager.containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span>   ## @param jobmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+   ## @param jobmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+   ## @param jobmanager.containerSecurityContext.allowPrivilegeEscalation Allows privilege escalation
+<span class="p">@@ -318,6 +325,7 @@</span> jobmanager:
+   ##
+   containerSecurityContext:
+     enabled: true
+<span class="gi">+    seLinuxOptions: {}
+</span>     runAsUser: 1001
+     runAsNonRoot: true
+     allowPrivilegeEscalation: false
+<span class="p">@@ -602,14 +610,21 @@</span> taskmanager:
+   ## Pod security context
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param taskmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+<span class="gi">+  ## @param taskmanager.podSecurityContext.fsGroupChangePolicy Set filesystem group change policy
++  ## @param taskmanager.podSecurityContext.sysctls Set kernel settings using the sysctl interface
++  ## @param taskmanager.podSecurityContext.supplementalGroups Set filesystem extra groups
+</span>   ## @param taskmanager.podSecurityContext.fsGroup Set Apache Flink pod's Security Context fsGroup
+   ##
+   podSecurityContext:
+     enabled: true
+<span class="gi">+    fsGroupChangePolicy: Always
++    sysctls: []
++    supplementalGroups: []
+</span>     fsGroup: 1001
+   ## Configure Container Security Context (only main container)
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+   ## @param taskmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+<span class="gi">+  ## @param taskmanager.containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span>   ## @param taskmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+   ## @param taskmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+   ## @param taskmanager.containerSecurityContext.privileged Set primary container's Security Context privileged
+<span class="p">@@ -619,6 +634,7 @@</span> taskmanager:
+   ##
+   containerSecurityContext:
+     enabled: true
+<span class="gi">+    seLinuxOptions: {}
+</span>     runAsUser: 1001
+     runAsNonRoot: true
+     privileged: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="054"> <a href="#054" class="anchor-heading" aria-labelledby="054"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.4 </h2> <p><strong>Release date:</strong> 2024-01-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] fix: :lock: Do not automount the service account token unless necessary (#22039)</li> <li>[bitnami/*] Fix ref links (in comments) (#21822)</li> <li>[bitnami/*] Fix docs.bitnami.com broken links (#21901)</li> <li>[bitnami/*] Update copyright: Year and company (#21815)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 5770ed5653..20990db964 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -76,7 +76,7 @@</span> image:
+   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
+</span>   ##
+   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+<span class="p">@@ -173,7 +173,7 @@</span> jobmanager:
+   ##
+   customReadinessProbe: {}
+   ## Apache Flink pods' resource requests and limits
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+</span>   ## Minimum memory for development is 4GB and 2 CPU cores
+   ## Minimum memory for production is 8GB and 4 CPU cores
+   ## ref: http://docs.datastax.com/en/archived/flink/2.0/flink/architecture/architecturePlanningHardware_c.html
+<span class="p">@@ -297,7 +297,7 @@</span> jobmanager:
+     annotations: {}
+     ## @param jobmanager.serviceAccount.automountServiceAccountToken Automount API credentials for a service account.
+     ##
+<span class="gd">-    automountServiceAccountToken: true
+</span><span class="gi">+    automountServiceAccountToken: false
+</span>   ## Pod security context
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param jobmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+<span class="p">@@ -369,7 +369,7 @@</span> jobmanager:
+   ##
+   affinity: {}
+   ## @param jobmanager.nodeSelector Node labels for pod assignment
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/node-selection/
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
+</span>   ##
+   nodeSelector: {}
+   ## @param jobmanager.tolerations Tolerations for pod assignment
+<span class="p">@@ -484,7 +484,7 @@</span> taskmanager:
+   ##
+   customReadinessProbe: {}
+   ## Apache Flink pods' resource requests and limits
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+</span>   ## Minimum memory for development is 4GB and 2 CPU cores
+   ## Minimum memory for production is 8GB and 4 CPU cores
+   ## ref: http://docs.datastax.com/en/archived/flink/2.0/flink/architecture/architecturePlanningHardware_c.html
+<span class="p">@@ -598,7 +598,7 @@</span> taskmanager:
+     annotations: {}
+     ## @param taskmanager.serviceAccount.automountServiceAccountToken Automount API credentials for a service account.
+     ##
+<span class="gd">-    automountServiceAccountToken: true
+</span><span class="gi">+    automountServiceAccountToken: false
+</span>   ## Pod security context
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param taskmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+<span class="p">@@ -670,7 +670,7 @@</span> taskmanager:
+   ##
+   affinity: {}
+   ## @param taskmanager.nodeSelector Node labels for pod assignment
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/node-selection/
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
+</span>   ##
+   nodeSelector: {}
+   ## @param taskmanager.tolerations Tolerations for pod assignment
+<span class="err">
+</span></code></pre></div></div> <h2 id="053"> <a href="#053" class="anchor-heading" aria-labelledby="053"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.3 </h2> <p><strong>Release date:</strong> 2023-12-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.5.3 updating components versions (#21802)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 7ed1984892..5770ed5653 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.18.0-debian-11-r1
+</span><span class="gi">+  tag: 1.18.0-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="052"> <a href="#052" class="anchor-heading" aria-labelledby="052"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.2 </h2> <p><strong>Release date:</strong> 2023-11-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.5.2 updating components versions (#21114)</li> <li>[bitnami/*] Rename solutions to “Bitnami package for …” (#21038)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="051"> <a href="#051" class="anchor-heading" aria-labelledby="051"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.1 </h2> <p><strong>Release date:</strong> 2023-11-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.5.1 (#21011)</li> <li>[bitnami/*] Remove relative links to non-README sections, add verification for that and update TL;DR section (#20967)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 0189bc0a30..7ed1984892 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.18.0-debian-11-r0
+</span><span class="gi">+  tag: 1.18.0-debian-11-r1
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="050"> <a href="#050" class="anchor-heading" aria-labelledby="050"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.0 </h2> <p><strong>Release date:</strong> 2023-10-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] feat: :sparkles: Add support for PSA restricted policy (#20427)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 20673cd9c8..0189bc0a30 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -302,28 +302,30 @@</span> jobmanager:
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param jobmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+   ## @param jobmanager.podSecurityContext.fsGroup Set Apache Flink pod's Security Context fsGroup
+<span class="gd">-  ## @param jobmanager.podSecurityContext.seccompProfile.type Rules specifying actions to take based on the requested syscall
+</span>   ##
+   podSecurityContext:
+     enabled: true
+     fsGroup: 1001
+<span class="gd">-    seccompProfile:
+-      type: "RuntimeDefault"
+</span>   ## Configure Container Security Context (only main container)
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+   ## @param jobmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+   ## @param jobmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+   ## @param jobmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+   ## @param jobmanager.containerSecurityContext.allowPrivilegeEscalation Allows privilege escalation
+<span class="gi">+  ## @param jobmanager.containerSecurityContext.privileged Set primary container's Security Context privileged
+</span>   ## @param jobmanager.containerSecurityContext.capabilities.drop List of capabilities to be dropped
+<span class="gi">+  ## @param jobmanager.containerSecurityContext.seccompProfile.type Rules specifying actions to take based on the requested syscall
+</span>   ##
+   containerSecurityContext:
+     enabled: true
+     runAsUser: 1001
+     runAsNonRoot: true
+     allowPrivilegeEscalation: false
+<span class="gi">+    privileged: false
+</span>     capabilities:
+<span class="gd">-      drop: [ "ALL" ]
+</span><span class="gi">+      drop: ["ALL"]
++    seccompProfile:
++      type: "RuntimeDefault"
+</span>   ## @param jobmanager.podAnnotations Additional pod annotations
+   ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+   ##
+<span class="p">@@ -601,28 +603,30 @@</span> taskmanager:
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param taskmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+   ## @param taskmanager.podSecurityContext.fsGroup Set Apache Flink pod's Security Context fsGroup
+<span class="gd">-  ## @param taskmanager.podSecurityContext.seccompProfile.type Rules specifying actions to take based on the requested syscall
+</span>   ##
+   podSecurityContext:
+     enabled: true
+     fsGroup: 1001
+<span class="gd">-    seccompProfile:
+-      type: "RuntimeDefault"
+</span>   ## Configure Container Security Context (only main container)
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+   ## @param taskmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+   ## @param taskmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+   ## @param taskmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+<span class="gi">+  ## @param taskmanager.containerSecurityContext.privileged Set primary container's Security Context privileged
+</span>   ## @param taskmanager.containerSecurityContext.allowPrivilegeEscalation Allows privilege escalation
+   ## @param taskmanager.containerSecurityContext.capabilities.drop List of capabilities to be dropped
+<span class="gi">+  ## @param taskmanager.containerSecurityContext.seccompProfile.type Rules specifying actions to take based on the requested syscall
+</span>   ##
+   containerSecurityContext:
+     enabled: true
+     runAsUser: 1001
+     runAsNonRoot: true
+<span class="gi">+    privileged: false
+</span>     allowPrivilegeEscalation: false
+     capabilities:
+<span class="gd">-      drop: [ "ALL" ]
+</span><span class="gi">+      drop: ["ALL"]
++    seccompProfile:
++      type: "RuntimeDefault"
+</span>   ## @param taskmanager.podAnnotations Additional pod annotations
+   ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+   ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="046"> <a href="#046" class="anchor-heading" aria-labelledby="046"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.6 </h2> <p><strong>Release date:</strong> 2023-10-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.18.0&amp;color=success" alt="AppVersion: 1.18.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.4.6 updating components versions (#20392)</li> <li>[bitnami/*] Rename VMware Application Catalog (#20361)</li> <li>[bitnami/*] Skip image’s tag in the README files of the Bitnami Charts (#19841)</li> <li>[bitnami/*] Standardize documentation (#19835)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index f89f02c857..20673cd9c8 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -61,9 +61,9 @@</span> diagnosticMode:
+ 
+ ## Bitnami Apache Flink image
+ ## ref: https://hub.docker.com/r/bitnami/flink/tags/
+<span class="gd">-## @param image.registry Apache Flink image registry
+-## @param image.repository Apache Flink image repository
+-## @param image.tag Apache Flink image tag (immutable tags are recommended)
+</span><span class="gi">+## @param image.registry [default: REGISTRY_NAME] Apache Flink image registry
++## @param image.repository [default: REPOSITORY_NAME/flink] Apache Flink image repository
++## @skip image.tag Apache Flink image tag (immutable tags are recommended)
+</span> ## @param image.digest Apache Flink image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+ ## @param image.pullPolicy image pull policy
+ ## @param image.pullSecrets Apache Flink image pull secrets
+<span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r120
+</span><span class="gi">+  tag: 1.18.0-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="045"> <a href="#045" class="anchor-heading" aria-labelledby="045"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.5 </h2> <p><strong>Release date:</strong> 2023-10-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.4.5 updating components versions (#20129)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="044"> <a href="#044" class="anchor-heading" aria-labelledby="044"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.4 </h2> <p><strong>Release date:</strong> 2023-10-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.4.4 (#20115)</li> <li>[bitnami/*] Update Helm charts prerequisites (#19745)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 200b13fec1..f89f02c857 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r100
+</span><span class="gi">+  tag: 1.17.1-debian-11-r120
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="043"> <a href="#043" class="anchor-heading" aria-labelledby="043"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.3 </h2> <p><strong>Release date:</strong> 2023-10-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Fix pullSecrets and extraVolumeMounts (#19675)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="042"> <a href="#042" class="anchor-heading" aria-labelledby="042"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.2 </h2> <p><strong>Release date:</strong> 2023-09-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.4.2 (#19357)</li> <li>Revert “Autogenerate schema files (#19194)” (#19335)</li> <li>Autogenerate schema files (#19194)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index db02df61fa..200b13fec1 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r75
+</span><span class="gi">+  tag: 1.17.1-debian-11-r100
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="041"> <a href="#041" class="anchor-heading" aria-labelledby="041"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.1 </h2> <p><strong>Release date:</strong> 2023-09-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="040"> <a href="#040" class="anchor-heading" aria-labelledby="040"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.0 </h2> <p><strong>Release date:</strong> 2023-08-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Support for customizing standard labels (#18299)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="038"> <a href="#038" class="anchor-heading" aria-labelledby="038"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.8 </h2> <p><strong>Release date:</strong> 2023-08-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.3.8 (#18658)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index d68301a135..db02df61fa 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r73
+</span><span class="gi">+  tag: 1.17.1-debian-11-r75
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="037"> <a href="#037" class="anchor-heading" aria-labelledby="037"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.7 </h2> <p><strong>Release date:</strong> 2023-08-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.3.7 (#18515)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 1dfc8f6b46..d68301a135 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r53
+</span><span class="gi">+  tag: 1.17.1-debian-11-r73
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="036"> <a href="#036" class="anchor-heading" aria-labelledby="036"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.6 </h2> <p><strong>Release date:</strong> 2023-07-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.3.6 (#17983)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index e827c44be0..1dfc8f6b46 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r46
+</span><span class="gi">+  tag: 1.17.1-debian-11-r53
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="035"> <a href="#035" class="anchor-heading" aria-labelledby="035"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.5 </h2> <p><strong>Release date:</strong> 2023-07-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.3.5 (#17777)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index b616a6ec94..e827c44be0 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -72,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r16
+</span><span class="gi">+  tag: 1.17.1-debian-11-r46
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="034"> <a href="#034" class="anchor-heading" aria-labelledby="034"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.4 </h2> <p><strong>Release date:</strong> 2023-07-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0 (#17595)</li> <li>Add copyright header (#17300)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index fbb091465b..b616a6ec94 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -1,3 +1,6 @@</span>
+<span class="gi">+# Copyright VMware, Inc.
++# SPDX-License-Identifier: APACHE-2.0
++
+</span> ## @section Global parameters
+ ## Global Docker image parameters
+ ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+<span class="p">@@ -69,7 +72,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r10
+</span><span class="gi">+  tag: 1.17.1-debian-11-r16
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="033"> <a href="#033" class="anchor-heading" aria-labelledby="033"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.3 </h2> <p><strong>Release date:</strong> 2023-06-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.3.3 (#17342)</li> <li>Update charts readme (#17217)</li> <li>[bitnami/*] Change copyright section in READMEs (#17006)</li> <li>[bitnami/several] Change copyright section in READMEs (#16989)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 79ecfc6cb0..fbb091465b 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r1
+</span><span class="gi">+  tag: 1.17.1-debian-11-r10
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="032"> <a href="#032" class="anchor-heading" aria-labelledby="032"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.2 </h2> <p><strong>Release date:</strong> 2023-05-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.3.2 updating components versions (#16926)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 7284901f2f..79ecfc6cb0 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.17.1-debian-11-r0
+</span><span class="gi">+  tag: 1.17.1-debian-11-r1
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="031"> <a href="#031" class="anchor-heading" aria-labelledby="031"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.1 </h2> <p><strong>Release date:</strong> 2023-05-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.17.1&amp;color=success" alt="AppVersion: 1.17.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.3.1 updating components versions (#16924)</li> <li>Add wording for enterprise page (#16560)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 18225df196..7284901f2f 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.16.1-debian-11-r17
+</span><span class="gi">+  tag: 1.17.1-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2023-05-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.16.1&amp;color=success" alt="AppVersion: 1.16.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/several] Adapt Chart.yaml to set desired OCI annotations (#16546)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="021"> <a href="#021" class="anchor-heading" aria-labelledby="021"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.1 </h2> <p><strong>Release date:</strong> 2023-05-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.16.1&amp;color=success" alt="AppVersion: 1.16.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.2.1 (#16506)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index 11be647035..18225df196 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.16.1-debian-11-r9
+</span><span class="gi">+  tag: 1.16.1-debian-11-r17
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2023-04-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.16.1&amp;color=success" alt="AppVersion: 1.16.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/*] Make Helm charts 100% OCI (#15998)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="012"> <a href="#012" class="anchor-heading" aria-labelledby="012"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.2 </h2> <p><strong>Release date:</strong> 2023-04-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.16.1&amp;color=success" alt="AppVersion: 1.16.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.1.2 updating components versions</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index b5e5ad0e5a..11be647035 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.16.1-debian-11-r7
+</span><span class="gi">+  tag: 1.16.1-debian-11-r9
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2023-04-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.16.1&amp;color=success" alt="AppVersion: 1.16.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Release 0.1.1 updating components versions</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/flink/values.yaml b/bitnami/flink/values.yaml
+index d44f2567ae..b5e5ad0e5a 100644
+</span><span class="gd">--- a/bitnami/flink/values.yaml
+</span><span class="gi">+++ b/bitnami/flink/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/flink
+<span class="gd">-  tag: 1.16.1-debian-11-r0
+</span><span class="gi">+  tag: 1.16.1-debian-11-r7
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2023-04-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.16.0&amp;color=success" alt="AppVersion: 1.16.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/flink] Add Apache Flink chart (#14879)</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## @section Global parameters
+## Global Docker image parameters
+## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+## Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
+##
+<span class="err">
+</span>## @param global.imageRegistry Global Docker image registry
+## @param global.imagePullSecrets Global Docker registry secret names as an array
+## @param global.storageClass Global StorageClass for Persistent Volume(s)
+##
+<span class="p">global:
+</span>  imageRegistry: ""
+  ## E.g.
+  ## imagePullSecrets:
+  ##   - myRegistryKeySecretName
+  ##
+  imagePullSecrets: []
+  storageClass: ""
+<span class="err">
+</span>## @section Common parameters
+##
+<span class="err">
+</span>## @param nameOverride String to partially override common.names.fullname
+##
+<span class="p">nameOverride: ""
+</span>## @param fullnameOverride String to fully override common.names.fullname
+##
+<span class="p">fullnameOverride: ""
+</span>## @param kubeVersion Force target Kubernetes version (using Helm capabilities if not set)
+##
+<span class="p">kubeVersion: ""
+</span>## @param commonLabels Labels to add to all deployed objects (sub-charts are not considered)
+##
+<span class="p">commonLabels: {}
+</span>## @param commonAnnotations Annotations to add to all deployed objects
+##
+<span class="p">commonAnnotations: {}
+</span>## @param extraDeploy Array of extra objects to deploy with the release
+##
+<span class="p">extraDeploy: []
+</span>## Enable diagnostic mode in the deployment
+##
+<span class="p">diagnosticMode:
+</span>  ## @param diagnosticMode.enabled Enable diagnostic mode (all probes will be disabled and the command will be overridden)
+  ##
+  enabled: false
+  ## @param diagnosticMode.command Command to override all containers in the deployment
+  ##
+  command:
+    - sleep
+  ## @param diagnosticMode.args Args to override all containers in the deployment
+  ##
+  args:
+    - infinity
+<span class="err">
+</span>## @section Apache Flink parameters
+##
+<span class="err">
+</span>## Bitnami Apache Flink image
+## ref: https://hub.docker.com/r/bitnami/flink/tags/
+## @param image.registry Apache Flink image registry
+## @param image.repository Apache Flink image repository
+## @param image.tag Apache Flink image tag (immutable tags are recommended)
+## @param image.digest Apache Flink image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+## @param image.pullPolicy image pull policy
+## @param image.pullSecrets Apache Flink image pull secrets
+## @param image.debug Enable image debug mode
+##
+<span class="p">image:
+</span>  registry: docker.io
+  repository: bitnami/flink
+  tag: 1.16.1-debian-11-r0
+  digest: ""
+  ## Specify a imagePullPolicy
+  ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+  ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+  ##
+  pullPolicy: IfNotPresent
+  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ## e.g:
+  ## pullSecrets:
+  ##   - myRegistryKeySecretName
+  ##
+  pullSecrets: []
+  ## Enable debug mode
+  ##
+  debug: false
+<span class="err">
+</span>## @section Jobmanager deployment parameters
+##
+<span class="err">
+</span><span class="p">jobmanager:
+</span>  ## @param jobmanager.command Command for running the container (set to default if not set). Use array form
+  ##
+  command: []
+  ## @param jobmanager.args Args for running the container (set to default if not set). Use array form
+  ##
+  args: []
+  ## @param jobmanager.lifecycleHooks [object] Override default etcd container hooks
+  ##
+  lifecycleHooks: {}
+  ## @param jobmanager.extraEnvVars Extra environment variables to be set on flink container
+  ## For example:
+  ##  - name: FOO
+  ##    value: BAR
+  ##
+  extraEnvVars: []
+  ## @param jobmanager.extraEnvVarsCM Name of existing ConfigMap containing extra env vars
+  ##
+  extraEnvVarsCM: ""
+  ## @param jobmanager.extraEnvVarsSecret Name of existing Secret containing extra env vars
+  ##
+  extraEnvVarsSecret: ""
+  ## @param jobmanager.replicaCount Number of Apache Flink Jobmanager replicas
+  ##
+  replicaCount: 1
+  ## Configure extra options for container's liveness, readiness and startup probes
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes
+  ## @param jobmanager.livenessProbe.enabled Enable livenessProbe on Jobmanager nodes
+  ## @param jobmanager.livenessProbe.initialDelaySeconds Initial delay seconds for livenessProbe
+  ## @param jobmanager.livenessProbe.periodSeconds Period seconds for livenessProbe
+  ## @param jobmanager.livenessProbe.timeoutSeconds Timeout seconds for livenessProbe
+  ## @param jobmanager.livenessProbe.failureThreshold Failure threshold for livenessProbe
+  ## @param jobmanager.livenessProbe.successThreshold Success threshold for livenessProbe
+  ##
+  livenessProbe:
+    enabled: true
+    failureThreshold: 3
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+  ## @param jobmanager.startupProbe.enabled Enable startupProbe on Jobmanager containers
+  ## @param jobmanager.startupProbe.initialDelaySeconds Initial delay seconds for startupProbe
+  ## @param jobmanager.startupProbe.periodSeconds Period seconds for startupProbe
+  ## @param jobmanager.startupProbe.timeoutSeconds Timeout seconds for startupProbe
+  ## @param jobmanager.startupProbe.failureThreshold Failure threshold for startupProbe
+  ## @param jobmanager.startupProbe.successThreshold Success threshold for startupProbe
+  ##
+  startupProbe:
+    enabled: true
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    timeoutSeconds: 1
+    failureThreshold: 15
+    successThreshold: 1
+  ## @param jobmanager.readinessProbe.enabled Enable readinessProbe
+  ## @param jobmanager.readinessProbe.initialDelaySeconds Initial delay seconds for readinessProbe
+  ## @param jobmanager.readinessProbe.periodSeconds Period seconds for readinessProbe
+  ## @param jobmanager.readinessProbe.timeoutSeconds Timeout seconds for readinessProbe
+  ## @param jobmanager.readinessProbe.failureThreshold Failure threshold for readinessProbe
+  ## @param jobmanager.readinessProbe.successThreshold Success threshold for readinessProbe
+  ##
+  readinessProbe:
+    enabled: true
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    timeoutSeconds: 1
+    failureThreshold: 15
+    successThreshold: 1
+  ## @param jobmanager.customLivenessProbe Custom livenessProbe that overrides the default one
+  ##
+  customLivenessProbe: {}
+  ## @param jobmanager.customStartupProbe [object] Override default startup probe
+  ##
+  customStartupProbe: {}
+  ## @param jobmanager.customReadinessProbe [object] Override default readiness probe
+  ##
+  customReadinessProbe: {}
+  ## Apache Flink pods' resource requests and limits
+  ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+  ## Minimum memory for development is 4GB and 2 CPU cores
+  ## Minimum memory for production is 8GB and 4 CPU cores
+  ## ref: http://docs.datastax.com/en/archived/flink/2.0/flink/architecture/architecturePlanningHardware_c.html
+  ##
+  ## We usually recommend not to specify default resources and to leave this as a conscious
+  ## choice for the user. This also increases chances charts run on environments with little
+  ## resources, such as Minikube. If you do want to specify resources, uncomment the following
+  ## lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  ## @param jobmanager.resources.limits The resources limits for Apache Flink containers
+  ## @param jobmanager.resources.requests The requested resources for Apache Flink containers
+  ##
+  resources:
+    ## Example:
+    ## limits:
+    ##    cpu: 2
+    ##    memory: 4Gi
+    ##
+    limits: {}
+    ## Examples:
+    ## requests:
+    ##    cpu: 2
+    ##    memory: 4Gi
+    ##
+    requests: {}
+  ## @param jobmanager.extraVolumeMounts Optionally specify extra list of additional volumeMounts for flink container
+  ##
+  extraVolumeMounts: []
+  ## Container ports to expose
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+  containerPorts:
+    ## @param jobmanager.containerPorts.rpc Port for RPC
+    ##
+    rpc: 6123
+    ## @param jobmanager.containerPorts.http Port for http UI
+    ##
+    http: 8081
+    ## @param jobmanager.containerPorts.blob Port for blob server
+    ##
+    blob: 6124
+  ## Apache Flink jobmanager.service parameters
+  ##
+  service:
+    ## @param jobmanager.service.type Apache Flink service type
+    ##
+    type: ClusterIP
+    ## Ports to expose
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+    ports:
+      ## @param jobmanager.service.ports.rpc Port for RPC
+      ##
+      rpc: 6123
+      ## @param jobmanager.service.ports.http Port for http UI
+      ##
+      http: 8081
+      ## @param jobmanager.service.ports.blob Port for blob server
+      ## Due the Apache Flink specificities this port should match the jobmanager.containerPorts.blob port. The taskmanager should be
+      ## able to communicate with the jobmanager through the port jobmanager indicates to the taskmanager, being the jobmanager not aware of the service port.
+      blob: 6124
+    ## Node ports to expose
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+    nodePorts:
+      ## @param jobmanager.service.nodePorts.rpc Node port for RPC
+      ##
+      rpc: ""
+      ## @param jobmanager.service.nodePorts.http Node port for http UI
+      ##
+      http: ""
+      ## @param jobmanager.service.nodePorts.blob Port for blob server
+      ##
+      blob: ""
+    ## @param jobmanager.service.extraPorts Extra ports to expose in the service (normally used with the `sidecar` value)
+    ##
+    extraPorts: []
+    ## @param jobmanager.service.loadBalancerIP LoadBalancerIP if service type is `LoadBalancer`
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
+    ##
+    loadBalancerIP: ""
+    ## @param jobmanager.service.loadBalancerSourceRanges Service Load Balancer sources
+    ## ref: https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/#restrict-access-for-loadbalancer-service
+    ## e.g:
+    ## loadBalancerSourceRanges:
+    ##   - 10.10.10.0/24
+    ##
+    loadBalancerSourceRanges: []
+    ## @param jobmanager.service.clusterIP Service Cluster IP
+    ## e.g.:
+    ## clusterIP: None
+    ##
+    clusterIP: ""
+    ## @param jobmanager.service.externalTrafficPolicy Service external traffic policy
+    ## ref https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip
+    ##
+    externalTrafficPolicy: Cluster
+    ## @param jobmanager.service.annotations Provide any additional annotations which may be required.
+    ## This can be used to set the LoadBalancer service type to internal only.
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
+    ##
+    annotations: {}
+    ## @param jobmanager.service.sessionAffinity Session Affinity for Kubernetes service, can be "None" or "ClientIP"
+    ## If "ClientIP", consecutive client requests will be directed to the same Pod
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+    ##
+    sessionAffinity: None
+    ## @param jobmanager.service.sessionAffinityConfig Additional settings for the sessionAffinity
+    ## sessionAffinityConfig:
+    ##   clientIP:
+    ##     timeoutSeconds: 300
+    ##
+    sessionAffinityConfig: {}
+  ## Apache Flink Jobmanager serviceAccount parameters
+  ##
+  serviceAccount:
+    ## @param jobmanager.serviceAccount.create Enables ServiceAccount
+    ##
+    create: true
+    ## @param jobmanager.serviceAccount.name ServiceAccount name
+    ##
+    name: ""
+    ## @param jobmanager.serviceAccount.annotations Annotations to add to all deployed objects
+    ##
+    annotations: {}
+    ## @param jobmanager.serviceAccount.automountServiceAccountToken Automount API credentials for a service account.
+    ##
+    automountServiceAccountToken: true
+  ## Pod security context
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+  ## @param jobmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+  ## @param jobmanager.podSecurityContext.fsGroup Set Apache Flink pod's Security Context fsGroup
+  ## @param jobmanager.podSecurityContext.seccompProfile.type Rules specifying actions to take based on the requested syscall
+  ##
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+    seccompProfile:
+      type: "RuntimeDefault"
+  ## Configure Container Security Context (only main container)
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+  ## @param jobmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+  ## @param jobmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+  ## @param jobmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+  ## @param jobmanager.containerSecurityContext.allowPrivilegeEscalation Allows privilege escalation
+  ## @param jobmanager.containerSecurityContext.capabilities.drop List of capabilities to be dropped
+  ##
+  containerSecurityContext:
+    enabled: true
+    runAsUser: 1001
+    runAsNonRoot: true
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop: [ "ALL" ]
+  ## @param jobmanager.podAnnotations Additional pod annotations
+  ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+  ##
+  podAnnotations: {}
+  ## @param jobmanager.podLabels Additional pod labels
+  ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+  ##
+  podLabels: {}
+  ## @param jobmanager.podAffinityPreset Pod affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+  ## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+  ##
+  podAffinityPreset: ""
+  ## @param jobmanager.podAntiAffinityPreset Pod anti-affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+  ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+  ##
+  podAntiAffinityPreset: soft
+  ## Node affinity preset
+  ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
+  ##
+  nodeAffinityPreset:
+    ## @param jobmanager.nodeAffinityPreset.type Node affinity preset type. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+    ##
+    type: ""
+    ## @param jobmanager.nodeAffinityPreset.key Node label key to match. Ignored if `affinity` is set
+    ##
+    key: ""
+    ## @param jobmanager.nodeAffinityPreset.values Node label values to match. Ignored if `affinity` is set
+    ## E.g.
+    ## values:
+    ##   - e2e-az1
+    ##   - e2e-az2
+    ##
+    values: []
+  ## @param jobmanager.priorityClassName Server priorityClassName
+  ## Ref: https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/
+  ##
+  priorityClassName: ""
+  ## @param jobmanager.affinity Affinity for pod assignment
+  ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+  ## NOTE: podAffinityPreset, podAntiAffinityPreset, and nodeAffinityPreset will be ignored when it's set
+  ##
+  affinity: {}
+  ## @param jobmanager.nodeSelector Node labels for pod assignment
+  ## ref: https://kubernetes.io/docs/user-guide/node-selection/
+  ##
+  nodeSelector: {}
+  ## @param jobmanager.tolerations Tolerations for pod assignment
+  ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+  ##
+  tolerations: []
+  ## @param jobmanager.topologySpreadConstraints Topology Spread Constraints for pod assignment
+  ## https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+  ## The value is evaluated as a template
+  ##
+  topologySpreadConstraints: []
+  ## @param jobmanager.schedulerName Alternative scheduler
+  ## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
+  ##
+  schedulerName: ""
+  ## @param jobmanager.updateStrategy.type Apache Flink jobmanager deployment strategy type
+  ## @param jobmanager.updateStrategy.rollingUpdate Apache Flink jobmanager deployment rolling update configuration parameters
+  ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+  ##
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate: {}
+  ## @param jobmanager.extraVolumes Optionally specify extra list of additional volumes for flink container
+  ##
+  extraVolumes: []
+  ## @param jobmanager.initContainers Add additional init containers to the flink pods
+  ##
+  initContainers: []
+  ## @param jobmanager.sidecars Add additional sidecar containers to the flink pods
+  ##
+  sidecars: []
+<span class="err">
+</span>## @section TaskManager deployment parameters
+##
+<span class="err">
+</span><span class="p">taskmanager:
+</span>  ## @param taskmanager.command Command for running the container (set to default if not set). Use array form
+  ##
+  command: []
+  ## @param taskmanager.args Args for running the container (set to default if not set). Use array form
+  ##
+  args: []
+  ## @param taskmanager.lifecycleHooks [object] Override default etcd container hooks
+  ##
+  lifecycleHooks: {}
+  ## @param taskmanager.extraEnvVars Extra environment variables to be set on flink container
+  ## For example:
+  ##  - name: FOO
+  ##    value: BAR
+  ##
+  extraEnvVars: []
+  ## @param taskmanager.extraEnvVarsCM Name of existing ConfigMap containing extra env vars
+  ##
+  extraEnvVarsCM: ""
+  ## @param taskmanager.extraEnvVarsSecret Name of existing Secret containing extra env vars
+  ##
+  extraEnvVarsSecret: ""
+  ## @param taskmanager.replicaCount Number of Apache Flink replicas
+  ##
+  replicaCount: 1
+  ## Configure extra options for container's liveness, readiness and startup probes
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes
+  ## @param taskmanager.livenessProbe.enabled Enable livenessProbe on taskmanager nodes
+  ## @param taskmanager.livenessProbe.initialDelaySeconds Initial delay seconds for livenessProbe
+  ## @param taskmanager.livenessProbe.periodSeconds Period seconds for livenessProbe
+  ## @param taskmanager.livenessProbe.timeoutSeconds Timeout seconds for livenessProbe
+  ## @param taskmanager.livenessProbe.failureThreshold Failure threshold for livenessProbe
+  ## @param taskmanager.livenessProbe.successThreshold Success threshold for livenessProbe
+  ##
+  livenessProbe:
+    enabled: true
+    failureThreshold: 3
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    successThreshold: 1
+    timeoutSeconds: 1
+  ## @param taskmanager.startupProbe.enabled Enable startupProbe on taskmanager containers
+  ## @param taskmanager.startupProbe.initialDelaySeconds Initial delay seconds for startupProbe
+  ## @param taskmanager.startupProbe.periodSeconds Period seconds for startupProbe
+  ## @param taskmanager.startupProbe.timeoutSeconds Timeout seconds for startupProbe
+  ## @param taskmanager.startupProbe.failureThreshold Failure threshold for startupProbe
+  ## @param taskmanager.startupProbe.successThreshold Success threshold for startupProbe
+  ##
+  startupProbe:
+    enabled: true
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    timeoutSeconds: 1
+    failureThreshold: 15
+    successThreshold: 1
+  ## @param taskmanager.readinessProbe.enabled Enable readinessProbe
+  ## @param taskmanager.readinessProbe.initialDelaySeconds Initial delay seconds for readinessProbe
+  ## @param taskmanager.readinessProbe.periodSeconds Period seconds for readinessProbe
+  ## @param taskmanager.readinessProbe.timeoutSeconds Timeout seconds for readinessProbe
+  ## @param taskmanager.readinessProbe.failureThreshold Failure threshold for readinessProbe
+  ## @param taskmanager.readinessProbe.successThreshold Success threshold for readinessProbe
+  ##
+  readinessProbe:
+    enabled: true
+    initialDelaySeconds: 20
+    periodSeconds: 10
+    timeoutSeconds: 1
+    failureThreshold: 15
+    successThreshold: 1
+  ## @param taskmanager.customLivenessProbe Custom livenessProbe that overrides the default one
+  ##
+  customLivenessProbe: {}
+  ## @param taskmanager.customStartupProbe [object] Override default startup probe
+  ##
+  customStartupProbe: {}
+  ## @param taskmanager.customReadinessProbe [object] Override default readiness probe
+  ##
+  customReadinessProbe: {}
+  ## Apache Flink pods' resource requests and limits
+  ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+  ## Minimum memory for development is 4GB and 2 CPU cores
+  ## Minimum memory for production is 8GB and 4 CPU cores
+  ## ref: http://docs.datastax.com/en/archived/flink/2.0/flink/architecture/architecturePlanningHardware_c.html
+  ##
+  ## We usually recommend not to specify default resources and to leave this as a conscious
+  ## choice for the user. This also increases chances charts run on environments with little
+  ## resources, such as Minikube. If you do want to specify resources, uncomment the following
+  ## lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  ## @param taskmanager.resources.limits The resources limits for Apache Flink containers
+  ## @param taskmanager.resources.requests The requested resources for Apache Flink containers
+  ##
+  resources:
+    ## Example:
+    ## limits:
+    ##    cpu: 2
+    ##    memory: 4Gi
+    ##
+    limits: {}
+    ## Examples:
+    ## requests:
+    ##    cpu: 2
+    ##    memory: 4Gi
+    ##
+    requests: {}
+  ## @param taskmanager.extraVolumeMounts Optionally specify extra list of additional volumeMounts for flink container
+  ##
+  extraVolumeMounts: []
+  ## Container ports to expose
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+  containerPorts:
+    ## @param taskmanager.containerPorts.data data exchange port
+    ##
+    data: 6121
+    ## @param taskmanager.containerPorts.rpc Port for RPC
+    ##
+    rpc: 6122
+  ## Apache Flink taskmanager.service parameters
+  ##
+  service:
+    ## @param taskmanager.service.type Apache Flink service type
+    ##
+    type: ClusterIP
+    ## Ports to expose
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+    ports:
+      ## @param taskmanager.service.ports.data data exchange port
+      ##
+      data: 6121
+      ## @param taskmanager.service.ports.rpc Port for RPC
+      ##
+      rpc: 6122
+    ## Node ports to expose
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+    nodePorts:
+      ## @param taskmanager.service.nodePorts.data data exchange port
+      ##
+      data: ""
+      ## @param taskmanager.service.nodePorts.rpc Port for RPC
+      ##
+      rpc: ""
+    ## @param taskmanager.service.extraPorts Extra ports to expose in the service (normally used with the `sidecar` value)
+    ##
+    extraPorts: []
+    ## @param taskmanager.service.loadBalancerIP LoadBalancerIP if service type is `LoadBalancer`
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
+    ##
+    loadBalancerIP: ""
+    ## @param taskmanager.service.loadBalancerSourceRanges Service Load Balancer sources
+    ## ref: https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/#restrict-access-for-loadbalancer-service
+    ## e.g:
+    ## loadBalancerSourceRanges:
+    ##   - 10.10.10.0/24
+    ##
+    loadBalancerSourceRanges: []
+    ## @param taskmanager.service.clusterIP Service Cluster IP
+    ## e.g.:
+    ## clusterIP: None
+    ##
+    clusterIP: ""
+    ## @param taskmanager.service.externalTrafficPolicy Service external traffic policy
+    ## ref https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip
+    ##
+    externalTrafficPolicy: Cluster
+    ## @param taskmanager.service.annotations Provide any additional annotations which may be required.
+    ## This can be used to set the LoadBalancer service type to internal only.
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
+    ##
+    annotations: {}
+    ## @param taskmanager.service.sessionAffinity Session Affinity for Kubernetes service, can be "None" or "ClientIP"
+    ## If "ClientIP", consecutive client requests will be directed to the same Pod
+    ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+    ##
+    sessionAffinity: None
+    ## @param taskmanager.service.sessionAffinityConfig Additional settings for the sessionAffinity
+    ## sessionAffinityConfig:
+    ##   clientIP:
+    ##     timeoutSeconds: 300
+    ##
+    sessionAffinityConfig: {}
+  ## Apache Flink taskmanager serviceAccount parameters
+  ##
+  serviceAccount:
+    ## @param taskmanager.serviceAccount.create Enables ServiceAccount
+    ##
+    create: true
+    ## @param taskmanager.serviceAccount.name ServiceAccount name
+    ##
+    name: ""
+    ## @param taskmanager.serviceAccount.annotations Annotations to add to all deployed objects
+    ##
+    annotations: {}
+    ## @param taskmanager.serviceAccount.automountServiceAccountToken Automount API credentials for a service account.
+    ##
+    automountServiceAccountToken: true
+  ## Pod security context
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+  ## @param taskmanager.podSecurityContext.enabled Enabled Apache Flink pods' Security Context
+  ## @param taskmanager.podSecurityContext.fsGroup Set Apache Flink pod's Security Context fsGroup
+  ## @param taskmanager.podSecurityContext.seccompProfile.type Rules specifying actions to take based on the requested syscall
+  ##
+  podSecurityContext:
+    enabled: true
+    fsGroup: 1001
+    seccompProfile:
+      type: "RuntimeDefault"
+  ## Configure Container Security Context (only main container)
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+  ## @param taskmanager.containerSecurityContext.enabled Enabled Apache Flink containers' Security Context
+  ## @param taskmanager.containerSecurityContext.runAsUser Set Apache Flink container's Security Context runAsUser
+  ## @param taskmanager.containerSecurityContext.runAsNonRoot Force the container to be run as non root
+  ## @param taskmanager.containerSecurityContext.allowPrivilegeEscalation Allows privilege escalation
+  ## @param taskmanager.containerSecurityContext.capabilities.drop List of capabilities to be dropped
+  ##
+  containerSecurityContext:
+    enabled: true
+    runAsUser: 1001
+    runAsNonRoot: true
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop: [ "ALL" ]
+  ## @param taskmanager.podAnnotations Additional pod annotations
+  ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+  ##
+  podAnnotations: {}
+  ## @param taskmanager.podLabels Additional pod labels
+  ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+  ##
+  podLabels: {}
+  ## @param taskmanager.podAffinityPreset Pod affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+  ## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+  ##
+  podAffinityPreset: ""
+  ## @param taskmanager.podAntiAffinityPreset Pod anti-affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+  ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+  ##
+  podAntiAffinityPreset: soft
+  ## Node affinity preset
+  ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
+  ##
+  nodeAffinityPreset:
+    ## @param taskmanager.nodeAffinityPreset.type Node affinity preset type. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+    ##
+    type: ""
+    ## @param taskmanager.nodeAffinityPreset.key Node label key to match. Ignored if `affinity` is set
+    ##
+    key: ""
+    ## @param taskmanager.nodeAffinityPreset.values Node label values to match. Ignored if `affinity` is set
+    ## E.g.
+    ## values:
+    ##   - e2e-az1
+    ##   - e2e-az2
+    ##
+    values: []
+  ## @param taskmanager.priorityClassName Server priorityClassName
+  ## Ref: https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/
+  ##
+  priorityClassName: ""
+  ## @param taskmanager.affinity Affinity for pod assignment
+  ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+  ## NOTE: podAffinityPreset, podAntiAffinityPreset, and nodeAffinityPreset will be ignored when it's set
+  ##
+  affinity: {}
+  ## @param taskmanager.nodeSelector Node labels for pod assignment
+  ## ref: https://kubernetes.io/docs/user-guide/node-selection/
+  ##
+  nodeSelector: {}
+  ## @param taskmanager.tolerations Tolerations for pod assignment
+  ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+  ##
+  tolerations: []
+  ## @param taskmanager.topologySpreadConstraints Topology Spread Constraints for pod assignment
+  ## https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+  ## The value is evaluated as a template
+  ##
+  topologySpreadConstraints: []
+  ## @param taskmanager.schedulerName Alternative scheduler
+  ## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
+  ##
+  schedulerName: ""
+  ## @param taskmanager.updateStrategy.type Apache Flink taskmanager deployment strategy type
+  ## @param taskmanager.updateStrategy.rollingUpdate Apache Flink taskmanager deployment rolling update configuration parameters
+  ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+  ##
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate: {}
+  ## @param taskmanager.extraVolumes Optionally specify extra list of additional volumes for flink container
+  ##
+  extraVolumes: []
+  ## @param taskmanager.initContainers Add additional init containers to the flink pods
+  ##
+  initContainers: []
+  ## @param taskmanager.sidecars Add additional sidecar containers to the flink pods
+  ##
+  sidecars: []
+<span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

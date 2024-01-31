@@ -1,0 +1,1639 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(2)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(2) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(4) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(2) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list > li.nav-list-item:nth-child(2) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>enterprise-logs | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="enterprise-logs" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/grafana/helm-charts/enterprise-logs" /> <meta property="og:url" content="https://baprx.github.io/changelogs/grafana/helm-charts/enterprise-logs" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="enterprise-logs" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"enterprise-logs","url":"https://baprx.github.io/changelogs/grafana/helm-charts/enterprise-logs"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/grafana/helm-charts">grafana/helm-charts</a></li> <li class="breadcrumb-nav-list-item"><span>enterprise-logs</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="enterprise-logs"> <a href="#enterprise-logs" class="anchor-heading" aria-labelledby="enterprise-logs"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> enterprise-logs </h1> <h2 id="next-release"> <a href="#next-release" class="anchor-heading" aria-labelledby="next-release"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Next Release </h2> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.2&amp;color=success" alt="AppVersion: v1.5.2"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update values.yaml</li> <li>Update values.yaml</li> <li>Update values.yaml</li> <li>Update Chart.yaml</li> <li>Update Chart.yaml</li> <li>Update Chart.yaml</li> <li>Update Chart.yaml</li> <li>Update Chart.yaml</li> <li>Update Chart.yaml</li> <li>Delete Chart.lock</li> <li>Update Chart.lock</li> <li>Update Chart.yaml</li> <li>apply suggestions</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index aa6820b8..54607c9e 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -173,7 +173,7 @@</span> tokengen:
+   # -- Whether the job should be part of the deployment
+   enable: true
+   # -- hostAliases to add
+<span class="gd">-  hostAliases: [ ]
+</span><span class="gi">+  hostAliases: []
+</span>   #  - ip: 1.2.3.4
+   #    hostnames:
+   #      - domain.tld
+<span class="p">@@ -207,7 +207,7 @@</span> adminApi:
+   # -- Define the amount of instances
+   replicas: 1
+   # -- hostAliases to add
+<span class="gd">-  hostAliases: [ ]
+</span><span class="gi">+  hostAliases: []
+</span>   #  - ip: 1.2.3.4
+   #    hostnames:
+   #      - domain.tld
+<span class="p">@@ -281,7 +281,7 @@</span> gateway:
+   # -- Define the amount of instances
+   replicas: 1
+   # -- hostAliases to add
+<span class="gd">-  hostAliases: [ ]
+</span><span class="gi">+  hostAliases: []
+</span>   #  - ip: 1.2.3.4
+   #    hostnames:
+   #      - domain.tld
+<span class="p">@@ -360,7 +360,7 @@</span> compactor:
+   # -- Define the amount of instances
+   replicas: 1
+   # -- hostAliases to add
+<span class="gd">-  hostAliases: [ ]
+</span><span class="gi">+  hostAliases: []
+</span>   #  - ip: 1.2.3.4
+   #    hostnames:
+   #      - domain.tld
+<span class="p">@@ -491,8 +491,8 @@</span> loki-distributed:
+ 
+   # RBAC configuration
+   rbac:
+<span class="gd">-    # -- If pspEnabled true, a PodSecurityPolicy is created for K8s that use psp.
+-    pspEnabled: true
+</span><span class="gi">+    # -- If pspEnabled true, a PodSecurityPolicy is created for K8s that use psp. Disable due to deprecated since k8s v1.25.
++    pspEnabled: false
+</span>     # -- For OpenShift set pspEnabled to 'false' and sccEnabled to 'true' to use the SecurityContextConstraints.
+     sccEnabled: false
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="250"> <a href="#250" class="anchor-heading" aria-labelledby="250"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.5.0 </h2> <p><strong>Release date:</strong> 2023-07-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.2&amp;color=success" alt="AppVersion: v1.5.2"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump version</li> <li>add hostAliases</li> <li>[enterprise-logs] as per Christian comment updated changelog.md file</li> <li>[enterprise-logs] as per Trevor fixed trailing space in values.yaml comment</li> <li>[enterprise-logs] fixed trailing spaces in values.yaml comment</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index ded51be1..aa6820b8 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -172,6 +172,11 @@</span> structuredConfig: {}
+ tokengen:
+   # -- Whether the job should be part of the deployment
+   enable: true
+<span class="gi">+  # -- hostAliases to add
++  hostAliases: [ ]
++  #  - ip: 1.2.3.4
++  #    hostnames:
++  #      - domain.tld
+</span>   # -- Additional CLI arguments for the `tokengen` target
+   extraArgs: {}
+   # -- Additional Kubernetes environment
+<span class="p">@@ -201,6 +206,11 @@</span> tokengen:
+ adminApi:
+   # -- Define the amount of instances
+   replicas: 1
+<span class="gi">+  # -- hostAliases to add
++  hostAliases: [ ]
++  #  - ip: 1.2.3.4
++  #    hostnames:
++  #      - domain.tld
+</span>   # -- Additional CLI arguments for the `admin-api` target
+   extraArgs: {}
+   # -- Additional labels for the `admin-api` Deployment
+<span class="p">@@ -270,6 +280,11 @@</span> adminApi:
+ gateway:
+   # -- Define the amount of instances
+   replicas: 1
+<span class="gi">+  # -- hostAliases to add
++  hostAliases: [ ]
++  #  - ip: 1.2.3.4
++  #    hostnames:
++  #      - domain.tld
+</span>   # -- Additional CLI arguments for the `gateway` target
+   extraArgs: {}
+   # -- Additional labels for the `gateway` Pod
+<span class="p">@@ -277,7 +292,7 @@</span> gateway:
+   # -- Additional annotations for the `gateway` Pod
+   annotations: {}
+   # -- Additional labels and annotations for the `gateway` Service
+<span class="gd">-  # Service -- overriding service type 
+</span><span class="gi">+  # -- Service overriding service type
+</span>   service:
+     type: ClusterIP
+     labels: {}
+<span class="p">@@ -344,6 +359,11 @@</span> gateway:
+ compactor:
+   # -- Define the amount of instances
+   replicas: 1
+<span class="gi">+  # -- hostAliases to add
++  hostAliases: [ ]
++  #  - ip: 1.2.3.4
++  #    hostnames:
++  #      - domain.tld
+</span>   # -- Additional CLI arguments for the `compactor` target
+   extraArgs: {}
+   # -- Additional labels for the `compactor` Pod
+<span class="err">
+</span></code></pre></div></div> <h2 id="243"> <a href="#243" class="anchor-heading" aria-labelledby="243"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.3 </h2> <p><strong>Release date:</strong> 2022-12-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.2&amp;color=success" alt="AppVersion: v1.5.2"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>making gateway service type configurable in enterprise-logs helm chart</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 683a3c46..ded51be1 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -277,7 +277,9 @@</span> gateway:
+   # -- Additional annotations for the `gateway` Pod
+   annotations: {}
+   # -- Additional labels and annotations for the `gateway` Service
+<span class="gi">+  # Service -- overriding service type 
+</span>   service:
+<span class="gi">+    type: ClusterIP
+</span>     labels: {}
+     annotations: {}
+   # -- Run container as user `enterprise-logs(uid=10001)`
+<span class="err">
+</span></code></pre></div></div> <h2 id="242"> <a href="#242" class="anchor-heading" aria-labelledby="242"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.2 </h2> <p><strong>Release date:</strong> 2022-09-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.2&amp;color=success" alt="AppVersion: v1.5.2"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] bumped GEL version to 1.5.2</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 16bca0cd..683a3c46 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -19,7 +19,7 @@</span> image: &amp;image
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.5.1
+</span><span class="gi">+  tag: v1.5.2
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="241"> <a href="#241" class="anchor-heading" aria-labelledby="241"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.1 </h2> <p><strong>Release date:</strong> 2022-08-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] bumped GEL version to 1.5.1</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 7a3a7ad6..16bca0cd 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -19,7 +19,7 @@</span> image: &amp;image
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.5.0
+</span><span class="gi">+  tag: v1.5.1
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="240"> <a href="#240" class="anchor-heading" aria-labelledby="240"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.0 </h2> <p><strong>Release date:</strong> 2022-08-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add CHANGELOG</li> <li>Update to latest loki-distributed</li> <li>Harmonize securityContext for all pods</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 287c7708..7a3a7ad6 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -185,11 +185,17 @@</span> tokengen:
+   # -- Additional volume mounts for Pods
+   extraVolumeMounts: []
+   # -- Run containers as user `enterprise-logs(uid=10001)`
+<span class="gd">-  securityContext:
+</span><span class="gi">+  podSecurityContext:
+</span>     runAsNonRoot: true
+     runAsGroup: 10001
+     runAsUser: 10001
+     fsGroup: 10001
+<span class="gi">+  containerSecurityContext:
++    readOnlyRootFilesystem: true
++    capabilities:
++      drop:
++        - ALL
++    allowPrivilegeEscalation: false
+</span> 
+ # -- Configuration for the `admin-api` target
+ adminApi:
+<span class="p">@@ -208,10 +214,16 @@</span> adminApi:
+   # -- Run container as user `enterprise-logs(uid=10001)`
+   # `fsGroup` must not be specified, because these security options are applied
+   # on container level not on Pod level.
+<span class="gd">-  securityContext:
+</span><span class="gi">+  podSecurityContext:
+</span>     runAsNonRoot: true
+     runAsGroup: 10001
+     runAsUser: 10001
+<span class="gi">+  containerSecurityContext:
++    readOnlyRootFilesystem: true
++    capabilities:
++      drop:
++        - ALL
++    allowPrivilegeEscalation: false
+</span> 
+   strategy:
+     type: RollingUpdate
+<span class="p">@@ -269,7 +281,7 @@</span> gateway:
+     labels: {}
+     annotations: {}
+   # -- Run container as user `enterprise-logs(uid=10001)`
+<span class="gd">-  securityContext:
+</span><span class="gi">+  podSecurityContext:
+</span>     runAsNonRoot: true
+     runAsGroup: 10001
+     runAsUser: 10001
+<span class="p">@@ -341,7 +353,7 @@</span> compactor:
+     labels: {}
+     annotations: {}
+   # -- Run containers as user `enterprise-logs(uid=10001)`
+<span class="gd">-  securityContext:
+</span><span class="gi">+  podSecurityContext:
+</span>     runAsNonRoot: true
+     runAsGroup: 10001
+     runAsUser: 10001
+<span class="err">
+</span></code></pre></div></div> <h2 id="231"> <a href="#231" class="anchor-heading" aria-labelledby="231"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.3.1 </h2> <p><strong>Release date:</strong> 2022-08-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update changelog and bump enterprise-logs chart version</li> <li>Support configuring <code class="language-plaintext highlighter-rouge">containerSecurityContext</code> for compactor and gateway targets in the enterprise-logs chart</li> <li>updated changelog</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index f5cbe202..287c7708 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -274,6 +274,12 @@</span> gateway:
+     runAsGroup: 10001
+     runAsUser: 10001
+     fsGroup: 10001
+<span class="gi">+  containerSecurityContext:
++    readOnlyRootFilesystem: true
++    capabilities:
++      drop:
++        - ALL
++    allowPrivilegeEscalation: false
+</span> 
+   # If you want to use your own proxy URLs, set this to false.
+   useDefaultProxyURLs: true
+<span class="p">@@ -340,6 +346,12 @@</span> compactor:
+     runAsGroup: 10001
+     runAsUser: 10001
+     fsGroup: 10001
+<span class="gi">+  containerSecurityContext:
++    readOnlyRootFilesystem: true
++    capabilities:
++      drop:
++        - ALL
++    allowPrivilegeEscalation: false
+</span> 
+   strategy:
+     type: RollingUpdate
+<span class="err">
+</span></code></pre></div></div> <h2 id="230"> <a href="#230" class="anchor-heading" aria-labelledby="230"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.3.0 </h2> <p><strong>Release date:</strong> 2022-07-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.0&amp;color=success" alt="AppVersion: v1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] updated image version to use GEL 1.5</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 1df73137..f5cbe202 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -19,7 +19,7 @@</span> image: &amp;image
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.4.1
+</span><span class="gi">+  tag: v1.5.0
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="223"> <a href="#223" class="anchor-heading" aria-labelledby="223"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.3 </h2> <p><strong>Release date:</strong> 2022-06-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump enterprise-logs chart to version 2.2.3</li> <li>Mount read/write /tmp directory in Compactor</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="222"> <a href="#222" class="anchor-heading" aria-labelledby="222"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.2 </h2> <p><strong>Release date:</strong> 2022-05-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.1&amp;color=success" alt="AppVersion: v1.4.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] Update GEL version to v1.4.1 and loki-distributed chart to latest</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 60044a50..1df73137 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -19,7 +19,7 @@</span> image: &amp;image
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.4.0
+</span><span class="gi">+  tag: v1.4.1
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="221"> <a href="#221" class="anchor-heading" aria-labelledby="221"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.1 </h2> <p><strong>Release date:</strong> 2022-05-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.0&amp;color=success" alt="AppVersion: v1.4.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] Support additional config</li> <li>Mount compactor disk to /var/loki</li> <li>Properly template config string</li> <li>Introduce common config to values.yaml</li> <li>Use one ingester replica on CI</li> <li>Move split_queries_by_interval config</li> <li>Undo attempt to use appVersion as default tag</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index ed9b825d..60044a50 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -19,7 +19,7 @@</span> image: &amp;image
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: null
+</span><span class="gi">+  tag: v1.4.0
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="p">@@ -62,7 +62,7 @@</span> config: |
+   auth_enabled: true
+ 
+   license:
+<span class="gd">-    path: "/etc/enterprise-logs/license/license.jwt"
+</span><span class="gi">+    path: /etc/enterprise-logs/license/license.jwt
+</span> 
+   cluster_name: {{ .Release.Name }}
+ 
+<span class="p">@@ -70,38 +70,21 @@</span> config: |
+     http_listen_port: 3100
+     grpc_listen_port: 9095
+ 
+<span class="gi">+  {{- if .Values.commonConfig}}
++  common:
++  {{- toYaml .Values.commonConfig | nindent 2}}
++  {{- end}}
++
+</span>   admin_client:
+     storage:
+<span class="gd">-      type: s3
+</span>       s3:
+<span class="gd">-        endpoint: {{ include "enterprise-logs.minio" . }}
+</span>         bucket_name: enterprise-logs-admin
+<span class="gd">-        secret_access_key: supersecret
+-        access_key_id: enterprise-logs
+-        insecure: true
+-
+-  compactor:
+-    shared_store: s3
+-    working_directory: /data/boltdb-shipper-compactor
+-
+-  distributor:
+-    ring:
+-      kvstore:
+-        store: memberlist
+</span> 
+   ingester:
+<span class="gd">-    lifecycler:
+-      num_tokens: 512
+-      ring:
+-        replication_factor: 3
+-        kvstore:
+-          store: memberlist
+</span>     chunk_idle_period: 30m
+     chunk_block_size: 262144
+     chunk_encoding: snappy
+     chunk_retain_period: 1m
+<span class="gd">-    wal:
+-      dir: /var/loki/wal
+</span> 
+   ingester_client:
+     grpc_client_config:
+<span class="p">@@ -113,6 +96,7 @@</span> config: |
+     reject_old_samples: true
+     reject_old_samples_max_age: 168h
+     max_cache_freshness_per_query: 10m
+<span class="gi">+    split_queries_by_interval: 24h
+</span> 
+   frontend:
+     log_queries_longer_than: 10s
+<span class="p">@@ -130,7 +114,6 @@</span> config: |
+     query_ingesters_within: 12h
+ 
+   query_range:
+<span class="gd">-    split_queries_by_interval: 24h
+</span>     align_queries_with_step: true
+     cache_results: true
+     results_cache:
+<span class="p">@@ -152,38 +135,38 @@</span> config: |
+ 
+   storage_config:
+     aws:
+<span class="gd">-      endpoint: {{ include "enterprise-logs.minio" . }}
+</span>       bucketnames: enterprise-logs-tsdb
+<span class="gd">-      access_key_id: enterprise-logs
+-      secret_access_key: supersecret
+-      s3forcepathstyle: true
+-      insecure: true
+</span>     boltdb_shipper:
+<span class="gd">-      active_index_directory: /var/loki/index
+-      cache_location: /var/loki/cache
+-      cache_ttl: 24h
+-      shared_store: s3
+</span>       index_gateway_client:
+         server_address: dns:///{{ include "loki.indexGatewayFullname" . }}:9095
+ 
+   ruler:
+     storage:
+<span class="gd">-      type: s3
+</span>       s3:
+<span class="gd">-        endpoint: {{ include "enterprise-logs.minio" . }}
+</span>         bucketnames: enterprise-logs-ruler
+<span class="gd">-        access_key_id: enterprise-logs
+-        secret_access_key: supersecret
+-        s3forcepathstyle: true
+-        insecure: true
+-    enable_alertmanager_discovery: false
+-    enable_api: true
+-    enable_sharding: true
+-    ring:
+-      kvstore:
+-        store: memberlist
+-    rule_path: /var/loki
+</span> 
+<span class="gi">+  {{- if .Values.additionalConfig}}
++  {{.Values.additionalConfig}}
++  {{- end}}
++
++# Append some additional config to the default config. Expects a string or `null`
++additionalConfig: null
++
++# -- Check https://grafana.com/docs/loki/latest/configuration/#common_config for more info on how to provide a common configuration
++commonConfig:
++  path_prefix: /var/loki
++  replication_factor: 3
++  storage:
++    s3:
++      endpoint: '{{ include "enterprise-logs.minio" . }}'
++      bucketnames: enterprise-logs-tsdb
++      secret_access_key: supersecret
++      access_key_id: enterprise-logs
++      s3forcepathstyle: true
++      insecure: true
++
++# -- Structured GEL configuration, takes precedence over `loki.config`, `loki.schemaConfig`, `loki.storageConfig`
++structuredConfig: {}
+</span> 
+ # -- Configuration for `tokengen` target
+ tokengen:
+<span class="p">@@ -382,10 +365,6 @@</span> compactor:
+     # compactor data Persistent Volume size
+     #
+     size: 2Gi
+<span class="gd">-    # Subdirectory of compactor data Persistent Volume to mount
+-    # Useful if the volume's root directory is not empty
+-    #
+-    subPath: ''
+</span>     # compactor data Persistent Volume Storage Class
+     # If defined, storageClassName: &lt;storageClass&gt;
+     # If set to "-", storageClassName: "", which disables dynamic provisioning
+<span class="err">
+</span></code></pre></div></div> <h2 id="220"> <a href="#220" class="anchor-heading" aria-labelledby="220"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.0 </h2> <p><strong>Release date:</strong> 2022-04-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.4.0&amp;color=success" alt="AppVersion: v1.4.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump chart version</li> <li>bump enterprise-logs to 1.4</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 56b0f303..ed9b825d 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -19,7 +19,7 @@</span> image: &amp;image
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.3.0
+</span><span class="gi">+  tag: null
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="210"> <a href="#210" class="anchor-heading" aria-labelledby="210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.0 </h2> <p><strong>Release date:</strong> 2022-04-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump chart version</li> <li>Ensure each container name matches the component name</li> <li>added missed space</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 733bacd3..56b0f303 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -595,5 +595,5 @@</span> minio:
+     requests:
+       cpu: 100m
+       memory: 128Mi
+<span class="gd">-  #change the mc config path to '/tmp' from '/etc' as '/etc' is only writable by root
+</span><span class="gi">+  # -- Change the mc config path to '/tmp' from '/etc' as '/etc' is only writable by root
+</span>   configPathmc: "/tmp/minio/mc/"
+<span class="err">
+</span></code></pre></div></div> <h2 id="204"> <a href="#204" class="anchor-heading" aria-labelledby="204"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.4 </h2> <p><strong>Release date:</strong> 2022-03-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bumped version of loki-distributed helm chart to 0.46.4 that adds OpenShift support</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="203"> <a href="#203" class="anchor-heading" aria-labelledby="203"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.3 </h2> <p><strong>Release date:</strong> 2022-03-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Openshift support for GEL</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 2db71772..733bacd3 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -466,8 +466,10 @@</span> loki-distributed:
+ 
+   # RBAC configuration
+   rbac:
+<span class="gd">-    # -- If enabled, a PodSecurityPolicy is created
+</span><span class="gi">+    # -- If pspEnabled true, a PodSecurityPolicy is created for K8s that use psp.
+</span>     pspEnabled: true
+<span class="gi">+    # -- For OpenShift set pspEnabled to 'false' and sccEnabled to 'true' to use the SecurityContextConstraints.
++    sccEnabled: false
+</span> 
+   # -- Compactor is defined in parent chart
+   compactor:
+<span class="p">@@ -593,3 +595,5 @@</span> minio:
+     requests:
+       cpu: 100m
+       memory: 128Mi
+<span class="gi">+  #change the mc config path to '/tmp' from '/etc' as '/etc' is only writable by root
++  configPathmc: "/tmp/minio/mc/"
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="202"> <a href="#202" class="anchor-heading" aria-labelledby="202"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.2 </h2> <p><strong>Release date:</strong> 2022-02-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump chart version and update CHANGELOG</li> <li>Use the same ServiceAccount for tokengen, ensuring RBAC is applied</li> <li>Fix typos in CHANGELOG</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="201"> <a href="#201" class="anchor-heading" aria-labelledby="201"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.1 </h2> <p><strong>Release date:</strong> 2022-02-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump chart to 2.0.1</li> <li>Update CHANGELOG to reflect 2.0.1 and 2.0.0 releases</li> <li>Re-add WAL dir configuration lost in 2.0.0 update</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 260f08ca..2db71772 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -100,6 +100,8 @@</span> config: |
+     chunk_block_size: 262144
+     chunk_encoding: snappy
+     chunk_retain_period: 1m
+<span class="gi">+    wal:
++      dir: /var/loki/wal
+</span> 
+   ingester_client:
+     grpc_client_config:
+<span class="err">
+</span></code></pre></div></div> <h2 id="200"> <a href="#200" class="anchor-heading" aria-labelledby="200"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.0 </h2> <p><strong>Release date:</strong> 2022-01-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Major version bump</li> <li>fix quote escapes in config</li> <li>convert config value to a string</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 97089d6b..260f08ca 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -56,14 +56,15 @@</span> license:
+   contents: "NOTAVALIDLICENSE"
+ 
+ # -- Grafana Enterprise Logs configuration file
+<span class="gd">-config:
+</span><span class="gi">+config: |
+</span>   auth:
+     type: enterprise
+   auth_enabled: true
+ 
+   license:
+     path: "/etc/enterprise-logs/license/license.jwt"
+<span class="gd">-  cluster_name: "{{ .Release.Name }}"
+</span><span class="gi">+
++  cluster_name: {{ .Release.Name }}
+</span> 
+   server:
+     http_listen_port: 3100
+<span class="p">@@ -73,7 +74,7 @@</span> config:
+     storage:
+       type: s3
+       s3:
+<span class="gd">-        endpoint: "{{ include \"enterprise-logs.minio\" . }}"
+</span><span class="gi">+        endpoint: {{ include "enterprise-logs.minio" . }}
+</span>         bucket_name: enterprise-logs-admin
+         secret_access_key: supersecret
+         access_key_id: enterprise-logs
+<span class="p">@@ -114,14 +115,14 @@</span> config:
+   frontend:
+     log_queries_longer_than: 10s
+     compress_responses: true
+<span class="gd">-    tail_proxy_url: "http://{{ include \"loki.querierFullname\" . }}:3100"
+</span><span class="gi">+    tail_proxy_url: http://{{ include "loki.querierFullname" . }}:3100
+</span> 
+   frontend_worker:
+<span class="gd">-    frontend_address: "{{ include \"loki.queryFrontendFullname\" . }}:9095"
+</span><span class="gi">+    frontend_address: {{ include "loki.queryFrontendFullname" . }}:9095
+</span> 
+   memberlist:
+     join_members:
+<span class="gd">-      - "{{ include \"loki.fullname\" . }}-memberlist"
+</span><span class="gi">+      - {{ include "loki.fullname" . }}-memberlist
+</span> 
+   querier:
+     query_ingesters_within: 12h
+<span class="p">@@ -149,7 +150,7 @@</span> config:
+ 
+   storage_config:
+     aws:
+<span class="gd">-      endpoint: "{{ include \"enterprise-logs.minio\" . }}"
+</span><span class="gi">+      endpoint: {{ include "enterprise-logs.minio" . }}
+</span>       bucketnames: enterprise-logs-tsdb
+       access_key_id: enterprise-logs
+       secret_access_key: supersecret
+<span class="p">@@ -161,13 +162,13 @@</span> config:
+       cache_ttl: 24h
+       shared_store: s3
+       index_gateway_client:
+<span class="gd">-        server_address: "dns:///{{ include \"loki.indexGatewayFullname\" . }}:9095"
+</span><span class="gi">+        server_address: dns:///{{ include "loki.indexGatewayFullname" . }}:9095
+</span> 
+   ruler:
+     storage:
+       type: s3
+       s3:
+<span class="gd">-        endpoint: "{{ include \"enterprise-logs.minio\" . }}"
+</span><span class="gi">+        endpoint: {{ include "enterprise-logs.minio" . }}
+</span>         bucketnames: enterprise-logs-ruler
+         access_key_id: enterprise-logs
+         secret_access_key: supersecret
+<span class="p">@@ -181,6 +182,7 @@</span> config:
+         store: memberlist
+     rule_path: /var/loki
+ 
+<span class="gi">+
+</span> # -- Configuration for `tokengen` target
+ tokengen:
+   # -- Whether the job should be part of the deployment
+<span class="err">
+</span></code></pre></div></div> <h2 id="140"> <a href="#140" class="anchor-heading" aria-labelledby="140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.0 </h2> <p><strong>Release date:</strong> 2022-01-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.3.0&amp;color=success" alt="AppVersion: v1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] update to gel 1.3.0</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 4d23cfd2..97089d6b 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -19,7 +19,7 @@</span> image: &amp;image
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.1.0
+</span><span class="gi">+  tag: v1.3.0
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="135"> <a href="#135" class="anchor-heading" aria-labelledby="135"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.5 </h2> <p><strong>Release date:</strong> 2022-01-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump enterprise-logs chart to version 1.3.5</li> <li>Use correct subPath config for compactor storage</li> <li>Use correct config to mount PVs for compactor</li> <li>Make fsGroup value for adminApi deployment configurable</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="134"> <a href="#134" class="anchor-heading" aria-labelledby="134"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.4 </h2> <p><strong>Release date:</strong> 2021-12-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump chart version and add changelog entry</li> <li>remove fields that make it hard to do helm updates</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="133"> <a href="#133" class="anchor-heading" aria-labelledby="133"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.3 </h2> <p><strong>Release date:</strong> 2021-11-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bumped version of the chart loki-distributed to 0.39.3 that already contains fix for WAL location</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="132"> <a href="#132" class="anchor-heading" aria-labelledby="132"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.2 </h2> <p><strong>Release date:</strong> 2021-11-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump enterprise-logs chart version to 1.3.2</li> <li>Update GEL version in templates of the child chart</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 76149ee0..4d23cfd2 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -9,15 +9,17 @@</span> nameOverride: null
+ fullnameOverride: null
+ 
+ # -- Definition of the Docker image for Grafana Enterprise Logs
+<span class="gd">-# If any of these values are changed, then they also need to be reflected in
+-# `loki-distributed.loki.image`
+-image:
+</span><span class="gi">+# If the image block is overwritten in a custom values file, it is also
++# required to update the values in the `loki-distributed.loki.image` block.
++# This can be done by copying the values, or like here, by using an anchor and
++# a pointer.
++image: &amp;image
+</span>   # -- The container registry to use
+   registry: docker.io
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.2.0
+</span><span class="gi">+  tag: v1.1.0
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="p">@@ -561,12 +563,7 @@</span> loki-distributed:
+   loki:
+     config: null
+     existingSecretForConfig: enterprise-logs-config
+<span class="gd">-    image:
+-      registry: docker.io
+-      repository: grafana/enterprise-logs
+-      tag: v1.1.0
+-      pullPolicy: IfNotPresent
+-      pullSecrets: []
+</span><span class="gi">+    image: *image
+</span> 
+ 
+ # -------------------------------------
+<span class="err">
+</span></code></pre></div></div> <h2 id="131"> <a href="#131" class="anchor-heading" aria-labelledby="131"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.1 </h2> <p><strong>Release date:</strong> 2021-11-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump enterprise-logs chart version to 1.3.1</li> <li>Fix error in template rendering when MinIO is disabled</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="130"> <a href="#130" class="anchor-heading" aria-labelledby="130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.0 </h2> <p><strong>Release date:</strong> 2021-11-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.2.0&amp;color=success" alt="AppVersion: v1.2.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump enterprise-logs version to 1.3.0</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="121"> <a href="#121" class="anchor-heading" aria-labelledby="121"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.1 </h2> <p><strong>Release date:</strong> 2021-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump chart enterprise-logs to version v1.2.1</li> <li>Fix MinIO endpoints in the resultiung <code class="language-plaintext highlighter-rouge">config.yaml</code>
+</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index decd6dce..76149ee0 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -17,7 +17,7 @@</span> image:
+   # -- The image repository to use
+   repository: grafana/enterprise-logs
+   # -- The version of Grafana Enterprise Logs
+<span class="gd">-  tag: v1.1.0
+</span><span class="gi">+  tag: v1.2.0
+</span>   # -- Defines the policy how and when images are pulled
+   pullPolicy: IfNotPresent
+   # -- Additional image pull secrets
+<span class="p">@@ -71,7 +71,7 @@</span> config:
+     storage:
+       type: s3
+       s3:
+<span class="gd">-        endpoint: "{{ include \"loki.fullname\" . }}-minio:9000"
+</span><span class="gi">+        endpoint: "{{ include \"enterprise-logs.minio\" . }}"
+</span>         bucket_name: enterprise-logs-admin
+         secret_access_key: supersecret
+         access_key_id: enterprise-logs
+<span class="p">@@ -147,7 +147,7 @@</span> config:
+ 
+   storage_config:
+     aws:
+<span class="gd">-      endpoint: "{{ include \"loki.fullname\" . }}-minio:9000"
+</span><span class="gi">+      endpoint: "{{ include \"enterprise-logs.minio\" . }}"
+</span>       bucketnames: enterprise-logs-tsdb
+       access_key_id: enterprise-logs
+       secret_access_key: supersecret
+<span class="p">@@ -165,7 +165,7 @@</span> config:
+     storage:
+       type: s3
+       s3:
+<span class="gd">-        endpoint: "{{ include \"loki.fullname\" . }}-minio:9000"
+</span><span class="gi">+        endpoint: "{{ include \"enterprise-logs.minio\" . }}"
+</span>         bucketnames: enterprise-logs-ruler
+         access_key_id: enterprise-logs
+         secret_access_key: supersecret
+<span class="err">
+</span></code></pre></div></div> <h2 id="120"> <a href="#120" class="anchor-heading" aria-labelledby="120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.0 </h2> <p><strong>Release date:</strong> 2021-09-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump chart enterprise-logs to version v1.2.0</li> <li>Remove unused deployment of <code class="language-plaintext highlighter-rouge">memcached-index-writes</code> StatefulSet</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="111"> <a href="#111" class="anchor-heading" aria-labelledby="111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.1 </h2> <p><strong>Release date:</strong> 2021-09-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump chart enterprise-logs to version 1.1.1</li> <li>Ensure that Pods run as non-root user <code class="language-plaintext highlighter-rouge">enterprise-logs</code>
+</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 56a1bc91..decd6dce 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -195,8 +195,10 @@</span> tokengen:
+   extraVolumes: []
+   # -- Additional volume mounts for Pods
+   extraVolumeMounts: []
+<span class="gi">+  # -- Run containers as user `enterprise-logs(uid=10001)`
+</span>   securityContext:
+     runAsNonRoot: true
+<span class="gi">+    runAsGroup: 10001
+</span>     runAsUser: 10001
+     fsGroup: 10001
+ 
+<span class="p">@@ -210,14 +212,18 @@</span> adminApi:
+   labels: {}
+   # -- Additional annotations for the `admin-api` Deployment
+   annotations: {}
+<span class="gd">-
+</span><span class="gi">+  # -- Additional labels and annotations for the `admin-api` Service
+</span>   service:
+<span class="gd">-    # -- Additional labels for the `admin-api` Service
+</span>     labels: {}
+<span class="gd">-    # -- Additional annotations for the `admin-api` Service
+</span>     annotations: {}
+<span class="gi">+  # -- Run container as user `enterprise-logs(uid=10001)`
++  # `fsGroup` must not be specified, because these security options are applied
++  # on container level not on Pod level.
++  securityContext:
++    runAsNonRoot: true
++    runAsGroup: 10001
++    runAsUser: 10001
+</span> 
+<span class="gd">-  securityContext: {}
+</span>   strategy:
+     type: RollingUpdate
+ 
+<span class="p">@@ -269,17 +275,20 @@</span> gateway:
+   labels: {}
+   # -- Additional annotations for the `gateway` Pod
+   annotations: {}
+<span class="gd">-
+</span><span class="gi">+  # -- Additional labels and annotations for the `gateway` Service
+</span>   service:
+<span class="gd">-    # -- Additional labels for the `gateway` Service
+</span>     labels: {}
+<span class="gd">-    # -- Additional annotations for the `gateway` Service
+</span>     annotations: {}
+<span class="gi">+  # -- Run container as user `enterprise-logs(uid=10001)`
++  securityContext:
++    runAsNonRoot: true
++    runAsGroup: 10001
++    runAsUser: 10001
++    fsGroup: 10001
+</span> 
+   # If you want to use your own proxy URLs, set this to false.
+   useDefaultProxyURLs: true
+ 
+<span class="gd">-  securityContext: {}
+</span>   strategy:
+     type: RollingUpdate
+ 
+<span class="p">@@ -332,14 +341,17 @@</span> compactor:
+   labels: {}
+   # -- Additional annotations for the `compactor` Pod
+   annotations: {}
+<span class="gd">-
+</span><span class="gi">+  # -- Additional labels and annotations for the `compactor` Service
+</span>   service:
+<span class="gd">-    # -- Additional labels for the `compactor` Service
+</span>     labels: {}
+<span class="gd">-    # -- Additional annotations for the `compactor` Service
+</span>     annotations: {}
+<span class="gi">+  # -- Run containers as user `enterprise-logs(uid=10001)`
++  securityContext:
++    runAsNonRoot: true
++    runAsGroup: 10001
++    runAsUser: 10001
++    fsGroup: 10001
+</span> 
+<span class="gd">-  securityContext: {}
+</span>   strategy:
+     type: RollingUpdate
+ 
+<span class="p">@@ -449,7 +461,7 @@</span> loki-distributed:
+   # RBAC configuration
+   rbac:
+     # -- If enabled, a PodSecurityPolicy is created
+<span class="gd">-    pspEnabled: false
+</span><span class="gi">+    pspEnabled: true
+</span> 
+   # -- Compactor is defined in parent chart
+   compactor:
+<span class="err">
+</span></code></pre></div></div> <h2 id="110"> <a href="#110" class="anchor-heading" aria-labelledby="110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.0 </h2> <p><strong>Release date:</strong> 2021-09-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump enterprise-logs chart version to 1.1.0</li> <li>Enable persistent volume for <code class="language-plaintext highlighter-rouge">querier</code> service</li> <li>Remove deployment of <code class="language-plaintext highlighter-rouge">table-manager</code> service</li> <li>Enable deployment of index gateway</li> <li>Update <code class="language-plaintext highlighter-rouge">loki-distributed</code> chart dependency to latest version</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 5b0a52d2..56a1bc91 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -158,6 +158,8 @@</span> config:
+       cache_location: /var/loki/cache
+       cache_ttl: 24h
+       shared_store: s3
+<span class="gi">+      index_gateway_client:
++        server_address: "dns:///{{ include \"loki.indexGatewayFullname\" . }}:9095"
+</span> 
+   ruler:
+     storage:
+<span class="p">@@ -457,6 +459,10 @@</span> loki-distributed:
+   gateway:
+     enabled: false
+ 
+<span class="gi">+  # -- Table manager is not needed because we use boltdb-shipper and compactor
++  tableManager:
++    enabled: false
++
+</span>   # -- Configuration for the `ruler` target
+   ruler:
+     enabled: true
+<span class="p">@@ -509,6 +515,8 @@</span> loki-distributed:
+       # -- Mount the license volume
+       - name: license
+         mountPath: /etc/enterprise-logs/license
+<span class="gi">+    persistence:
++      enabled: true
+</span> 
+   # -- Configuration for the `query-frontend` target
+   queryFrontend:
+<span class="p">@@ -523,8 +531,8 @@</span> loki-distributed:
+       - name: license
+         mountPath: /etc/enterprise-logs/license
+ 
+<span class="gd">-  # -- Configuration for the `table-manager` target
+-  tableManager:
+</span><span class="gi">+  # -- Configuration for the `index-gateway` target
++  indexGateway:
+</span>     enabled: true
+     extraVolumes:
+       # -- Create license volume from license secret
+<span class="p">@@ -535,6 +543,8 @@</span> loki-distributed:
+       # -- Mount the license volume
+       - name: license
+         mountPath: /etc/enterprise-logs/license
+<span class="gi">+    persistence:
++      enabled: true
+</span> 
+   loki:
+     config: null
+<span class="err">
+</span></code></pre></div></div> <h2 id="100"> <a href="#100" class="anchor-heading" aria-labelledby="100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.0 </h2> <p><strong>Release date:</strong> 2021-08-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] Bump version to 1.0.0</li> <li>[enterprise-logs] Enable Secret creation using tokengen</li> <li>[enterprise-logs] Enable Admin API leader election in small.yaml</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/enterprise-logs/values.yaml b/charts/enterprise-logs/values.yaml
+index 55b869b2..5b0a52d2 100644
+</span><span class="gd">--- a/charts/enterprise-logs/values.yaml
+</span><span class="gi">+++ b/charts/enterprise-logs/values.yaml
+</span><span class="p">@@ -179,7 +179,7 @@</span> config:
+ 
+ # -- Configuration for `tokengen` target
+ tokengen:
+<span class="gd">-  # -- Weather the job should be part of the deployment
+</span><span class="gi">+  # -- Whether the job should be part of the deployment
+</span>   enable: true
+   # -- Additional CLI arguments for the `tokengen` target
+   extraArgs: {}
+<span class="p">@@ -193,6 +193,10 @@</span> tokengen:
+   extraVolumes: []
+   # -- Additional volume mounts for Pods
+   extraVolumeMounts: []
+<span class="gi">+  securityContext:
++    runAsNonRoot: true
++    runAsUser: 10001
++    fsGroup: 10001
+</span> 
+ # -- Configuration for the `admin-api` target
+ adminApi:
+<span class="err">
+</span></code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2021-07-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.1.0&amp;color=success" alt="AppVersion: v1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=^1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: ^1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[enterprise-logs] Add initial version of the Helm chart</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -----------------------------------------
+# Configuration for `enterprise-logs` chart
+# -----------------------------------------
+<span class="err">
+</span># -- Overrides the chart's name
+<span class="p">nameOverride: null
+</span><span class="err">
+</span># -- Overrides the chart's computed fullname
+<span class="p">fullnameOverride: null
+</span><span class="err">
+</span># -- Definition of the Docker image for Grafana Enterprise Logs
+# If any of these values are changed, then they also need to be reflected in
+# `loki-distributed.loki.image`
+<span class="p">image:
+</span>  # -- The container registry to use
+  registry: docker.io
+  # -- The image repository to use
+  repository: grafana/enterprise-logs
+  # -- The version of Grafana Enterprise Logs
+  tag: v1.1.0
+  # -- Defines the policy how and when images are pulled
+  pullPolicy: IfNotPresent
+  # -- Additional image pull secrets
+  pullSecrets: []
+<span class="err">
+</span># -- Definition of the ServiceAccount for containers
+# Any additional configuration of the ServiceAccount has to be done in
+# `loki-distributed.serviceAccount`.
+<span class="p">serviceAccount:
+</span>  # -- Specifies whether a ServiceAccount should be created
+  # If this value is changed to `false`, it also needs to be reflected in
+  # `loki-distributed.serviceAccount.create`.
+  create: true
+<span class="err">
+</span># -- External config.yaml
+# A GEL configuration file may be provided as Kubernetes Secret outside of this Helm chart.
+<span class="p">useExternalConfig: false
+externalConfigName: enterprise-logs-config
+externalConfigVersion: "0"
+</span><span class="err">
+</span># -- External license.jwt
+# A GEL license file may be provided as Kubernetes Secret outside of this Helm chart.
+<span class="p">useExternalLicense: false
+externalLicenseName: enterprise-logs-license
+externalLicenseVersion: "0"
+</span><span class="err">
+</span># -- Grafana Enterprise Logs license
+# In order to use Grafana Enterprise Logs features, you will need to provide
+# the contents of your Grafana Enterprise Logs license, either by providing the
+# contents of the license.jwt, or the name Kubernetes Secret that contains your
+# license.jwt.
+# To set the license contents, use the flag `--set-file 'license.contents=./license.jwt'`
+<span class="p">license:
+</span>  contents: "NOTAVALIDLICENSE"
+<span class="err">
+</span># -- Grafana Enterprise Logs configuration file
+<span class="p">config:
+</span>  auth:
+    type: enterprise
+  auth_enabled: true
+<span class="err">
+</span>  license:
+    path: "/etc/enterprise-logs/license/license.jwt"
+  cluster_name: "{{ .Release.Name }}"
+<span class="err">
+</span>  server:
+    http_listen_port: 3100
+    grpc_listen_port: 9095
+<span class="err">
+</span>  admin_client:
+    storage:
+      type: s3
+      s3:
+        endpoint: "{{ include \"loki.fullname\" . }}-minio:9000"
+        bucket_name: enterprise-logs-admin
+        secret_access_key: supersecret
+        access_key_id: enterprise-logs
+        insecure: true
+<span class="err">
+</span>  compactor:
+    shared_store: s3
+    working_directory: /data/boltdb-shipper-compactor
+<span class="err">
+</span>  distributor:
+    ring:
+      kvstore:
+        store: memberlist
+<span class="err">
+</span>  ingester:
+    lifecycler:
+      num_tokens: 512
+      ring:
+        replication_factor: 3
+        kvstore:
+          store: memberlist
+    chunk_idle_period: 30m
+    chunk_block_size: 262144
+    chunk_encoding: snappy
+    chunk_retain_period: 1m
+<span class="err">
+</span>  ingester_client:
+    grpc_client_config:
+      max_recv_msg_size: 104857600
+      max_send_msg_size: 104857600
+<span class="err">
+</span>  limits_config:
+    enforce_metric_name: false
+    reject_old_samples: true
+    reject_old_samples_max_age: 168h
+    max_cache_freshness_per_query: 10m
+<span class="err">
+</span>  frontend:
+    log_queries_longer_than: 10s
+    compress_responses: true
+    tail_proxy_url: "http://{{ include \"loki.querierFullname\" . }}:3100"
+<span class="err">
+</span>  frontend_worker:
+    frontend_address: "{{ include \"loki.queryFrontendFullname\" . }}:9095"
+<span class="err">
+</span>  memberlist:
+    join_members:
+      - "{{ include \"loki.fullname\" . }}-memberlist"
+<span class="err">
+</span>  querier:
+    query_ingesters_within: 12h
+<span class="err">
+</span>  query_range:
+    split_queries_by_interval: 24h
+    align_queries_with_step: true
+    cache_results: true
+    results_cache:
+      cache:
+        memcached:
+          expiration: 1h
+        memcached_client:
+          timeout: 1s
+<span class="err">
+</span>  schema_config:
+    configs:
+      - from: 2021-01-01
+        store: boltdb-shipper
+        object_store: aws
+        schema: v11
+        index:
+          prefix: index_
+          period: 24h
+<span class="err">
+</span>  storage_config:
+    aws:
+      endpoint: "{{ include \"loki.fullname\" . }}-minio:9000"
+      bucketnames: enterprise-logs-tsdb
+      access_key_id: enterprise-logs
+      secret_access_key: supersecret
+      s3forcepathstyle: true
+      insecure: true
+    boltdb_shipper:
+      active_index_directory: /var/loki/index
+      cache_location: /var/loki/cache
+      cache_ttl: 24h
+      shared_store: s3
+<span class="err">
+</span>  ruler:
+    storage:
+      type: s3
+      s3:
+        endpoint: "{{ include \"loki.fullname\" . }}-minio:9000"
+        bucketnames: enterprise-logs-ruler
+        access_key_id: enterprise-logs
+        secret_access_key: supersecret
+        s3forcepathstyle: true
+        insecure: true
+    enable_alertmanager_discovery: false
+    enable_api: true
+    enable_sharding: true
+    ring:
+      kvstore:
+        store: memberlist
+    rule_path: /var/loki
+<span class="err">
+</span># -- Configuration for `tokengen` target
+<span class="p">tokengen:
+</span>  # -- Weather the job should be part of the deployment
+  enable: true
+  # -- Additional CLI arguments for the `tokengen` target
+  extraArgs: {}
+  # -- Additional Kubernetes environment
+  env: []
+  # -- Additional labels for the `tokengen` Job
+  labels: {}
+  # -- Additional annotations for the `tokengen` Job
+  annotations: {}
+  # -- Additional volumes for Pods
+  extraVolumes: []
+  # -- Additional volume mounts for Pods
+  extraVolumeMounts: []
+<span class="err">
+</span># -- Configuration for the `admin-api` target
+<span class="p">adminApi:
+</span>  # -- Define the amount of instances
+  replicas: 1
+  # -- Additional CLI arguments for the `admin-api` target
+  extraArgs: {}
+  # -- Additional labels for the `admin-api` Deployment
+  labels: {}
+  # -- Additional annotations for the `admin-api` Deployment
+  annotations: {}
+<span class="err">
+</span>  service:
+    # -- Additional labels for the `admin-api` Service
+    labels: {}
+    # -- Additional annotations for the `admin-api` Service
+    annotations: {}
+<span class="err">
+</span>  securityContext: {}
+  strategy:
+    type: RollingUpdate
+<span class="err">
+</span>  env: []
+<span class="err">
+</span>  persistence:
+    subPath:
+<span class="err">
+</span>  livenessProbe:
+    httpGet:
+      path: /ready
+      port: http-metrics
+    initialDelaySeconds: 45
+<span class="err">
+</span>  readinessProbe:
+    httpGet:
+      path: /ready
+      port: http-metrics
+    initialDelaySeconds: 45
+<span class="err">
+</span>  # -- Request and limit Kubernetes resources
+  # -- Values are defined in small.yaml and large.yaml
+  resources: {}
+<span class="err">
+</span>  initContainers: []
+  extraContainers: []
+<span class="err">
+</span>  # -- Additional volumes for Pods
+  extraVolumes: []
+  # -- Additional volume mounts for Pods
+  extraVolumeMounts: []
+<span class="err">
+</span>  # -- Affinity for admin-api Pods
+  affinity: {}
+  # -- Node selector for admin-api Pods
+  nodeSelector: {}
+  # -- Tolerations for admin-api Pods
+  tolerations: []
+  # -- Grace period to allow the admin-api to shutdown before it is killed
+  terminationGracePeriodSeconds: 60
+<span class="err">
+</span># -- Configuration for the `gateway` target
+<span class="p">gateway:
+</span>  # -- Define the amount of instances
+  replicas: 1
+  # -- Additional CLI arguments for the `gateway` target
+  extraArgs: {}
+  # -- Additional labels for the `gateway` Pod
+  labels: {}
+  # -- Additional annotations for the `gateway` Pod
+  annotations: {}
+<span class="err">
+</span>  service:
+    # -- Additional labels for the `gateway` Service
+    labels: {}
+    # -- Additional annotations for the `gateway` Service
+    annotations: {}
+<span class="err">
+</span>  # If you want to use your own proxy URLs, set this to false.
+  useDefaultProxyURLs: true
+<span class="err">
+</span>  securityContext: {}
+  strategy:
+    type: RollingUpdate
+<span class="err">
+</span>  livenessProbe:
+    httpGet:
+      path: /ready
+      port: http-metrics
+    initialDelaySeconds: 45
+<span class="err">
+</span>  readinessProbe:
+    httpGet:
+      path: /ready
+      port: http-metrics
+    initialDelaySeconds: 45
+<span class="err">
+</span>  # -- Request and limit Kubernetes resources
+  # -- Values are defined in small.yaml and large.yaml
+  resources: {}
+<span class="err">
+</span>  env: []
+<span class="err">
+</span>  persistence:
+    subPath:
+<span class="err">
+</span>  initContainers: []
+  extraContainers: []
+<span class="err">
+</span>  # -- Additional volumes for Pods
+  extraVolumes: []
+  # -- Additional volume mounts for Pods
+  extraVolumeMounts: []
+<span class="err">
+</span>  # -- Affinity for gateway Pods
+  affinity: {}
+  # -- Node selector for gateway Pods
+  nodeSelector: {}
+  # -- Tolerations for gateway Pods
+  tolerations: []
+  # -- Grace period to allow the gateway to shutdown before it is killed
+  terminationGracePeriodSeconds: 60
+<span class="err">
+
+</span># -- Configuration for the `compactor` target
+<span class="p">compactor:
+</span>  # -- Define the amount of instances
+  replicas: 1
+  # -- Additional CLI arguments for the `compactor` target
+  extraArgs: {}
+  # -- Additional labels for the `compactor` Pod
+  labels: {}
+  # -- Additional annotations for the `compactor` Pod
+  annotations: {}
+<span class="err">
+</span>  service:
+    # -- Additional labels for the `compactor` Service
+    labels: {}
+    # -- Additional annotations for the `compactor` Service
+    annotations: {}
+<span class="err">
+</span>  securityContext: {}
+  strategy:
+    type: RollingUpdate
+<span class="err">
+</span>  # -- Request and limit Kubernetes resources
+  # -- Values are defined in small.yaml and large.yaml
+  resources: {}
+<span class="err">
+</span>  persistentVolume:
+    # If true compactor will create/use a Persistent Volume Claim
+    # If false, use emptyDir
+    #
+    enabled: true
+    # compactor data Persistent Volume Claim annotations
+    #
+    annotations: {}
+    # compactor data Persistent Volume access modes
+    # Must match those of existing PV or dynamic provisioner
+    # Ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+    #
+    accessModes:
+      - ReadWriteOnce
+    # compactor data Persistent Volume size
+    #
+    size: 2Gi
+    # Subdirectory of compactor data Persistent Volume to mount
+    # Useful if the volume's root directory is not empty
+    #
+    subPath: ''
+    # compactor data Persistent Volume Storage Class
+    # If defined, storageClassName: &lt;storageClass&gt;
+    # If set to "-", storageClassName: "", which disables dynamic provisioning
+    # If undefined (the default) or set to null, no storageClassName spec is
+    #   set, choosing the default provisioner.  (gp2 on AWS, standard on
+    #   GKE, AWS &amp; OpenStack)
+    #
+    # storageClass: "-"
+<span class="err">
+</span>  livenessProbe:
+    failureThreshold: 20  # 10 minutes failure threshold
+    httpGet:
+      path: /ready
+      port: http-metrics
+      scheme: HTTP
+    initialDelaySeconds: 180
+    periodSeconds: 30
+    successThreshold: 1
+    timeoutSeconds: 1
+<span class="err">
+</span>  readinessProbe:
+    httpGet:
+      path: /ready
+      port: http-metrics
+    initialDelaySeconds: 60
+<span class="err">
+</span>  env: []
+<span class="err">
+</span>  initContainers: []
+  extraContainers: []
+<span class="err">
+</span>  # -- Additional volumes for Pods
+  extraVolumes: []
+  # -- Additional volume mounts for Pods
+  extraVolumeMounts: []
+<span class="err">
+</span>  # -- Affinity for compactor Pods
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+                - key: target
+                  operator: In
+                  values:
+                    - compactor
+            topologyKey: 'kubernetes.io/hostname'
+  # -- Node selector for compactor Pods
+  nodeSelector: {}
+  # -- Tolerations for compactor Pods
+  tolerations: []
+  # -- Grace period to allow the compactor to shutdown before it is killed
+  terminationGracePeriodSeconds: 300
+<span class="err">
+
+</span># ------------------------------------------------
+# Configuration for `loki-distributed` child chart
+# ------------------------------------------------
+<span class="p">loki-distributed:
+</span>  # -- In order to have consistent Pod names for both pods from the enterprise-logs and loki-distributed chart, we override the name of the child chart to match the name of the parent chart.
+  nameOverride: enterprise-logs
+<span class="err">
+</span>  # -- Definition of the ServiceAccount for containers
+  serviceAccount:
+    # -- Specifies whether a ServiceAccount should be created
+    create: true
+    # -- The name of the ServiceAccount to use.
+    # If not set and create is true, a name is generated using the fullname template
+    name: null
+    # -- Image pull secrets for the service account
+    imagePullSecrets: []
+    # -- Annotations for the service account
+    annotations: {}
+    # -- Set this toggle to false to opt out of automounting API credentials for the service account
+    automountServiceAccountToken: true
+<span class="err">
+</span>  # RBAC configuration
+  rbac:
+    # -- If enabled, a PodSecurityPolicy is created
+    pspEnabled: false
+<span class="err">
+</span>  # -- Compactor is defined in parent chart
+  compactor:
+    enabled: false
+<span class="err">
+</span>  # -- Gateway is defined in parent chart
+  gateway:
+    enabled: false
+<span class="err">
+</span>  # -- Configuration for the `ruler` target
+  ruler:
+    enabled: true
+    extraVolumes:
+      # -- Create license volume from license secret
+      - name: license
+        secret:
+          secretName: enterprise-logs-license
+    extraVolumeMounts:
+      # -- Mount the license volume
+      - name: license
+        mountPath: /etc/enterprise-logs/license
+<span class="err">
+</span>  # -- Configuration for the `ingester` target
+  ingester:
+    enabled: true
+    extraVolumes:
+      # -- Create license volume from license secret
+      - name: license
+        secret:
+          secretName: enterprise-logs-license
+    extraVolumeMounts:
+      # -- Mount the license volume
+      - name: license
+        mountPath: /etc/enterprise-logs/license
+    replicas: 3
+<span class="err">
+</span>  # -- Configuration for the `distributor` target
+  distributor:
+    enabled: true
+    extraVolumes:
+      # -- Create license volume from license secret
+      - name: license
+        secret:
+          secretName: enterprise-logs-license
+    extraVolumeMounts:
+      # -- Mount the license volume
+      - name: license
+        mountPath: /etc/enterprise-logs/license
+<span class="err">
+</span>  # -- Configuration for the `querier` target
+  querier:
+    enabled: true
+    extraVolumes:
+      # -- Create license volume from license secret
+      - name: license
+        secret:
+          secretName: enterprise-logs-license
+    extraVolumeMounts:
+      # -- Mount the license volume
+      - name: license
+        mountPath: /etc/enterprise-logs/license
+<span class="err">
+</span>  # -- Configuration for the `query-frontend` target
+  queryFrontend:
+    enabled: true
+    extraVolumes:
+      # -- Create license volume from license secret
+      - name: license
+        secret:
+          secretName: enterprise-logs-license
+    extraVolumeMounts:
+      # -- Mount the license volume
+      - name: license
+        mountPath: /etc/enterprise-logs/license
+<span class="err">
+</span>  # -- Configuration for the `table-manager` target
+  tableManager:
+    enabled: true
+    extraVolumes:
+      # -- Create license volume from license secret
+      - name: license
+        secret:
+          secretName: enterprise-logs-license
+    extraVolumeMounts:
+      # -- Mount the license volume
+      - name: license
+        mountPath: /etc/enterprise-logs/license
+<span class="err">
+</span>  loki:
+    config: null
+    existingSecretForConfig: enterprise-logs-config
+    image:
+      registry: docker.io
+      repository: grafana/enterprise-logs
+      tag: v1.1.0
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+<span class="err">
+
+</span># -------------------------------------
+# Configuration for `minio` child chart
+# -------------------------------------
+<span class="p">minio:
+</span>  enabled: true
+  accessKey: enterprise-logs
+  secretKey: supersecret
+  buckets:
+    - name: enterprise-logs-tsdb
+      policy: none
+      purge: false
+    - name: enterprise-logs-admin
+      policy: none
+      purge: false
+    - name: enterprise-logs-ruler
+      policy: none
+      purge: false
+  persistence:
+    size: 5Gi
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+<span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

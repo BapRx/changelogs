@@ -1,0 +1,1453 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(25)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(25) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(25) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(25) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>fluent-bit | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="fluent-bit" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/bitnami/charts/fluent-bit" /> <meta property="og:url" content="https://baprx.github.io/changelogs/bitnami/charts/fluent-bit" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="fluent-bit" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"fluent-bit","url":"https://baprx.github.io/changelogs/bitnami/charts/fluent-bit"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/bitnami/charts">bitnami/charts</a></li> <li class="breadcrumb-nav-list-item"><span>fluent-bit</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="fluent-bit"> <a href="#fluent-bit" class="anchor-heading" aria-labelledby="fluent-bit"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> fluent-bit </h1> <h2 id="083"> <a href="#083" class="anchor-heading" aria-labelledby="083"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.8.3 </h2> <p><strong>Release date:</strong> 2024-01-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.8.3 updating components versions (#22915)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index ca66b83e37..b6a0c6cc3f 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.2.2-debian-11-r2
+</span><span class="gi">+  tag: 2.2.2-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="082"> <a href="#082" class="anchor-heading" aria-labelledby="082"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.8.2 </h2> <p><strong>Release date:</strong> 2024-01-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.8.2 updating components versions (#22853)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 534e86e806..ca66b83e37 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.2.2-debian-11-r0
+</span><span class="gi">+  tag: 2.2.2-debian-11-r2
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="081"> <a href="#081" class="anchor-heading" aria-labelledby="081"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.8.1 </h2> <p><strong>Release date:</strong> 2024-01-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] fix: :bug: Set seLinuxOptions to null for Openshift compatibility (#22587)</li> <li>[bitnami/*] Move documentation sections from docs.bitnami.com back to the README (#22203)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index ae1e5ea31c..534e86e806 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -99,7 +99,7 @@</span> daemonset:
+   ## Pod security context
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param daemonset.podSecurityContext.enabled Enable security context for daemonset pods
+<span class="gd">-  ## @param daemonset.podSecurityContext.seLinuxOptions Set SELinux options in container
+</span><span class="gi">+  ## @param daemonset.podSecurityContext.seLinuxOptions [object,nullable] Set SELinux options in container
+</span>   ## @param daemonset.podSecurityContext.runAsUser User ID for daemonset containers
+   ## @param daemonset.podSecurityContext.runAsGroup Group ID for daemonset containers
+   ## @param daemonset.podSecurityContext.fsGroupChangePolicy Set filesystem group change policy
+<span class="p">@@ -109,7 +109,7 @@</span> daemonset:
+   ##
+   podSecurityContext:
+     enabled: true
+<span class="gd">-    seLinuxOptions: {}
+</span><span class="gi">+    seLinuxOptions: null
+</span>     runAsUser: 0
+     runAsGroup: 0
+     fsGroupChangePolicy: Always
+<span class="p">@@ -341,7 +341,7 @@</span> podSecurityContext:
+ ## Configure Container Security Context (only main container)
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+ ## @param containerSecurityContext.enabled Enabled Fluent Bit containers' Security Context
+<span class="gd">-## @param containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span><span class="gi">+## @param containerSecurityContext.seLinuxOptions [object,nullable] Set SELinux options in container
+</span> ## @param containerSecurityContext.runAsUser Set Fluent Bit containers' Security Context runAsUser
+ ## @param containerSecurityContext.runAsNonRoot Set Fluent Bit container's Security Context runAsNonRoot
+ ## @param containerSecurityContext.readOnlyRootFilesystem Set Fluent Bit container's Security Context runAsNonRoot
+<span class="p">@@ -352,7 +352,7 @@</span> podSecurityContext:
+ ##
+ containerSecurityContext:
+   enabled: true
+<span class="gd">-  seLinuxOptions: {}
+</span><span class="gi">+  seLinuxOptions: null
+</span>   runAsUser: 1001
+   runAsNonRoot: true
+   privileged: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="080"> <a href="#080" class="anchor-heading" aria-labelledby="080"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.8.0 </h2> <p><strong>Release date:</strong> 2024-01-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] fix: :lock: Move service-account token auto-mount to pod declaration (#22399)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index a17afef3ad..ae1e5ea31c 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -154,6 +154,9 @@</span> extraEnvVarsSecret: ""
+ ## @param existingConfigMap Name of an existing ConfigMap with the Fluent Bit config file
+ ##
+ existingConfigMap: ""
+<span class="gi">+## @param automountServiceAccountToken Mount Service Account token in pod
++##
++automountServiceAccountToken: true
+</span> ## @param hostAliases Deployment pod host aliases
+ ## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
+ ##
+<span class="p">@@ -320,7 +323,7 @@</span> serviceAccount:
+   annotations: {}
+   ## @param serviceAccount.automountServiceAccountToken Automount API credentials for a service account.
+   ##
+<span class="gd">-  automountServiceAccountToken: true
+</span><span class="gi">+  automountServiceAccountToken: false
+</span> ## Pod security context
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+ ## @param podSecurityContext.enabled Enabled Fluent Bit pods' Security Context
+<span class="err">
+</span></code></pre></div></div> <h2 id="071"> <a href="#071" class="anchor-heading" aria-labelledby="071"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.1 </h2> <p><strong>Release date:</strong> 2024-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.7.1 updating components versions (#22270)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="070"> <a href="#070" class="anchor-heading" aria-labelledby="070"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.0 </h2> <p><strong>Release date:</strong> 2024-01-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] fix: :lock: Improve podSecurityContext and containerSecurityContext with essential security fields (#22118)</li> <li>[bitnami/fluent-bit] Fix HPA API version template usage (#21953)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 1705420444..a17afef3ad 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -99,14 +99,22 @@</span> daemonset:
+   ## Pod security context
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+   ## @param daemonset.podSecurityContext.enabled Enable security context for daemonset pods
+<span class="gi">+  ## @param daemonset.podSecurityContext.seLinuxOptions Set SELinux options in container
+</span>   ## @param daemonset.podSecurityContext.runAsUser User ID for daemonset containers
+   ## @param daemonset.podSecurityContext.runAsGroup Group ID for daemonset containers
+<span class="gi">+  ## @param daemonset.podSecurityContext.fsGroupChangePolicy Set filesystem group change policy
++  ## @param daemonset.podSecurityContext.sysctls Set kernel settings using the sysctl interface
++  ## @param daemonset.podSecurityContext.supplementalGroups Set filesystem extra groups
+</span>   ## @param daemonset.podSecurityContext.fsGroup Group ID for daemonset containers filesystem
+   ##
+   podSecurityContext:
+     enabled: true
+<span class="gi">+    seLinuxOptions: {}
+</span>     runAsUser: 0
+     runAsGroup: 0
+<span class="gi">+    fsGroupChangePolicy: Always
++    sysctls: []
++    supplementalGroups: []
+</span>     fsGroup: 0
+   ## Pod host paths
+   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+<span class="p">@@ -316,14 +324,21 @@</span> serviceAccount:
+ ## Pod security context
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+ ## @param podSecurityContext.enabled Enabled Fluent Bit pods' Security Context
+<span class="gi">+## @param podSecurityContext.fsGroupChangePolicy Set filesystem group change policy
++## @param podSecurityContext.sysctls Set kernel settings using the sysctl interface
++## @param podSecurityContext.supplementalGroups Set filesystem extra groups
+</span> ## @param podSecurityContext.fsGroup Set Fluent Bit pod's Security Context fsGroup
+ ##
+ podSecurityContext:
+   enabled: true
+<span class="gi">+  fsGroupChangePolicy: Always
++  sysctls: []
++  supplementalGroups: []
+</span>   fsGroup: 1001
+ ## Configure Container Security Context (only main container)
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+ ## @param containerSecurityContext.enabled Enabled Fluent Bit containers' Security Context
+<span class="gi">+## @param containerSecurityContext.seLinuxOptions Set SELinux options in container
+</span> ## @param containerSecurityContext.runAsUser Set Fluent Bit containers' Security Context runAsUser
+ ## @param containerSecurityContext.runAsNonRoot Set Fluent Bit container's Security Context runAsNonRoot
+ ## @param containerSecurityContext.readOnlyRootFilesystem Set Fluent Bit container's Security Context runAsNonRoot
+<span class="p">@@ -334,6 +349,7 @@</span> podSecurityContext:
+ ##
+ containerSecurityContext:
+   enabled: true
+<span class="gi">+  seLinuxOptions: {}
+</span>   runAsUser: 1001
+   runAsNonRoot: true
+   privileged: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="066"> <a href="#066" class="anchor-heading" aria-labelledby="066"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.6 </h2> <p><strong>Release date:</strong> 2024-01-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.2&amp;color=success" alt="AppVersion: 2.2.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.6.6 updating components versions (#22083)</li> <li>[bitnami/*] Fix ref links (in comments) (#21822)</li> <li>[bitnami/*] Fix docs.bitnami.com broken links (#21901)</li> <li>[bitnami/*] Update copyright: Year and company (#21815)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 9a4e1c62e4..1705420444 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,11 +69,11 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.2.1-debian-11-r0
+</span><span class="gi">+  tag: 2.2.2-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="gd">-  ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+</span><span class="gi">+  ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
+</span>   ##
+   pullPolicy: IfNotPresent
+   ## Optionally specify an array of imagePullSecrets.
+<span class="p">@@ -207,7 +207,7 @@</span> customStartupProbe: {}
+ ##
+ customReadinessProbe: {}
+ ## Fluent Bit pods' resource requests and limits
+<span class="gd">-## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+</span><span class="gi">+## ref: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+</span> ## Minimum memory for development is 4GB and 2 CPU cores
+ ## Minimum memory for production is 8GB and 4 CPU cores
+ ## ref: http://docs.datastax.com/en/archived/fluent-bit/2.0/fluent-bit/architecture/architecturePlanningHardware_c.html
+<span class="p">@@ -386,7 +386,7 @@</span> priorityClassName: ""
+ ##
+ affinity: {}
+ ## @param nodeSelector Node labels for pod assignment
+<span class="gd">-## ref: https://kubernetes.io/docs/user-guide/node-selection/
+</span><span class="gi">+## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
+</span> ##
+ nodeSelector: {}
+ ## @param tolerations Tolerations for pod assignment
+<span class="p">@@ -562,7 +562,7 @@</span> autoscaling:
+ 
+ ## Configure the ingress resource that allows you to access the
+ ## fluent-bit Console. Set up the URL
+<span class="gd">-## ref: https://kubernetes.io/docs/user-guide/ingress/
+</span><span class="gi">+## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
+</span> ##
+ ingress:
+   ## @param ingress.enabled Enable ingress controller resource for fluentBit Console
+<span class="p">@@ -587,7 +587,7 @@</span> ingress:
+   pathType: ImplementationSpecific
+   ## @param ingress.annotations Additional annotations for the Ingress resource. To enable certificate autogeneration, place here your cert-manager annotations.
+   ## For a full list of possible ingress annotations, please see
+<span class="gd">-  ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
+</span><span class="gi">+  ## ref: https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md
+</span>   ## Use this parameter to set the required annotations for cert-manager, see
+   ## ref: https://cert-manager.io/docs/usage/ingress/#supported-annotations
+   ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="065"> <a href="#065" class="anchor-heading" aria-labelledby="065"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.5 </h2> <p><strong>Release date:</strong> 2023-12-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.1&amp;color=success" alt="AppVersion: 2.2.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.6.5 updating components versions (#21724)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index b154125697..9a4e1c62e4 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.2.0-debian-11-r0
+</span><span class="gi">+  tag: 2.2.1-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="064"> <a href="#064" class="anchor-heading" aria-labelledby="064"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.4 </h2> <p><strong>Release date:</strong> 2023-12-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.0&amp;color=success" alt="AppVersion: 2.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Replace deprecated pull secret partial (#21371)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="063"> <a href="#063" class="anchor-heading" aria-labelledby="063"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.3 </h2> <p><strong>Release date:</strong> 2023-11-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.0&amp;color=success" alt="AppVersion: 2.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.6.3 updating components versions (#21116)</li> <li>[bitnami/*] Rename solutions to “Bitnami package for …” (#21038)</li> <li>[bitnami/*] Remove relative links to non-README sections, add verification for that and update TL;DR section (#20967)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="062"> <a href="#062" class="anchor-heading" aria-labelledby="062"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.2 </h2> <p><strong>Release date:</strong> 2023-11-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.2.0&amp;color=success" alt="AppVersion: 2.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.6.2 updating components versions (#20819)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 75a128ed24..b154125697 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.10-debian-11-r12
+</span><span class="gi">+  tag: 2.2.0-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="061"> <a href="#061" class="anchor-heading" aria-labelledby="061"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.1 </h2> <p><strong>Release date:</strong> 2023-11-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.10&amp;color=success" alt="AppVersion: 2.1.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.6.1 updating components versions (#20688)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="060"> <a href="#060" class="anchor-heading" aria-labelledby="060"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.0 </h2> <p><strong>Release date:</strong> 2023-10-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.10&amp;color=success" alt="AppVersion: 2.1.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] feat: :sparkles: Add support for PSA restricted policy (#20438)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index e29f5986a0..75a128ed24 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -324,13 +324,25 @@</span> podSecurityContext:
+ ## Configure Container Security Context (only main container)
+ ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+ ## @param containerSecurityContext.enabled Enabled Fluent Bit containers' Security Context
+<span class="gd">-## @param containerSecurityContext.runAsUser Set Fluent Bit container's Security Context runAsUser
+-## @param containerSecurityContext.runAsNonRoot Force the container to be run as non root
+</span><span class="gi">+## @param containerSecurityContext.runAsUser Set Fluent Bit containers' Security Context runAsUser
++## @param containerSecurityContext.runAsNonRoot Set Fluent Bit container's Security Context runAsNonRoot
++## @param containerSecurityContext.readOnlyRootFilesystem Set Fluent Bit container's Security Context runAsNonRoot
++## @param containerSecurityContext.privileged Set primary container's Security Context privileged
++## @param containerSecurityContext.allowPrivilegeEscalation Set primary container's Security Context allowPrivilegeEscalation
++## @param containerSecurityContext.capabilities.drop List of capabilities to be dropped
++## @param containerSecurityContext.seccompProfile.type Set container's Security Context seccomp profile
+</span> ##
+ containerSecurityContext:
+   enabled: true
+   runAsUser: 1001
+   runAsNonRoot: true
+<span class="gi">+  privileged: false
++  allowPrivilegeEscalation: false
++  readOnlyRootFilesystem: false
++  capabilities:
++    drop: ["ALL"]
++  seccompProfile:
++    type: "RuntimeDefault"
+</span> ## @param podAnnotations Additional pod annotations
+ ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+ ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="055"> <a href="#055" class="anchor-heading" aria-labelledby="055"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.5 </h2> <p><strong>Release date:</strong> 2023-10-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.10&amp;color=success" alt="AppVersion: 2.1.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.5.5 updating components versions (#20370)</li> <li>[bitnami/*] Rename VMware Application Catalog (#20361)</li> <li>[bitnami/*] Skip image’s tag in the README files of the Bitnami Charts (#19841)</li> <li>[bitnami/*] Standardize documentation (#19835)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index a6684419c4..e29f5986a0 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -58,9 +58,9 @@</span> diagnosticMode:
+ 
+ ## Bitnami Fluent Bit image
+ ## ref: https://hub.docker.com/r/bitnami/fluent-bit/tags/
+<span class="gd">-## @param image.registry Fluent Bit image registry
+-## @param image.repository Fluent Bit image repository
+-## @param image.tag Fluent Bit image tag (immutable tags are recommended)
+</span><span class="gi">+## @param image.registry [default: REGISTRY_NAME] Fluent Bit image registry
++## @param image.repository [default: REPOSITORY_NAME/fluent-bit] Fluent Bit image repository
++## @skip image.tag Fluent Bit image tag (immutable tags are recommended)
+</span> ## @param image.digest Fluent Bit image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+ ## @param image.pullPolicy image pull policy
+ ## @param image.pullSecrets Fluent Bit image pull secrets
+<span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.10-debian-11-r0
+</span><span class="gi">+  tag: 2.1.10-debian-11-r12
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="054"> <a href="#054" class="anchor-heading" aria-labelledby="054"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.4 </h2> <p><strong>Release date:</strong> 2023-10-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.10&amp;color=success" alt="AppVersion: 2.1.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] bump bitnami/common (#20079)</li> <li>[bitnami/*] Update Helm charts prerequisites (#19745)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="053"> <a href="#053" class="anchor-heading" aria-labelledby="053"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.3 </h2> <p><strong>Release date:</strong> 2023-09-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.10&amp;color=success" alt="AppVersion: 2.1.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.5.3 (#19490)</li> <li>Revert “Autogenerate schema files (#19194)” (#19335)</li> <li>Autogenerate schema files (#19194)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 1393e8f608..a6684419c4 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.9-debian-11-r0
+</span><span class="gi">+  tag: 2.1.10-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="052"> <a href="#052" class="anchor-heading" aria-labelledby="052"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.2 </h2> <p><strong>Release date:</strong> 2023-09-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.9&amp;color=success" alt="AppVersion: 2.1.9"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="051"> <a href="#051" class="anchor-heading" aria-labelledby="051"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.1 </h2> <p><strong>Release date:</strong> 2023-09-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.9&amp;color=success" alt="AppVersion: 2.1.9"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.5.1 (#19009)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 8eccc2454a..1393e8f608 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.8-debian-11-r24
+</span><span class="gi">+  tag: 2.1.9-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="050"> <a href="#050" class="anchor-heading" aria-labelledby="050"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.0 </h2> <p><strong>Release date:</strong> 2023-08-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.8&amp;color=success" alt="AppVersion: 2.1.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Support for customizing standard labels (#18301)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="0411"> <a href="#0411" class="anchor-heading" aria-labelledby="0411"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.11 </h2> <p><strong>Release date:</strong> 2023-08-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.8&amp;color=success" alt="AppVersion: 2.1.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.11 (#18661)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 5dcbd9a3c8..8eccc2454a 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.8-debian-11-r20
+</span><span class="gi">+  tag: 2.1.8-debian-11-r24
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="0410"> <a href="#0410" class="anchor-heading" aria-labelledby="0410"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.10 </h2> <p><strong>Release date:</strong> 2023-08-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.8&amp;color=success" alt="AppVersion: 2.1.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.10 (#18516)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 5f76b1f865..5dcbd9a3c8 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.8-debian-11-r0
+</span><span class="gi">+  tag: 2.1.8-debian-11-r20
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="049"> <a href="#049" class="anchor-heading" aria-labelledby="049"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.9 </h2> <p><strong>Release date:</strong> 2023-07-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.8&amp;color=success" alt="AppVersion: 2.1.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.9 (#17869)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 045b389357..5f76b1f865 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -69,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.7-debian-11-r0
+</span><span class="gi">+  tag: 2.1.8-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="048"> <a href="#048" class="anchor-heading" aria-labelledby="048"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.8 </h2> <p><strong>Release date:</strong> 2023-07-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.7&amp;color=success" alt="AppVersion: 2.1.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0 updating components versions (#17597)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="047"> <a href="#047" class="anchor-heading" aria-labelledby="047"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.7 </h2> <p><strong>Release date:</strong> 2023-07-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.7&amp;color=success" alt="AppVersion: 2.1.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.7 (#17585)</li> <li>Add copyright header (#17300)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index faeeeac683..045b389357 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -1,3 +1,6 @@</span>
+<span class="gi">+# Copyright VMware, Inc.
++# SPDX-License-Identifier: APACHE-2.0
++
+</span> ## @section Global parameters
+ ## Global Docker image parameters
+ ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+<span class="p">@@ -66,7 +69,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.6-debian-11-r0
+</span><span class="gi">+  tag: 2.1.7-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="046"> <a href="#046" class="anchor-heading" aria-labelledby="046"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.6 </h2> <p><strong>Release date:</strong> 2023-06-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.6&amp;color=success" alt="AppVersion: 2.1.6"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.6 (#17324)</li> <li>Update charts readme (#17217)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 54188c15eb..faeeeac683 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.5-debian-11-r0
+</span><span class="gi">+  tag: 2.1.6-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="045"> <a href="#045" class="anchor-heading" aria-labelledby="045"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.5 </h2> <p><strong>Release date:</strong> 2023-06-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.5&amp;color=success" alt="AppVersion: 2.1.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Remove namespace field for cluster wide resources (#17275)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="044"> <a href="#044" class="anchor-heading" aria-labelledby="044"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.4 </h2> <p><strong>Release date:</strong> 2023-06-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.5&amp;color=success" alt="AppVersion: 2.1.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.4 (#17132)</li> <li>[bitnami/*] Change copyright section in READMEs (#17006)</li> <li>[bitnami/several] Change copyright section in READMEs (#16989)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 109a5956f1..54188c15eb 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.4-debian-11-r1
+</span><span class="gi">+  tag: 2.1.5-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="043"> <a href="#043" class="anchor-heading" aria-labelledby="043"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.3 </h2> <p><strong>Release date:</strong> 2023-05-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.4&amp;color=success" alt="AppVersion: 2.1.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.3 updating components versions (#16928)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 095a5cabad..109a5956f1 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.3-debian-11-r2
+</span><span class="gi">+  tag: 2.1.4-debian-11-r1
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="042"> <a href="#042" class="anchor-heading" aria-labelledby="042"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.2 </h2> <p><strong>Release date:</strong> 2023-05-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.3&amp;color=success" alt="AppVersion: 2.1.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.2 (#16772)</li> <li>[bitnami/fluent-bit] Update README.md (#16728)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 66aec9e3a0..095a5cabad 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.3-debian-11-r0
+</span><span class="gi">+  tag: 2.1.3-debian-11-r2
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="041"> <a href="#041" class="anchor-heading" aria-labelledby="041"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.1 </h2> <p><strong>Release date:</strong> 2023-05-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.3&amp;color=success" alt="AppVersion: 2.1.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.4.1 (#16662)</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index d24b0c39d6..66aec9e3a0 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.2-debian-11-r6
+</span><span class="gi">+  tag: 2.1.3-debian-11-r0
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="040"> <a href="#040" class="anchor-heading" aria-labelledby="040"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.0 </h2> <p><strong>Release date:</strong> 2023-05-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.2&amp;color=success" alt="AppVersion: 2.1.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Remove default systemd input (#16641)</li> <li>Add wording for enterprise page (#16560)</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index a685440ccb..d24b0c39d6 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -431,12 +431,6 @@</span> config:
+     [INPUT]
+         Name cpu
+ 
+<span class="gd">-    [INPUT]
+-        Name systemd
+-        Tag host.*
+-        Systemd_Filter _SYSTEMD_UNIT=kubelet.service
+-        Read_From_Tail On
+-
+</span>   ## @param config.filters [string] Set of plugins that can be used to filter, modify, or enrich log data that is processed by Fluent Bit.
+   ## https://docs.fluentbit.io/manual/pipeline/filters
+   ## Example:
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2023-05-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.2&amp;color=success" alt="AppVersion: 2.1.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/several] Adapt Chart.yaml to set desired OCI annotations (#16546)</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="021"> <a href="#021" class="anchor-heading" aria-labelledby="021"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.1 </h2> <p><strong>Release date:</strong> 2023-05-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.2&amp;color=success" alt="AppVersion: 2.1.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.2.1 (#16457)</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 34997d6907..a685440ccb 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.1.2-debian-11-r3
+</span><span class="gi">+  tag: 2.1.2-debian-11-r6
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2023-05-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.2&amp;color=success" alt="AppVersion: 2.1.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Include imagePullSecrets on deployment (#16381)</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="012"> <a href="#012" class="anchor-heading" aria-labelledby="012"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.2 </h2> <p><strong>Release date:</strong> 2023-05-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.2&amp;color=success" alt="AppVersion: 2.1.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Add Fluent Bit OCI links (#16352)</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2023-04-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.1.2&amp;color=success" alt="AppVersion: 2.1.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Release 0.1.1 updating components versions</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/bitnami/fluent-bit/values.yaml b/bitnami/fluent-bit/values.yaml
+index 65295b062d..34997d6907 100644
+</span><span class="gd">--- a/bitnami/fluent-bit/values.yaml
+</span><span class="gi">+++ b/bitnami/fluent-bit/values.yaml
+</span><span class="p">@@ -66,7 +66,7 @@</span> diagnosticMode:
+ image:
+   registry: docker.io
+   repository: bitnami/fluent-bit
+<span class="gd">-  tag: 2.0.9-debian-11-r11
+</span><span class="gi">+  tag: 2.1.2-debian-11-r3
+</span>   digest: ""
+   ## Specify a imagePullPolicy
+   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+<span class="err">
+</span></code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2023-04-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=2.0.10&amp;color=success" alt="AppVersion: 2.0.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[bitnami/fluent-bit] Add Fluent Bit Chart (#15453)</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## @section Global parameters
+## Global Docker image parameters
+## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+## Current available global Docker image parameters: imageRegistry, imagePullSecrets and storageClass
+##
+<span class="err">
+</span>## @param global.imageRegistry Global Docker image registry
+## @param global.imagePullSecrets Global Docker registry secret names as an array
+## @param global.storageClass Global StorageClass for Persistent Volume(s)
+##
+<span class="p">global:
+</span>  imageRegistry: ""
+  ## E.g.
+  ## imagePullSecrets:
+  ##   - myRegistryKeySecretName
+  ##
+  imagePullSecrets: []
+  storageClass: ""
+<span class="err">
+</span>## @section Common parameters
+##
+<span class="err">
+</span>## @param nameOverride String to partially override common.names.fullname
+##
+<span class="p">nameOverride: ""
+</span>## @param fullnameOverride String to fully override common.names.fullname
+##
+<span class="p">fullnameOverride: ""
+</span>## @param kubeVersion Force target Kubernetes version (using Helm capabilities if not set)
+##
+<span class="p">kubeVersion: ""
+</span>## @param commonLabels Labels to add to all deployed objects (sub-charts are not considered)
+##
+<span class="p">commonLabels: {}
+</span>## @param commonAnnotations Annotations to add to all deployed objects
+##
+<span class="p">commonAnnotations: {}
+</span>## Enable diagnostic mode in the deployment
+##
+<span class="p">diagnosticMode:
+</span>  ## @param diagnosticMode.enabled Enable diagnostic mode (all probes will be disabled and the command will be overridden)
+  ##
+  enabled: false
+  ## @param diagnosticMode.command Command to override all containers in the deployment
+  ##
+  command:
+    - sleep
+  ## @param diagnosticMode.args Args to override all containers in the deployment
+  ##
+  args:
+    - infinity
+<span class="err">
+</span>## @section Fluent Bit parameters
+##
+<span class="err">
+</span>## Bitnami Fluent Bit image
+## ref: https://hub.docker.com/r/bitnami/fluent-bit/tags/
+## @param image.registry Fluent Bit image registry
+## @param image.repository Fluent Bit image repository
+## @param image.tag Fluent Bit image tag (immutable tags are recommended)
+## @param image.digest Fluent Bit image digest in the way sha256:aa.... Please note this parameter, if set, will override the tag
+## @param image.pullPolicy image pull policy
+## @param image.pullSecrets Fluent Bit image pull secrets
+## @param image.debug Enable image debug mode
+##
+<span class="p">image:
+</span>  registry: docker.io
+  repository: bitnami/fluent-bit
+  tag: 2.0.9-debian-11-r11
+  digest: ""
+  ## Specify a imagePullPolicy
+  ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
+  ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+  ##
+  pullPolicy: IfNotPresent
+  ## Optionally specify an array of imagePullSecrets.
+  ## Secrets must be manually created in the namespace.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  ## e.g:
+  ## pullSecrets:
+  ##   - myRegistryKeySecretName
+  ##
+  pullSecrets: []
+  ## Enable debug mode
+  ##
+  debug: false
+<span class="err">
+</span>## @section Fluent Bit daemonset configuration
+## Running as daemonset eases kubernetes pod monitoring and ensures its integrity
+## If daemonset is enabled, Fluent Bit deployment will be disabled
+##
+<span class="p">daemonset:
+</span>  ## @param daemonset.enabled Use a daemonset instead of a deployment. `replicaCount` will not take effect.
+  ##
+  enabled: false
+  ## Pod security context
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+  ## @param daemonset.podSecurityContext.enabled Enable security context for daemonset pods
+  ## @param daemonset.podSecurityContext.runAsUser User ID for daemonset containers
+  ## @param daemonset.podSecurityContext.runAsGroup Group ID for daemonset containers
+  ## @param daemonset.podSecurityContext.fsGroup Group ID for daemonset containers filesystem
+  ##
+  podSecurityContext:
+    enabled: true
+    runAsUser: 0
+    runAsGroup: 0
+    fsGroup: 0
+  ## Pod host paths
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+  ## @param daemonset.hostPaths.logs Path to the node logs dir
+  ## @param daemonset.hostPaths.containerLogs Path to the container logs dir
+  ## @param daemonset.hostPaths.machineId Path to the machine-id file
+  ##
+  hostPaths:
+    logs: /var/log
+    containerLogs: /var/lib/docker/containers
+    machineId: /etc/machine-id
+## @param hostNetwork Enable HOST Network
+## If hostNetwork true -&gt;  dnsPolicy is set to ClusterFirstWithHostNet
+##
+<span class="p">hostNetwork: false
+</span>## @param command Command for running the container (set to default if not set). Use array form
+##
+<span class="p">command: []
+</span>## @param args Args for running the container (set to default if not set). Use array form
+##
+<span class="p">args: []
+</span>## @param lifecycleHooks [object] Override default etcd container hooks
+##
+<span class="p">lifecycleHooks: {}
+</span>## @param extraEnvVars Extra environment variables to be set on fluent-bit container
+## For example:
+##  - name: FOO
+##    value: BAR
+##
+<span class="p">extraEnvVars: []
+</span>## @param extraEnvVarsCM Name of existing ConfigMap containing extra env vars
+##
+<span class="p">extraEnvVarsCM: ""
+</span>## @param extraEnvVarsSecret Name of existing Secret containing extra env vars
+##
+<span class="p">extraEnvVarsSecret: ""
+</span>## @param existingConfigMap Name of an existing ConfigMap with the Fluent Bit config file
+##
+<span class="p">existingConfigMap: ""
+</span>## @param hostAliases Deployment pod host aliases
+## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
+##
+<span class="p">hostAliases: []
+</span>## @param replicaCount Number of Fluent Bit replicas
+##
+<span class="p">replicaCount: 1
+</span>## Configure extra options for container's liveness, readiness and startup probes
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes
+## @param livenessProbe.enabled Enable livenessProbe on nodes
+## @param livenessProbe.initialDelaySeconds Initial delay seconds for livenessProbe
+## @param livenessProbe.periodSeconds Period seconds for livenessProbe
+## @param livenessProbe.timeoutSeconds Timeout seconds for livenessProbe
+## @param livenessProbe.failureThreshold Failure threshold for livenessProbe
+## @param livenessProbe.successThreshold Success threshold for livenessProbe
+##
+<span class="p">livenessProbe:
+</span>  enabled: true
+  failureThreshold: 3
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  successThreshold: 1
+  timeoutSeconds: 1
+## @param startupProbe.enabled Enable startupProbe on containers
+## @param startupProbe.initialDelaySeconds Initial delay seconds for startupProbe
+## @param startupProbe.periodSeconds Period seconds for startupProbe
+## @param startupProbe.timeoutSeconds Timeout seconds for startupProbe
+## @param startupProbe.failureThreshold Failure threshold for startupProbe
+## @param startupProbe.successThreshold Success threshold for startupProbe
+##
+<span class="p">startupProbe:
+</span>  enabled: true
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  timeoutSeconds: 1
+  failureThreshold: 15
+  successThreshold: 1
+## @param readinessProbe.enabled Enable readinessProbe
+## @param readinessProbe.initialDelaySeconds Initial delay seconds for readinessProbe
+## @param readinessProbe.periodSeconds Period seconds for readinessProbe
+## @param readinessProbe.timeoutSeconds Timeout seconds for readinessProbe
+## @param readinessProbe.failureThreshold Failure threshold for readinessProbe
+## @param readinessProbe.successThreshold Success threshold for readinessProbe
+##
+<span class="p">readinessProbe:
+</span>  enabled: true
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  timeoutSeconds: 1
+  failureThreshold: 15
+  successThreshold: 1
+## @param customLivenessProbe Custom livenessProbe that overrides the default one
+##
+<span class="p">customLivenessProbe: {}
+</span>## @param customStartupProbe [object] Override default startup probe
+##
+<span class="p">customStartupProbe: {}
+</span>## @param customReadinessProbe [object] Override default readiness probe
+##
+<span class="p">customReadinessProbe: {}
+</span>## Fluent Bit pods' resource requests and limits
+## ref: https://kubernetes.io/docs/user-guide/compute-resources/
+## Minimum memory for development is 4GB and 2 CPU cores
+## Minimum memory for production is 8GB and 4 CPU cores
+## ref: http://docs.datastax.com/en/archived/fluent-bit/2.0/fluent-bit/architecture/architecturePlanningHardware_c.html
+##
+## We usually recommend not to specify default resources and to leave this as a conscious
+## choice for the user. This also increases chances charts run on environments with little
+## resources, such as Minikube. If you do want to specify resources, uncomment the following
+## lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+## @param resources.limits The resources limits for Fluent Bit containers
+## @param resources.requests The requested resources for Fluent Bit containers
+##
+<span class="p">resources:
+</span>  ## Example:
+  ## limits:
+  ##    cpu: 2
+  ##    memory: 4Gi
+  ##
+  limits: {}
+  ## Examples:
+  ## requests:
+  ##    cpu: 2
+  ##    memory: 4Gi
+  ##
+  requests: {}
+## @param extraVolumeMounts Optionally specify extra list of additional volumeMounts for fluent-bit container
+##
+<span class="p">extraVolumeMounts: []
+</span>## Container ports to expose
+## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+<span class="p">containerPorts:
+</span>  ## @param containerPorts.http Port for HTTP port
+  ##
+  http: 2020
+## Fluent Bit service parameters
+##
+<span class="p">service:
+</span>  ## @param service.type Fluent Bit service type
+  ##
+  type: ClusterIP
+  ## Ports to expose
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+  ports:
+    ## @param service.ports.http Port for HTTP port
+    ##
+    http: 2020
+  ## Node ports to expose
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+  nodePorts:
+    ## @param service.nodePorts.http Node port for HTTP port
+    ##
+    http: ""
+  ## @param service.extraPorts Extra ports to expose in the service (normally used with the `sidecar` value)
+  ##
+  extraPorts: []
+  ## @param service.loadBalancerIP LoadBalancerIP if service type is `LoadBalancer`
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
+  ##
+  loadBalancerIP: ""
+  ## @param service.loadBalancerSourceRanges Service Load Balancer sources
+  ## ref: https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/#restrict-access-for-loadbalancer-service
+  ## e.g:
+  ## loadBalancerSourceRanges:
+  ##   - 10.10.10.0/24
+  ##
+  loadBalancerSourceRanges: []
+  ## @param service.clusterIP Service Cluster IP
+  ## e.g.:
+  ## clusterIP: None
+  ##
+  clusterIP: ""
+  ## @param service.externalTrafficPolicy Service external traffic policy
+  ## ref https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip
+  ##
+  externalTrafficPolicy: Cluster
+  ## @param service.annotations Provide any additional annotations which may be required.
+  ## This can be used to set the LoadBalancer service type to internal only.
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
+  ##
+  annotations: {}
+  ## @param service.sessionAffinity Session Affinity for Kubernetes service, can be "None" or "ClientIP"
+  ## If "ClientIP", consecutive client requests will be directed to the same Pod
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
+  ##
+  sessionAffinity: None
+  ## @param service.sessionAffinityConfig Additional settings for the sessionAffinity
+  ## sessionAffinityConfig:
+  ##   clientIP:
+  ##     timeoutSeconds: 300
+  ##
+  sessionAffinityConfig: {}
+## Fluent Bit serviceAccount parameters
+##
+<span class="p">serviceAccount:
+</span>  ## @param serviceAccount.create Enables ServiceAccount
+  ##
+  create: true
+  ## @param serviceAccount.name ServiceAccount name
+  ##
+  name: ""
+  ## @param serviceAccount.annotations Annotations to add to all deployed objects
+  ##
+  annotations: {}
+  ## @param serviceAccount.automountServiceAccountToken Automount API credentials for a service account.
+  ##
+  automountServiceAccountToken: true
+## Pod security context
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
+## @param podSecurityContext.enabled Enabled Fluent Bit pods' Security Context
+## @param podSecurityContext.fsGroup Set Fluent Bit pod's Security Context fsGroup
+##
+<span class="p">podSecurityContext:
+</span>  enabled: true
+  fsGroup: 1001
+## Configure Container Security Context (only main container)
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
+## @param containerSecurityContext.enabled Enabled Fluent Bit containers' Security Context
+## @param containerSecurityContext.runAsUser Set Fluent Bit container's Security Context runAsUser
+## @param containerSecurityContext.runAsNonRoot Force the container to be run as non root
+##
+<span class="p">containerSecurityContext:
+</span>  enabled: true
+  runAsUser: 1001
+  runAsNonRoot: true
+## @param podAnnotations Additional pod annotations
+## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+##
+<span class="p">podAnnotations: {}
+</span>## @param podLabels Additional pod labels
+## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+##
+<span class="p">podLabels: {}
+</span>## @param podAffinityPreset Pod affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+##
+<span class="p">podAffinityPreset: ""
+</span>## @param podAntiAffinityPreset Pod anti-affinity preset. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity
+##
+<span class="p">podAntiAffinityPreset: soft
+</span>## Node affinity preset
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
+##
+<span class="p">nodeAffinityPreset:
+</span>  ## @param nodeAffinityPreset.type Node affinity preset type. Ignored if `affinity` is set. Allowed values: `soft` or `hard`
+  ##
+  type: ""
+  ## @param nodeAffinityPreset.key Node label key to match. Ignored if `affinity` is set
+  ##
+  key: ""
+  ## @param nodeAffinityPreset.values Node label values to match. Ignored if `affinity` is set
+  ## E.g.
+  ## values:
+  ##   - e2e-az1
+  ##   - e2e-az2
+  ##
+  values: []
+## @param priorityClassName Server priorityClassName
+## Ref: https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/
+##
+<span class="p">priorityClassName: ""
+</span>## @param affinity Affinity for pod assignment
+## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+## NOTE: podAffinityPreset, podAntiAffinityPreset, and nodeAffinityPreset will be ignored when it's set
+##
+<span class="p">affinity: {}
+</span>## @param nodeSelector Node labels for pod assignment
+## ref: https://kubernetes.io/docs/user-guide/node-selection/
+##
+<span class="p">nodeSelector: {}
+</span>## @param tolerations Tolerations for pod assignment
+## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+##
+<span class="p">tolerations: []
+</span>## @param topologySpreadConstraints Topology Spread Constraints for pod assignment
+## https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
+## The value is evaluated as a template
+##
+<span class="p">topologySpreadConstraints: []
+</span>## @param schedulerName Alternative scheduler
+## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
+##
+<span class="p">schedulerName: ""
+</span>## @param updateStrategy.type Fluent Bit deployment strategy type
+## @param updateStrategy.rollingUpdate Fluent Bit deployment rolling update configuration parameters
+## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+##
+<span class="p">updateStrategy:
+</span>  type: RollingUpdate
+  rollingUpdate: {}
+## @param extraVolumes Optionally specify extra list of additional volumes for fluent-bit container
+##
+<span class="p">extraVolumes: []
+</span>## @param initContainers Add additional init containers to the fluent-bit pods
+##
+<span class="p">initContainers: []
+</span>## @param sidecars Add additional sidecar containers to the fluent-bit pods
+##
+<span class="p">sidecars: []
+</span><span class="err">
+</span>## @section Fluent Bit configuration
+##
+<span class="p">config:
+</span>  ## @param config.flush Interval to flush output (seconds)
+  ##
+  flush: 1
+  ## @param config.logLevel Diagnostic level (error/warning/info/debug/trace)
+  ##
+  logLevel: info
+  ## @param config.service [string] Defines the global behaviour of the Fluent Bit engine.
+  ##
+  service: |
+    [SERVICE]
+        Flush        {{ .Values.config.flush }}
+        Daemon       Off
+        LogLevel     {{ .Values.config.logLevel }}
+        Config_Watch On
+        HTTP_Server  On
+        HTTP_Listen  0.0.0.0
+        HTTP_Port    {{ .Values.containerPorts.http }}
+  ## @param config.inputs [string] Defines the source from where Fluent Bit can collect data
+  ## https://docs.fluentbit.io/manual/pipeline/inputs
+  ##
+  inputs: |
+    [INPUT]
+        Name cpu
+<span class="err">
+</span>    [INPUT]
+        Name systemd
+        Tag host.*
+        Systemd_Filter _SYSTEMD_UNIT=kubelet.service
+        Read_From_Tail On
+<span class="err">
+</span>  ## @param config.filters [string] Set of plugins that can be used to filter, modify, or enrich log data that is processed by Fluent Bit.
+  ## https://docs.fluentbit.io/manual/pipeline/filters
+  ## Example:
+  ## filters: |
+  ##   [FILTER]
+  ##       Name kubernetes
+  ##       Match kube.*
+  ##       Merge_Log On
+  ##       Keep_Log Off
+  ##       K8S-Logging.Parser On
+  ##       K8S-Logging.Exclude On
+  ##
+  filters: ""
+  ## @param config.outputs [string] Outputs to send the collected data to different destinations
+  ## https://docs.fluentbit.io/manual/pipeline/outputs
+  ##
+  outputs: |
+    [OUTPUT]
+        Name  stdout
+        Match *
+  ## @param config.upstream This configuration is deprecated, please use `extraFiles` instead.
+  ## https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/classic-mode/upstream-servers
+  ##
+  upstream: {}
+  ## @param config.customParsers [string] Custom parsers
+  ## https://docs.fluentbit.io/manual/pipeline/parsers
+  ##
+  customParsers: |
+    [PARSER]
+        Name docker_no_time
+        Format json
+        Time_Keep Off
+        Time_Key time
+        Time_Format %Y-%m-%dT%H:%M:%S.%L
+  ## @param config.extraFiles Extra config files
+  ## This allows adding more files with arbitary filenames to /fluent-bit/etc by providing key/value pairs.
+  ## The key becomes the filename, the value becomes the file content.
+  ##
+  extraFiles: {}
+## Role Based Access
+## Ref: https://kubernetes.io/docs/admin/authorization/rbac/
+## @param rbac.create Create Role and RoleBinding
+## @param rbac.nodeAccess RBAC node access
+##
+<span class="p">rbac:
+</span>  create: false
+  nodeAccess: false
+  ## @param rbac.rules Custom RBAC rules to set
+  ## e.g:
+  ## rules:
+  ##   - apiGroups:
+  ##       - ""
+  ##     resources:
+  ##       - pods
+  ##     verbs:
+  ##       - get
+  ##       - list
+  ##
+  rules: []
+<span class="err">
+</span>## @section Autoscaling
+##
+<span class="p">autoscaling:
+</span>  vpa:
+    ## @param autoscaling.vpa.enabled Enable VPA
+    ##
+    enabled: false
+    ## @param autoscaling.vpa.annotations Annotations for VPA resource
+    ##
+    annotations: {}
+    ## @param autoscaling.vpa.controlledResources VPA List of resources that the vertical pod autoscaler can control. Defaults to cpu and memory
+    ##
+    controlledResources: []
+    ## @param autoscaling.vpa.maxAllowed VPA Max allowed resources for the pod
+    ## cpu: 200m
+    ## memory: 100Mi
+    maxAllowed: {}
+    ## @param autoscaling.vpa.minAllowed VPA Min allowed resources for the pod
+    ## cpu: 200m
+    ## memory: 100Mi
+    minAllowed: {}
+    ## @section VPA update policy
+    ##
+    updatePolicy:
+      ## @param autoscaling.vpa.updatePolicy.updateMode Autoscaling update policy Specifies whether recommended updates are applied when a Pod is started and whether recommended updates are applied during the life of a Pod
+      ## Possible values are "Off", "Initial", "Recreate", and "Auto".
+      ##
+      updateMode: Auto
+  hpa:
+    ## @param autoscaling.hpa.annotations Annotations for HPA resource
+    ##
+    annotations: {}
+    ## @param autoscaling.hpa.enabled Enable HPA
+    ##
+    enabled: false
+    ## @param autoscaling.hpa.minReplicas Min replicas
+    ##
+    minReplicas: 1
+    ## @param autoscaling.hpa.maxReplicas Max replicas
+    ##
+    maxReplicas: 3
+    ## @param autoscaling.hpa.targetCPUUtilizationPercentage Target CPU utilization percentage
+    ##
+    targetCPUUtilizationPercentage: 75
+    ## @param autoscaling.hpa.targetMemoryUtilizationPercentage Target Memory utilization percentage
+    ##
+    targetMemoryUtilizationPercentage: ""
+    ## @param autoscaling.hpa.customRules Custom rules
+    ##
+    customRules: []
+    ## @param autoscaling.hpa.behavior HPA Behavior
+    ##
+    behavior: {}
+<span class="err">
+</span>## Configure the ingress resource that allows you to access the
+## fluent-bit Console. Set up the URL
+## ref: https://kubernetes.io/docs/user-guide/ingress/
+##
+<span class="p">ingress:
+</span>  ## @param ingress.enabled Enable ingress controller resource for fluentBit Console
+  ##
+  enabled: false
+  ## @param ingress.apiVersion Force Ingress API version (automatically detected if not set)
+  ##
+  apiVersion: ""
+  ## @param ingress.ingressClassName IngressClass that will be be used to implement the Ingress (Kubernetes 1.18+)
+  ## This is supported in Kubernetes 1.18+ and required if you have more than one IngressClass marked as the default for your cluster.
+  ## ref: https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/
+  ##
+  ingressClassName: ""
+  ## @param ingress.hostname Default host for the ingress resource
+  ##
+  hostname: fluent-bit.local
+  ## @param ingress.path The Path to fluentBit&amp;reg;. You may need to set this to '/*' in order to use this with ALB ingress controllers.
+  ##
+  path: /
+  ## @param ingress.pathType Ingress path type
+  ##
+  pathType: ImplementationSpecific
+  ## @param ingress.annotations Additional annotations for the Ingress resource. To enable certificate autogeneration, place here your cert-manager annotations.
+  ## For a full list of possible ingress annotations, please see
+  ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
+  ## Use this parameter to set the required annotations for cert-manager, see
+  ## ref: https://cert-manager.io/docs/usage/ingress/#supported-annotations
+  ##
+  ## e.g:
+  ## annotations:
+  ##   kubernetes.io/ingress.class: nginx
+  ##   cert-manager.io/cluster-issuer: cluster-issuer-name
+  ##
+  annotations: {}
+  ## @param ingress.tls Enable TLS configuration for the hostname defined at `ingress.hostname` parameter
+  ## TLS certificates will be retrieved from a TLS secret with name: `{{- printf "%s-tls" .Values.ingress.hostname }}`
+  ## You can:
+  ##   - Use the `ingress.secrets` parameter to create this TLS secret
+  ##   - Rely on cert-manager to create it by setting the corresponding annotations
+  ##   - Rely on Helm to create self-signed certificates by setting `ingress.selfSigned=true`
+  ##
+  tls: false
+  ## @param ingress.selfSigned Create a TLS secret for this ingress record using self-signed certificates generated by Helm
+  ##
+  selfSigned: false
+  ## @param ingress.extraHosts The list of additional hostnames to be covered with this ingress record.
+  ## Most likely the hostname above will be enough, but in the event more hosts are needed, this is an array
+  ## e.g:
+  ## extraHosts:
+  ##   - name: fluent-bit.local
+  ##     path: /
+  ##
+  extraHosts: []
+  ## @param ingress.extraPaths Any additional paths that may need to be added to the ingress under the main host
+  ## For example: The ALB ingress controller requires a special rule for handling SSL redirection.
+  ## extraPaths:
+  ## - path: /*
+  ##   backend:
+  ##     serviceName: ssl-redirect
+  ##     servicePort: use-annotation
+  ##
+  extraPaths: []
+  ## @param ingress.extraTls The tls configuration for additional hostnames to be covered with this ingress record.
+  ## see: https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
+  ## e.g:
+  ## extraTls:
+  ## - hosts:
+  ##     - fluent-bit.local
+  ##   secretName: fluent-bit.local-tls
+  ##
+  extraTls: []
+  ## @param ingress.secrets If you're providing your own certificates, please use this to add the certificates as secrets
+  ## key and certificate are expected in PEM format
+  ## name should line up with a secretName set further up
+  ##
+  ## If it is not set and you're using cert-manager, this is unneeded, as it will create a secret for you with valid certificates
+  ## If it is not set and you're NOT using cert-manager either, self-signed certificates will be created valid for 365 days
+  ## It is also possible to create and manage the certificates outside of this helm chart
+  ## Please see README.md for more information
+  ##
+  ## Example
+  ## secrets:
+  ##   - name: fluent-bit.local-tls
+  ##     key: ""
+  ##     certificate: ""
+  ##
+  secrets: []
+  ## @param ingress.extraRules Additional rules to be covered with this ingress record
+  ## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules
+  ## e.g:
+  ## extraRules:
+  ## - host: example.local
+  ##     http:
+  ##       path: /
+  ##       backend:
+  ##         service:
+  ##           name: example-svc
+  ##           port:
+  ##             name: http
+  ##
+  extraRules: []
+<span class="err">
+</span>## Fluent Bit Pod Disruption Budget
+## ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
+## @param pdb.create Deploy a PodDisruptionBudget object for Fluent Bit deployment
+## @param pdb.minAvailable Minimum available Fluent Bit replicas (expressed in percentage)
+## @param pdb.maxUnavailable Maximum unavailable Fluent Bit replicas (expressed in percentage)
+##
+<span class="p">pdb:
+</span>  create: false
+  minAvailable: ""
+  maxUnavailable: "50%"
+<span class="err">
+</span>## Prometheus metrics
+##
+<span class="p">metrics:
+</span>  ## @param metrics.enabled Enable the export of Prometheus metrics
+  ##
+  enabled: false
+  ## Prometheus Operator ServiceMonitor configuration
+  ##
+  serviceMonitor:
+    ## @param metrics.serviceMonitor.enabled if `true`, creates a Prometheus Operator ServiceMonitor (also requires `metrics.enabled` to be `true`)
+    ##
+    enabled: false
+    ## @param metrics.serviceMonitor.namespace Namespace in which Prometheus is running
+    ##
+    namespace: ""
+    ## @param metrics.serviceMonitor.annotations [object] Additional custom annotations for the ServiceMonitor
+    ##
+    annotations:
+      prometheus.io/scrape: "true"
+      prometheus.io/port: "{{ .Values.service.ports.http }}"
+      prometheus.io/path: "/metrics"
+    ## @param metrics.serviceMonitor.labels Extra labels for the ServiceMonitor
+    ##
+    labels: {}
+    ## @param metrics.serviceMonitor.jobLabel The name of the label on the target service to use as the job name in Prometheus
+    ##
+    jobLabel: ""
+    ## @param metrics.serviceMonitor.honorLabels honorLabels chooses the metric's labels on collisions with target labels
+    ##
+    honorLabels: false
+    ## @param metrics.serviceMonitor.interval Interval at which metrics should be scraped.
+    ## ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#endpoint
+    ## e.g:
+    ## interval: 10s
+    ##
+    interval: ""
+    ## @param metrics.serviceMonitor.scrapeTimeout Timeout after which the scrape is ended
+    ## ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#endpoint
+    ## e.g:
+    ## scrapeTimeout: 10s
+    ##
+    scrapeTimeout: ""
+    ## @param metrics.serviceMonitor.metricRelabelings Specify additional relabeling of metrics
+    ##
+    metricRelabelings: []
+    ## @param metrics.serviceMonitor.relabelings Specify general relabeling
+    ##
+    relabelings: []
+    ## @param metrics.serviceMonitor.selector Prometheus instance selector labels
+    ## ref: https://github.com/bitnami/charts/tree/main/bitnami/prometheus-operator#prometheus-configuration
+    ## selector:
+    ##   prometheus: my-prometheus
+    ##
+    selector: {}
+<span class="err">
+</span>## @param extraDeploy Array of extra objects to deploy with the release
+##
+<span class="p">extraDeploy: []
+</span><span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

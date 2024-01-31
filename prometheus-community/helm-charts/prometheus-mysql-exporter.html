@@ -1,0 +1,1014 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(24)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(7) > ul > li:nth-child(24) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(7) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(7) > ul > li:nth-child(24) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(7) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(7) > ul.nav-list > li.nav-list-item:nth-child(24) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>prometheus-mysql-exporter | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="prometheus-mysql-exporter" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" /> <meta property="og:url" content="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="prometheus-mysql-exporter" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"prometheus-mysql-exporter","url":"https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/prometheus-community/helm-charts">prometheus-community/helm-charts</a></li> <li class="breadcrumb-nav-list-item"><span>prometheus-mysql-exporter</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="prometheus-mysql-exporter"> <a href="#prometheus-mysql-exporter" class="anchor-heading" aria-labelledby="prometheus-mysql-exporter"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> prometheus-mysql-exporter </h1> <h2 id="240"> <a href="#240" class="anchor-heading" aria-labelledby="240"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.0 </h2> <p><strong>Release date:</strong> 2024-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.15.1&amp;color=success" alt="AppVersion: v0.15.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[proemtheus-mysql-exporter] add promethesrules (#4136)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 2d19969e..1d1a056d 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -197,3 +197,23 @@</span> cloudsqlproxy:
+     enabled: false
+     serviceAccountEmail: ""
+   extraArgs: ""
+<span class="gi">+
++## Custom PrometheusRules to be defined
++## The value is evaluated as a template, so, for example, the value can depend on .Release or .Chart
++## ref: https://github.com/coreos/prometheus-operator#customresourcedefinitions
++prometheusRule:
++  enabled: false
++  additionalLabels: {}
++  namespace: ""
++  rules:
++    []
++    ## These are just examples rules, please adapt them to your needs.
++    ## Make sure to constraint the rules to the current service.
++    # - alert: MysqlDown
++    #   expr: mysql_up == 0
++    #   for: 5m
++    #   labels:
++    #     severity: critical
++    #   annotations:
++    #     summary: MySQL down (instance {{ $labels.instance }})
++    #     description: "MySQL instance is down on {{ $labels.instance }}\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="230"> <a href="#230" class="anchor-heading" aria-labelledby="230"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.3.0 </h2> <p><strong>Release date:</strong> 2024-01-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.15.1&amp;color=success" alt="AppVersion: v0.15.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> enable monitoring not only in release namespace (#3905)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index a9eb1807..2d19969e 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -37,6 +37,7 @@</span> serviceMonitor:
+   # scrapeTimeout is the timeout after which the scrape is ended
+   # scrapeTimeout: 10s
+   # namespace: monitoring
+<span class="gi">+  # namespaceSelector: []
+</span>   # additionalLabels is the set of additional labels to add to the ServiceMonitor
+   additionalLabels: {}
+   jobLabel: ""
+<span class="err">
+</span></code></pre></div></div> <h2 id="221"> <a href="#221" class="anchor-heading" aria-labelledby="221"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.1 </h2> <p><strong>Release date:</strong> 2024-01-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.15.1&amp;color=success" alt="AppVersion: v0.15.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>bump mysql to 0.15.1 (#4085)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="220"> <a href="#220" class="anchor-heading" aria-labelledby="220"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.0 </h2> <p><strong>Release date:</strong> 2023-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.15.0&amp;color=success" alt="AppVersion: v0.15.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Support multiple target (#3751)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index b0011bf4..a9eb1807 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -45,6 +45,21 @@</span> serviceMonitor:
+   metricRelabelings: []
+   # Set relabel_configs as per https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
+   relabelings: []
+<span class="gi">+  # Enable multi target scraping.
++  multipleTarget:
++    enabled: false
++    targets: []
++      # target connection information with name (required), endpoint (required) and port (optionnal)
++      # if sharedSecret is not enabled the name must match an entry client.{{ name }} existing in the secret
++      # - endpoint: mysql1.dns.local
++      #   name: mysql1
++      #   port: 3307
++      # - endpoint: mysql2.dns.local
++      #   name: mysql2
++    # Enable shared credentials for all targets
++    sharedSecret:
++      enabled: false
++      name: ""
+</span> 
+ serviceAccount:
+   # Specifies whether a ServiceAccount should be created
+<span class="err">
+</span></code></pre></div></div> <h2 id="211"> <a href="#211" class="anchor-heading" aria-labelledby="211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.1 </h2> <p><strong>Release date:</strong> 2023-11-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.15.0&amp;color=success" alt="AppVersion: v0.15.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix(prometheus-mysql-exporter): set serviceaccount lifecycle (#3949)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="210"> <a href="#210" class="anchor-heading" aria-labelledby="210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.0 </h2> <p><strong>Release date:</strong> 2023-10-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.15.0&amp;color=success" alt="AppVersion: v0.15.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add support for templating .Release.Namespace with its override (#3882)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 6ad9dcd8..b0011bf4 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -2,6 +2,9 @@</span>
+ ## This is a YAML-formatted file.
+ ## Declare variables to be passed into your templates.
+ 
+<span class="gi">+## namespaceOverride overrides the namespace which the resources will be deployed in
++namespaceOverride: ""
++
+</span> ## override release name
+ fullnameOverride: ""
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="200"> <a href="#200" class="anchor-heading" aria-labelledby="200"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.0 </h2> <p><strong>Release date:</strong> 2023-07-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.15.0&amp;color=success" alt="AppVersion: v0.15.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 503099fe..6ad9dcd8 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -140,17 +140,22 @@</span> collectors: {}
+   # heartbeat.database: heartbeat
+   # heartbeat.table: heartbeat
+ 
+<span class="gd">-# mysql connection params which build the DATA_SOURCE_NAME env var of the docker container
+</span><span class="gi">+# mysql connection params which build the my.cnf config
+</span> mysql:
+   db: ""
+   host: "localhost"
+<span class="gd">-  param: ""
+</span><span class="gi">+  # config my.cnf https://dev.mysql.com/doc/c-api/8.0/en/mysql-options.html
++  additionalConfig:
++    # - connect-timeout=5
++    # - debug
+</span>   pass: "password"
+   port: 3306
+   protocol: ""
+   user: "exporter"
+<span class="gd">-  # secret with full DATA_SOURCE_NAME env var as stringdata
+-  existingSecret: ""
+</span><span class="gi">+  # secret with full config my.cnf
++  existingConfigSecret:
++    name: ""
++    key: ""
+</span>   # secret only containing the password
+   existingPasswordSecret:
+     name: ""
+<span class="p">@@ -160,11 +165,11 @@</span> mysql:
+ cloudsqlproxy:
+   enabled: false
+   image:
+<span class="gd">-    repo: "gcr.io/cloudsql-docker/gce-proxy"
+-    tag: "1.33.0-alpine"
+</span><span class="gi">+    repo: "gcr.io/cloud-sql-connectors/cloud-sql-proxy"
++    tag: "2.4.0"
+</span>     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+<span class="gd">-  ipAddressTypes: ""
+</span><span class="gi">+  privateIp: false
+</span>   port: "3306"
+   credentialsSecret: ""
+   # service account json
+<span class="err">
+</span></code></pre></div></div> <h2 id="1140"> <a href="#1140" class="anchor-heading" aria-labelledby="1140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.14.0 </h2> <p><strong>Release date:</strong> 2023-04-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add option for extraArgs in cloudsqlproxy (#3284)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 36866c9e..503099fe 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -172,3 +172,4 @@</span> cloudsqlproxy:
+   workloadIdentity:
+     enabled: false
+     serviceAccountEmail: ""
+<span class="gi">+  extraArgs: ""
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="1130"> <a href="#1130" class="anchor-heading" aria-labelledby="1130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.13.0 </h2> <p><strong>Release date:</strong> 2023-03-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Allow overriding of image registry and add quay.io default (#3099)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 77f234c0..36866c9e 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -8,7 +8,8 @@</span> fullnameOverride: ""
+ replicaCount: 1
+ 
+ image:
+<span class="gd">-  repository: "prom/mysqld-exporter"
+</span><span class="gi">+  registry: quay.io
++  repository: prometheus/mysqld-exporter
+</span>   ## if not set charts appVersion var is used
+   tag: ""
+   pullPolicy: "IfNotPresent"
+<span class="err">
+</span></code></pre></div></div> <h2 id="1121"> <a href="#1121" class="anchor-heading" aria-labelledby="1121"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.12.1 </h2> <p><strong>Release date:</strong> 2023-01-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> add imagePullSecrets and fullname override (#2905)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 559b8ad5..77f234c0 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -1,14 +1,22 @@</span>
+<span class="gd">-# Default values for prometheus-mysql-exporter.
+-# This is a YAML-formatted file.
+-# Declare variables to be passed into your templates.
+</span><span class="gi">+## Default values for prometheus-mysql-exporter.
++## This is a YAML-formatted file.
++## Declare variables to be passed into your templates.
++
++## override release name
++fullnameOverride: ""
+</span> 
+ replicaCount: 1
+ 
+ image:
+   repository: "prom/mysqld-exporter"
+<span class="gd">-  tag: "v0.14.0"
+</span><span class="gi">+  ## if not set charts appVersion var is used
++  tag: ""
+</span>   pullPolicy: "IfNotPresent"
+ 
+<span class="gi">+# imagePullSecrets:
++# - name: secret-name
++imagePullSecrets: []
++
+</span> service:
+   labels: {}
+   annotations: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="1111"> <a href="#1111" class="anchor-heading" aria-labelledby="1111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.11.1 </h2> <p><strong>Release date:</strong> 2022-12-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> fix error in extraVolumes (#2770)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1110"> <a href="#1110" class="anchor-heading" aria-labelledby="1110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.11.0 </h2> <p><strong>Release date:</strong> 2022-12-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> add extraVolumes and extraVolumeMounts to chart (#2764)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index efd628da..559b8ad5 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -62,6 +62,17 @@</span> affinity: {}
+ 
+ podLabels: {}
+ 
+<span class="gi">+# Extra Volume Mounts for the mysql exporter container
++extraVolumeMounts: []
++# - name: example
++#   mountPath: /example
++
++# Extra Volumes for the pod
++extraVolumes: []
++# - name: example
++#   configMap:
++#     name: example
++
+</span> podSecurityContext: {}
+   # fsGroup: 65534
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="1100"> <a href="#1100" class="anchor-heading" aria-labelledby="1100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.10.0 </h2> <p><strong>Release date:</strong> 2022-11-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Support Workload Identity (#2645)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index c4c77375..efd628da 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -141,7 +141,7 @@</span> cloudsqlproxy:
+   enabled: false
+   image:
+     repo: "gcr.io/cloudsql-docker/gce-proxy"
+<span class="gd">-    tag: "1.30.1-alpine"
+</span><span class="gi">+    tag: "1.33.0-alpine"
+</span>     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+   ipAddressTypes: ""
+<span class="p">@@ -149,3 +149,6 @@</span> cloudsqlproxy:
+   credentialsSecret: ""
+   # service account json
+   credentials: ""
+<span class="gi">+  workloadIdentity:
++    enabled: false
++    serviceAccountEmail: ""
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="191"> <a href="#191" class="anchor-heading" aria-labelledby="191"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.9.1 </h2> <p><strong>Release date:</strong> 2022-10-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Fix typo in README.md (#2587)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="190"> <a href="#190" class="anchor-heading" aria-labelledby="190"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.9.0 </h2> <p><strong>Release date:</strong> 2022-08-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add option for ipAddressTypes (#2339)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 861a6c26..c4c77375 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -144,6 +144,7 @@</span> cloudsqlproxy:
+     tag: "1.30.1-alpine"
+     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+<span class="gi">+  ipAddressTypes: ""
+</span>   port: "3306"
+   credentialsSecret: ""
+   # service account json
+<span class="err">
+</span></code></pre></div></div> <h2 id="181"> <a href="#181" class="anchor-heading" aria-labelledby="181"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.8.1 </h2> <p><strong>Release date:</strong> 2022-06-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> add missing collect parameter (#2103)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="180"> <a href="#180" class="anchor-heading" aria-labelledby="180"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.8.0 </h2> <p><strong>Release date:</strong> 2022-05-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.14.0&amp;color=success" alt="AppVersion: v0.14.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> add logLevel and logFormat options (#2099)</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 645c094a..861a6c26 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -6,7 +6,7 @@</span> replicaCount: 1
+ 
+ image:
+   repository: "prom/mysqld-exporter"
+<span class="gd">-  tag: "v0.12.1"
+</span><span class="gi">+  tag: "v0.14.0"
+</span>   pullPolicy: "IfNotPresent"
+ 
+ service:
+<span class="p">@@ -73,12 +73,16 @@</span> securityContext: {}
+   # runAsNonRoot: true
+   # runAsUser: 65534
+ 
+<span class="gd">-
+</span> annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/path: "/metrics"
+   prometheus.io/port: "9104"
+ 
+<span class="gi">+config: {}
++  # Allow to set specifc options on the exporter
++  # logLevel: info
++  # logFormat: "logger:stderr"
++
+</span> collectors: {}
+   # auto_increment.columns: false
+   # binlog_size: false
+<span class="p">@@ -137,21 +141,10 @@</span> cloudsqlproxy:
+   enabled: false
+   image:
+     repo: "gcr.io/cloudsql-docker/gce-proxy"
+<span class="gd">-    tag: "1.19.1-alpine"
+</span><span class="gi">+    tag: "1.30.1-alpine"
+</span>     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+   port: "3306"
+   credentialsSecret: ""
+<span class="gi">+  # service account json
+</span>   credentials: ""
+<span class="gd">-    # {
+-    #   "type": "service_account",
+-    #   "project_id": "project",
+-    #   "private_key_id": "KEYID1",
+-    #   "private_key": "-----BEGIN PRIVATE KEY-----\sdajsdnasd\n-----END PRIVATE KEY-----\n",
+-    #   "client_email": "user@project.iam.gserviceaccount.com",
+-    #   "client_id": "111111111",
+-    #   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+-    #   "token_uri": "https://accounts.google.com/o/oauth2/token",
+-    #   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+-    #   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/user%40project.iam.gserviceaccount.com"
+-    # }
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="170"> <a href="#170" class="anchor-heading" aria-labelledby="170"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.7.0 </h2> <p><strong>Release date:</strong> 2022-03-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add relabelings to servicemonitor (#1891)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 7cedf176..645c094a 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -24,13 +24,15 @@</span> serviceMonitor:
+   # interval: 30s
+   # scrapeTimeout is the timeout after which the scrape is ended
+   # scrapeTimeout: 10s
+<span class="gd">-  # additionalLabels is the set of additional labels to add to the ServiceMonitor
+</span>   # namespace: monitoring
+<span class="gi">+  # additionalLabels is the set of additional labels to add to the ServiceMonitor
+</span>   additionalLabels: {}
+   jobLabel: ""
+   targetLabels: []
+   podTargetLabels: []
+   metricRelabelings: []
+<span class="gi">+  # Set relabel_configs as per https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config
++  relabelings: []
+</span> 
+ serviceAccount:
+   # Specifies whether a ServiceAccount should be created
+<span class="err">
+</span></code></pre></div></div> <h2 id="160"> <a href="#160" class="anchor-heading" aria-labelledby="160"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.0 </h2> <p><strong>Release date:</strong> 2022-02-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add missing namespaceSelector to servicemonitor (#1786)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="150"> <a href="#150" class="anchor-heading" aria-labelledby="150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.5.0 </h2> <p><strong>Release date:</strong> 2021-12-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> add annotations to service account (#1649)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 2b16ae46..7cedf176 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -38,6 +38,7 @@</span> serviceAccount:
+   # The name of the ServiceAccount to use.
+   # If not set and create is true, a name is generated using the fullname template
+   name:
+<span class="gi">+  annotations: {}
+</span> 
+ resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+<span class="err">
+</span></code></pre></div></div> <h2 id="140"> <a href="#140" class="anchor-heading" aria-labelledby="140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.0 </h2> <p><strong>Release date:</strong> 2021-12-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add namespace support to service monitor of MySQL exporter (#1630)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 20678b52..2b16ae46 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -25,6 +25,7 @@</span> serviceMonitor:
+   # scrapeTimeout is the timeout after which the scrape is ended
+   # scrapeTimeout: 10s
+   # additionalLabels is the set of additional labels to add to the ServiceMonitor
+<span class="gi">+  # namespace: monitoring
+</span>   additionalLabels: {}
+   jobLabel: ""
+   targetLabels: []
+<span class="err">
+</span></code></pre></div></div> <h2 id="130"> <a href="#130" class="anchor-heading" aria-labelledby="130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.0 </h2> <p><strong>Release date:</strong> 2021-10-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add proxysql credentials as secret (#1469)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index c735d6dc..20678b52 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -137,6 +137,7 @@</span> cloudsqlproxy:
+     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+   port: "3306"
+<span class="gi">+  credentialsSecret: ""
+</span>   credentials: ""
+     # {
+     #   "type": "service_account",
+<span class="err">
+</span></code></pre></div></div> <h2 id="122"> <a href="#122" class="anchor-heading" aria-labelledby="122"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.2 </h2> <p><strong>Release date:</strong> 2021-08-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Restart pod on password change (#1262)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="121"> <a href="#121" class="anchor-heading" aria-labelledby="121"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.1 </h2> <p><strong>Release date:</strong> 2021-06-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add ServiceAccount (#1087)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index be5bfdab..c735d6dc 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -31,6 +31,13 @@</span> serviceMonitor:
+   podTargetLabels: []
+   metricRelabelings: []
+ 
+<span class="gi">+serviceAccount:
++  # Specifies whether a ServiceAccount should be created
++  create: false
++  # The name of the ServiceAccount to use.
++  # If not set and create is true, a name is generated using the fullname template
++  name:
++
+</span> resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+   # choice for the user. This also increases chances charts run on environments with little
+<span class="err">
+</span></code></pre></div></div> <h2 id="120"> <a href="#120" class="anchor-heading" aria-labelledby="120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.0 </h2> <p><strong>Release date:</strong> 2021-04-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>make existing secret config more flexible (#705)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index c1a3cd77..be5bfdab 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -114,7 +114,12 @@</span> mysql:
+   port: 3306
+   protocol: ""
+   user: "exporter"
+<span class="gd">-  existingSecret: false
+</span><span class="gi">+  # secret with full DATA_SOURCE_NAME env var as stringdata
++  existingSecret: ""
++  # secret only containing the password
++  existingPasswordSecret:
++    name: ""
++    key: ""
+</span> 
+ # cloudsqlproxy https://cloud.google.com/sql/docs/mysql/sql-proxy
+ cloudsqlproxy:
+<span class="err">
+</span></code></pre></div></div> <h2 id="110"> <a href="#110" class="anchor-heading" aria-labelledby="110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.0 </h2> <p><strong>Release date:</strong> 2021-02-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> Add securityContext and podSecurityContext (#662)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index f77038b7..c1a3cd77 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -51,6 +51,18 @@</span> affinity: {}
+ 
+ podLabels: {}
+ 
+<span class="gi">+podSecurityContext: {}
++  # fsGroup: 65534
++
++securityContext: {}
++  # capabilities:
++  #   drop:
++  #   - ALL
++  # readOnlyRootFilesystem: true
++  # runAsNonRoot: true
++  # runAsUser: 65534
++
++
+</span> annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/path: "/metrics"
+<span class="err">
+</span></code></pre></div></div> <h2 id="102"> <a href="#102" class="anchor-heading" aria-labelledby="102"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.2 </h2> <p><strong>Release date:</strong> 2021-02-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> fixed link to Prometheus MySQL Exporter repo (#630)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="101"> <a href="#101" class="anchor-heading" aria-labelledby="101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.1 </h2> <p><strong>Release date:</strong> 2020-12-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix: use alpine cloudsqlproxy image (#464)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 5c0b107a..f77038b7 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -109,7 +109,7 @@</span> cloudsqlproxy:
+   enabled: false
+   image:
+     repo: "gcr.io/cloudsql-docker/gce-proxy"
+<span class="gd">-    tag: "1.16"
+</span><span class="gi">+    tag: "1.19.1-alpine"
+</span>     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+   port: "3306"
+<span class="err">
+</span></code></pre></div></div> <h2 id="100"> <a href="#100" class="anchor-heading" aria-labelledby="100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.0 </h2> <p><strong>Release date:</strong> 2020-10-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.12.1&amp;color=success" alt="AppVersion: v0.12.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="upgrade%20cloud-sql-proxy%20v2%20(#3583)">prometheus-mysql-exporter</a> update docker image, readme links &amp; use default labels (#68)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index b67a8297..5c0b107a 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -6,7 +6,7 @@</span> replicaCount: 1
+ 
+ image:
+   repository: "prom/mysqld-exporter"
+<span class="gd">-  tag: "v0.11.0"
+</span><span class="gi">+  tag: "v0.12.1"
+</span>   pullPolicy: "IfNotPresent"
+ 
+ service:
+<span class="p">@@ -109,20 +109,20 @@</span> cloudsqlproxy:
+   enabled: false
+   image:
+     repo: "gcr.io/cloudsql-docker/gce-proxy"
+<span class="gd">-    tag: "1.14"
+</span><span class="gi">+    tag: "1.16"
+</span>     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+   port: "3306"
+<span class="gd">-  credentials:
+-    '{
+-      "type": "service_account",
+-      "project_id": "project",
+-      "private_key_id": "KEYID1",
+-      "private_key": "-----BEGIN PRIVATE KEY-----\sdajsdnasd\n-----END PRIVATE KEY-----\n",
+-      "client_email": "user@project.iam.gserviceaccount.com",
+-      "client_id": "111111111",
+-      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+-      "token_uri": "https://accounts.google.com/o/oauth2/token",
+-      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+-      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/user%40project.iam.gserviceaccount.com"
+-    }'
+</span><span class="gi">+  credentials: ""
++    # {
++    #   "type": "service_account",
++    #   "project_id": "project",
++    #   "private_key_id": "KEYID1",
++    #   "private_key": "-----BEGIN PRIVATE KEY-----\sdajsdnasd\n-----END PRIVATE KEY-----\n",
++    #   "client_email": "user@project.iam.gserviceaccount.com",
++    #   "client_id": "111111111",
++    #   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
++    #   "token_uri": "https://accounts.google.com/o/oauth2/token",
++    #   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
++    #   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/user%40project.iam.gserviceaccount.com"
++    # }
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="071"> <a href="#071" class="anchor-heading" aria-labelledby="071"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.1 </h2> <p><strong>Release date:</strong> 2020-08-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Prep initial charts indexing (#14)</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="070"> <a href="#070" class="anchor-heading" aria-labelledby="070"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.7.0 </h2> <p><strong>Release date:</strong> 2020-07-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="fix%20docs%20typo%20(#22674)">stable/prometheus-mysql-exporter</a> Add ServiceMonitor metricRelabeling (#23352)</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index d308647d..b67a8297 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -29,6 +29,7 @@</span> serviceMonitor:
+   jobLabel: ""
+   targetLabels: []
+   podTargetLabels: []
+<span class="gi">+  metricRelabelings: []
+</span> 
+ resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+<span class="err">
+</span></code></pre></div></div> <h2 id="060"> <a href="#060" class="anchor-heading" aria-labelledby="060"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.6.0 </h2> <p><strong>Release date:</strong> 2020-06-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 9b8afd9f..d308647d 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -10,6 +10,8 @@</span> image:
+   pullPolicy: "IfNotPresent"
+ 
+ service:
+<span class="gi">+  labels: {}
++  annotations: {}
+</span>   name: mysql-exporter
+   type: ClusterIP
+   externalPort: 9104
+<span class="err">
+</span></code></pre></div></div> <h2 id="053"> <a href="#053" class="anchor-heading" aria-labelledby="053"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.3 </h2> <p><strong>Release date:</strong> 2020-06-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="052"> <a href="#052" class="anchor-heading" aria-labelledby="052"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.2 </h2> <p><strong>Release date:</strong> 2019-10-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[mysqld-exporter] Improve Secrets (#18314)</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 1f2309f6..9b8afd9f 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -99,6 +99,7 @@</span> mysql:
+   port: 3306
+   protocol: ""
+   user: "exporter"
+<span class="gi">+  existingSecret: false
+</span> 
+ # cloudsqlproxy https://cloud.google.com/sql/docs/mysql/sql-proxy
+ cloudsqlproxy:
+<span class="err">
+</span></code></pre></div></div> <h2 id="051"> <a href="#051" class="anchor-heading" aria-labelledby="051"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.1 </h2> <p><strong>Release date:</strong> 2019-07-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Mysql exporter managing labels (#15349)</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index d1e48a4c..1f2309f6 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -24,6 +24,9 @@</span> serviceMonitor:
+   # scrapeTimeout: 10s
+   # additionalLabels is the set of additional labels to add to the ServiceMonitor
+   additionalLabels: {}
+<span class="gi">+  jobLabel: ""
++  targetLabels: []
++  podTargetLabels: []
+</span> 
+ resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+<span class="err">
+</span></code></pre></div></div> <h2 id="050"> <a href="#050" class="anchor-heading" aria-labelledby="050"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.5.0 </h2> <p><strong>Release date:</strong> 2019-06-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(stable/prometheus-mysql-exporter): add optional ServiceMonitor (#14600)</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index c0441410..d1e48a4c 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -15,6 +15,16 @@</span> service:
+   externalPort: 9104
+   internalPort: 9104
+ 
+<span class="gi">+serviceMonitor:
++  # enabled should be set to true to enable prometheus-operator discovery of this service
++  enabled: false
++  # interval is the interval at which metrics should be scraped
++  # interval: 30s
++  # scrapeTimeout is the timeout after which the scrape is ended
++  # scrapeTimeout: 10s
++  # additionalLabels is the set of additional labels to add to the ServiceMonitor
++  additionalLabels: {}
++
+</span> resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+   # choice for the user. This also increases chances charts run on environments with little
+<span class="err">
+</span></code></pre></div></div> <h2 id="040"> <a href="#040" class="anchor-heading" aria-labelledby="040"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.0 </h2> <p><strong>Release date:</strong> 2019-06-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(stable/prometheus-mysql-exporter): store MySQL password in a k8s Secret (#14712)</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="034"> <a href="#034" class="anchor-heading" aria-labelledby="034"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.4 </h2> <p><strong>Release date:</strong> 2019-06-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="fix%20docs%20typo%20(#22674)">stable/prometheus-mysql-exporter</a> updated gce-proxy to 1.14 &amp; added myself to maintainers &amp; owners (#14776)</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 7f4828f5..c0441410 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -92,7 +92,7 @@</span> cloudsqlproxy:
+   enabled: false
+   image:
+     repo: "gcr.io/cloudsql-docker/gce-proxy"
+<span class="gd">-    tag: "1.11"
+</span><span class="gi">+    tag: "1.14"
+</span>     pullPolicy: "IfNotPresent"
+   instanceConnectionName: "project:us-central1:dbname"
+   port: "3306"
+<span class="err">
+</span></code></pre></div></div> <h2 id="033"> <a href="#033" class="anchor-heading" aria-labelledby="033"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.3 </h2> <p><strong>Release date:</strong> 2019-06-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="fix%20docs%20typo%20(#22674)">stable/prometheus-mysql-exporter</a> Fix invalid YAML with non-boolean collectors (#14701)</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="032"> <a href="#032" class="anchor-heading" aria-labelledby="032"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.2 </h2> <p><strong>Release date:</strong> 2019-03-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fixed readme (#11660)</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="031"> <a href="#031" class="anchor-heading" aria-labelledby="031"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.1 </h2> <p><strong>Release date:</strong> 2019-03-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-mysql-importer] Add optional labels to each pod (#11380)</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 7fd4de24..7f4828f5 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -33,6 +33,8 @@</span> tolerations: []
+ 
+ affinity: {}
+ 
+<span class="gi">+podLabels: {}
++
+</span> annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/path: "/metrics"
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2019-03-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="fix%20docs%20typo%20(#22674)">stable/prometheus-mysql-exporter</a> Collector flags config (#11569)</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 77fac30a..7fd4de24 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -38,6 +38,43 @@</span> annotations:
+   prometheus.io/path: "/metrics"
+   prometheus.io/port: "9104"
+ 
+<span class="gi">+collectors: {}
++  # auto_increment.columns: false
++  # binlog_size: false
++  # engine_innodb_status: false
++  # engine_tokudb_status: false
++  # global_status: true
++  # global_variables: true
++  # info_schema.clientstats: false
++  # info_schema.innodb_metrics: false
++  # info_schema.innodb_tablespaces: false
++  # info_schema.innodb_cmp: false
++  # info_schema.innodb_cmpmem: false
++  # info_schema.processlist: false
++  # info_schema.processlist.min_time: 0
++  # info_schema.query_response_time: false
++  # info_schema.tables: true
++  # info_schema.tables.databases: '*'
++  # info_schema.tablestats: false
++  # info_schema.schemastats: false
++  # info_schema.userstats: false
++  # perf_schema.eventsstatements: false
++  # perf_schema.eventsstatements.digest_text_limit: 120
++  # perf_schema.eventsstatements.limit: false
++  # perf_schema.eventsstatements.timelimit: 86400
++  # perf_schema.eventswaits: false
++  # perf_schema.file_events: false
++  # perf_schema.file_instances: false
++  # perf_schema.indexiowaits: false
++  # perf_schema.tableiowaits: false
++  # perf_schema.tablelocks: false
++  # perf_schema.replication_group_member_stats: false
++  # slave_status: true
++  # slave_hosts: false
++  # heartbeat: false
++  # heartbeat.database: heartbeat
++  # heartbeat.table: heartbeat
++
+</span> # mysql connection params which build the DATA_SOURCE_NAME env var of the docker container
+ mysql:
+   db: ""
+<span class="err">
+</span></code></pre></div></div> <h2 id="021"> <a href="#021" class="anchor-heading" aria-labelledby="021"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.1 </h2> <p><strong>Release date:</strong> 2018-10-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fixed annotations (#8431)</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index 58387d5d..77fac30a 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -36,7 +36,7 @@</span> affinity: {}
+ annotations:
+   prometheus.io/scrape: "true"
+   prometheus.io/path: "/metrics"
+<span class="gd">-  prometheus.io/port: 9104
+</span><span class="gi">+  prometheus.io/port: "9104"
+</span> 
+ # mysql connection params which build the DATA_SOURCE_NAME env var of the docker container
+ mysql:
+<span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2018-10-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.11.0&amp;color=success" alt="AppVersion: v0.11.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="fix%20docs%20typo%20(#22674)">stable/prometheus-mysql-exporter</a> split datasource in separate mysql connection vars (#8000)</li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-mysql-exporter/values.yaml b/charts/prometheus-mysql-exporter/values.yaml
+index fa1d9c99..58387d5d 100644
+</span><span class="gd">--- a/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-mysql-exporter/values.yaml
+</span><span class="p">@@ -6,7 +6,7 @@</span> replicaCount: 1
+ 
+ image:
+   repository: "prom/mysqld-exporter"
+<span class="gd">-  tag: "v0.10.0"
+</span><span class="gi">+  tag: "v0.11.0"
+</span>   pullPolicy: "IfNotPresent"
+ 
+ service:
+<span class="p">@@ -33,13 +33,20 @@</span> tolerations: []
+ 
+ affinity: {}
+ 
+<span class="gd">-annotations: {}
+-#  prometheus.io/scrape: "true"
+-#  prometheus.io/path: "/metrics"
+-#  prometheus.io/port: "{{ .Values.service.internalPort }}"
+</span><span class="gi">+annotations:
++  prometheus.io/scrape: "true"
++  prometheus.io/path: "/metrics"
++  prometheus.io/port: 9104
+</span> 
+<span class="gd">-# Scraper datasource
+-datasource: "username:password@(localhost:3306)/"
+</span><span class="gi">+# mysql connection params which build the DATA_SOURCE_NAME env var of the docker container
++mysql:
++  db: ""
++  host: "localhost"
++  param: ""
++  pass: "password"
++  port: 3306
++  protocol: ""
++  user: "exporter"
+</span> 
+ # cloudsqlproxy https://cloud.google.com/sql/docs/mysql/sql-proxy
+ cloudsqlproxy:
+<span class="err">
+</span></code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2018-05-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v0.10.0&amp;color=success" alt="AppVersion: v0.10.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Added prometheus mysql exporter chart (#5373)</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Default values for prometheus-mysql-exporter.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+<span class="err">
+</span><span class="p">replicaCount: 1
+</span><span class="err">
+</span><span class="p">image:
+</span>  repository: "prom/mysqld-exporter"
+  tag: "v0.10.0"
+  pullPolicy: "IfNotPresent"
+<span class="err">
+</span><span class="p">service:
+</span>  name: mysql-exporter
+  type: ClusterIP
+  externalPort: 9104
+  internalPort: 9104
+<span class="err">
+</span><span class="p">resources: {}
+</span>  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+<span class="err">
+</span><span class="p">nodeSelector: {}
+</span><span class="err">
+</span><span class="p">tolerations: []
+</span><span class="err">
+</span><span class="p">affinity: {}
+</span><span class="err">
+</span><span class="p">annotations: {}
+</span>#  prometheus.io/scrape: "true"
+#  prometheus.io/path: "/metrics"
+#  prometheus.io/port: "{{ .Values.service.internalPort }}"
+<span class="err">
+</span># Scraper datasource
+<span class="p">datasource: "username:password@(localhost:3306)/"
+</span><span class="err">
+</span># cloudsqlproxy https://cloud.google.com/sql/docs/mysql/sql-proxy
+<span class="p">cloudsqlproxy:
+</span>  enabled: false
+  image:
+    repo: "gcr.io/cloudsql-docker/gce-proxy"
+    tag: "1.11"
+    pullPolicy: "IfNotPresent"
+  instanceConnectionName: "project:us-central1:dbname"
+  port: "3306"
+  credentials:
+    '{
+      "type": "service_account",
+      "project_id": "project",
+      "private_key_id": "KEYID1",
+      "private_key": "-----BEGIN PRIVATE KEY-----\sdajsdnasd\n-----END PRIVATE KEY-----\n",
+      "client_email": "user@project.iam.gserviceaccount.com",
+      "client_id": "111111111",
+      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+      "token_uri": "https://accounts.google.com/o/oauth2/token",
+      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/user%40project.iam.gserviceaccount.com"
+    }'
+<span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

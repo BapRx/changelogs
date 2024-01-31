@@ -1,0 +1,1291 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(35)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(7) > ul > li:nth-child(35) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(7) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(7) > ul > li:nth-child(35) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(7) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(7) > ul.nav-list > li.nav-list-item:nth-child(35) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>prometheus-pushgateway | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="prometheus-pushgateway" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" /> <meta property="og:url" content="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="prometheus-pushgateway" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"prometheus-pushgateway","url":"https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-pushgateway"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/prometheus-community/helm-charts">prometheus-community/helm-charts</a></li> <li class="breadcrumb-nav-list-item"><span>prometheus-pushgateway</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="prometheus-pushgateway"> <a href="#prometheus-pushgateway" class="anchor-heading" aria-labelledby="prometheus-pushgateway"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> prometheus-pushgateway </h1> <h2 id="260"> <a href="#260" class="anchor-heading" aria-labelledby="260"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.6.0 </h2> <p><strong>Release date:</strong> 2024-01-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.7.0&amp;color=success" alt="AppVersion: v1.7.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] bump pgw to 1.7.0 (#4162)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="250"> <a href="#250" class="anchor-heading" aria-labelledby="250"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.5.0 </h2> <p><strong>Release date:</strong> 2023-12-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.2&amp;color=success" alt="AppVersion: v1.6.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] add host aliases (#4099)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 02e5c0bf..4eb0b910 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -175,6 +175,16 @@</span> nodeSelector: {}
+ 
+ replicaCount: 1
+ 
+<span class="gi">+hostAliases: []
++  # - ip: "127.0.0.1"
++  #   hostnames:
++  #   - "foo.local"
++  #   - "bar.local"
++  # - ip: "10.1.2.3"
++  #   hostnames:
++  #   - "foo.remote"
++  #   - "bar.remote"
++
+</span> ## When running more than one replica alongside with persistence, different volumes are needed
+ ## per replica, since sharing a `persistence.file` across replicas does not keep metrics synced.
+ ## For this purpose, you can enable the `runAsStatefulSet` to deploy the pushgateway as a
+<span class="err">
+</span></code></pre></div></div> <h2 id="242"> <a href="#242" class="anchor-heading" aria-labelledby="242"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.2 </h2> <p><strong>Release date:</strong> 2023-11-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.2&amp;color=success" alt="AppVersion: v1.6.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Bump to 1.6.2 (#3995)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="241"> <a href="#241" class="anchor-heading" aria-labelledby="241"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.1 </h2> <p><strong>Release date:</strong> 2023-09-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.1&amp;color=success" alt="AppVersion: v1.6.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] bump pushgateway to 1.6.1 (#3785)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="240"> <a href="#240" class="anchor-heading" aria-labelledby="240"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.4.0 </h2> <p><strong>Release date:</strong> 2023-07-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.0&amp;color=success" alt="AppVersion: v1.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] move registry to quay.io (#3563)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index b61e83e7..02e5c0bf 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -12,7 +12,7 @@</span> fullnameOverride: ""
+ namespaceOverride: ""
+ 
+ image:
+<span class="gd">-  repository: prom/pushgateway
+</span><span class="gi">+  repository: quay.io/prometheus/pushgateway
+</span>   # if not set appVersion field from Chart.yaml is used
+   tag: ""
+   pullPolicy: IfNotPresent
+<span class="err">
+</span></code></pre></div></div> <h2 id="230"> <a href="#230" class="anchor-heading" aria-labelledby="230"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.3.0 </h2> <p><strong>Release date:</strong> 2023-06-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.0&amp;color=success" alt="AppVersion: v1.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] updates pushgateway image to 1.6.0 (#3511)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 011dbf29..b61e83e7 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -164,7 +164,7 @@</span> ingress:
+   #     hosts:
+   #       - pushgateway.domain.com
+ 
+<span class="gd">-tolerations: {}
+</span><span class="gi">+tolerations: []
+</span>   # - effect: NoSchedule
+   #   operator: Exists
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="220"> <a href="#220" class="anchor-heading" aria-labelledby="220"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.0 </h2> <p><strong>Release date:</strong> 2023-05-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Make path configurable in service monitor (#3373)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 0df94441..011dbf29 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -209,6 +209,11 @@</span> serviceMonitor:
+   enabled: false
+   namespace: monitoring
+ 
+<span class="gi">+  # telemetryPath: HTTP resource path from which to fetch metrics.
++  # Telemetry path, default /metrics, has to be prefixed accordingly if pushgateway sets a route prefix at start-up.
++  #
++  telemetryPath: "/metrics"
++
+</span>   # Fallback to the prometheus default unless specified
+   # interval: 10s
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="216"> <a href="#216" class="anchor-heading" aria-labelledby="216"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.6 </h2> <p><strong>Release date:</strong> 2023-05-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] fix apiVersion for PDB (#3300)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="215"> <a href="#215" class="anchor-heading" aria-labelledby="215"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.5 </h2> <p><strong>Release date:</strong> 2023-05-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Remove label duplication (#3266)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="214"> <a href="#214" class="anchor-heading" aria-labelledby="214"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.4 </h2> <p><strong>Release date:</strong> 2023-05-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Add a maintainer (#3350)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="213"> <a href="#213" class="anchor-heading" aria-labelledby="213"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.3 </h2> <p><strong>Release date:</strong> 2023-02-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Correct spelling mistake (#3003)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="212"> <a href="#212" class="anchor-heading" aria-labelledby="212"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.2 </h2> <p><strong>Release date:</strong> 2023-02-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Adjust Liveness probe default to /healthy (#3017)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 23d0a0ea..0df94441 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -103,7 +103,7 @@</span> liveness:
+   enabled: true
+   probe:
+     httpGet:
+<span class="gd">-      path: /-/ready
+</span><span class="gi">+      path: /-/healthy
+</span>       port: 9091
+     initialDelaySeconds: 10
+     timeoutSeconds: 10
+<span class="err">
+</span></code></pre></div></div> <h2 id="211"> <a href="#211" class="anchor-heading" aria-labelledby="211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.1 </h2> <p><strong>Release date:</strong> 2023-02-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] helm template error (#2985)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="210"> <a href="#210" class="anchor-heading" aria-labelledby="210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.0 </h2> <p><strong>Release date:</strong> 2023-02-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Add namespaceOverride to all resources (#2967)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index f2fd5cd1..23d0a0ea 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -8,6 +8,9 @@</span> nameOverride: ""
+ # Provide a name to substitute for the full names of resources
+ fullnameOverride: ""
+ 
+<span class="gi">+# Provide a namespace to substitude for the namespace on resources
++namespaceOverride: ""
++
+</span> image:
+   repository: prom/pushgateway
+   # if not set appVersion field from Chart.yaml is used
+<span class="err">
+</span></code></pre></div></div> <h2 id="204"> <a href="#204" class="anchor-heading" aria-labelledby="204"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.4 </h2> <p><strong>Release date:</strong> 2023-01-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Fix NodePort service type (#2958)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 90cee5c8..f2fd5cd1 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -21,6 +21,7 @@</span> service:
+   type: ClusterIP
+   port: 9091
+   targetPort: 9091
+<span class="gi">+  # nodePort: 32100
+</span> 
+   # Optional - Can be used for headless if value is "None"
+   clusterIP: ""
+<span class="err">
+</span></code></pre></div></div> <h2 id="203"> <a href="#203" class="anchor-heading" aria-labelledby="203"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.3 </h2> <p><strong>Release date:</strong> 2022-12-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Fix additionalLabels for service monitor (#2820)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="202"> <a href="#202" class="anchor-heading" aria-labelledby="202"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.2 </h2> <p><strong>Release date:</strong> 2022-12-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Fix service monitor selector (#2782) (#2783)</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="201"> <a href="#201" class="anchor-heading" aria-labelledby="201"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.1 </h2> <p><strong>Release date:</strong> 2022-12-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Hotfix new line problem (#2779)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="200"> <a href="#200" class="anchor-heading" aria-labelledby="200"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.0 </h2> <p><strong>Release date:</strong> 2022-12-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.5.1&amp;color=success" alt="AppVersion: v1.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Refactor (#2746)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index e2e9ebed..90cee5c8 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -10,7 +10,8 @@</span> fullnameOverride: ""
+ 
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v1.4.2
+</span><span class="gi">+  # if not set appVersion field from Chart.yaml is used
++  tag: ""
+</span>   pullPolicy: IfNotPresent
+ 
+ # Optional pod imagePullSecrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="1211"> <a href="#1211" class="anchor-heading" aria-labelledby="1211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.21.1 </h2> <p><strong>Release date:</strong> 2022-11-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Ensure PDB labels are same as the matchLabels of the owner app (#2666)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1210"> <a href="#1210" class="anchor-heading" aria-labelledby="1210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.21.0 </h2> <p><strong>Release date:</strong> 2022-11-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Support ingress.extraPaths (#2709)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index aed41a8f..e2e9ebed 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -132,25 +132,32 @@</span> ingress:
+   path: /
+   pathType: ImplementationSpecific
+ 
+<span class="gd">-    ## Annotations.
+-    ##
+-    # annotations:
+-    #   kubernetes.io/ingress.class: nginx
+-    #   kubernetes.io/tls-acme: 'true'
+-
+-    ## Hostnames.
+-    ## Must be provided if Ingress is enabled.
+-    ##
+-    # hosts:
+-    #   - pushgateway.domain.com
+-
+-    ## TLS configuration.
+-    ## Secrets must be manually created in the namespace.
+-    ##
+-    # tls:
+-    #   - secretName: pushgateway-tls
+-    #     hosts:
+-    #       - pushgateway.domain.com
+</span><span class="gi">+  ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
++  extraPaths: []
++  # - path: /*
++  #   backend:
++  #     serviceName: ssl-redirect
++  #     servicePort: use-annotation
++
++  ## Annotations.
++  ##
++  # annotations:
++  #   kubernetes.io/ingress.class: nginx
++  #   kubernetes.io/tls-acme: 'true'
++
++  ## Hostnames.
++  ## Must be provided if Ingress is enabled.
++  ##
++  # hosts:
++  #   - pushgateway.domain.com
++
++  ## TLS configuration.
++  ## Secrets must be manually created in the namespace.
++  ##
++  # tls:
++  #   - secretName: pushgateway-tls
++  #     hosts:
++  #       - pushgateway.domain.com
+</span> 
+ tolerations: {}
+   # - effect: NoSchedule
+<span class="err">
+</span></code></pre></div></div> <h2 id="1201"> <a href="#1201" class="anchor-heading" aria-labelledby="1201"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.20.1 </h2> <p><strong>Release date:</strong> 2022-10-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Omit clusterIP if service is of type LoadBalancer (#2579)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1200"> <a href="#1200" class="anchor-heading" aria-labelledby="1200"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.20.0 </h2> <p><strong>Release date:</strong> 2022-09-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] - Add extra init containers for pushgateway helm chart (#2480)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index cb81baa2..aed41a8f 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -56,6 +56,10 @@</span> extraVars: []
+ ##  - --persistence.interval=5m
+ extraArgs: []
+ 
+<span class="gi">+## Additional InitContainers to initialize the pod
++##
++extraInitContainers: []
++
+</span> # Optional additional containers (sidecar)
+ extraContainers: []
+   # - name: oAuth2-proxy
+<span class="err">
+</span></code></pre></div></div> <h2 id="1192"> <a href="#1192" class="anchor-heading" aria-labelledby="1192"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.19.2 </h2> <p><strong>Release date:</strong> 2022-09-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] extraVolumes and extraVolumeMounts should be empty arrays (#2495)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index aefa2bbc..cb81baa2 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -286,10 +286,10 @@</span> persistentVolume:
+   ##
+   subPath: ""
+ 
+<span class="gd">-extraVolumes: {}
+</span><span class="gi">+extraVolumes: []
+</span>   # - name: extra
+   #   emptyDir: {}
+<span class="gd">-extraVolumeMounts: {}
+</span><span class="gi">+extraVolumeMounts: []
+</span>   # - name: extra
+   #   mountPath: /usr/share/extras
+   #   readOnly: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="1191"> <a href="#1191" class="anchor-heading" aria-labelledby="1191"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.19.1 </h2> <p><strong>Release date:</strong> 2022-09-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix topologySpreadConstraints (#2501)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1190"> <a href="#1190" class="anchor-heading" aria-labelledby="1190"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.19.0 </h2> <p><strong>Release date:</strong> 2022-09-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Add topologySpreadConstraints (#2497)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 5bb8eb2b..aefa2bbc 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -184,6 +184,10 @@</span> containerSecurityContext: {}
+ ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+ affinity: {}
+ 
+<span class="gi">+## Topology spread constraints for pods
++## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/
++topologySpreadConstraints: []
++
+</span> # Enable this if you're using https://github.com/coreos/prometheus-operator
+ serviceMonitor:
+   enabled: false
+<span class="err">
+</span></code></pre></div></div> <h2 id="1183"> <a href="#1183" class="anchor-heading" aria-labelledby="1183"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.18.3 </h2> <p><strong>Release date:</strong> 2022-09-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] update notes.txt notify port (#2462)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1182"> <a href="#1182" class="anchor-heading" aria-labelledby="1182"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.18.2 </h2> <p><strong>Release date:</strong> 2022-06-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix: Metadata labels consistency (#2126)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1181"> <a href="#1181" class="anchor-heading" aria-labelledby="1181"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.18.1 </h2> <p><strong>Release date:</strong> 2022-05-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] - Upgrade pdb version to apiVersion: policy/v1 (#2096)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1180"> <a href="#1180" class="anchor-heading" aria-labelledby="1180"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.18.0 </h2> <p><strong>Release date:</strong> 2022-05-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Allow prometheus gateway to run as a StatefulSet (#2031)</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 8c5992e5..5bb8eb2b 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -159,6 +159,12 @@</span> nodeSelector: {}
+ 
+ replicaCount: 1
+ 
+<span class="gi">+## When running more than one replica alongside with persistence, different volumes are needed
++## per replica, since sharing a `persistence.file` across replicas does not keep metrics synced.
++## For this purpose, you can enable the `runAsStatefulSet` to deploy the pushgateway as a
++## StatefulSet instead of as a Deployment.
++runAsStatefulSet: false
++
+</span> ## Security context to be added to push-gateway pods
+ ##
+ securityContext:
+<span class="err">
+</span></code></pre></div></div> <h2 id="1170"> <a href="#1170" class="anchor-heading" aria-labelledby="1170"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.17.0 </h2> <p><strong>Release date:</strong> 2022-05-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Adding extra containers (#2023)</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index ecc536b6..8c5992e5 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -56,6 +56,28 @@</span> extraVars: []
+ ##  - --persistence.interval=5m
+ extraArgs: []
+ 
+<span class="gi">+# Optional additional containers (sidecar)
++extraContainers: []
++  # - name: oAuth2-proxy
++  #   args:
++  #     - -https-address=:9092
++  #     - -upstream=http://localhost:9091
++  #     - -skip-auth-regex=^/metrics
++  #     - -openshift-delegate-urls={"/":{"group":"monitoring.coreos.com","resource":"prometheuses","verb":"get"}}
++  #   image: openshift/oauth-proxy:v1.1.0
++  #   ports:
++  #       - containerPort: 9092
++  #         name: proxy
++  #   resources:
++  #       limits:
++  #         memory: 16Mi
++  #       requests:
++  #         memory: 4Mi
++  #         cpu: 20m
++  #   volumeMounts:
++  #     - mountPath: /etc/prometheus/secrets/pushgateway-tls
++  #       name: secret-pushgateway-tls
++
+</span> resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+   # choice for the user. This also increases chances charts run on environments with little
+<span class="p">@@ -164,6 +186,14 @@</span> serviceMonitor:
+   # Fallback to the prometheus default unless specified
+   # interval: 10s
+ 
+<span class="gi">+  ## scheme: HTTP scheme to use for scraping. Can be used with `tlsConfig` for example if using istio mTLS.
++  # scheme: ""
++
++  ## tlsConfig: TLS configuration to use when scraping the endpoint. For example if using istio mTLS.
++  ## Of type: https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#tlsconfig
++  # tlsConfig: {}
++
++  # bearerTokenFile:
+</span>   # Fallback to the prometheus default unless specified
+   # scrapeTimeout: 30s
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="1161"> <a href="#1161" class="anchor-heading" aria-labelledby="1161"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.16.1 </h2> <p><strong>Release date:</strong> 2022-03-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Fix indentation in resources example comment (#1837)</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 33635c92..ecc536b6 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -63,7 +63,7 @@</span> resources: {}
+   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+   # limits:
+   #   cpu: 200m
+<span class="gd">-  #    memory: 50Mi
+</span><span class="gi">+  #   memory: 50Mi
+</span>   # requests:
+   #   cpu: 100m
+   #   memory: 30Mi
+<span class="err">
+</span></code></pre></div></div> <h2 id="1160"> <a href="#1160" class="anchor-heading" aria-labelledby="1160"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.16.0 </h2> <p><strong>Release date:</strong> 2022-02-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] give the pushgateway live/ready probes the ability to add httpHeaders (#1797)</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 5d691766..33635c92 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -68,6 +68,24 @@</span> resources: {}
+   #   cpu: 100m
+   #   memory: 30Mi
+ 
+<span class="gi">+liveness:
++  enabled: true
++  probe:
++    httpGet:
++      path: /-/ready
++      port: 9091
++    initialDelaySeconds: 10
++    timeoutSeconds: 10
++
++readiness:
++  enabled: true
++  probe:
++    httpGet:
++      path: /-/ready
++      port: 9091
++    initialDelaySeconds: 10
++    timeoutSeconds: 10
++
+</span> serviceAccount:
+   # Specifies whether a ServiceAccount should be created
+   create: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="1150"> <a href="#1150" class="anchor-heading" aria-labelledby="1150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.15.0 </h2> <p><strong>Release date:</strong> 2022-01-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Add support for containerSecurityContext to fix #1741 (#1744)</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 9b730d95..5d691766 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -126,6 +126,14 @@</span> securityContext:
+   runAsUser: 65534
+   runAsNonRoot: true
+ 
+<span class="gi">+## Security context to be added to push-gateway containers
++## Having a separate variable as securityContext differs for pods and containers.
++containerSecurityContext: {}
++#  allowPrivilegeEscalation: false
++#  readOnlyRootFilesystem: true
++#  runAsUser: 65534
++#  runAsNonRoot: true
++
+</span> ## Affinity for pod assignment
+ ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+ affinity: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="1140"> <a href="#1140" class="anchor-heading" aria-labelledby="1140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.14.0 </h2> <p><strong>Release date:</strong> 2021-12-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.2&amp;color=success" alt="AppVersion: 1.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] bump prom pushgateway to latest version - 1.4.2 (#1589)</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index fbb49040..9b730d95 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -10,7 +10,7 @@</span> fullnameOverride: ""
+ 
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v1.4.1
+</span><span class="gi">+  tag: v1.4.2
+</span>   pullPolicy: IfNotPresent
+ 
+ # Optional pod imagePullSecrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="1130"> <a href="#1130" class="anchor-heading" aria-labelledby="1130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.13.0 </h2> <p><strong>Release date:</strong> 2021-11-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Support networking.k8s.io/v1 (#1443)</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 9340c15c..fbb49040 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -84,7 +84,9 @@</span> ingress:
+   ##
+   enabled: false
+   # AWS ALB requires path of /*
+<span class="gi">+  className: ""
+</span>   path: /
+<span class="gi">+  pathType: ImplementationSpecific
+</span> 
+     ## Annotations.
+     ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="1120"> <a href="#1120" class="anchor-heading" aria-labelledby="1120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.12.0 </h2> <p><strong>Release date:</strong> 2021-10-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.4.1&amp;color=success" alt="AppVersion: 1.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] increase version number (#1445)</li> <li>Update pushgateway latest (#1306)</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index d9ccdf5b..9340c15c 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -10,7 +10,7 @@</span> fullnameOverride: ""
+ 
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v1.3.0
+</span><span class="gi">+  tag: v1.4.1
+</span>   pullPolicy: IfNotPresent
+ 
+ # Optional pod imagePullSecrets
+<span class="err">
+</span></code></pre></div></div> <h2 id="1110"> <a href="#1110" class="anchor-heading" aria-labelledby="1110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.11.0 </h2> <p><strong>Release date:</strong> 2021-09-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] add extraVolumes and extraVolumeMounts to chart (#1059)</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index c3f78ea1..d9ccdf5b 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -218,6 +218,14 @@</span> persistentVolume:
+   ##
+   subPath: ""
+ 
+<span class="gi">+extraVolumes: {}
++  # - name: extra
++  #   emptyDir: {}
++extraVolumeMounts: {}
++  # - name: extra
++  #   mountPath: /usr/share/extras
++  #   readOnly: true
++
+</span> # Configuration for clusters with restrictive network policies in place:
+ # - allowAll allows access to the PushGateway from any namespace
+ # - customSelector is a list of pod/namespaceSelectors to allow access from
+<span class="err">
+</span></code></pre></div></div> <h2 id="1101"> <a href="#1101" class="anchor-heading" aria-labelledby="1101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.10.1 </h2> <p><strong>Release date:</strong> 2021-06-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Only apply clusterIP if we have a value (#954)</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1100"> <a href="#1100" class="anchor-heading" aria-labelledby="1100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.10.0 </h2> <p><strong>Release date:</strong> 2021-06-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] PriorityClassName for prom-pushgateway (#948)</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index ae22dba7..c3f78ea1 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -168,6 +168,8 @@</span> serviceMonitor:
+ # If not set then a PodDisruptionBudget will not be created
+ podDisruptionBudget: {}
+ 
+<span class="gi">+priorityClassName:
++
+</span> # Deployment Strategy type
+ strategy:
+   type: Recreate
+<span class="err">
+</span></code></pre></div></div> <h2 id="190"> <a href="#190" class="anchor-heading" aria-labelledby="190"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.9.0 </h2> <p><strong>Release date:</strong> 2021-04-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] added ClusterIP flag in values.yaml to support headless service (#324)</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index cd586269..ae22dba7 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -21,8 +21,12 @@</span> service:
+   port: 9091
+   targetPort: 9091
+ 
+<span class="gi">+  # Optional - Can be used for headless if value is "None"
++  clusterIP: ""
++
+</span>   loadBalancerIP: ""
+   loadBalancerSourceRanges: []
+<span class="gi">+
+</span> # Optional pod annotations
+ podAnnotations: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="180"> <a href="#180" class="anchor-heading" aria-labelledby="180"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.8.0 </h2> <p><strong>Release date:</strong> 2021-04-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] add loadBalancerIP and sourceranges to pushgateway service (#671)</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index e05ee201..cd586269 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -21,6 +21,8 @@</span> service:
+   port: 9091
+   targetPort: 9091
+ 
+<span class="gi">+  loadBalancerIP: ""
++  loadBalancerSourceRanges: []
+</span> # Optional pod annotations
+ podAnnotations: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="171"> <a href="#171" class="anchor-heading" aria-labelledby="171"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.7.1 </h2> <p><strong>Release date:</strong> 2021-03-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Align resource label handling (#456)</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="170"> <a href="#170" class="anchor-heading" aria-labelledby="170"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.7.0 </h2> <p><strong>Release date:</strong> 2021-02-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] fix failed release (#637)</li> <li>[prometheus-pushgateway] Adds ability to specify metricRelabelings and relabelings (#453)</li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 12e9e3d0..e05ee201 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -141,6 +141,23 @@</span> serviceMonitor:
+   # [Scraping Pushgateway](https://github.com/prometheus/pushgateway#configure-the-pushgateway-as-a-target-to-scrape)
+   honorLabels: true
+ 
+<span class="gi">+  ## Metric relabel configs to apply to samples before ingestion.
++  ## [Metric Relabeling](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#metric_relabel_configs)
++  metricRelabelings: []
++  # - action: keep
++  #   regex: 'kube_(daemonset|deployment|pod|namespace|node|statefulset).+'
++  #   sourceLabels: [__name__]
++
++  ## Relabel configs to apply to samples before ingestion.
++  ## [Relabeling](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config)
++  relabelings: []
++  # - sourceLabels: [__meta_kubernetes_pod_node_name]
++  #   separator: ;
++  #   regex: ^(.*)$
++  #   targetLabel: nodename
++  #   replacement: $1
++  #   action: replace
++
+</span> # The values to set in the PodDisruptionBudget spec (minAvailable/maxUnavailable)
+ # If not set then a PodDisruptionBudget will not be created
+ podDisruptionBudget: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="160"> <a href="#160" class="anchor-heading" aria-labelledby="160"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.0 </h2> <p><strong>Release date:</strong> 2021-02-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Adds imagePullSecrets value for deployment (#608)</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 4a56f4f4..12e9e3d0 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -13,6 +13,9 @@</span> image:
+   tag: v1.3.0
+   pullPolicy: IfNotPresent
+ 
+<span class="gi">+# Optional pod imagePullSecrets
++imagePullSecrets: []
++
+</span> service:
+   type: ClusterIP
+   port: 9091
+<span class="err">
+</span></code></pre></div></div> <h2 id="151"> <a href="#151" class="anchor-heading" aria-labelledby="151"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.5.1 </h2> <p><strong>Release date:</strong> 2020-12-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-pushgateway] Add missing fields within values.yaml (#219)</li> </ul> <h3 id="default-value-changes-45"> <a href="#default-value-changes-45" class="anchor-heading" aria-labelledby="default-value-changes-45"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 169a5cd9..4a56f4f4 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -1,6 +1,13 @@</span>
+ # Default values for prometheus-pushgateway.
+ # This is a YAML-formatted file.
+ # Declare variables to be passed into your templates.
+<span class="gi">+
++# Provide a name in place of prometheus-pushgateway for `app:` labels
++nameOverride: ""
++
++# Provide a name to substitute for the full names of resources
++fullnameOverride: ""
++
+</span> image:
+   repository: prom/pushgateway
+   tag: v1.3.0
+<span class="err">
+</span></code></pre></div></div> <h2 id="150"> <a href="#150" class="anchor-heading" aria-labelledby="150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.5.0 </h2> <p><strong>Release date:</strong> 2020-11-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>pushgateway 1.3.0 - update chart version, pushgateway version and values (#195)</li> </ul> <h3 id="default-value-changes-46"> <a href="#default-value-changes-46" class="anchor-heading" aria-labelledby="default-value-changes-46"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 63b2a43e..169a5cd9 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v1.2.0
+</span><span class="gi">+  tag: v1.3.0
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="142"> <a href="#142" class="anchor-heading" aria-labelledby="142"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.2 </h2> <p><strong>Release date:</strong> 2020-08-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Prep initial charts indexing (#14)</li> </ul> <h3 id="default-value-changes-47"> <a href="#default-value-changes-47" class="anchor-heading" aria-labelledby="default-value-changes-47"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="141"> <a href="#141" class="anchor-heading" aria-labelledby="141"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.1 </h2> <p><strong>Release date:</strong> 2020-07-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Fix networkPolicy podSelector and ingress rule (#23053)</li> </ul> <h3 id="default-value-changes-48"> <a href="#default-value-changes-48" class="anchor-heading" aria-labelledby="default-value-changes-48"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="140"> <a href="#140" class="anchor-heading" aria-labelledby="140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.0 </h2> <p><strong>Release date:</strong> 2020-04-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] configureable deployment strategy (#21685)</li> </ul> <h3 id="default-value-changes-49"> <a href="#default-value-changes-49" class="anchor-heading" aria-labelledby="default-value-changes-49"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 1ae09068..63b2a43e 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -135,6 +135,10 @@</span> serviceMonitor:
+ # If not set then a PodDisruptionBudget will not be created
+ podDisruptionBudget: {}
+ 
+<span class="gi">+# Deployment Strategy type
++strategy:
++  type: Recreate
++
+</span> persistentVolume:
+   ## If true, pushgateway will create/use a Persistent Volume Claim
+   ## If false, use emptyDir
+<span class="err">
+</span></code></pre></div></div> <h2 id="130"> <a href="#130" class="anchor-heading" aria-labelledby="130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.0 </h2> <p><strong>Release date:</strong> 2020-03-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.0&amp;color=success" alt="AppVersion: 1.2.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] upgrade to latest release (#21424)</li> </ul> <h3 id="default-value-changes-50"> <a href="#default-value-changes-50" class="anchor-heading" aria-labelledby="default-value-changes-50"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 7709c9d6..1ae09068 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v1.0.1
+</span><span class="gi">+  tag: v1.2.0
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="1215"> <a href="#1215" class="anchor-heading" aria-labelledby="1215"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.15 </h2> <p><strong>Release date:</strong> 2020-03-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.1&amp;color=success" alt="AppVersion: 1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix hard-coded path and default to “/” (#21253)</li> </ul> <h3 id="default-value-changes-51"> <a href="#default-value-changes-51" class="anchor-heading" aria-labelledby="default-value-changes-51"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 55d0bf8b..7709c9d6 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -67,6 +67,8 @@</span> ingress:
+   ## Enable Ingress.
+   ##
+   enabled: false
+<span class="gi">+  # AWS ALB requires path of /*
++  path: /
+</span> 
+     ## Annotations.
+     ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="1214"> <a href="#1214" class="anchor-heading" aria-labelledby="1214"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.14 </h2> <p><strong>Release date:</strong> 2020-01-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.1&amp;color=success" alt="AppVersion: 1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add annotation support to pushgateway service (#20351)</li> </ul> <h3 id="default-value-changes-52"> <a href="#default-value-changes-52" class="anchor-heading" aria-labelledby="default-value-changes-52"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index d9ff624b..55d0bf8b 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -17,6 +17,9 @@</span> podAnnotations: {}
+ # Optional pod labels
+ podLabels: {}
+ 
+<span class="gi">+# Optional service annotations
++serviceAnnotations: {}
++
+</span> # Optional service labels
+ serviceLabels: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="1213"> <a href="#1213" class="anchor-heading" aria-labelledby="1213"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.13 </h2> <p><strong>Release date:</strong> 2020-01-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.1&amp;color=success" alt="AppVersion: 1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Fix persistence support (#20048)</li> </ul> <h3 id="default-value-changes-53"> <a href="#default-value-changes-53" class="anchor-heading" aria-labelledby="default-value-changes-53"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1212"> <a href="#1212" class="anchor-heading" aria-labelledby="1212"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.12 </h2> <p><strong>Release date:</strong> 2020-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.1&amp;color=success" alt="AppVersion: 1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Add persistence support (#16040)</li> </ul> <h3 id="default-value-changes-54"> <a href="#default-value-changes-54" class="anchor-heading" aria-labelledby="default-value-changes-54"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index a714a399..d9ff624b 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -23,12 +23,20 @@</span> serviceLabels: {}
+ # Optional serviceAccount labels
+ serviceAccountLabels: {}
+ 
+<span class="gd">-# Optional additional arguments
+-extraArgs: []
+</span><span class="gi">+# Optional persistentVolume labels
++persistentVolumeLabels: {}
+</span> 
+ # Optional additional environment variables
+ extraVars: []
+ 
+<span class="gi">+## Additional pushgateway container arguments
++##
++## example:
++## extraArgs:
++##  - --persistence.file=/data/pushgateway.data
++##  - --persistence.interval=5m
++extraArgs: []
++
+</span> resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+   # choice for the user. This also increases chances charts run on environments with little
+<span class="p">@@ -88,6 +96,13 @@</span> nodeSelector: {}
+ 
+ replicaCount: 1
+ 
+<span class="gi">+## Security context to be added to push-gateway pods
++##
++securityContext:
++  fsGroup: 65534
++  runAsUser: 65534
++  runAsNonRoot: true
++
+</span> ## Affinity for pod assignment
+ ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+ affinity: {}
+<span class="p">@@ -115,6 +130,50 @@</span> serviceMonitor:
+ # If not set then a PodDisruptionBudget will not be created
+ podDisruptionBudget: {}
+ 
+<span class="gi">+persistentVolume:
++  ## If true, pushgateway will create/use a Persistent Volume Claim
++  ## If false, use emptyDir
++  ##
++  enabled: false
++
++  ## pushgateway data Persistent Volume access modes
++  ## Must match those of existing PV or dynamic provisioner
++  ## Ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
++  ##
++  accessModes:
++    - ReadWriteOnce
++
++  ## pushgateway data Persistent Volume Claim annotations
++  ##
++  annotations: {}
++
++  ## pushgateway data Persistent Volume existing claim name
++  ## Requires pushgateway.persistentVolume.enabled: true
++  ## If defined, PVC must be created manually before volume will be bound
++  existingClaim: ""
++
++  ## pushgateway data Persistent Volume mount root path
++  ##
++  mountPath: /data
++
++  ## pushgateway data Persistent Volume size
++  ##
++  size: 2Gi
++
++  ## pushgateway data Persistent Volume Storage Class
++  ## If defined, storageClassName: &lt;storageClass&gt;
++  ## If set to "-", storageClassName: "", which disables dynamic provisioning
++  ## If undefined (the default) or set to null, no storageClassName spec is
++  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
++  ##   GKE, AWS &amp; OpenStack)
++  ##
++  # storageClass: "-"
++
++  ## Subdirectory of pushgateway data Persistent Volume to mount
++  ## Useful if the volume's root directory is not empty
++  ##
++  subPath: ""
++
+</span> # Configuration for clusters with restrictive network policies in place:
+ # - allowAll allows access to the PushGateway from any namespace
+ # - customSelector is a list of pod/namespaceSelectors to allow access from
+<span class="err">
+</span></code></pre></div></div> <h2 id="1211-1"> <a href="#1211-1" class="anchor-heading" aria-labelledby="1211-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.11 </h2> <p><strong>Release date:</strong> 2020-01-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.1&amp;color=success" alt="AppVersion: 1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Allow to specify the nodePort when service type is NodePort (#19936)</li> </ul> <h3 id="default-value-changes-55"> <a href="#default-value-changes-55" class="anchor-heading" aria-labelledby="default-value-changes-55"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1210-1"> <a href="#1210-1" class="anchor-heading" aria-labelledby="1210-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.10 </h2> <p><strong>Release date:</strong> 2019-12-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.1&amp;color=success" alt="AppVersion: 1.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Upgrade push-gateway (#19732)</li> </ul> <h3 id="default-value-changes-56"> <a href="#default-value-changes-56" class="anchor-heading" aria-labelledby="default-value-changes-56"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 5f204c2c..a714a399 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v1.0.0
+</span><span class="gi">+  tag: v1.0.1
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="129"> <a href="#129" class="anchor-heading" aria-labelledby="129"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.9 </h2> <p><strong>Release date:</strong> 2019-12-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Fix missleading documentation about <code class="language-plaintext highlighter-rouge">metrics.enabled</code> in values documentation (#19730)</li> </ul> <h3 id="default-value-changes-57"> <a href="#default-value-changes-57" class="anchor-heading" aria-labelledby="default-value-changes-57"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="128"> <a href="#128" class="anchor-heading" aria-labelledby="128"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.8 </h2> <p><strong>Release date:</strong> 2019-12-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] fix default values for podDisruptionBudget and networkPolicy (#19680)</li> </ul> <h3 id="default-value-changes-58"> <a href="#default-value-changes-58" class="anchor-heading" aria-labelledby="default-value-changes-58"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index c9752632..5f204c2c 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -113,13 +113,13 @@</span> serviceMonitor:
+ 
+ # The values to set in the PodDisruptionBudget spec (minAvailable/maxUnavailable)
+ # If not set then a PodDisruptionBudget will not be created
+<span class="gd">-podDisruptionBudget:
+</span><span class="gi">+podDisruptionBudget: {}
+</span> 
+ # Configuration for clusters with restrictive network policies in place:
+ # - allowAll allows access to the PushGateway from any namespace
+ # - customSelector is a list of pod/namespaceSelectors to allow access from
+ # These options are mutually exclusive and the latter will take precedence.
+<span class="gd">-networkPolicy:
+</span><span class="gi">+networkPolicy: {}
+</span>   # allowAll: true
+   # customSelectors:
+   #   - namespaceSelector:
+<span class="err">
+</span></code></pre></div></div> <h2 id="127"> <a href="#127" class="anchor-heading" aria-labelledby="127"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.7 </h2> <p><strong>Release date:</strong> 2019-12-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update readiness liveness probe path for prometheus pushgateway (#19580)</li> </ul> <h3 id="default-value-changes-59"> <a href="#default-value-changes-59" class="anchor-heading" aria-labelledby="default-value-changes-59"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="126"> <a href="#126" class="anchor-heading" aria-labelledby="126"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.6 </h2> <p><strong>Release date:</strong> 2019-11-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] support for networkpolicies (#19057)</li> </ul> <h3 id="default-value-changes-60"> <a href="#default-value-changes-60" class="anchor-heading" aria-labelledby="default-value-changes-60"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 8a60aa02..c9752632 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -114,3 +114,17 @@</span> serviceMonitor:
+ # The values to set in the PodDisruptionBudget spec (minAvailable/maxUnavailable)
+ # If not set then a PodDisruptionBudget will not be created
+ podDisruptionBudget:
+<span class="gi">+
++# Configuration for clusters with restrictive network policies in place:
++# - allowAll allows access to the PushGateway from any namespace
++# - customSelector is a list of pod/namespaceSelectors to allow access from
++# These options are mutually exclusive and the latter will take precedence.
++networkPolicy:
++  # allowAll: true
++  # customSelectors:
++  #   - namespaceSelector:
++  #       matchLabels:
++  #         type: admin
++  #   - podSelector:
++  #       matchLabels:
++  #         app: myapp
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="125"> <a href="#125" class="anchor-heading" aria-labelledby="125"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.5 </h2> <p><strong>Release date:</strong> 2019-11-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Add servicemonitor configuration options (#18907)</li> </ul> <h3 id="default-value-changes-61"> <a href="#default-value-changes-61" class="anchor-heading" aria-labelledby="default-value-changes-61"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 26d3ceb7..8a60aa02 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -96,9 +96,13 @@</span> affinity: {}
+ serviceMonitor:
+   enabled: false
+   namespace: monitoring
+<span class="gd">-  # fallback to the prometheus default unless specified
+</span><span class="gi">+
++  # Fallback to the prometheus default unless specified
+</span>   # interval: 10s
+ 
+<span class="gi">+  # Fallback to the prometheus default unless specified
++  # scrapeTimeout: 30s
++
+</span>   ## Used to pass Labels that are used by the Prometheus installed in your cluster to select Service Monitors to work with
+   ## ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#prometheusspec
+   additionalLabels: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="124"> <a href="#124" class="anchor-heading" aria-labelledby="124"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.4 </h2> <p><strong>Release date:</strong> 2019-11-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Adjust servicemonitor labels (#18877)</li> </ul> <h3 id="default-value-changes-62"> <a href="#default-value-changes-62" class="anchor-heading" aria-labelledby="default-value-changes-62"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index bc19c116..26d3ceb7 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -98,11 +98,11 @@</span> serviceMonitor:
+   namespace: monitoring
+   # fallback to the prometheus default unless specified
+   # interval: 10s
+<span class="gd">-  ## Defaults to what's used if you follow CoreOS [Prometheus Install Instructions](https://github.com/helm/charts/tree/master/stable/prometheus-operator#tldr)
+-  ## [Prometheus Selector Label](https://github.com/helm/charts/tree/master/stable/prometheus-operator#prometheus-operator-1)
+-  ## [Kube Prometheus Selector Label](https://github.com/helm/charts/tree/master/stable/prometheus-operator#exporters)
+-  selector:
+-    prometheus: kube-prometheus
+</span><span class="gi">+
++  ## Used to pass Labels that are used by the Prometheus installed in your cluster to select Service Monitors to work with
++  ## ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/api.md#prometheusspec
++  additionalLabels: {}
++
+</span>   # Retain the job and instance labels of the metrics pushed to the Pushgateway
+   # [Scraping Pushgateway](https://github.com/prometheus/pushgateway#configure-the-pushgateway-as-a-target-to-scrape)
+   honorLabels: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="123"> <a href="#123" class="anchor-heading" aria-labelledby="123"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.3 </h2> <p><strong>Release date:</strong> 2019-11-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Use fullname for the servicemonitor name (#18872)</li> </ul> <h3 id="default-value-changes-63"> <a href="#default-value-changes-63" class="anchor-heading" aria-labelledby="default-value-changes-63"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="122"> <a href="#122" class="anchor-heading" aria-labelledby="122"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.2 </h2> <p><strong>Release date:</strong> 2019-11-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Compat k8s 1.16 (#18598)</li> </ul> <h3 id="default-value-changes-64"> <a href="#default-value-changes-64" class="anchor-heading" aria-labelledby="default-value-changes-64"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="121"> <a href="#121" class="anchor-heading" aria-labelledby="121"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.1 </h2> <p><strong>Release date:</strong> 2019-11-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Follow the Call for maintainers (#18662)</li> </ul> <h3 id="default-value-changes-65"> <a href="#default-value-changes-65" class="anchor-heading" aria-labelledby="default-value-changes-65"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="120"> <a href="#120" class="anchor-heading" aria-labelledby="120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.0 </h2> <p><strong>Release date:</strong> 2019-11-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix deprecated apiVersion for Deployment (#18586)</li> </ul> <h3 id="default-value-changes-66"> <a href="#default-value-changes-66" class="anchor-heading" aria-labelledby="default-value-changes-66"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="111"> <a href="#111" class="anchor-heading" aria-labelledby="111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.1 </h2> <p><strong>Release date:</strong> 2019-10-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Fix podDisruptionBudget template (#18187)</li> </ul> <h3 id="default-value-changes-67"> <a href="#default-value-changes-67" class="anchor-heading" aria-labelledby="default-value-changes-67"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="110"> <a href="#110" class="anchor-heading" aria-labelledby="110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.0 </h2> <p><strong>Release date:</strong> 2019-10-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.0&amp;color=success" alt="AppVersion: 1.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] Update default version to v1.0.0 (#18091)</li> </ul> <h3 id="default-value-changes-68"> <a href="#default-value-changes-68" class="anchor-heading" aria-labelledby="default-value-changes-68"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index b08f2a74..bc19c116 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v0.9.1
+</span><span class="gi">+  tag: v1.0.0
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="101"> <a href="#101" class="anchor-heading" aria-labelledby="101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.1 </h2> <p><strong>Release date:</strong> 2019-08-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.9.1&amp;color=success" alt="AppVersion: 0.9.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>upgrade pushgateway (#16061)</li> </ul> <h3 id="default-value-changes-69"> <a href="#default-value-changes-69" class="anchor-heading" aria-labelledby="default-value-changes-69"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index adb90803..b08f2a74 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v0.9.0
+</span><span class="gi">+  tag: v0.9.1
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="100"> <a href="#100" class="anchor-heading" aria-labelledby="100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.0 </h2> <p><strong>Release date:</strong> 2019-07-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.9.0&amp;color=success" alt="AppVersion: 0.9.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] upgrade to latest release, set chart to v1 (#15912)</li> </ul> <h3 id="default-value-changes-70"> <a href="#default-value-changes-70" class="anchor-heading" aria-labelledby="default-value-changes-70"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 2eaa38ee..adb90803 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v0.8.0
+</span><span class="gi">+  tag: v0.9.0
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="041"> <a href="#041" class="anchor-heading" aria-labelledby="041"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.1 </h2> <p><strong>Release date:</strong> 2019-07-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.0&amp;color=success" alt="AppVersion: 0.8.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/prometheus-pushgateway] add optional PodDisruptionBudget (#13293)</li> </ul> <h3 id="default-value-changes-71"> <a href="#default-value-changes-71" class="anchor-heading" aria-labelledby="default-value-changes-71"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 77a1921a..2eaa38ee 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -106,3 +106,7 @@</span> serviceMonitor:
+   # Retain the job and instance labels of the metrics pushed to the Pushgateway
+   # [Scraping Pushgateway](https://github.com/prometheus/pushgateway#configure-the-pushgateway-as-a-target-to-scrape)
+   honorLabels: true
+<span class="gi">+
++# The values to set in the PodDisruptionBudget spec (minAvailable/maxUnavailable)
++# If not set then a PodDisruptionBudget will not be created
++podDisruptionBudget:
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="040"> <a href="#040" class="anchor-heading" aria-labelledby="040"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.0 </h2> <p><strong>Release date:</strong> 2019-04-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.8.0&amp;color=success" alt="AppVersion: 0.8.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>upgrade promteheus pushgateway (#13038)</li> </ul> <h3 id="default-value-changes-72"> <a href="#default-value-changes-72" class="anchor-heading" aria-labelledby="default-value-changes-72"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index ad5a4ce5..77a1921a 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v0.6.0
+</span><span class="gi">+  tag: v0.8.0
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="031"> <a href="#031" class="anchor-heading" aria-labelledby="031"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.1 </h2> <p><strong>Release date:</strong> 2019-03-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.6.0&amp;color=success" alt="AppVersion: 0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Allow for customization of env vars on prometheus-pushgateway (#12196)</li> </ul> <h3 id="default-value-changes-73"> <a href="#default-value-changes-73" class="anchor-heading" aria-labelledby="default-value-changes-73"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index cc06ed09..ad5a4ce5 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -26,6 +26,9 @@</span> serviceAccountLabels: {}
+ # Optional additional arguments
+ extraArgs: []
+ 
+<span class="gi">+# Optional additional environment variables
++extraVars: []
++
+</span> resources: {}
+   # We usually recommend not to specify default resources and to leave this as a conscious
+   # choice for the user. This also increases chances charts run on environments with little
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2019-01-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.6.0&amp;color=success" alt="AppVersion: 0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix pushgateway labels honoring (#10728)</li> </ul> <h3 id="default-value-changes-74"> <a href="#default-value-changes-74" class="anchor-heading" aria-labelledby="default-value-changes-74"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 9900bda6..cc06ed09 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -100,3 +100,6 @@</span> serviceMonitor:
+   ## [Kube Prometheus Selector Label](https://github.com/helm/charts/tree/master/stable/prometheus-operator#exporters)
+   selector:
+     prometheus: kube-prometheus
+<span class="gi">+  # Retain the job and instance labels of the metrics pushed to the Pushgateway
++  # [Scraping Pushgateway](https://github.com/prometheus/pushgateway#configure-the-pushgateway-as-a-target-to-scrape)
++  honorLabels: true
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2018-11-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.6.0&amp;color=success" alt="AppVersion: 0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>add prometheus servicemonitor support to pushgateway (#9385)</li> </ul> <h3 id="default-value-changes-75"> <a href="#default-value-changes-75" class="anchor-heading" aria-labelledby="default-value-changes-75"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 5dd7a076..9900bda6 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -88,3 +88,15 @@</span> replicaCount: 1
+ ## Affinity for pod assignment
+ ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+ affinity: {}
+<span class="gi">+
++# Enable this if you're using https://github.com/coreos/prometheus-operator
++serviceMonitor:
++  enabled: false
++  namespace: monitoring
++  # fallback to the prometheus default unless specified
++  # interval: 10s
++  ## Defaults to what's used if you follow CoreOS [Prometheus Install Instructions](https://github.com/helm/charts/tree/master/stable/prometheus-operator#tldr)
++  ## [Prometheus Selector Label](https://github.com/helm/charts/tree/master/stable/prometheus-operator#prometheus-operator-1)
++  ## [Kube Prometheus Selector Label](https://github.com/helm/charts/tree/master/stable/prometheus-operator#exporters)
++  selector:
++    prometheus: kube-prometheus
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="016"> <a href="#016" class="anchor-heading" aria-labelledby="016"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.6 </h2> <p><strong>Release date:</strong> 2018-11-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.6.0&amp;color=success" alt="AppVersion: 0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add the serviceAccountLabels variable i forgot to document in #8567 (#8913)</li> </ul> <h3 id="default-value-changes-76"> <a href="#default-value-changes-76" class="anchor-heading" aria-labelledby="default-value-changes-76"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="015"> <a href="#015" class="anchor-heading" aria-labelledby="015"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.5 </h2> <p><strong>Release date:</strong> 2018-10-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.6.0&amp;color=success" alt="AppVersion: 0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add pod and service labels support (#8567)</li> </ul> <h3 id="default-value-changes-77"> <a href="#default-value-changes-77" class="anchor-heading" aria-labelledby="default-value-changes-77"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index c6abed5d..5dd7a076 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -14,6 +14,15 @@</span> service:
+ # Optional pod annotations
+ podAnnotations: {}
+ 
+<span class="gi">+# Optional pod labels
++podLabels: {}
++
++# Optional service labels
++serviceLabels: {}
++
++# Optional serviceAccount labels
++serviceAccountLabels: {}
++
+</span> # Optional additional arguments
+ extraArgs: []
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="014"> <a href="#014" class="anchor-heading" aria-labelledby="014"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.4 </h2> <p><strong>Release date:</strong> 2018-10-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.6.0&amp;color=success" alt="AppVersion: 0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update appVersion and image tag (#8864)</li> </ul> <h3 id="default-value-changes-78"> <a href="#default-value-changes-78" class="anchor-heading" aria-labelledby="default-value-changes-78"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="013"> <a href="#013" class="anchor-heading" aria-labelledby="013"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.3 </h2> <p><strong>Release date:</strong> 2018-10-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.6.0&amp;color=success" alt="AppVersion: 0.6.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Update appVersion and image tag (#8794)</li> </ul> <h3 id="default-value-changes-79"> <a href="#default-value-changes-79" class="anchor-heading" aria-labelledby="default-value-changes-79"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 90e08214..c6abed5d 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -3,7 +3,7 @@</span>
+ # Declare variables to be passed into your templates.
+ image:
+   repository: prom/pushgateway
+<span class="gd">-  tag: v0.4.0
+</span><span class="gi">+  tag: v0.6.0
+</span>   pullPolicy: IfNotPresent
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="012"> <a href="#012" class="anchor-heading" aria-labelledby="012"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.2 </h2> <p><strong>Release date:</strong> 2018-05-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.4.0&amp;color=success" alt="AppVersion: 0.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>pod annotations on prometheus-pushgateway pod (#5469)</li> </ul> <h3 id="default-value-changes-80"> <a href="#default-value-changes-80" class="anchor-heading" aria-labelledby="default-value-changes-80"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-pushgateway/values.yaml b/charts/prometheus-pushgateway/values.yaml
+index 70a2bc42..90e08214 100644
+</span><span class="gd">--- a/charts/prometheus-pushgateway/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-pushgateway/values.yaml
+</span><span class="p">@@ -11,6 +11,9 @@</span> service:
+   port: 9091
+   targetPort: 9091
+ 
+<span class="gi">+# Optional pod annotations
++podAnnotations: {}
++
+</span> # Optional additional arguments
+ extraArgs: []
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2018-04-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.4.0&amp;color=success" alt="AppVersion: 0.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>review wrong service port in pushgateway readme (#4679)</li> </ul> <h3 id="default-value-changes-81"> <a href="#default-value-changes-81" class="anchor-heading" aria-labelledby="default-value-changes-81"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2018-04-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=0.4.0&amp;color=success" alt="AppVersion: 0.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add prometheus pushgateway (#4620)</li> </ul> <h3 id="default-value-changes-82"> <a href="#default-value-changes-82" class="anchor-heading" aria-labelledby="default-value-changes-82"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Default values for prometheus-pushgateway.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+<span class="p">image:
+</span>  repository: prom/pushgateway
+  tag: v0.4.0
+  pullPolicy: IfNotPresent
+<span class="err">
+</span><span class="p">service:
+</span>  type: ClusterIP
+  port: 9091
+  targetPort: 9091
+<span class="err">
+</span># Optional additional arguments
+<span class="p">extraArgs: []
+</span><span class="err">
+</span><span class="p">resources: {}
+</span>  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 200m
+  #    memory: 50Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 30Mi
+<span class="err">
+</span><span class="p">serviceAccount:
+</span>  # Specifies whether a ServiceAccount should be created
+  create: true
+  # The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+<span class="err">
+</span>## Configure ingress resource that allow you to access the
+## pushgateway installation. Set up the URL
+## ref: http://kubernetes.io/docs/user-guide/ingress/
+##
+<span class="p">ingress:
+</span>  ## Enable Ingress.
+  ##
+  enabled: false
+<span class="err">
+</span>    ## Annotations.
+    ##
+    # annotations:
+    #   kubernetes.io/ingress.class: nginx
+    #   kubernetes.io/tls-acme: 'true'
+<span class="err">
+</span>    ## Hostnames.
+    ## Must be provided if Ingress is enabled.
+    ##
+    # hosts:
+    #   - pushgateway.domain.com
+<span class="err">
+</span>    ## TLS configuration.
+    ## Secrets must be manually created in the namespace.
+    ##
+    # tls:
+    #   - secretName: pushgateway-tls
+    #     hosts:
+    #       - pushgateway.domain.com
+<span class="err">
+</span><span class="p">tolerations: {}
+</span>  # - effect: NoSchedule
+  #   operator: Exists
+<span class="err">
+</span>## Node labels for pushgateway pod assignment
+## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+##
+<span class="p">nodeSelector: {}
+</span><span class="err">
+</span><span class="p">replicaCount: 1
+</span><span class="err">
+</span>## Affinity for pod assignment
+## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
+<span class="p">affinity: {}
+</span><span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

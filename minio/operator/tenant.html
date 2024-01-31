@@ -1,0 +1,2461 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(2)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(2) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(6) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(2) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(2) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>tenant | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="tenant" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/minio/operator/tenant" /> <meta property="og:url" content="https://baprx.github.io/changelogs/minio/operator/tenant" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="tenant" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"tenant","url":"https://baprx.github.io/changelogs/minio/operator/tenant"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/minio/operator">minio/operator</a></li> <li class="breadcrumb-nav-list-item"><span>tenant</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="tenant"> <a href="#tenant" class="anchor-heading" aria-labelledby="tenant"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> tenant </h1> <h2 id="next-release"> <a href="#next-release" class="anchor-heading" aria-labelledby="next-release"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Next Release </h2> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.11&amp;color=success" alt="AppVersion: v5.0.11"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix ingress creation for DNS enabled tenant (#1930)</li> <li>fix : fix incorrect indentation in secrets.existingSecret (#1910)</li> <li>Remove hardcoded storage class (#1902)</li> <li>Enable adding annotations of PVCs (#1897)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 14a7e6de..1e3e38a8 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -19,21 +19,21 @@</span> secrets:
+   name: myminio-env-configuration
+   accessKey: minio 
+   secretKey: minio123
+<span class="gd">-###
+-# The name of an existing Kubernetes secret to import to the MinIO Tenant
+-# The secret must contain a key ``config.env``.
+-# The values should be a series of export statements to set environment variables for the Tenant.
+-# For example:
+-#
+-# .. code-block:: shell
+-#
+-#    stringData:
+-#       config.env: | -
+-#         export MINIO_ROOT_USER=ROOTUSERNAME
+-#         export MINIO_ROOT_PASSWORD=ROOTUSERPASSWORD
+-#
+-existingSecret:
+-  name: myminio-env-configuration
+</span><span class="gi">+  ###
++  # The name of an existing Kubernetes secret to import to the MinIO Tenant
++  # The secret must contain a key ``config.env``.
++  # The values should be a series of export statements to set environment variables for the Tenant.
++  # For example:
++  #
++  # .. code-block:: shell
++  #
++  #    stringData:
++  #       config.env: | -
++  #         export MINIO_ROOT_USER=ROOTUSERNAME
++  #         export MINIO_ROOT_PASSWORD=ROOTUSERPASSWORD
++  #
++  #existingSecret:
++  #  name: myminio-env-configuration
+</span> ###
+ # Root key for MinIO Tenant Chart
+ tenant:
+<span class="p">@@ -109,7 +109,10 @@</span> tenant:
+       # If using Amazon Elastic Block Store (EBS) CSI driver
+       # Please make sure to set xfs for "csi.storage.k8s.io/fstype" parameter under StorageClass.parameters.
+       # Docs: https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/docs/parameters.md
+<span class="gd">-      storageClassName: standard
+</span><span class="gi">+      # storageClassName: standard
++      ###
++      # Specify `storageAnnotations &lt;https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/&gt;`__ to associate to PVCs.
++      storageAnnotations: { }
+</span>       ###
+       # Specify `annotations &lt;https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/&gt;`__ to associate to Tenant pods.
+       annotations: { }
+<span class="err">
+</span></code></pre></div></div> <h2 id="5011"> <a href="#5011" class="anchor-heading" aria-labelledby="5011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.11 </h2> <p><strong>Release date:</strong> 2023-11-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.11&amp;color=success" alt="AppVersion: v5.0.11"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v5.0.11 (#1865)</li> <li>DOCS-1021: Attempting to add autoyaml docs for Helm charts (#1827)</li> <li>disable anonymous logging in tenant helm chart (#1776)</li> <li>Additional Volumes Support for Tenant Helm Chart (#1786)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 80f01b72..14a7e6de 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -1,194 +1,345 @@</span>
+<span class="gd">-## Secret with default environment variable configurations to be used by MinIO Tenant.
+-## Not recommended for production deployments! Create the secret manually instead.
+</span><span class="gi">+###
++# Root key for dynamically creating a secret for use with configuring root MinIO User
++# Specify the ``name`` and then a list of environment variables. 
++#
++# .. important::
++#
++#    Do not use this in production environments. 
++#    This field is intended for use with rapid development or testing only.
++# 
++# For example:
++#
++# .. code-block:: yaml
++#
++#    name: myminio-env-configuration
++#    accessKey: minio
++#    secretKey: minio123
++#
+</span> secrets:
+   name: myminio-env-configuration
+<span class="gd">-  # MinIO root user and password
+-  accessKey: minio
+</span><span class="gi">+  accessKey: minio 
+</span>   secretKey: minio123
+<span class="gd">-  ## Set the value for existingSecret to use a pre created secret and dont create default one
+-  # existingSecret: random-env-configuration
+-## MinIO Tenant Definition
+</span><span class="gi">+###
++# The name of an existing Kubernetes secret to import to the MinIO Tenant
++# The secret must contain a key ``config.env``.
++# The values should be a series of export statements to set environment variables for the Tenant.
++# For example:
++#
++# .. code-block:: shell
++#
++#    stringData:
++#       config.env: | -
++#         export MINIO_ROOT_USER=ROOTUSERNAME
++#         export MINIO_ROOT_PASSWORD=ROOTUSERPASSWORD
++#
++existingSecret:
++  name: myminio-env-configuration
++###
++# Root key for MinIO Tenant Chart
+</span> tenant:
+<span class="gd">-  # Tenant name
+</span><span class="gi">+  ###
++  # The Tenant name
++  #
++  # Change this to match your preferred MinIO Tenant name.
+</span>   name: myminio
+<span class="gd">-  ### Registry location and Tag or Digest to download MinIO Server image, options:
+-  ## Option 1: Image from tag (original behaviour):
+-  # image:
+-  #    repository: quay.io/minio/minio
+-  #    tag: RELEASE.2023-10-07T15-07-38Z
+-  #    pullPolicy: IfNotPresent
+-  ## Option 2: Image from digest (added after original):
+-  # image:
+-  #    repository: quay.io/minio/minio@sha256
+-  #    digest: 28c80b379c75242c6fe793dfbf212f43c602140a0de5ebe3d9c2a3a7b9f9f983
+-  #    pullPolicy: IfNotPresent
+</span><span class="gi">+  ###
++  # Specify the Operator container image to use for the deployment.
++  # ``image.tag`` 
++  # For example, the following sets the image to the ``quay.io/minio/operator`` repo and the v5.0.11 tag.
++  # The container pulls the image if not already present:
++  #
++  # .. code-block:: yaml
++  # 
++  #    image:
++  #       repository: quay.io/minio/minio
++  #       tag: RELEASE.2023-11-15T20-43-25Z
++  #       pullPolicy: IfNotPresent
++  #
++  # The chart also supports specifying an image based on digest value:
++  # 
++  # .. code-block:: yaml
++  # 
++  #    image:
++  #       repository: quay.io/minio/minio@sha256
++  #       digest: 28c80b379c75242c6fe793dfbf212f43c602140a0de5ebe3d9c2a3a7b9f9f983
++  #       pullPolicy: IfNotPresent
++  #
++  #
+</span>   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-10-07T15-07-38Z
+</span><span class="gi">+    tag: RELEASE.2023-11-15T20-43-25Z
+</span>     pullPolicy: IfNotPresent
+<span class="gd">-  ## Customize any private registry image pull secret.
+-  ## currently only one secret registry is supported
+</span><span class="gi">+  ###
++  #
++  # An array of Kubernetes secrets to use for pulling images from a private ``image.repository``.
++  # Only one array element is supported at this time.
+</span>   imagePullSecret: { }
+<span class="gd">-  ## If a scheduler is specified here, Tenant pods will be dispatched by specified scheduler.
+-  ## If not specified, the Tenant pods will be dispatched by default scheduler.
+</span><span class="gi">+  ###
++  # The Kubernetes `Scheduler &lt;https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/&gt;`__ to use for dispatching Tenant pods.
++  #
++  # Specify an empty dictionary ``{}`` to dispatch pods with the default scheduler.
+</span>   scheduler: { }
+<span class="gd">-  ## Secret name that contains additional environment variable configurations.
+-  ## The secret is expected to have a key named config.env containing environment variables exports.
+</span><span class="gi">+  ###
++  # The Kubernetes secret name that contains MinIO environment variable configurations.
++  # The secret is expected to have a key named config.env containing environment variables exports.
+</span>   configuration:
+     name: myminio-env-configuration
+<span class="gd">-  ## Specification for MinIO Pool(s) in this Tenant.
+</span><span class="gi">+  ###
++  # Top level key for configuring MinIO Pool(s) in this Tenant.
++  #
++  # See `Operator CRD: Pools &lt;https://min.io/docs/minio/kubernetes/upstream/reference/operator-crd.html#pool&gt;`__ for more information on all subfields.
+</span>   pools:
+<span class="gd">-    ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
+-    ## For standalone mode, supply 1. For distributed mode, supply 4 or more.
+-    ## Note that the operator does not support upgrading from standalone to distributed mode.
+</span><span class="gi">+    ###
++    # The number of MinIO Tenant Pods / Servers in this pool.
++    # For standalone mode, supply 1. For distributed mode, supply 4 or more.
++    # Note that the operator does not support upgrading from standalone to distributed mode.
+</span>     - servers: 4
+<span class="gd">-      ## custom name for the pool
+</span><span class="gi">+      ###
++      # Custom name for the pool
+</span>       name: pool-0
+<span class="gd">-      ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
+</span><span class="gi">+      ###
++      # The number of volumes attached per MinIO Tenant Pod / Server.
+</span>       volumesPerServer: 4
+<span class="gd">-      ## size specifies the capacity per volume
+</span><span class="gi">+      ###
++      # The capacity per volume requested per MinIO Tenant Pod.
+</span>       size: 10Gi
+<span class="gd">-      ## storageClass specifies the storage class name to be used for this pool
+-      ### If using Amazon Elastic Block Store (EBS) CSI driver
+-      ### Please make sure to set xfs for "csi.storage.k8s.io/fstype" parameter
+-      ### under StorageClass.parameters.
+-      ### Docs: https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/docs/parameters.md
+</span><span class="gi">+      ###
++      # The `storageClass &lt;https://kubernetes.io/docs/concepts/storage/storage-classes/&gt;`__ to associate with volumes generated for this pool.
++      #
++      # If using Amazon Elastic Block Store (EBS) CSI driver
++      # Please make sure to set xfs for "csi.storage.k8s.io/fstype" parameter under StorageClass.parameters.
++      # Docs: https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/docs/parameters.md
+</span>       storageClassName: standard
+<span class="gd">-      ## Used to specify annotations for pods
+</span><span class="gi">+      ###
++      # Specify `annotations &lt;https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/&gt;`__ to associate to Tenant pods.
+</span>       annotations: { }
+<span class="gd">-      ## Used to specify labels for pods
+</span><span class="gi">+      ###
++      # Specify `labels &lt;https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/&gt;`__ to associate to Tenant pods.
+</span>       labels: { }
+<span class="gd">-      ## Used to specify a toleration for a pod
+</span><span class="gi">+      ###
++      #
++      # An array of `Toleration labels &lt;https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/&gt;`__ to associate to Tenant pods.
++      #
++      # These settings determine the distribution of pods across worker nodes.
+</span>       tolerations: [ ]
+<span class="gd">-      ## nodeSelector parameters for MinIO Pods. It specifies a map of key-value pairs. For the pod to be
+-      ## eligible to run on a node, the node must have each of the
+-      ## indicated key-value pairs as labels.
+-      ## Read more here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+</span><span class="gi">+      ###
++      # Any `Node Selectors &lt;https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/&gt;`__ to apply to Tenant pods.
++      #
++      # The Kubernetes scheduler uses these selectors to determine which worker nodes onto which it can deploy Tenant pods.
++      #
++      # If no worker nodes match the specified selectors, the Tenant deployment will fail.
+</span>       nodeSelector: { }
+<span class="gd">-      ## Affinity settings for MinIO pods. Read more about affinity
+-      ## here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity.
+</span><span class="gi">+      ###
++      #
++      # The `affinity &lt;https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/&gt;`__ or anti-affinity settings to apply to Tenant pods.
++      #
++      # These settings determine the distribution of pods across worker nodes and can help prevent or allow colocating pods onto the same worker nodes.
+</span>       affinity: { }
+<span class="gd">-      ## Configure resource requests and limits for MinIO containers
+</span><span class="gi">+      ###
++      # 
++      # The `Requests or Limits &lt;https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/&gt;`__ for resources to associate to Tenant pods.
++      #
++      # These settings can control the minimum and maximum resources requested for each pod.
++      # If no worker nodes can meet the specified requests, the Operator may fail to deploy.
+</span>       resources: { }
+<span class="gd">-      ## Configure Pod's security context
+-      ## We recommend to skip the recursive permission change by using
+-      ## fsGroupChangePolicy as OnRootMismatch because it can be pretty
+-      ## expensive for larger volumes with lots of small files.
+</span><span class="gi">+      ###
++      # The Kubernetes `SecurityContext &lt;https://kubernetes.io/docs/tasks/configure-pod-container/security-context/&gt;`__ to use for deploying Tenant resources.
++      #
++      # You may need to modify these values to meet your cluster's security and access settings.
++      #
++      # We recommend disabling recursive permission changes by setting ``fsGroupChangePolicy`` to ``OnRootMismatch`` as those operations can be expensive for certain workloads (e.g. large volumes with many small files).
+</span>       securityContext:
+         runAsUser: 1000
+         runAsGroup: 1000
+         fsGroup: 1000
+         fsGroupChangePolicy: "OnRootMismatch"
+         runAsNonRoot: true
+<span class="gd">-      ## Configure container security context
+</span><span class="gi">+      ###
++      # The Kubernetes `SecurityContext &lt;https://kubernetes.io/docs/tasks/configure-pod-container/security-context/&gt;`__ to use for deploying Tenant containers.
++      # You may need to modify these values to meet your cluster's security and access settings.
+</span>       containerSecurityContext:
+         runAsUser: 1000
+         runAsGroup: 1000
+         runAsNonRoot: true
+<span class="gd">-      ## Configure topology constraints
+</span><span class="gi">+      ###
++      #
++      # An array of `Topology Spread Constraints &lt;https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/&gt;`__ to associate to Operator Console pods.
++      #
++      # These settings determine the distribution of pods across worker nodes.
+</span>       topologySpreadConstraints: [ ]
+<span class="gd">-      ## Configure Runtime Class
+</span><span class="gi">+      ###
++      #
++      # The name of a custom `Container Runtime &lt;https://kubernetes.io/docs/concepts/containers/runtime-class/&gt;`__ to use for the Operator Console pods.
+</span>       # runtimeClassName: ""
+<span class="gd">-  ## Mount path where PV will be mounted inside container(s).
+</span><span class="gi">+  ###
++  # The mount path where Persistent Volumes are mounted inside Tenant container(s).
+</span>   mountPath: /export
+<span class="gd">-  ## Sub path inside Mount path where MinIO stores data.
+-  ## WARNING:
+-  ## We recommend you to keep the same mountPath and the same subPath once the
+-  ## Tenant has been deployed over your different PVs.
+-  ## This is because if you change these values once Tenant is deployed, then
+-  ## you will end up with multiple paths for different buckets. So please, be
+-  ## very careful to keep same value for the life of the Tenant.
+</span><span class="gi">+  ###
++  # The Sub path inside Mount path where MinIO stores data.
++  #
++  # .. warning::
++  #
++  #    Treat the ``mountPath`` and ``subPath`` values as immutable once you deploy the Tenant.
++  #    If you change these values post-deployment, then you may have different paths for new and pre-existing data.
++  #    This can vastly increase operational complexity and may result in unpredictable data states.
+</span>   subPath: /data
+<span class="gd">-  # pool metrics to be read by Prometheus
+</span><span class="gi">+  ###
++  # Configures a Prometheus-compatible scraping endpoint at the specified port.
+</span>   metrics:
+     enabled: false
+     port: 9000
+     protocol: http
+<span class="gi">+  ###
++  # Configures external certificate settings for the Tenant.
+</span>   certificate:
+<span class="gd">-    ## Use this field to provide one or more external CA certificates. This is used by MinIO
+-    ## to verify TLS connections with other applications:
+-    ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+</span><span class="gi">+    ###
++    # Specify an array of Kubernetes TLS secrets, where each entry corresponds to a secret the TLS private key and public certificate pair.
++    #
++    # This is used by MinIO to verify TLS connections from clients using those CAs
++    # If you omit this and have clients using TLS certificates minted by an external CA, those connections may fail with warnings around certificate verification.
++    # See `Operator CRD: TenantSpec &lt;https://min.io/docs/minio/kubernetes/upstream/reference/operator-crd.html#tenantspec&gt;`__.
+</span>     externalCaCertSecret: [ ]
+<span class="gd">-    ## Use this field to provide a list of Secrets with external certificates. This can be used to configure
+-    ## TLS for MinIO Tenant pods. Create secrets as explained here:
+-    ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+</span><span class="gi">+    ###
++    # Specify an array of Kubernetes secrets, where each entry corresponds to a secret contains the TLS private key and public certificate pair.
++    #
++    # Omit this to use only the MinIO Operator autogenerated certificates.
++    # 
++    # If you omit this field *and* set ``requestAutoCert`` to false, the Tenant starts without TLS.
++    #
++    # See `Operator CRD: TenantSpec &lt;https://min.io/docs/minio/kubernetes/upstream/reference/operator-crd.html#tenantspec&gt;`__.
++    #
++    # .. important::
++    #
++    #    The MinIO Operator may output TLS connectivity errors if it cannot trust the Certificate Authority (CA) which minted the custom certificates.
++    #
++    #    You can pass the CA to the Operator to allow it to trust that cert.
++    #    See `Self-Signed, Internal, and Private Certificates &lt;https://min.io/docs/minio/kubernetes/upstream/operations/network-encryption.html#self-signed-internal-and-private-certificates&gt;`__ for more information.
++    #    This step may also be necessary for globally trusted CAs where you must provide intermediate certificates to the Operator to help build the full chain of trust.
+</span>     externalCertSecret: [ ]
+<span class="gd">-    ## Enable automatic Kubernetes based certificate generation and signing as explained in
+-    ## https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster
+</span><span class="gi">+    ###
++    # Enable automatic Kubernetes based `certificate generation and signing &lt;https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster&gt;`__
+</span>     requestAutoCert: true
+<span class="gd">-    ## This field is used only when "requestAutoCert" is set to true. Use this field to set CommonName
+-    ## for the auto-generated certificate. Internal DNS name for the pod will be used if CommonName is
+-    ## not provided. DNS name format is *.minio.default.svc.cluster.local
+</span><span class="gi">+    ###
++    # This field is used only when ``requestAutoCert: true``.
++    # Use this field to set CommonName for the auto-generated certificate. 
++    # MinIO defaults to using the internal Kubernetes DNS name for the pod
++    # The default DNS name format is typically ``*.minio.default.svc.cluster.local``.
++    #
++    # See `Operator CRD: CertificateConfig &lt;https://min.io/docs/minio/kubernetes/upstream/reference/operator-crd.html#certificateconfig&gt;`__
+</span>     certConfig: { }
+<span class="gd">-  ## MinIO features to enable or disable in the MinIO Tenant
+-  ## https://github.com/minio/operator/blob/master/docs/tenant_crd.adoc#features
+</span><span class="gi">+  ###
++  # MinIO features to enable or disable in the MinIO Tenant
++  # See `Operator CRD: Features &lt;https://min.io/docs/minio/kubernetes/upstream/reference/operator-crd.html#features&gt;`__.
+</span>   features:
+     bucketDNS: false
+     domains: { }
+     enableSFTP: false
+<span class="gd">-  ## List of bucket definitions to create during tenant provisioning.
+-  ## Example:
+-  #   - name: my-minio-bucket
+-  #     objectLock: false        # optional
+-  #     region: us-east-1        # optional
+</span><span class="gi">+  ###
++  # Array of objects describing one or more buckets to create during tenant provisioning.
++  # Example:
++  # 
++  # .. code-block:: yaml
++  #
++  #    - name: my-minio-bucket
++  #         objectLock: false        # optional
++  #         region: us-east-1        # optional
+</span>   buckets: [ ]
+<span class="gd">-  ## List of secret names to use for generating MinIO users during tenant provisioning
+</span><span class="gi">+  ###
++  # Array of Kubernetes secrets from which the Operator generates MinIO users during tenant provisioning.
++  #
++  # Each secret should specify the ``CONSOLE_ACCESS_KEY`` and ``CONSOLE_SECRET_KEY`` as the access key and secret key for that user.
+</span>   users: [ ]
+<span class="gd">-  ## PodManagement policy for MinIO Tenant Pods. Can be "OrderedReady" or "Parallel"
+-  ## Refer https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy
+-  ## for details.
+</span><span class="gi">+  ###
++  # The `PodManagement &lt;https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy&gt;`__ policy for MinIO Tenant Pods. 
++  # Can be "OrderedReady" or "Parallel"
+</span>   podManagementPolicy: Parallel
+<span class="gd">-  # Liveness Probe for container liveness. Container will be restarted if the probe fails.
+-  # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.
+</span><span class="gi">+  # The `Liveness Probe &lt;https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes&gt;`__ for monitoring Tenant pod liveness. 
++  # Tenant pods will be restarted if the probe fails.
+</span>   liveness: { }
+<span class="gd">-  # Readiness Probe for container readiness. Container will be removed from service endpoints if the probe fails.
+-  # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+</span><span class="gi">+  ###
++  # `Readiness Probe &lt;https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/&gt;`__ for monitoring Tenant container readiness.
++  # Tenant pods will be removed from service endpoints if the probe fails.
+</span>   readiness: { }
+<span class="gd">-  # Startup Probe for container startup. Container will be restarted if the probe fails.
+-  # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+</span><span class="gi">+  ###
++  # `Startup Probe &lt;https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/&gt;`__ for monitoring container startup. 
++  # Tenant pods will be restarted if the probe fails.
++  # Refer 
+</span>   startup: { }
+<span class="gd">-  ## exposeServices defines the exposure of the MinIO object storage and Console services.
+-  ## service is exposed as a loadbalancer in k8s service.
+</span><span class="gi">+  ###
++  # Directs the Operator to deploy the MinIO S3 API and Console services as LoadBalancer objects.
++  #
++  # If the Kubernetes cluster has a configured LoadBalancer, it can attempt to route traffic to those services automatically.
++  #
++  # - Specify ``minio: true`` to expose the MinIO S3 API.
++  # - Specify ``console: true`` to expose the Console.
++  #
++  # Both fields default to ``false``.
+</span>   exposeServices: { }
+<span class="gd">-  # kubernetes service account associated with a specific tenant
+-  # https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+</span><span class="gi">+  ###
++  # The `Kubernetes Service Account &lt;https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/&gt;`__ associated with the Tenant.
+</span>   serviceAccountName: ""
+<span class="gd">-  # Tenant scrape configuration will be added to prometheus managed by the prometheus-operator.
+</span><span class="gi">+  ###
++  # Directs the Operator to add the Tenant's metric scrape configuration to an existing Kubernetes Prometheus deployment managed by the Prometheus Operator.
+</span>   prometheusOperator: false
+<span class="gd">-  # Enable JSON, Anonymous logging for MinIO tenants.
+-  # Refer https://github.com/minio/operator/blob/master/pkg/apis/minio.min.io/v2/types.go#L303
+-  # How logs will look:
+-  # $ k logs myminio-pool-0-0 -n default
+-  # {"level":"INFO","errKind":"","time":"2022-04-07T21:49:33.740058549Z","message":"All MinIO sub-systems initialized successfully"}
+-  # Notice they are in JSON format to be consumed
+-  logging:
+-    anonymous: true
+-    json: true
+-    quiet: true
+-  ## serviceMetadata allows passing additional labels and annotations to MinIO and Console specific
+-  ## services created by the operator.
+</span><span class="gi">+  ###
++  # Configure pod logging configuration for the MinIO Tenant.
++  #
++  # - Specify ``json`` for JSON-formatted logs.
++  # - Specify ``anonymous`` for anonymized logs.
++  # - Specify ``quiet`` to supress logging.
++  #
++  # An example of JSON-formatted logs is as follows:
++  #
++  # .. code-block:: shell
++  #
++  #    $ k logs myminio-pool-0-0 -n default
++  #    {"level":"INFO","errKind":"","time":"2022-04-07T21:49:33.740058549Z","message":"All MinIO sub-systems initialized successfully"}
++  logging: { }
++  ###
++  # serviceMetadata allows passing additional labels and annotations to MinIO and Console specific
++  # services created by the operator.
+</span>   serviceMetadata: { }
+<span class="gd">-  ## Add environment variables to be set in MinIO container (https://github.com/minio/minio/tree/master/docs/config)
+</span><span class="gi">+  ###
++  # Add environment variables to be set in MinIO container (https://github.com/minio/minio/tree/master/docs/config)
+</span>   env: [ ]
+<span class="gd">-  ## PriorityClassName indicates the Pod priority and hence importance of a Pod relative to other Pods.
+-  ## This is applied to MinIO pods only.
+-  ## Refer Kubernetes documentation for details https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#priorityclass/
+</span><span class="gi">+  ###
++  # PriorityClassName indicates the Pod priority and hence importance of a Pod relative to other Pods.
++  # This is applied to MinIO pods only.
++  # Refer Kubernetes documentation for details https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#priorityclass/
+</span>   priorityClassName: ""
+<span class="gd">-  ## Define configuration for KES (stateless and distributed key-management system)
+-  ## Refer https://github.com/minio/kes
+</span><span class="gi">+  ###
++  # An array of `Volumes &lt;https://kubernetes.io/docs/concepts/storage/volumes/&gt;`__ which the Operator can mount to Tenant pods.
++  #
++  # The volumes must exist *and* be accessible to the Tenant pods.
++  additionalVolumes: [ ]
++  ###
++  # An array of volume mount points associated to each Tenant container.
++  # 
++  # Specify each item in the array as follows:
++  #
++  # .. code-block:: yaml
++  #
++  #    volumeMounts:
++  #    - name: volumename
++  #      mountPath: /path/to/mount
++  #
++  # The ``name`` field must correspond to an entry in the ``additionalVolumes`` array.
++  additionalVolumeMounts: [ ]
++  # Define configuration for KES (stateless and distributed key-management system)
++  # Refer https://github.com/minio/kes
+</span>   #kes:
+<span class="gd">-  #  ### Image field:
+-  #  ## Image from tag (original behaviour), for example:
+</span><span class="gi">+  #  ## Image field:
++  #  # Image from tag (original behavior), for example:
+</span>   #  # image:
+   #  #   repository: quay.io/minio/kes
+<span class="gd">-  #  #   tag: 2023-10-03T00-48-37Z
+-  #  ## Image from digest (added after original behaviour), for example:
+</span><span class="gi">+  #  #   tag: 2023-11-10T10-44-28Z
++  #  # Image from digest (added after original behavior), for example:
+</span>   #  # image:
+   #  #   repository: quay.io/minio/kes@sha256
+   #  #   digest: fb15af611149892f357a8a99d1bcd8bf5dae713bd64c15e6eb27fbdb88fc208b
+   #  image:
+   #    repository: quay.io/minio/kes
+<span class="gd">-  #    tag: 2023-10-03T00-48-37Z
+</span><span class="gi">+  #    tag: 2023-11-10T10-44-28Z
+</span>   #    pullPolicy: IfNotPresent
+   #  env: [ ]
+   #  replicas: 2
+<span class="p">@@ -218,8 +369,8 @@</span> tenant:
+   #      error: on
+   #      audit: off
+   #    keys:
+<span class="gd">-  #      ## KES configured with fs (File System mode) doesnt work in Kubernetes environments and it's not recommended
+-  #      ## use a real KMS
+</span><span class="gi">+  #      # KES configured with fs (File System mode) doesn't work in Kubernetes environments and is not recommended
++  #      # use a real KMS
+</span>   #      # fs:
+   #      #   path: "./keys" # Path to directory. Keys will be stored as files. Not Recommended for Production.
+   #      vault:
+<span class="p">@@ -251,7 +402,7 @@</span> tenant:
+   #  imagePullPolicy: "IfNotPresent"
+   #  externalCertSecret: null
+   #  clientCertSecret: null
+<span class="gd">-  #  ## Key name to be created on the KMS, default is "my-minio-key"
+</span><span class="gi">+  #  # Key name to be created on the KMS, default is "my-minio-key"
+</span>   #  keyName: ""
+   #  resources: { }
+   #  nodeSelector: { }
+<span class="p">@@ -268,7 +419,10 @@</span> tenant:
+   #    runAsGroup: 1000
+   #    runAsNonRoot: true
+   #    fsGroup: 1000
+<span class="gd">-
+</span><span class="gi">+###
++# Configures `Ingress &lt;https://kubernetes.io/docs/concepts/services-networking/ingress/&gt;`__ for the Tenant S3 API and Console.
++#
++# Set the keys to conform to the Ingress controller and configuration of your choice.
+</span> ingress:
+   api:
+     enabled: false
+<span class="p">@@ -288,12 +442,8 @@</span> ingress:
+     host: minio-console.local
+     path: /
+     pathType: Prefix
+<span class="gd">-
+-## Use an extraResources template section to include additional Kubernetes resources
+-## with the Helm deployment.
+-## Example: the following creates the config secret together with the tenant:
+-#secrets:
+-#  existingSecret: custom-env-configuration
+</span><span class="gi">+# Use an extraResources template section to include additional Kubernetes resources
++# with the Helm deployment.
+</span> #extraResources:
+ #  - |
+ #    apiVersion: v1
+<span class="err">
+</span></code></pre></div></div> <h2 id="5010"> <a href="#5010" class="anchor-heading" aria-labelledby="5010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.10 </h2> <p><strong>Release date:</strong> 2023-10-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.10&amp;color=success" alt="AppVersion: v5.0.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v5.0.10 (#1813)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 996eb246..80f01b72 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -15,7 +15,7 @@</span> tenant:
+   ## Option 1: Image from tag (original behaviour):
+   # image:
+   #    repository: quay.io/minio/minio
+<span class="gd">-  #    tag: RELEASE.2023-09-07T02-05-02Z
+</span><span class="gi">+  #    tag: RELEASE.2023-10-07T15-07-38Z
+</span>   #    pullPolicy: IfNotPresent
+   ## Option 2: Image from digest (added after original):
+   # image:
+<span class="p">@@ -24,7 +24,7 @@</span> tenant:
+   #    pullPolicy: IfNotPresent
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-09-07T02-05-02Z
+</span><span class="gi">+    tag: RELEASE.2023-10-07T15-07-38Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -181,14 +181,14 @@</span> tenant:
+   #  ## Image from tag (original behaviour), for example:
+   #  # image:
+   #  #   repository: quay.io/minio/kes
+<span class="gd">-  #  #   tag: 2023-08-19T17-27-47Z
+</span><span class="gi">+  #  #   tag: 2023-10-03T00-48-37Z
+</span>   #  ## Image from digest (added after original behaviour), for example:
+   #  # image:
+   #  #   repository: quay.io/minio/kes@sha256
+   #  #   digest: fb15af611149892f357a8a99d1bcd8bf5dae713bd64c15e6eb27fbdb88fc208b
+   #  image:
+   #    repository: quay.io/minio/kes
+<span class="gd">-  #    tag: 2023-08-19T17-27-47Z
+</span><span class="gi">+  #    tag: 2023-10-03T00-48-37Z
+</span>   #    pullPolicy: IfNotPresent
+   #  env: [ ]
+   #  replicas: 2
+<span class="err">
+</span></code></pre></div></div> <h2 id="509"> <a href="#509" class="anchor-heading" aria-labelledby="509"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.9 </h2> <p><strong>Release date:</strong> 2023-09-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.9&amp;color=success" alt="AppVersion: v5.0.9"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release 5.0.9 (#1770)</li> <li>Warn to use XFS as File system type in AWS EBS (#1758)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index a5ece562..996eb246 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -15,7 +15,7 @@</span> tenant:
+   ## Option 1: Image from tag (original behaviour):
+   # image:
+   #    repository: quay.io/minio/minio
+<span class="gd">-  #    tag: RELEASE.2023-09-04T19-57-37Z
+</span><span class="gi">+  #    tag: RELEASE.2023-09-07T02-05-02Z
+</span>   #    pullPolicy: IfNotPresent
+   ## Option 2: Image from digest (added after original):
+   # image:
+<span class="p">@@ -24,7 +24,7 @@</span> tenant:
+   #    pullPolicy: IfNotPresent
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-09-04T19-57-37Z
+</span><span class="gi">+    tag: RELEASE.2023-09-07T02-05-02Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -49,6 +49,10 @@</span> tenant:
+       ## size specifies the capacity per volume
+       size: 10Gi
+       ## storageClass specifies the storage class name to be used for this pool
+<span class="gi">+      ### If using Amazon Elastic Block Store (EBS) CSI driver
++      ### Please make sure to set xfs for "csi.storage.k8s.io/fstype" parameter
++      ### under StorageClass.parameters.
++      ### Docs: https://github.com/kubernetes-sigs/aws-ebs-csi-driver/blob/master/docs/parameters.md
+</span>       storageClassName: standard
+       ## Used to specify annotations for pods
+       annotations: { }
+<span class="err">
+</span></code></pre></div></div> <h2 id="508"> <a href="#508" class="anchor-heading" aria-labelledby="508"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.8 </h2> <p><strong>Release date:</strong> 2023-09-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.8&amp;color=success" alt="AppVersion: v5.0.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release 5.0.8 (#1756)</li> <li>document <code class="language-plaintext highlighter-rouge">extraResources</code> field in tenant helm chart (#1739)</li> <li>Helm: Skip recursive permission change (#1744)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index f8e10020..a5ece562 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -15,7 +15,7 @@</span> tenant:
+   ## Option 1: Image from tag (original behaviour):
+   # image:
+   #    repository: quay.io/minio/minio
+<span class="gd">-  #    tag: RELEASE.2023-07-21T21-12-44Z
+</span><span class="gi">+  #    tag: RELEASE.2023-09-04T19-57-37Z
+</span>   #    pullPolicy: IfNotPresent
+   ## Option 2: Image from digest (added after original):
+   # image:
+<span class="p">@@ -24,7 +24,7 @@</span> tenant:
+   #    pullPolicy: IfNotPresent
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-07-21T21-12-44Z
+</span><span class="gi">+    tag: RELEASE.2023-09-04T19-57-37Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -66,11 +66,15 @@</span> tenant:
+       affinity: { }
+       ## Configure resource requests and limits for MinIO containers
+       resources: { }
+<span class="gd">-      ## Configure security context
+</span><span class="gi">+      ## Configure Pod's security context
++      ## We recommend to skip the recursive permission change by using
++      ## fsGroupChangePolicy as OnRootMismatch because it can be pretty
++      ## expensive for larger volumes with lots of small files.
+</span>       securityContext:
+         runAsUser: 1000
+         runAsGroup: 1000
+         fsGroup: 1000
+<span class="gi">+        fsGroupChangePolicy: "OnRootMismatch"
+</span>         runAsNonRoot: true
+       ## Configure container security context
+       containerSecurityContext:
+<span class="p">@@ -173,14 +177,14 @@</span> tenant:
+   #  ## Image from tag (original behaviour), for example:
+   #  # image:
+   #  #   repository: quay.io/minio/kes
+<span class="gd">-  #  #   tag: 2023-07-26T11-13-07Z
+</span><span class="gi">+  #  #   tag: 2023-08-19T17-27-47Z
+</span>   #  ## Image from digest (added after original behaviour), for example:
+   #  # image:
+   #  #   repository: quay.io/minio/kes@sha256
+   #  #   digest: fb15af611149892f357a8a99d1bcd8bf5dae713bd64c15e6eb27fbdb88fc208b
+   #  image:
+   #    repository: quay.io/minio/kes
+<span class="gd">-  #    tag: 2023-07-26T11-13-07Z
+</span><span class="gi">+  #    tag: 2023-08-19T17-27-47Z
+</span>   #    pullPolicy: IfNotPresent
+   #  env: [ ]
+   #  replicas: 2
+<span class="p">@@ -280,3 +284,20 @@</span> ingress:
+     host: minio-console.local
+     path: /
+     pathType: Prefix
+<span class="gi">+
++## Use an extraResources template section to include additional Kubernetes resources
++## with the Helm deployment.
++## Example: the following creates the config secret together with the tenant:
++#secrets:
++#  existingSecret: custom-env-configuration
++#extraResources:
++#  - |
++#    apiVersion: v1
++#    kind: Secret
++#    type: Opaque
++#    metadata:
++#      name: {{ dig "secrets" "existingSecret" "" (.Values | merge (dict)) }}
++#    stringData:
++#      config.env: |-
++#        export MINIO_ROOT_USER='minio'
++#        export MINIO_ROOT_PASSWORD='minio123'
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="507"> <a href="#507" class="anchor-heading" aria-labelledby="507"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.7 </h2> <p><strong>Release date:</strong> 2023-08-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.7&amp;color=success" alt="AppVersion: v5.0.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release 5.0.7 (#1709)</li> <li>Helm: Adding digest option in Operator image (#1706)</li> <li>Add SFTP support (#1685)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index d5d6c542..f8e10020 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -11,10 +11,20 @@</span> secrets:
+ tenant:
+   # Tenant name
+   name: myminio
+<span class="gd">-  ## Registry location and Tag to download MinIO Server image
+</span><span class="gi">+  ### Registry location and Tag or Digest to download MinIO Server image, options:
++  ## Option 1: Image from tag (original behaviour):
++  # image:
++  #    repository: quay.io/minio/minio
++  #    tag: RELEASE.2023-07-21T21-12-44Z
++  #    pullPolicy: IfNotPresent
++  ## Option 2: Image from digest (added after original):
++  # image:
++  #    repository: quay.io/minio/minio@sha256
++  #    digest: 28c80b379c75242c6fe793dfbf212f43c602140a0de5ebe3d9c2a3a7b9f9f983
++  #    pullPolicy: IfNotPresent
+</span>   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-06-23T20-26-00Z
+</span><span class="gi">+    tag: RELEASE.2023-07-21T21-12-44Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -107,6 +117,7 @@</span> tenant:
+   features:
+     bucketDNS: false
+     domains: { }
+<span class="gi">+    enableSFTP: false
+</span>   ## List of bucket definitions to create during tenant provisioning.
+   ## Example:
+   #   - name: my-minio-bucket
+<span class="p">@@ -158,7 +169,19 @@</span> tenant:
+   ## Define configuration for KES (stateless and distributed key-management system)
+   ## Refer https://github.com/minio/kes
+   #kes:
+<span class="gd">-  #  image: "" # minio/kes:2023-05-02T22-48-10Z
+</span><span class="gi">+  #  ### Image field:
++  #  ## Image from tag (original behaviour), for example:
++  #  # image:
++  #  #   repository: quay.io/minio/kes
++  #  #   tag: 2023-07-26T11-13-07Z
++  #  ## Image from digest (added after original behaviour), for example:
++  #  # image:
++  #  #   repository: quay.io/minio/kes@sha256
++  #  #   digest: fb15af611149892f357a8a99d1bcd8bf5dae713bd64c15e6eb27fbdb88fc208b
++  #  image:
++  #    repository: quay.io/minio/kes
++  #    tag: 2023-07-26T11-13-07Z
++  #    pullPolicy: IfNotPresent
+</span>   #  env: [ ]
+   #  replicas: 2
+   #  configuration: |-
+<span class="err">
+</span></code></pre></div></div> <h2 id="506"> <a href="#506" class="anchor-heading" aria-labelledby="506"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.6 </h2> <p><strong>Release date:</strong> 2023-06-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.6&amp;color=success" alt="AppVersion: v5.0.6"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v5.0.6 (#1665)</li> <li>Tenant chart: : add extra resources capability (#1643)</li> <li>Reformat chart templates with minor property fixes (#1647)</li> <li>Warn user about the proper use of subPath field (#1594)</li> <li>Dont create default secret if <code class="language-plaintext highlighter-rouge">existingSecret</code> value set (#1663)</li> <li>Added bucket schema example to tenant values file (#1657)</li> <li>moving Tenant scheduler to correct location (#1627)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 71ad56c8..d5d6c542 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -5,6 +5,8 @@</span> secrets:
+   # MinIO root user and password
+   accessKey: minio
+   secretKey: minio123
+<span class="gi">+  ## Set the value for existingSecret to use a pre created secret and dont create default one
++  # existingSecret: random-env-configuration
+</span> ## MinIO Tenant Definition
+ tenant:
+   # Tenant name
+<span class="p">@@ -12,7 +14,7 @@</span> tenant:
+   ## Registry location and Tag to download MinIO Server image
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-05-27T05-56-19Z
+</span><span class="gi">+    tag: RELEASE.2023-06-23T20-26-00Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -72,6 +74,12 @@</span> tenant:
+   ## Mount path where PV will be mounted inside container(s).
+   mountPath: /export
+   ## Sub path inside Mount path where MinIO stores data.
+<span class="gi">+  ## WARNING:
++  ## We recommend you to keep the same mountPath and the same subPath once the
++  ## Tenant has been deployed over your different PVs.
++  ## This is because if you change these values once Tenant is deployed, then
++  ## you will end up with multiple paths for different buckets. So please, be
++  ## very careful to keep same value for the life of the Tenant.
+</span>   subPath: /data
+   # pool metrics to be read by Prometheus
+   metrics:
+<span class="p">@@ -99,7 +107,11 @@</span> tenant:
+   features:
+     bucketDNS: false
+     domains: { }
+<span class="gd">-  ## List of bucket names to create during tenant provisioning
+</span><span class="gi">+  ## List of bucket definitions to create during tenant provisioning.
++  ## Example:
++  #   - name: my-minio-bucket
++  #     objectLock: false        # optional
++  #     region: us-east-1        # optional
+</span>   buckets: [ ]
+   ## List of secret names to use for generating MinIO users during tenant provisioning
+   users: [ ]
+<span class="err">
+</span></code></pre></div></div> <h2 id="505"> <a href="#505" class="anchor-heading" aria-labelledby="505"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.5 </h2> <p><strong>Release date:</strong> 2023-05-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.5&amp;color=success" alt="AppVersion: v5.0.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release 5.0.5 (#1619)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 97592105..71ad56c8 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -12,7 +12,7 @@</span> tenant:
+   ## Registry location and Tag to download MinIO Server image
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-04-20T17-56-55Z
+</span><span class="gi">+    tag: RELEASE.2023-05-27T05-56-19Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -146,7 +146,7 @@</span> tenant:
+   ## Define configuration for KES (stateless and distributed key-management system)
+   ## Refer https://github.com/minio/kes
+   #kes:
+<span class="gd">-  #  image: "" # minio/kes:2023-04-18T19-36-09Z
+</span><span class="gi">+  #  image: "" # minio/kes:2023-05-02T22-48-10Z
+</span>   #  env: [ ]
+   #  replicas: 2
+   #  configuration: |-
+<span class="err">
+</span></code></pre></div></div> <h2 id="504"> <a href="#504" class="anchor-heading" aria-labelledby="504"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.4 </h2> <p><strong>Release date:</strong> 2023-04-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.4&amp;color=success" alt="AppVersion: v5.0.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release 5.0.4 (#1582)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 05fb2838..97592105 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -12,7 +12,7 @@</span> tenant:
+   ## Registry location and Tag to download MinIO Server image
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-03-24T21-41-23Z
+</span><span class="gi">+    tag: RELEASE.2023-04-20T17-56-55Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -146,7 +146,7 @@</span> tenant:
+   ## Define configuration for KES (stateless and distributed key-management system)
+   ## Refer https://github.com/minio/kes
+   #kes:
+<span class="gd">-  #  image: "" # minio/kes:2023-04-03T16-41-28Z
+</span><span class="gi">+  #  image: "" # minio/kes:2023-04-18T19-36-09Z
+</span>   #  env: [ ]
+   #  replicas: 2
+   #  configuration: |-
+<span class="err">
+</span></code></pre></div></div> <h2 id="503"> <a href="#503" class="anchor-heading" aria-labelledby="503"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.3 </h2> <p><strong>Release date:</strong> 2023-04-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.3&amp;color=success" alt="AppVersion: v5.0.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v5.0.3 (#1554)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 7b6fe840..05fb2838 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -146,7 +146,7 @@</span> tenant:
+   ## Define configuration for KES (stateless and distributed key-management system)
+   ## Refer https://github.com/minio/kes
+   #kes:
+<span class="gd">-  #  image: "" # minio/kes:2023-02-15T14-54-37Z
+</span><span class="gi">+  #  image: "" # minio/kes:2023-04-03T16-41-28Z
+</span>   #  env: [ ]
+   #  replicas: 2
+   #  configuration: |-
+<span class="err">
+</span></code></pre></div></div> <h2 id="502"> <a href="#502" class="anchor-heading" aria-labelledby="502"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.2 </h2> <p><strong>Release date:</strong> 2023-04-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.2&amp;color=success" alt="AppVersion: v5.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v5.0.2 (#1541)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="501"> <a href="#501" class="anchor-heading" aria-labelledby="501"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.1 </h2> <p><strong>Release date:</strong> 2023-03-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.1&amp;color=success" alt="AppVersion: v5.0.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v5.0.1 (#1531)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="500"> <a href="#500" class="anchor-heading" aria-labelledby="500"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.0 </h2> <p><strong>Release date:</strong> 2023-03-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v5.0.0&amp;color=success" alt="AppVersion: v5.0.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v5.0.0 (#1520)</li> <li>Organize Examples to use a consitent name (#1496)</li> <li>Operator STS (#1414)</li> <li>Introduce Sidecar Args (#1437)</li> <li>By default disable the audit logs and prometheus (#1433)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index efb4bfeb..7b6fe840 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -1,19 +1,18 @@</span>
+ ## Secret with default environment variable configurations to be used by MinIO Tenant.
+ ## Not recommended for production deployments! Create the secret manually instead.
+ secrets:
+<span class="gd">-  name: minio1-env-configuration
+</span><span class="gi">+  name: myminio-env-configuration
+</span>   # MinIO root user and password
+   accessKey: minio
+   secretKey: minio123
+<span class="gd">-
+</span> ## MinIO Tenant Definition
+ tenant:
+   # Tenant name
+<span class="gd">-  name: minio1
+</span><span class="gi">+  name: myminio
+</span>   ## Registry location and Tag to download MinIO Server image
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2023-01-12T02-06-16Z
+</span><span class="gi">+    tag: RELEASE.2023-03-24T21-41-23Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -24,7 +23,7 @@</span> tenant:
+   ## Secret name that contains additional environment variable configurations.
+   ## The secret is expected to have a key named config.env containing environment variables exports.
+   configuration:
+<span class="gd">-    name: minio1-env-configuration
+</span><span class="gi">+    name: myminio-env-configuration
+</span>   ## Specification for MinIO Pool(s) in this Tenant.
+   pools:
+     ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
+<span class="p">@@ -96,7 +95,7 @@</span> tenant:
+     ## not provided. DNS name format is *.minio.default.svc.cluster.local
+     certConfig: { }
+   ## MinIO features to enable or disable in the MinIO Tenant
+<span class="gd">-  ## https://github.com/minio/operator/blob/master/docs/crd.adoc#features
+</span><span class="gi">+  ## https://github.com/minio/operator/blob/master/docs/tenant_crd.adoc#features
+</span>   features:
+     bucketDNS: false
+     domains: { }
+<span class="p">@@ -128,7 +127,7 @@</span> tenant:
+   # Enable JSON, Anonymous logging for MinIO tenants.
+   # Refer https://github.com/minio/operator/blob/master/pkg/apis/minio.min.io/v2/types.go#L303
+   # How logs will look:
+<span class="gd">-  # $ k logs minio1-pool-0-0 -n default
+</span><span class="gi">+  # $ k logs myminio-pool-0-0 -n default
+</span>   # {"level":"INFO","errKind":"","time":"2022-04-07T21:49:33.740058549Z","message":"All MinIO sub-systems initialized successfully"}
+   # Notice they are in JSON format to be consumed
+   logging:
+<span class="p">@@ -147,7 +146,7 @@</span> tenant:
+   ## Define configuration for KES (stateless and distributed key-management system)
+   ## Refer https://github.com/minio/kes
+   #kes:
+<span class="gd">-  #  image: "" # minio/kes:v0.18.0
+</span><span class="gi">+  #  image: "" # minio/kes:2023-02-15T14-54-37Z
+</span>   #  env: [ ]
+   #  replicas: 2
+   #  configuration: |-
+<span class="p">@@ -226,83 +225,6 @@</span> tenant:
+   #    runAsGroup: 1000
+   #    runAsNonRoot: true
+   #    fsGroup: 1000
+<span class="gd">-  ## Prometheus setup for MinIO Tenant.
+-  prometheus:
+-    # When set to true disables the creation of prometheus deployment
+-    disabled: false
+-    image: "" # defaults to quay.io/prometheus/prometheus:latest
+-    env: [ ]
+-    sidecarimage: "" # defaults to alpine
+-    initimage: "" # defaults to busybox:1.33.1
+-    diskCapacityGB: 1
+-    storageClassName: standard
+-    annotations: { }
+-    labels: { }
+-    nodeSelector: { }
+-    tolerations: [ ]
+-    affinity:
+-      nodeAffinity: { }
+-      podAffinity: { }
+-      podAntiAffinity: { }
+-    resources: { }
+-    serviceAccountName: ""
+-    securityContext:
+-      runAsUser: 1000
+-      runAsGroup: 1000
+-      runAsNonRoot: true
+-      fsGroup: 1000
+-  ## LogSearch API setup for MinIO Tenant.
+-  log:
+-    # When set to true disables the creation of logsearch api deployment
+-    disabled: false
+-    image: "" # defaults to minio/operator:v4.4.17
+-    env: [ ]
+-    resources: { }
+-    nodeSelector: { }
+-    affinity:
+-      nodeAffinity: { }
+-      podAffinity: { }
+-      podAntiAffinity: { }
+-    tolerations: [ ]
+-    annotations: { }
+-    labels: { }
+-    audit:
+-      diskCapacityGB: 1
+-    ## Postgres setup for LogSearch API
+-    db:
+-      image: "" # defaults to library/postgres
+-      env: [ ]
+-      initimage: "" # defaults to busybox:1.33.1
+-      volumeClaimTemplate:
+-        metadata: { }
+-        spec:
+-          storageClassName: standard
+-          accessModes:
+-            - ReadWriteOnce
+-          resources:
+-            requests:
+-              storage: 1Gi
+-      resources: { }
+-      nodeSelector: { }
+-      affinity:
+-        nodeAffinity: { }
+-        podAffinity: { }
+-        podAntiAffinity: { }
+-      tolerations: [ ]
+-      annotations: { }
+-      labels: { }
+-      serviceAccountName: ""
+-      securityContext:
+-        runAsUser: 999
+-        runAsGroup: 999
+-        runAsNonRoot: true
+-        fsGroup: 999
+-    serviceAccountName: ""
+-    securityContext:
+-      runAsUser: 1000
+-      runAsGroup: 1000
+-      runAsNonRoot: true
+-      fsGroup: 1000
+</span> 
+ ingress:
+   api:
+<span class="err">
+</span></code></pre></div></div> <h2 id="458"> <a href="#458" class="anchor-heading" aria-labelledby="458"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.8 </h2> <p><strong>Release date:</strong> 2023-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.8&amp;color=success" alt="AppVersion: v4.5.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.8 (#1404)</li> <li>Not able to disable log and prometheus deployments because of typo (#1398)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index d7f99967..efb4bfeb 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -13,7 +13,7 @@</span> tenant:
+   ## Registry location and Tag to download MinIO Server image
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2022-05-26T05-48-41Z
+</span><span class="gi">+    tag: RELEASE.2023-01-12T02-06-16Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="err">
+</span></code></pre></div></div> <h2 id="457"> <a href="#457" class="anchor-heading" aria-labelledby="457"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.7 </h2> <p><strong>Release date:</strong> 2023-01-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.7&amp;color=success" alt="AppVersion: v4.5.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.7 (#1396)</li> <li>Tenant helm flags (#1391)</li> <li>Fix nested values in Tenant Helm template (#1355)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 7401e6f4..d7f99967 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -228,6 +228,8 @@</span> tenant:
+   #    fsGroup: 1000
+   ## Prometheus setup for MinIO Tenant.
+   prometheus:
+<span class="gi">+    # When set to true disables the creation of prometheus deployment
++    disabled: false
+</span>     image: "" # defaults to quay.io/prometheus/prometheus:latest
+     env: [ ]
+     sidecarimage: "" # defaults to alpine
+<span class="p">@@ -251,6 +253,8 @@</span> tenant:
+       fsGroup: 1000
+   ## LogSearch API setup for MinIO Tenant.
+   log:
+<span class="gi">+    # When set to true disables the creation of logsearch api deployment
++    disabled: false
+</span>     image: "" # defaults to minio/operator:v4.4.17
+     env: [ ]
+     resources: { }
+<span class="err">
+</span></code></pre></div></div> <h2 id="456"> <a href="#456" class="anchor-heading" aria-labelledby="456"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.6 </h2> <p><strong>Release date:</strong> 2023-01-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.6&amp;color=success" alt="AppVersion: v4.5.6"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.6 (#1379)</li> <li>Add ContainerSecurityContext to Pools (#1372)</li> <li>Enable configuration of startupProbe in containers created using Helm (#1370)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 9326a457..7401e6f4 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -56,7 +56,16 @@</span> tenant:
+       ## Configure resource requests and limits for MinIO containers
+       resources: { }
+       ## Configure security context
+<span class="gd">-      securityContext: { }
+</span><span class="gi">+      securityContext:
++        runAsUser: 1000
++        runAsGroup: 1000
++        fsGroup: 1000
++        runAsNonRoot: true
++      ## Configure container security context
++      containerSecurityContext:
++        runAsUser: 1000
++        runAsGroup: 1000
++        runAsNonRoot: true
+</span>       ## Configure topology constraints
+       topologySpreadConstraints: [ ]
+       ## Configure Runtime Class
+<span class="p">@@ -105,6 +114,9 @@</span> tenant:
+   # Readiness Probe for container readiness. Container will be removed from service endpoints if the probe fails.
+   # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+   readiness: { }
+<span class="gi">+  # Startup Probe for container startup. Container will be restarted if the probe fails.
++  # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
++  startup: { }
+</span>   ## exposeServices defines the exposure of the MinIO object storage and Console services.
+   ## service is exposed as a loadbalancer in k8s service.
+   exposeServices: { }
+<span class="err">
+</span></code></pre></div></div> <h2 id="455"> <a href="#455" class="anchor-heading" aria-labelledby="455"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.5 </h2> <p><strong>Release date:</strong> 2022-12-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.5&amp;color=success" alt="AppVersion: v4.5.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.5 (#1360)</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="454"> <a href="#454" class="anchor-heading" aria-labelledby="454"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.4 </h2> <p><strong>Release date:</strong> 2022-11-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.4&amp;color=success" alt="AppVersion: v4.5.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.4 (#1325)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="453"> <a href="#453" class="anchor-heading" aria-labelledby="453"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.3 </h2> <p><strong>Release date:</strong> 2022-10-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.3&amp;color=success" alt="AppVersion: v4.5.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.3 (#1316)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="452"> <a href="#452" class="anchor-heading" aria-labelledby="452"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.2 </h2> <p><strong>Release date:</strong> 2022-10-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.2&amp;color=success" alt="AppVersion: v4.5.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.2 (#1308)</li> <li>Fix configuration name set in tenant helm chart (#1303)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="451"> <a href="#451" class="anchor-heading" aria-labelledby="451"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.1 </h2> <p><strong>Release date:</strong> 2022-09-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.1&amp;color=success" alt="AppVersion: v4.5.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.1 (#1295)</li> <li>Fix incorrect quoting of objects in the tenant helm chart template (#1293)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="450"> <a href="#450" class="anchor-heading" aria-labelledby="450"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.0 </h2> <p><strong>Release date:</strong> 2022-09-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.5.0&amp;color=success" alt="AppVersion: v4.5.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.5.0 (#1281)</li> <li>Bugfix logsearchapi toleration (#1272)</li> <li>Removing credsSecret required field in tenant spec (#1009)</li> <li>Add configuration name support to tenant helm chart (#1232)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 841b5990..9326a457 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -1,7 +1,8 @@</span>
+<span class="gd">-## Secret with credentials to be used by MinIO Tenant
+</span><span class="gi">+## Secret with default environment variable configurations to be used by MinIO Tenant.
++## Not recommended for production deployments! Create the secret manually instead.
+</span> secrets:
+<span class="gd">-  # create a kubernetes configuration secret object with the accessKey and secretKey as defined here.
+</span>   name: minio1-env-configuration
+<span class="gi">+  # MinIO root user and password
+</span>   accessKey: minio
+   secretKey: minio123
+ 
+<span class="p">@@ -20,6 +21,10 @@</span> tenant:
+   ## If a scheduler is specified here, Tenant pods will be dispatched by specified scheduler.
+   ## If not specified, the Tenant pods will be dispatched by default scheduler.
+   scheduler: { }
+<span class="gi">+  ## Secret name that contains additional environment variable configurations.
++  ## The secret is expected to have a key named config.env containing environment variables exports.
++  configuration:
++    name: minio1-env-configuration
+</span>   ## Specification for MinIO Pool(s) in this Tenant.
+   pools:
+     ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
+<span class="p">@@ -220,6 +225,7 @@</span> tenant:
+     annotations: { }
+     labels: { }
+     nodeSelector: { }
+<span class="gi">+    tolerations: [ ]
+</span>     affinity:
+       nodeAffinity: { }
+       podAffinity: { }
+<span class="err">
+</span></code></pre></div></div> <h2 id="4428"> <a href="#4428" class="anchor-heading" aria-labelledby="4428"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.28 </h2> <p><strong>Release date:</strong> 2022-08-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.28&amp;color=success" alt="AppVersion: v4.4.28"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.28 (#1227)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4427"> <a href="#4427" class="anchor-heading" aria-labelledby="4427"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.27 </h2> <p><strong>Release date:</strong> 2022-07-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.27&amp;color=success" alt="AppVersion: v4.4.27"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.27 (#1221)</li> <li>Runtime Class Name for Helm (#1218)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index e23369fc..841b5990 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -54,6 +54,8 @@</span> tenant:
+       securityContext: { }
+       ## Configure topology constraints
+       topologySpreadConstraints: [ ]
+<span class="gi">+      ## Configure Runtime Class
++      # runtimeClassName: ""
+</span>   ## Mount path where PV will be mounted inside container(s).
+   mountPath: /export
+   ## Sub path inside Mount path where MinIO stores data.
+<span class="err">
+</span></code></pre></div></div> <h2 id="4426"> <a href="#4426" class="anchor-heading" aria-labelledby="4426"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.26 </h2> <p><strong>Release date:</strong> 2022-07-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.26&amp;color=success" alt="AppVersion: v4.4.26"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.26 (#1210)</li> <li>Add tenant.features.bucketDNS and tenant.features.domains to tenant helm chart (#1193)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index eb6c06a8..e23369fc 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -79,11 +79,11 @@</span> tenant:
+     ## for the auto-generated certificate. Internal DNS name for the pod will be used if CommonName is
+     ## not provided. DNS name format is *.minio.default.svc.cluster.local
+     certConfig: { }
+<span class="gd">-  ## Enable S3 specific features such as Bucket DNS which would allow `buckets` to be
+-  ## accessible as DNS entries of form `&lt;bucketname&gt;.minio.default.svc.cluster.local`
+-  s3:
+-    ## This feature is turned off by default
+</span><span class="gi">+  ## MinIO features to enable or disable in the MinIO Tenant
++  ## https://github.com/minio/operator/blob/master/docs/crd.adoc#features
++  features:
+</span>     bucketDNS: false
+<span class="gi">+    domains: { }
+</span>   ## List of bucket names to create during tenant provisioning
+   buckets: [ ]
+   ## List of secret names to use for generating MinIO users during tenant provisioning
+<span class="err">
+</span></code></pre></div></div> <h2 id="4425"> <a href="#4425" class="anchor-heading" aria-labelledby="4425"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.25 </h2> <p><strong>Release date:</strong> 2022-06-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.25&amp;color=success" alt="AppVersion: v4.4.25"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.25 (#1182)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4424"> <a href="#4424" class="anchor-heading" aria-labelledby="4424"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.24 </h2> <p><strong>Release date:</strong> 2022-06-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.24&amp;color=success" alt="AppVersion: v4.4.24"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.24 (#1175)</li> <li>Add support for custom environment variables on all services (#1174)</li> <li>Migrate tenant helm chart to use configuration file instead of credsSecret (#1171)</li> <li>Adding kes-configuration example on tenant helm chart (#1170)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 8ae57b46..eb6c06a8 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -1,8 +1,7 @@</span>
+ ## Secret with credentials to be used by MinIO Tenant
+ secrets:
+<span class="gd">-  # create a kubernetes secret object with the accessKey and secretKey as defined here.
+-  enabled: true
+-  name: minio1-secret
+</span><span class="gi">+  # create a kubernetes configuration secret object with the accessKey and secretKey as defined here.
++  name: minio1-env-configuration
+</span>   accessKey: minio
+   secretKey: minio123
+ 
+<span class="p">@@ -129,10 +128,65 @@</span> tenant:
+   ## Define configuration for KES (stateless and distributed key-management system)
+   ## Refer https://github.com/minio/kes
+   #kes:
+<span class="gd">-  #  image: "" # minio/kes:v0.17.6
+</span><span class="gi">+  #  image: "" # minio/kes:v0.18.0
++  #  env: [ ]
+</span>   #  replicas: 2
+<span class="gd">-  #  kesSecret:
+-  #    name: kes-configuration
+</span><span class="gi">+  #  configuration: |-
++  #    address: :7373
++  #    root: _ # Effectively disabled since no root identity necessary.
++  #    tls:
++  #      key: /tmp/kes/server.key   # Path to the TLS private key
++  #      cert: /tmp/kes/server.crt # Path to the TLS certificate
++  #      proxy:
++  #        identities: []
++  #        header:
++  #          cert: X-Tls-Client-Cert
++  #    policy:
++  #      my-policy:
++  #        paths:
++  #        - /v1/key/create/*
++  #        - /v1/key/generate/*
++  #        - /v1/key/decrypt/*
++  #        identities:
++  #        - ${MINIO_KES_IDENTITY}
++  #    cache:
++  #      expiry:
++  #        any: 5m0s
++  #        unused: 20s
++  #    log:
++  #      error: on
++  #      audit: off
++  #    keys:
++  #      ## KES configured with fs (File System mode) doesnt work in Kubernetes environments and it's not recommended
++  #      ## use a real KMS
++  #      # fs:
++  #      #   path: "./keys" # Path to directory. Keys will be stored as files. Not Recommended for Production.
++  #      vault:
++  #        endpoint: "http://vault.default.svc.cluster.local:8200" # The Vault endpoint
++  #        namespace: "" # An optional Vault namespace. See: https://www.vaultproject.io/docs/enterprise/namespaces/index.html
++  #        prefix: "my-minio"    # An optional K/V prefix. The server will store keys under this prefix.
++  #        approle:    # AppRole credentials. See: https://www.vaultproject.io/docs/auth/approle.html
++  #          id: "&lt;YOUR APPROLE ID HERE&gt;"      # Your AppRole Role ID
++  #          secret: "&lt;YOUR APPROLE SECRET ID HERE&gt;"  # Your AppRole Secret ID
++  #          retry: 15s  # Duration until the server tries to re-authenticate after connection loss.
++  #        tls:        # The Vault client TLS configuration for mTLS authentication and certificate verification
++  #          key: ""     # Path to the TLS client private key for mTLS authentication to Vault
++  #          cert: ""    # Path to the TLS client certificate for mTLS authentication to Vault
++  #          ca: ""      # Path to one or multiple PEM root CA certificates
++  #        status:     # Vault status configuration. The server will periodically reach out to Vault to check its status.
++  #          ping: 10s   # Duration until the server checks Vault's status again.
++  #      # aws:
++  #      #   # The AWS SecretsManager key store. The server will store
++  #      #   # secret keys at the AWS SecretsManager encrypted with
++  #      #   # AWS-KMS. See: https://aws.amazon.com/secrets-manager
++  #      #   secretsmanager:
++  #      #     endpoint: ""   # The AWS SecretsManager endpoint      - e.g.: secretsmanager.us-east-2.amazonaws.com
++  #      #     region: ""     # The AWS region of the SecretsManager - e.g.: us-east-2
++  #      #     kmskey: ""     # The AWS-KMS key ID used to en/decrypt secrets at the SecretsManager. By default (if not set) the default AWS-KMS key will be used.
++  #      #     credentials:   # The AWS credentials for accessing secrets at the AWS SecretsManager.
++  #      #       accesskey: ""  # Your AWS Access Key
++  #      #       secretkey: ""  # Your AWS Secret Key
++  #      #       token: ""      # Your AWS session token (usually optional)
+</span>   #  imagePullPolicy: "IfNotPresent"
+   #  externalCertSecret: null
+   #  clientCertSecret: null
+<span class="p">@@ -156,6 +210,7 @@</span> tenant:
+   ## Prometheus setup for MinIO Tenant.
+   prometheus:
+     image: "" # defaults to quay.io/prometheus/prometheus:latest
+<span class="gi">+    env: [ ]
+</span>     sidecarimage: "" # defaults to alpine
+     initimage: "" # defaults to busybox:1.33.1
+     diskCapacityGB: 1
+<span class="p">@@ -177,6 +232,7 @@</span> tenant:
+   ## LogSearch API setup for MinIO Tenant.
+   log:
+     image: "" # defaults to minio/operator:v4.4.17
+<span class="gi">+    env: [ ]
+</span>     resources: { }
+     nodeSelector: { }
+     affinity:
+<span class="p">@@ -191,6 +247,7 @@</span> tenant:
+     ## Postgres setup for LogSearch API
+     db:
+       image: "" # defaults to library/postgres
+<span class="gi">+      env: [ ]
+</span>       initimage: "" # defaults to busybox:1.33.1
+       volumeClaimTemplate:
+         metadata: { }
+<span class="err">
+</span></code></pre></div></div> <h2 id="4423"> <a href="#4423" class="anchor-heading" aria-labelledby="4423"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.23 </h2> <p><strong>Release date:</strong> 2022-06-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.23&amp;color=success" alt="AppVersion: v4.4.23"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.23 (#1160)</li> <li>Add ingresses to tenant helm chart (#1153)</li> <li>Disable KES for default tenant deployments using Helm (#1157)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 814e6bd0..8ae57b46 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -13,7 +13,7 @@</span> tenant:
+   ## Registry location and Tag to download MinIO Server image
+   image:
+     repository: quay.io/minio/minio
+<span class="gd">-    tag: RELEASE.2022-01-08T03-11-54Z
+</span><span class="gi">+    tag: RELEASE.2022-05-26T05-48-41Z
+</span>     pullPolicy: IfNotPresent
+   ## Customize any private registry image pull secret.
+   ## currently only one secret registry is supported
+<span class="p">@@ -40,7 +40,7 @@</span> tenant:
+       ## Used to specify labels for pods
+       labels: { }
+       ## Used to specify a toleration for a pod
+<span class="gd">-      tolerations: { }
+</span><span class="gi">+      tolerations: [ ]
+</span>       ## nodeSelector parameters for MinIO Pods. It specifies a map of key-value pairs. For the pod to be
+       ## eligible to run on a node, the node must have each of the
+       ## indicated key-value pairs as labels.
+<span class="p">@@ -68,11 +68,11 @@</span> tenant:
+     ## Use this field to provide one or more external CA certificates. This is used by MinIO
+     ## to verify TLS connections with other applications:
+     ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+<span class="gd">-    externalCaCertSecret: { }
+-    ## Use this field to provide a list of Secrets with external certificates. This can be used to to configure
+</span><span class="gi">+    externalCaCertSecret: [ ]
++    ## Use this field to provide a list of Secrets with external certificates. This can be used to configure
+</span>     ## TLS for MinIO Tenant pods. Create secrets as explained here:
+     ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+<span class="gd">-    externalCertSecret: { }
+</span><span class="gi">+    externalCertSecret: [ ]
+</span>     ## Enable automatic Kubernetes based certificate generation and signing as explained in
+     ## https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster
+     requestAutoCert: true
+<span class="p">@@ -121,38 +121,38 @@</span> tenant:
+   ## services created by the operator.
+   serviceMetadata: { }
+   ## Add environment variables to be set in MinIO container (https://github.com/minio/minio/tree/master/docs/config)
+<span class="gd">-  env: { }
+</span><span class="gi">+  env: [ ]
+</span>   ## PriorityClassName indicates the Pod priority and hence importance of a Pod relative to other Pods.
+   ## This is applied to MinIO pods only.
+   ## Refer Kubernetes documentation for details https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#priorityclass/
+   priorityClassName: ""
+   ## Define configuration for KES (stateless and distributed key-management system)
+   ## Refer https://github.com/minio/kes
+<span class="gd">-  kes:
+-    image: "" # minio/kes:v0.17.6
+-    replicas: 2
+-    kesSecret:
+-      name: kes-configuration
+-    imagePullPolicy: "IfNotPresent"
+-    externalCertSecret: null
+-    clientCertSecret: null
+-    ## Key name to be created on the KMS, default is "my-minio-key"
+-    keyName: ""
+-    resources: { }
+-    nodeSelector: { }
+-    affinity:
+-      nodeAffinity: { }
+-      podAffinity: { }
+-      podAntiAffinity: { }
+-    tolerations: [ ]
+-    annotations: { }
+-    labels: { }
+-    serviceAccountName: ""
+-    securityContext:
+-      runAsUser: 1000
+-      runAsGroup: 1000
+-      runAsNonRoot: true
+-      fsGroup: 1000
+</span><span class="gi">+  #kes:
++  #  image: "" # minio/kes:v0.17.6
++  #  replicas: 2
++  #  kesSecret:
++  #    name: kes-configuration
++  #  imagePullPolicy: "IfNotPresent"
++  #  externalCertSecret: null
++  #  clientCertSecret: null
++  #  ## Key name to be created on the KMS, default is "my-minio-key"
++  #  keyName: ""
++  #  resources: { }
++  #  nodeSelector: { }
++  #  affinity:
++  #    nodeAffinity: { }
++  #    podAffinity: { }
++  #    podAntiAffinity: { }
++  #  tolerations: [ ]
++  #  annotations: { }
++  #  labels: { }
++  #  serviceAccountName: ""
++  #  securityContext:
++  #    runAsUser: 1000
++  #    runAsGroup: 1000
++  #    runAsNonRoot: true
++  #    fsGroup: 1000
+</span>   ## Prometheus setup for MinIO Tenant.
+   prometheus:
+     image: "" # defaults to quay.io/prometheus/prometheus:latest
+<span class="p">@@ -222,3 +222,23 @@</span> tenant:
+       runAsGroup: 1000
+       runAsNonRoot: true
+       fsGroup: 1000
+<span class="gi">+
++ingress:
++  api:
++    enabled: false
++    ingressClassName: ""
++    labels: { }
++    annotations: { }
++    tls: [ ]
++    host: minio.local
++    path: /
++    pathType: Prefix
++  console:
++    enabled: false
++    ingressClassName: ""
++    labels: { }
++    annotations: { }
++    tls: [ ]
++    host: minio-console.local
++    path: /
++    pathType: Prefix
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="4422"> <a href="#4422" class="anchor-heading" aria-labelledby="4422"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.22 </h2> <p><strong>Release date:</strong> 2022-05-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.22&amp;color=success" alt="AppVersion: v4.4.22"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.22 (#1152)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4421"> <a href="#4421" class="anchor-heading" aria-labelledby="4421"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.21 </h2> <p><strong>Release date:</strong> 2022-05-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.21&amp;color=success" alt="AppVersion: v4.4.21"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.21 (#1144)</li> <li>Deploy and manage only one tenant per helm tenant release (#1142)</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 1ce0ac4c..814e6bd0 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -1,183 +1,206 @@</span>
+<span class="gi">+## Secret with credentials to be used by MinIO Tenant
++secrets:
++  # create a kubernetes secret object with the accessKey and secretKey as defined here.
++  enabled: true
++  name: minio1-secret
++  accessKey: minio
++  secretKey: minio123
++
+</span> ## MinIO Tenant Definition
+<span class="gd">-tenants:
+</span><span class="gi">+tenant:
+</span>   # Tenant name
+<span class="gd">-  - name: minio1
+-    ## Registry location and Tag to download MinIO Server image
+-    image:
+-      repository: quay.io/minio/minio
+-      tag: RELEASE.2022-01-08T03-11-54Z
+-      pullPolicy: IfNotPresent
+-    ## Customize namespace for tenant deployment
+-    namespace: default
+-    ## Customize any private registry image pull secret.
+-    ## currently only one secret registry is supported
+-    imagePullSecret: { }
+-    ## If a scheduler is specified here, Tenant pods will be dispatched by specified scheduler.
+-    ## If not specified, the Tenant pods will be dispatched by default scheduler.
+-    scheduler: { }
+-    ## Specification for MinIO Pool(s) in this Tenant.
+-    pools:
+-      ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
+-      ## For standalone mode, supply 1. For distributed mode, supply 4 or more.
+-      ## Note that the operator does not support upgrading from standalone to distributed mode.
+-      - servers: 4
+-        ## custom name for the pool
+-        name: pool-0
+-        ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
+-        volumesPerServer: 4
+-        ## size specifies the capacity per volume
+-        size: 10Gi
+-        ## storageClass specifies the storage class name to be used for this pool
+-        storageClassName: standard
+-        ## Used to specify annotations for pods
+-        annotations: { }
+-        ## Used to specify labels for pods
+-        labels: { }
+-        ## Used to specify a toleration for a pod
+-        tolerations: { }
+-        ## nodeSelector parameters for MinIO Pods. It specifies a map of key-value pairs. For the pod to be
+-        ## eligible to run on a node, the node must have each of the
+-        ## indicated key-value pairs as labels.
+-        ## Read more here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+-        nodeSelector: { }
+-        ## Affinity settings for MinIO pods. Read more about affinity
+-        ## here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity.
+-        affinity: { }
+-        ## Configure resource requests and limits for MinIO containers
+-        resources: { }
+-        ## Configure security context
+-        securityContext: { }
+-        ## Configure topology constraints
+-        topologySpreadConstraints: [ ]
+-    ## Mount path where PV will be mounted inside container(s).
+-    mountPath: /export
+-    ## Sub path inside Mount path where MinIO stores data.
+-    subPath: /data
+-    # pool secrets
+-    secrets:
+-      # create a kubernetes secret object with the accessKey and secretKey as defined here.
+-      enabled: true
+-      name: minio1-secret
+-      accessKey: minio
+-      secretKey: minio123
+-    # pool metrics to be read by Prometheus
+-    metrics:
+-      enabled: false
+-      port: 9000
+-      protocol: http
+-    certificate:
+-      ## Use this field to provide one or more external CA certificates. This is used by MinIO
+-      ## to verify TLS connections with other applications:
+-      ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+-      externalCaCertSecret: { }
+-      ## Use this field to provide a list of Secrets with external certificates. This can be used to to configure
+-      ## TLS for MinIO Tenant pods. Create secrets as explained here:
+-      ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+-      externalCertSecret: { }
+-      ## Enable automatic Kubernetes based certificate generation and signing as explained in
+-      ## https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster
+-      requestAutoCert: true
+-      ## This field is used only when "requestAutoCert" is set to true. Use this field to set CommonName
+-      ## for the auto-generated certificate. Internal DNS name for the pod will be used if CommonName is
+-      ## not provided. DNS name format is *.minio.default.svc.cluster.local
+-      certConfig: { }
+-    ## Enable S3 specific features such as Bucket DNS which would allow `buckets` to be
+-    ## accessible as DNS entries of form `&lt;bucketname&gt;.minio.default.svc.cluster.local`
+-    s3:
+-      ## This feature is turned off by default
+-      bucketDNS: false
+-    ## List of bucket names to create during tenant provisioning
+-    buckets: [ ]
+-    ## List of secret names to use for generating MinIO users during tenant provisioning
+-    users: [ ]
+-    ## PodManagement policy for MinIO Tenant Pods. Can be "OrderedReady" or "Parallel"
+-    ## Refer https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy
+-    ## for details.
+-    podManagementPolicy: Parallel
+-    # Liveness Probe for container liveness. Container will be restarted if the probe fails.
+-    # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.
+-    liveness: { }
+-    # Readiness Probe for container readiness. Container will be removed from service endpoints if the probe fails.
+-    # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+-    readiness: { }
+-    ## exposeServices defines the exposure of the MinIO object storage and Console services.
+-    ## service is exposed as a loadbalancer in k8s service.
+-    exposeServices: { }
+-    # kubernetes service account associated with a specific tenant
+-    # https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+-    serviceAccountName: ""
+-    # Tenant scrape configuration will be added to prometheus managed by the prometheus-operator.
+-    prometheusOperator: false
+-    # Enable JSON, Anonymous logging for MinIO tenants.
+-    # Refer https://github.com/minio/operator/blob/master/pkg/apis/minio.min.io/v2/types.go#L303
+-    # How logs will look:
+-    # $ k logs minio1-pool-0-0 -n default
+-    # {"level":"INFO","errKind":"","time":"2022-04-07T21:49:33.740058549Z","message":"All MinIO sub-systems initialized successfully"}
+-    # Notice they are in JSON format to be consumed
+-    logging:
+-      anonymous: true
+-      json: true
+-      quiet: true
+-    ## serviceMetadata allows passing additional labels and annotations to MinIO and Console specific
+-    ## services created by the operator.
+-    serviceMetadata: { }
+-    ## Add environment variables to be set in MinIO container (https://github.com/minio/minio/tree/master/docs/config)
+-    env: { }
+-    ## PriorityClassName indicates the Pod priority and hence importance of a Pod relative to other Pods.
+-    ## This is applied to MinIO pods only.
+-    ## Refer Kubernetes documentation for details https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#priorityclass/
+-    priorityClassName: ""
+-    ## Define configuration for KES (stateless and distributed key-management system)
+-    ## Refer https://github.com/minio/kes
+-    kes:
+-      image: "" # minio/kes:v0.17.6
+-      replicas: 2
+-      kesSecret:
+-        name: kes-configuration
+-      imagePullPolicy: "IfNotPresent"
+-      externalCertSecret: null
+-      clientCertSecret: null
+-      ## Key name to be created on the KMS, default is "my-minio-key"
+-      keyName: ""
+-      resources: { }
+-      nodeSelector: { }
+-      affinity:
+-        nodeAffinity: { }
+-        podAffinity: { }
+-        podAntiAffinity: { }
+-      tolerations: [ ]
+-      annotations: { }
+-      labels: { }
+-      serviceAccountName: ""
+-      securityContext:
+-        runAsUser: 1000
+-        runAsGroup: 1000
+-        runAsNonRoot: true
+-        fsGroup: 1000
+-    ## Prometheus setup for MinIO Tenant.
+-    prometheus:
+-      image: "" # defaults to quay.io/prometheus/prometheus:latest
+-      sidecarimage: "" # defaults to alpine
+-      initimage: "" # defaults to busybox:1.33.1
+-      diskCapacityGB: 1
+</span><span class="gi">+  name: minio1
++  ## Registry location and Tag to download MinIO Server image
++  image:
++    repository: quay.io/minio/minio
++    tag: RELEASE.2022-01-08T03-11-54Z
++    pullPolicy: IfNotPresent
++  ## Customize any private registry image pull secret.
++  ## currently only one secret registry is supported
++  imagePullSecret: { }
++  ## If a scheduler is specified here, Tenant pods will be dispatched by specified scheduler.
++  ## If not specified, the Tenant pods will be dispatched by default scheduler.
++  scheduler: { }
++  ## Specification for MinIO Pool(s) in this Tenant.
++  pools:
++    ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
++    ## For standalone mode, supply 1. For distributed mode, supply 4 or more.
++    ## Note that the operator does not support upgrading from standalone to distributed mode.
++    - servers: 4
++      ## custom name for the pool
++      name: pool-0
++      ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
++      volumesPerServer: 4
++      ## size specifies the capacity per volume
++      size: 10Gi
++      ## storageClass specifies the storage class name to be used for this pool
+</span>       storageClassName: standard
+<span class="gi">+      ## Used to specify annotations for pods
+</span>       annotations: { }
+<span class="gi">+      ## Used to specify labels for pods
+</span>       labels: { }
+<span class="gi">+      ## Used to specify a toleration for a pod
++      tolerations: { }
++      ## nodeSelector parameters for MinIO Pods. It specifies a map of key-value pairs. For the pod to be
++      ## eligible to run on a node, the node must have each of the
++      ## indicated key-value pairs as labels.
++      ## Read more here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+</span>       nodeSelector: { }
+<span class="gd">-      affinity:
+-        nodeAffinity: { }
+-        podAffinity: { }
+-        podAntiAffinity: { }
+</span><span class="gi">+      ## Affinity settings for MinIO pods. Read more about affinity
++      ## here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity.
++      affinity: { }
++      ## Configure resource requests and limits for MinIO containers
+</span>       resources: { }
+<span class="gd">-      serviceAccountName: ""
+-      securityContext:
+-        runAsUser: 1000
+-        runAsGroup: 1000
+-        runAsNonRoot: true
+-        fsGroup: 1000
+-    ## LogSearch API setup for MinIO Tenant.
+-    log:
+-      image: "" # defaults to minio/operator:v4.4.17
+</span><span class="gi">+      ## Configure security context
++      securityContext: { }
++      ## Configure topology constraints
++      topologySpreadConstraints: [ ]
++  ## Mount path where PV will be mounted inside container(s).
++  mountPath: /export
++  ## Sub path inside Mount path where MinIO stores data.
++  subPath: /data
++  # pool metrics to be read by Prometheus
++  metrics:
++    enabled: false
++    port: 9000
++    protocol: http
++  certificate:
++    ## Use this field to provide one or more external CA certificates. This is used by MinIO
++    ## to verify TLS connections with other applications:
++    ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
++    externalCaCertSecret: { }
++    ## Use this field to provide a list of Secrets with external certificates. This can be used to to configure
++    ## TLS for MinIO Tenant pods. Create secrets as explained here:
++    ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
++    externalCertSecret: { }
++    ## Enable automatic Kubernetes based certificate generation and signing as explained in
++    ## https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster
++    requestAutoCert: true
++    ## This field is used only when "requestAutoCert" is set to true. Use this field to set CommonName
++    ## for the auto-generated certificate. Internal DNS name for the pod will be used if CommonName is
++    ## not provided. DNS name format is *.minio.default.svc.cluster.local
++    certConfig: { }
++  ## Enable S3 specific features such as Bucket DNS which would allow `buckets` to be
++  ## accessible as DNS entries of form `&lt;bucketname&gt;.minio.default.svc.cluster.local`
++  s3:
++    ## This feature is turned off by default
++    bucketDNS: false
++  ## List of bucket names to create during tenant provisioning
++  buckets: [ ]
++  ## List of secret names to use for generating MinIO users during tenant provisioning
++  users: [ ]
++  ## PodManagement policy for MinIO Tenant Pods. Can be "OrderedReady" or "Parallel"
++  ## Refer https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy
++  ## for details.
++  podManagementPolicy: Parallel
++  # Liveness Probe for container liveness. Container will be restarted if the probe fails.
++  # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.
++  liveness: { }
++  # Readiness Probe for container readiness. Container will be removed from service endpoints if the probe fails.
++  # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
++  readiness: { }
++  ## exposeServices defines the exposure of the MinIO object storage and Console services.
++  ## service is exposed as a loadbalancer in k8s service.
++  exposeServices: { }
++  # kubernetes service account associated with a specific tenant
++  # https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
++  serviceAccountName: ""
++  # Tenant scrape configuration will be added to prometheus managed by the prometheus-operator.
++  prometheusOperator: false
++  # Enable JSON, Anonymous logging for MinIO tenants.
++  # Refer https://github.com/minio/operator/blob/master/pkg/apis/minio.min.io/v2/types.go#L303
++  # How logs will look:
++  # $ k logs minio1-pool-0-0 -n default
++  # {"level":"INFO","errKind":"","time":"2022-04-07T21:49:33.740058549Z","message":"All MinIO sub-systems initialized successfully"}
++  # Notice they are in JSON format to be consumed
++  logging:
++    anonymous: true
++    json: true
++    quiet: true
++  ## serviceMetadata allows passing additional labels and annotations to MinIO and Console specific
++  ## services created by the operator.
++  serviceMetadata: { }
++  ## Add environment variables to be set in MinIO container (https://github.com/minio/minio/tree/master/docs/config)
++  env: { }
++  ## PriorityClassName indicates the Pod priority and hence importance of a Pod relative to other Pods.
++  ## This is applied to MinIO pods only.
++  ## Refer Kubernetes documentation for details https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#priorityclass/
++  priorityClassName: ""
++  ## Define configuration for KES (stateless and distributed key-management system)
++  ## Refer https://github.com/minio/kes
++  kes:
++    image: "" # minio/kes:v0.17.6
++    replicas: 2
++    kesSecret:
++      name: kes-configuration
++    imagePullPolicy: "IfNotPresent"
++    externalCertSecret: null
++    clientCertSecret: null
++    ## Key name to be created on the KMS, default is "my-minio-key"
++    keyName: ""
++    resources: { }
++    nodeSelector: { }
++    affinity:
++      nodeAffinity: { }
++      podAffinity: { }
++      podAntiAffinity: { }
++    tolerations: [ ]
++    annotations: { }
++    labels: { }
++    serviceAccountName: ""
++    securityContext:
++      runAsUser: 1000
++      runAsGroup: 1000
++      runAsNonRoot: true
++      fsGroup: 1000
++  ## Prometheus setup for MinIO Tenant.
++  prometheus:
++    image: "" # defaults to quay.io/prometheus/prometheus:latest
++    sidecarimage: "" # defaults to alpine
++    initimage: "" # defaults to busybox:1.33.1
++    diskCapacityGB: 1
++    storageClassName: standard
++    annotations: { }
++    labels: { }
++    nodeSelector: { }
++    affinity:
++      nodeAffinity: { }
++      podAffinity: { }
++      podAntiAffinity: { }
++    resources: { }
++    serviceAccountName: ""
++    securityContext:
++      runAsUser: 1000
++      runAsGroup: 1000
++      runAsNonRoot: true
++      fsGroup: 1000
++  ## LogSearch API setup for MinIO Tenant.
++  log:
++    image: "" # defaults to minio/operator:v4.4.17
++    resources: { }
++    nodeSelector: { }
++    affinity:
++      nodeAffinity: { }
++      podAffinity: { }
++      podAntiAffinity: { }
++    tolerations: [ ]
++    annotations: { }
++    labels: { }
++    audit:
++      diskCapacityGB: 1
++    ## Postgres setup for LogSearch API
++    db:
++      image: "" # defaults to library/postgres
++      initimage: "" # defaults to busybox:1.33.1
++      volumeClaimTemplate:
++        metadata: { }
++        spec:
++          storageClassName: standard
++          accessModes:
++            - ReadWriteOnce
++          resources:
++            requests:
++              storage: 1Gi
+</span>       resources: { }
+       nodeSelector: { }
+       affinity:
+<span class="p">@@ -187,39 +210,15 @@</span> tenants:
+       tolerations: [ ]
+       annotations: { }
+       labels: { }
+<span class="gd">-      audit:
+-        diskCapacityGB: 1
+-      ## Postgres setup for LogSearch API
+-      db:
+-        image: "" # defaults to library/postgres
+-        initimage: "" # defaults to busybox:1.33.1
+-        volumeClaimTemplate:
+-          metadata: { }
+-          spec:
+-            storageClassName: standard
+-            accessModes:
+-              - ReadWriteOnce
+-            resources:
+-              requests:
+-                storage: 1Gi
+-        resources: { }
+-        nodeSelector: { }
+-        affinity:
+-          nodeAffinity: { }
+-          podAffinity: { }
+-          podAntiAffinity: { }
+-        tolerations: [ ]
+-        annotations: { }
+-        labels: { }
+-        serviceAccountName: ""
+-        securityContext:
+-          runAsUser: 999
+-          runAsGroup: 999
+-          runAsNonRoot: true
+-          fsGroup: 999
+</span>       serviceAccountName: ""
+       securityContext:
+<span class="gd">-        runAsUser: 1000
+-        runAsGroup: 1000
+</span><span class="gi">+        runAsUser: 999
++        runAsGroup: 999
+</span>         runAsNonRoot: true
+<span class="gd">-        fsGroup: 1000
+</span><span class="gi">+        fsGroup: 999
++    serviceAccountName: ""
++    securityContext:
++      runAsUser: 1000
++      runAsGroup: 1000
++      runAsNonRoot: true
++      fsGroup: 1000
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="4420"> <a href="#4420" class="anchor-heading" aria-labelledby="4420"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.20 </h2> <p><strong>Release date:</strong> 2022-05-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.20&amp;color=success" alt="AppVersion: v4.4.20"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.20 (#1139)</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4419"> <a href="#4419" class="anchor-heading" aria-labelledby="4419"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.19 </h2> <p><strong>Release date:</strong> 2022-05-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.19&amp;color=success" alt="AppVersion: v4.4.19"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.19 (#1133)</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4418"> <a href="#4418" class="anchor-heading" aria-labelledby="4418"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.18 </h2> <p><strong>Release date:</strong> 2022-05-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.18&amp;color=success" alt="AppVersion: v4.4.18"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.18 (#1123)</li> <li>Add AuditLog support to Tenant Helm Chart (#1117)</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 0066cf88..1ce0ac4c 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -175,3 +175,51 @@</span> tenants:
+         runAsGroup: 1000
+         runAsNonRoot: true
+         fsGroup: 1000
+<span class="gi">+    ## LogSearch API setup for MinIO Tenant.
++    log:
++      image: "" # defaults to minio/operator:v4.4.17
++      resources: { }
++      nodeSelector: { }
++      affinity:
++        nodeAffinity: { }
++        podAffinity: { }
++        podAntiAffinity: { }
++      tolerations: [ ]
++      annotations: { }
++      labels: { }
++      audit:
++        diskCapacityGB: 1
++      ## Postgres setup for LogSearch API
++      db:
++        image: "" # defaults to library/postgres
++        initimage: "" # defaults to busybox:1.33.1
++        volumeClaimTemplate:
++          metadata: { }
++          spec:
++            storageClassName: standard
++            accessModes:
++              - ReadWriteOnce
++            resources:
++              requests:
++                storage: 1Gi
++        resources: { }
++        nodeSelector: { }
++        affinity:
++          nodeAffinity: { }
++          podAffinity: { }
++          podAntiAffinity: { }
++        tolerations: [ ]
++        annotations: { }
++        labels: { }
++        serviceAccountName: ""
++        securityContext:
++          runAsUser: 999
++          runAsGroup: 999
++          runAsNonRoot: true
++          fsGroup: 999
++      serviceAccountName: ""
++      securityContext:
++        runAsUser: 1000
++        runAsGroup: 1000
++        runAsNonRoot: true
++        fsGroup: 1000
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="4417"> <a href="#4417" class="anchor-heading" aria-labelledby="4417"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.17 </h2> <p><strong>Release date:</strong> 2022-05-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.17&amp;color=success" alt="AppVersion: v4.4.17"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.17 (#1107)</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4416"> <a href="#4416" class="anchor-heading" aria-labelledby="4416"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.16 </h2> <p><strong>Release date:</strong> 2022-04-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.16&amp;color=success" alt="AppVersion: v4.4.16"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.16 (#1096)</li> <li>Add Prometheus on Helm Chart (#1086)</li> <li>Adding logging example (#1089)</li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 80122ae9..0066cf88 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -110,7 +110,14 @@</span> tenants:
+     prometheusOperator: false
+     # Enable JSON, Anonymous logging for MinIO tenants.
+     # Refer https://github.com/minio/operator/blob/master/pkg/apis/minio.min.io/v2/types.go#L303
+<span class="gd">-    logging: { }
+</span><span class="gi">+    # How logs will look:
++    # $ k logs minio1-pool-0-0 -n default
++    # {"level":"INFO","errKind":"","time":"2022-04-07T21:49:33.740058549Z","message":"All MinIO sub-systems initialized successfully"}
++    # Notice they are in JSON format to be consumed
++    logging:
++      anonymous: true
++      json: true
++      quiet: true
+</span>     ## serviceMetadata allows passing additional labels and annotations to MinIO and Console specific
+     ## services created by the operator.
+     serviceMetadata: { }
+<span class="p">@@ -147,3 +154,24 @@</span> tenants:
+         runAsGroup: 1000
+         runAsNonRoot: true
+         fsGroup: 1000
+<span class="gi">+    ## Prometheus setup for MinIO Tenant.
++    prometheus:
++      image: "" # defaults to quay.io/prometheus/prometheus:latest
++      sidecarimage: "" # defaults to alpine
++      initimage: "" # defaults to busybox:1.33.1
++      diskCapacityGB: 1
++      storageClassName: standard
++      annotations: { }
++      labels: { }
++      nodeSelector: { }
++      affinity:
++        nodeAffinity: { }
++        podAffinity: { }
++        podAntiAffinity: { }
++      resources: { }
++      serviceAccountName: ""
++      securityContext:
++        runAsUser: 1000
++        runAsGroup: 1000
++        runAsNonRoot: true
++        fsGroup: 1000
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="4415"> <a href="#4415" class="anchor-heading" aria-labelledby="4415"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.15 </h2> <p><strong>Release date:</strong> 2022-04-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.15&amp;color=success" alt="AppVersion: v4.4.15"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.15 (#1091)</li> <li>Adding kes on helm (#1082)</li> <li>Fixing annotation issue on helm chart (#1085)</li> <li>Added prometheus scheme support for minio tenant (#1071)</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 88ada540..80122ae9 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -64,6 +64,7 @@</span> tenants:
+     metrics:
+       enabled: false
+       port: 9000
+<span class="gi">+      protocol: http
+</span>     certificate:
+       ## Use this field to provide one or more external CA certificates. This is used by MinIO
+       ## to verify TLS connections with other applications:
+<span class="p">@@ -119,3 +120,30 @@</span> tenants:
+     ## This is applied to MinIO pods only.
+     ## Refer Kubernetes documentation for details https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#priorityclass/
+     priorityClassName: ""
+<span class="gi">+    ## Define configuration for KES (stateless and distributed key-management system)
++    ## Refer https://github.com/minio/kes
++    kes:
++      image: "" # minio/kes:v0.17.6
++      replicas: 2
++      kesSecret:
++        name: kes-configuration
++      imagePullPolicy: "IfNotPresent"
++      externalCertSecret: null
++      clientCertSecret: null
++      ## Key name to be created on the KMS, default is "my-minio-key"
++      keyName: ""
++      resources: { }
++      nodeSelector: { }
++      affinity:
++        nodeAffinity: { }
++        podAffinity: { }
++        podAntiAffinity: { }
++      tolerations: [ ]
++      annotations: { }
++      labels: { }
++      serviceAccountName: ""
++      securityContext:
++        runAsUser: 1000
++        runAsGroup: 1000
++        runAsNonRoot: true
++        fsGroup: 1000
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="4414"> <a href="#4414" class="anchor-heading" aria-labelledby="4414"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.14 </h2> <p><strong>Release date:</strong> 2022-04-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.14&amp;color=success" alt="AppVersion: v4.4.14"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.14 (#1081)</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4413"> <a href="#4413" class="anchor-heading" aria-labelledby="4413"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.13 </h2> <p><strong>Release date:</strong> 2022-03-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.13&amp;color=success" alt="AppVersion: v4.4.13"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.13 (#1068)</li> <li>Add annotations/labels to tenant pods (#1057)</li> <li>add support for decommissioning a tenant (#1044)</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 6d7f0e73..88ada540 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -21,12 +21,18 @@</span> tenants:
+       ## For standalone mode, supply 1. For distributed mode, supply 4 or more.
+       ## Note that the operator does not support upgrading from standalone to distributed mode.
+       - servers: 4
+<span class="gi">+        ## custom name for the pool
++        name: pool-0
+</span>         ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
+         volumesPerServer: 4
+         ## size specifies the capacity per volume
+         size: 10Gi
+         ## storageClass specifies the storage class name to be used for this pool
+         storageClassName: standard
+<span class="gi">+        ## Used to specify annotations for pods
++        annotations: { }
++        ## Used to specify labels for pods
++        labels: { }
+</span>         ## Used to specify a toleration for a pod
+         tolerations: { }
+         ## nodeSelector parameters for MinIO Pods. It specifies a map of key-value pairs. For the pod to be
+<span class="err">
+</span></code></pre></div></div> <h2 id="4412"> <a href="#4412" class="anchor-heading" aria-labelledby="4412"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.12 </h2> <p><strong>Release date:</strong> 2022-03-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.12&amp;color=success" alt="AppVersion: v4.4.12"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.12 (#1053)</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4411"> <a href="#4411" class="anchor-heading" aria-labelledby="4411"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.11 </h2> <p><strong>Release date:</strong> 2022-03-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.11&amp;color=success" alt="AppVersion: v4.4.11"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.11 (#1039)</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4410"> <a href="#4410" class="anchor-heading" aria-labelledby="4410"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.10 </h2> <p><strong>Release date:</strong> 2022-02-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.10&amp;color=success" alt="AppVersion: v4.4.10"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.10 (#1030)</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="449"> <a href="#449" class="anchor-heading" aria-labelledby="449"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.9 </h2> <p><strong>Release date:</strong> 2022-02-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.9&amp;color=success" alt="AppVersion: v4.4.9"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.9 (#1028)</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="448"> <a href="#448" class="anchor-heading" aria-labelledby="448"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.8 </h2> <p><strong>Release date:</strong> 2022-02-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.8&amp;color=success" alt="AppVersion: v4.4.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.8 (#1020)</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="447"> <a href="#447" class="anchor-heading" aria-labelledby="447"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.7 </h2> <p><strong>Release date:</strong> 2022-02-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.7&amp;color=success" alt="AppVersion: v4.4.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.7</li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="446"> <a href="#446" class="anchor-heading" aria-labelledby="446"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.6 </h2> <p><strong>Release date:</strong> 2022-02-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.6&amp;color=success" alt="AppVersion: v4.4.6"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.6 (#1006)</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="445"> <a href="#445" class="anchor-heading" aria-labelledby="445"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.5 </h2> <p><strong>Release date:</strong> 2022-02-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.5&amp;color=success" alt="AppVersion: v4.4.5"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.5 (#999)</li> </ul> <h3 id="default-value-changes-45"> <a href="#default-value-changes-45" class="anchor-heading" aria-labelledby="default-value-changes-45"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="444"> <a href="#444" class="anchor-heading" aria-labelledby="444"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.4 </h2> <p><strong>Release date:</strong> 2022-01-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.4&amp;color=success" alt="AppVersion: v4.4.4"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.4 (#989)</li> <li>Add buckets list to tenant helm chart and docs (#980)</li> <li>Add ‘users’ support to tenant helm chart (#979)</li> </ul> <h3 id="default-value-changes-46"> <a href="#default-value-changes-46" class="anchor-heading" aria-labelledby="default-value-changes-46"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 96b7dc68..6d7f0e73 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -79,6 +79,10 @@</span> tenants:
+     s3:
+       ## This feature is turned off by default
+       bucketDNS: false
+<span class="gi">+    ## List of bucket names to create during tenant provisioning
++    buckets: [ ]
++    ## List of secret names to use for generating MinIO users during tenant provisioning
++    users: [ ]
+</span>     ## PodManagement policy for MinIO Tenant Pods. Can be "OrderedReady" or "Parallel"
+     ## Refer https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy
+     ## for details.
+<span class="err">
+</span></code></pre></div></div> <h2 id="443"> <a href="#443" class="anchor-heading" aria-labelledby="443"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.3 </h2> <p><strong>Release date:</strong> 2022-01-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.3&amp;color=success" alt="AppVersion: v4.4.3"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.3 to update MinIO</li> </ul> <h3 id="default-value-changes-47"> <a href="#default-value-changes-47" class="anchor-heading" aria-labelledby="default-value-changes-47"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 7b95fd6c..96b7dc68 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -5,7 +5,7 @@</span> tenants:
+     ## Registry location and Tag to download MinIO Server image
+     image:
+       repository: quay.io/minio/minio
+<span class="gd">-      tag: RELEASE.2022-01-07T01-53-23Z
+</span><span class="gi">+      tag: RELEASE.2022-01-08T03-11-54Z
+</span>       pullPolicy: IfNotPresent
+     ## Customize namespace for tenant deployment
+     namespace: default
+<span class="err">
+</span></code></pre></div></div> <h2 id="442"> <a href="#442" class="anchor-heading" aria-labelledby="442"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.2 </h2> <p><strong>Release date:</strong> 2022-01-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.2&amp;color=success" alt="AppVersion: v4.4.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.2</li> </ul> <h3 id="default-value-changes-48"> <a href="#default-value-changes-48" class="anchor-heading" aria-labelledby="default-value-changes-48"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 41048637..7b95fd6c 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -5,7 +5,7 @@</span> tenants:
+     ## Registry location and Tag to download MinIO Server image
+     image:
+       repository: quay.io/minio/minio
+<span class="gd">-      tag: RELEASE.2021-12-29T06-49-06Z
+</span><span class="gi">+      tag: RELEASE.2022-01-07T01-53-23Z
+</span>       pullPolicy: IfNotPresent
+     ## Customize namespace for tenant deployment
+     namespace: default
+<span class="err">
+</span></code></pre></div></div> <h2 id="441"> <a href="#441" class="anchor-heading" aria-labelledby="441"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.1 </h2> <p><strong>Release date:</strong> 2022-01-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.1&amp;color=success" alt="AppVersion: v4.4.1"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.1</li> </ul> <h3 id="default-value-changes-49"> <a href="#default-value-changes-49" class="anchor-heading" aria-labelledby="default-value-changes-49"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="440"> <a href="#440" class="anchor-heading" aria-labelledby="440"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.0 </h2> <p><strong>Release date:</strong> 2022-01-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.4.0&amp;color=success" alt="AppVersion: v4.4.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.4.0 (#957)</li> <li>helm: add liveness, readiness configuration (#946)</li> <li>update helm version v4.3.9</li> </ul> <h3 id="default-value-changes-50"> <a href="#default-value-changes-50" class="anchor-heading" aria-labelledby="default-value-changes-50"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 2d3df022..41048637 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -5,7 +5,7 @@</span> tenants:
+     ## Registry location and Tag to download MinIO Server image
+     image:
+       repository: quay.io/minio/minio
+<span class="gd">-      tag: RELEASE.2021-12-27T07-23-18Z
+</span><span class="gi">+      tag: RELEASE.2021-12-29T06-49-06Z
+</span>       pullPolicy: IfNotPresent
+     ## Customize namespace for tenant deployment
+     namespace: default
+<span class="p">@@ -83,6 +83,23 @@</span> tenants:
+     ## Refer https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy
+     ## for details.
+     podManagementPolicy: Parallel
+<span class="gi">+    # Liveness Probe for container liveness. Container will be restarted if the probe fails.
++    # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes.
++    liveness: { }
++    # Readiness Probe for container readiness. Container will be removed from service endpoints if the probe fails.
++    # Refer https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
++    readiness: { }
++    ## exposeServices defines the exposure of the MinIO object storage and Console services.
++    ## service is exposed as a loadbalancer in k8s service.
++    exposeServices: { }
++    # kubernetes service account associated with a specific tenant
++    # https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
++    serviceAccountName: ""
++    # Tenant scrape configuration will be added to prometheus managed by the prometheus-operator.
++    prometheusOperator: false
++    # Enable JSON, Anonymous logging for MinIO tenants.
++    # Refer https://github.com/minio/operator/blob/master/pkg/apis/minio.min.io/v2/types.go#L303
++    logging: { }
+</span>     ## serviceMetadata allows passing additional labels and annotations to MinIO and Console specific
+     ## services created by the operator.
+     serviceMetadata: { }
+<span class="err">
+</span></code></pre></div></div> <h2 id="439"> <a href="#439" class="anchor-heading" aria-labelledby="439"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.3.9 </h2> <p><strong>Release date:</strong> 2021-12-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.3.9&amp;color=success" alt="AppVersion: v4.3.9"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.3.9</li> </ul> <h3 id="default-value-changes-51"> <a href="#default-value-changes-51" class="anchor-heading" aria-labelledby="default-value-changes-51"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index 8a3e2de7..2d3df022 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -5,7 +5,7 @@</span> tenants:
+     ## Registry location and Tag to download MinIO Server image
+     image:
+       repository: quay.io/minio/minio
+<span class="gd">-      tag: RELEASE.2021-12-20T22-07-16Z
+</span><span class="gi">+      tag: RELEASE.2021-12-27T07-23-18Z
+</span>       pullPolicy: IfNotPresent
+     ## Customize namespace for tenant deployment
+     namespace: default
+<span class="err">
+</span></code></pre></div></div> <h2 id="438"> <a href="#438" class="anchor-heading" aria-labelledby="438"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.3.8 </h2> <p><strong>Release date:</strong> 2021-12-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.3.8&amp;color=success" alt="AppVersion: v4.3.8"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Release v4.3.8 (#927)</li> <li>update helm docs</li> </ul> <h3 id="default-value-changes-52"> <a href="#default-value-changes-52" class="anchor-heading" aria-labelledby="default-value-changes-52"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/helm/tenant/values.yaml b/helm/tenant/values.yaml
+index b93f51c5..8a3e2de7 100644
+</span><span class="gd">--- a/helm/tenant/values.yaml
+</span><span class="gi">+++ b/helm/tenant/values.yaml
+</span><span class="p">@@ -4,8 +4,8 @@</span> tenants:
+   - name: minio1
+     ## Registry location and Tag to download MinIO Server image
+     image:
+<span class="gd">-      repository: minio/minio
+-      tag: RELEASE.2021-11-09T03-21-45Z
+</span><span class="gi">+      repository: quay.io/minio/minio
++      tag: RELEASE.2021-12-20T22-07-16Z
+</span>       pullPolicy: IfNotPresent
+     ## Customize namespace for tenant deployment
+     namespace: default
+<span class="err">
+</span></code></pre></div></div> <h2 id="437"> <a href="#437" class="anchor-heading" aria-labelledby="437"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.3.7 </h2> <p><strong>Release date:</strong> 2021-12-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v4.3.7&amp;color=success" alt="AppVersion: v4.3.7"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Split Helm Chart into separate Charts (#918)</li> </ul> <h3 id="default-value-changes-53"> <a href="#default-value-changes-53" class="anchor-heading" aria-labelledby="default-value-changes-53"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## MinIO Tenant Definition
+<span class="p">tenants:
+</span>  # Tenant name
+  - name: minio1
+    ## Registry location and Tag to download MinIO Server image
+    image:
+      repository: minio/minio
+      tag: RELEASE.2021-11-09T03-21-45Z
+      pullPolicy: IfNotPresent
+    ## Customize namespace for tenant deployment
+    namespace: default
+    ## Customize any private registry image pull secret.
+    ## currently only one secret registry is supported
+    imagePullSecret: { }
+    ## If a scheduler is specified here, Tenant pods will be dispatched by specified scheduler.
+    ## If not specified, the Tenant pods will be dispatched by default scheduler.
+    scheduler: { }
+    ## Specification for MinIO Pool(s) in this Tenant.
+    pools:
+      ## Servers specifies the number of MinIO Tenant Pods / Servers in this pool.
+      ## For standalone mode, supply 1. For distributed mode, supply 4 or more.
+      ## Note that the operator does not support upgrading from standalone to distributed mode.
+      - servers: 4
+        ## volumesPerServer specifies the number of volumes attached per MinIO Tenant Pod / Server.
+        volumesPerServer: 4
+        ## size specifies the capacity per volume
+        size: 10Gi
+        ## storageClass specifies the storage class name to be used for this pool
+        storageClassName: standard
+        ## Used to specify a toleration for a pod
+        tolerations: { }
+        ## nodeSelector parameters for MinIO Pods. It specifies a map of key-value pairs. For the pod to be
+        ## eligible to run on a node, the node must have each of the
+        ## indicated key-value pairs as labels.
+        ## Read more here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+        nodeSelector: { }
+        ## Affinity settings for MinIO pods. Read more about affinity
+        ## here: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity.
+        affinity: { }
+        ## Configure resource requests and limits for MinIO containers
+        resources: { }
+        ## Configure security context
+        securityContext: { }
+        ## Configure topology constraints
+        topologySpreadConstraints: [ ]
+    ## Mount path where PV will be mounted inside container(s).
+    mountPath: /export
+    ## Sub path inside Mount path where MinIO stores data.
+    subPath: /data
+    # pool secrets
+    secrets:
+      # create a kubernetes secret object with the accessKey and secretKey as defined here.
+      enabled: true
+      name: minio1-secret
+      accessKey: minio
+      secretKey: minio123
+    # pool metrics to be read by Prometheus
+    metrics:
+      enabled: false
+      port: 9000
+    certificate:
+      ## Use this field to provide one or more external CA certificates. This is used by MinIO
+      ## to verify TLS connections with other applications:
+      ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+      externalCaCertSecret: { }
+      ## Use this field to provide a list of Secrets with external certificates. This can be used to to configure
+      ## TLS for MinIO Tenant pods. Create secrets as explained here:
+      ## https://github.com/minio/minio/tree/master/docs/tls/kubernetes#2-create-kubernetes-secret
+      externalCertSecret: { }
+      ## Enable automatic Kubernetes based certificate generation and signing as explained in
+      ## https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster
+      requestAutoCert: true
+      ## This field is used only when "requestAutoCert" is set to true. Use this field to set CommonName
+      ## for the auto-generated certificate. Internal DNS name for the pod will be used if CommonName is
+      ## not provided. DNS name format is *.minio.default.svc.cluster.local
+      certConfig: { }
+    ## Enable S3 specific features such as Bucket DNS which would allow `buckets` to be
+    ## accessible as DNS entries of form `&lt;bucketname&gt;.minio.default.svc.cluster.local`
+    s3:
+      ## This feature is turned off by default
+      bucketDNS: false
+    ## PodManagement policy for MinIO Tenant Pods. Can be "OrderedReady" or "Parallel"
+    ## Refer https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy
+    ## for details.
+    podManagementPolicy: Parallel
+    ## serviceMetadata allows passing additional labels and annotations to MinIO and Console specific
+    ## services created by the operator.
+    serviceMetadata: { }
+    ## Add environment variables to be set in MinIO container (https://github.com/minio/minio/tree/master/docs/config)
+    env: { }
+    ## PriorityClassName indicates the Pod priority and hence importance of a Pod relative to other Pods.
+    ## This is applied to MinIO pods only.
+    ## Refer Kubernetes documentation for details https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#priorityclass/
+    priorityClassName: ""
+<span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

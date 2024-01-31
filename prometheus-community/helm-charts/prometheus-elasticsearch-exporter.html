@@ -1,0 +1,1295 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/changelogs/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(16)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(7) > ul > li:nth-child(16) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(7) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(7) > ul > li:nth-child(16) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(7) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(7) > ul.nav-list > li.nav-list-item:nth-child(16) > ul.nav-list { display: block; } </style> <script src="/changelogs/assets/js/vendor/lunr.min.js"></script> <script src="/changelogs/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>prometheus-elasticsearch-exporter | Changelogs</title> <meta name="generator" content="Jekyll v4.3.3" /> <meta property="og:title" content="prometheus-elasticsearch-exporter" /> <meta name="author" content="Baptiste ROUX" /> <meta property="og:locale" content="en_US" /> <link rel="canonical" href="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" /> <meta property="og:url" content="https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" /> <meta property="og:site_name" content="Changelogs" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="prometheus-elasticsearch-exporter" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Baptiste ROUX"},"headline":"prometheus-elasticsearch-exporter","url":"https://baprx.github.io/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewbox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewbox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewbox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewbox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </svg> </symbol> <symbol id="svg-copied" viewbox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewbox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"></path> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"></path> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/changelogs/" class="site-title lh-tight"> Changelogs </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewbox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list">
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in argoproj/argo-helm category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/argoproj/argo-helm" class="nav-list-link">argoproj/argo-helm</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-events" class="nav-list-link">argo-events</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-rollouts" class="nav-list-link">argo-rollouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-apps" class="nav-list-link">argocd-apps</a></li>
+<li class="nav-list-item"><a href="/changelogs/argoproj/argo-helm/argocd-image-updater" class="nav-list-link">argocd-image-updater</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in authelia/chartrepo category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/authelia/chartrepo" class="nav-list-link">authelia/chartrepo</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/authelia/chartrepo/authelia" class="nav-list-link">authelia</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in bitnami/charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/bitnami/charts" class="nav-list-link">bitnami/charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/CHART_NAME" class="nav-list-link">CHART_NAME</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/airflow" class="nav-list-link">airflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apache" class="nav-list-link">apache</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/apisix" class="nav-list-link">apisix</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/appsmith" class="nav-list-link">appsmith</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-cd" class="nav-list-link">argo-cd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/argo-workflows" class="nav-list-link">argo-workflows</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/aspnet-core" class="nav-list-link">aspnet-core</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cassandra" class="nav-list-link">cassandra</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/cert-manager" class="nav-list-link">cert-manager</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/clickhouse" class="nav-list-link">clickhouse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/common" class="nav-list-link">common</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/concourse" class="nav-list-link">concourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/consul" class="nav-list-link">consul</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/contour" class="nav-list-link">contour</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/deepspeed" class="nav-list-link">deepspeed</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/discourse" class="nav-list-link">discourse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/dokuwiki" class="nav-list-link">dokuwiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/drupal" class="nav-list-link">drupal</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ejbca" class="nav-list-link">ejbca</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/elasticsearch" class="nav-list-link">elasticsearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/etcd" class="nav-list-link">etcd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/external-dns" class="nav-list-link">external-dns</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flink" class="nav-list-link">flink</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/fluentd" class="nav-list-link">fluentd</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/flux" class="nav-list-link">flux</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/ghost" class="nav-list-link">ghost</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/gitea" class="nav-list-link">gitea</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-loki" class="nav-list-link">grafana-loki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-mimir" class="nav-list-link">grafana-mimir</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-operator" class="nav-list-link">grafana-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/grafana-tempo" class="nav-list-link">grafana-tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/haproxy" class="nav-list-link">haproxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/harbor" class="nav-list-link">harbor</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/influxdb" class="nav-list-link">influxdb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jaeger" class="nav-list-link">jaeger</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jasperreports" class="nav-list-link">jasperreports</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jenkins" class="nav-list-link">jenkins</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/joomla" class="nav-list-link">joomla</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/jupyterhub" class="nav-list-link">jupyterhub</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kafka" class="nav-list-link">kafka</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/keycloak" class="nav-list-link">keycloak</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kiam" class="nav-list-link">kiam</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kibana" class="nav-list-link">kibana</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kong" class="nav-list-link">kong</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-prometheus" class="nav-list-link">kube-prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubeapps" class="nav-list-link">kubeapps</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kuberay" class="nav-list-link">kuberay</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/kubernetes-event-exporter" class="nav-list-link">kubernetes-event-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/logstash" class="nav-list-link">logstash</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/magento" class="nav-list-link">magento</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb" class="nav-list-link">mariadb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mariadb-galera" class="nav-list-link">mariadb-galera</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mastodon" class="nav-list-link">mastodon</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/matomo" class="nav-list-link">matomo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mediawiki" class="nav-list-link">mediawiki</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/memcached" class="nav-list-link">memcached</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metallb" class="nav-list-link">metallb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/metrics-server" class="nav-list-link">metrics-server</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/milvus" class="nav-list-link">milvus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/minio" class="nav-list-link">minio</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mlflow" class="nav-list-link">mlflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb" class="nav-list-link">mongodb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mongodb-sharded" class="nav-list-link">mongodb-sharded</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/moodle" class="nav-list-link">moodle</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/multus-cni" class="nav-list-link">multus-cni</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/mysql" class="nav-list-link">mysql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nats" class="nav-list-link">nats</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx" class="nav-list-link">nginx</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/nginx-ingress-controller" class="nav-list-link">nginx-ingress-controller</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/node-exporter" class="nav-list-link">node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/oauth2-proxy" class="nav-list-link">oauth2-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/odoo" class="nav-list-link">odoo</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opencart" class="nav-list-link">opencart</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/opensearch" class="nav-list-link">opensearch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/osclass" class="nav-list-link">osclass</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/parse" class="nav-list-link">parse</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpbb" class="nav-list-link">phpbb</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/phpmyadmin" class="nav-list-link">phpmyadmin</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pinniped" class="nav-list-link">pinniped</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql" class="nav-list-link">postgresql</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/postgresql-ha" class="nav-list-link">postgresql-ha</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prestashop" class="nav-list-link">prestashop</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/pytorch" class="nav-list-link">pytorch</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq" class="nav-list-link">rabbitmq</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/rabbitmq-cluster-operator" class="nav-list-link">rabbitmq-cluster-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis" class="nav-list-link">redis</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redis-cluster" class="nav-list-link">redis-cluster</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/redmine" class="nav-list-link">redmine</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/schema-registry" class="nav-list-link">schema-registry</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sealed-secrets" class="nav-list-link">sealed-secrets</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/solr" class="nav-list-link">solr</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/sonarqube" class="nav-list-link">sonarqube</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spark" class="nav-list-link">spark</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/spring-cloud-dataflow" class="nav-list-link">spring-cloud-dataflow</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/supabase" class="nav-list-link">supabase</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tensorflow-resnet" class="nav-list-link">tensorflow-resnet</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/thanos" class="nav-list-link">thanos</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/tomcat" class="nav-list-link">tomcat</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/vault" class="nav-list-link">vault</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/whereabouts" class="nav-list-link">whereabouts</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wildfly" class="nav-list-link">wildfly</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/wordpress" class="nav-list-link">wordpress</a></li>
+<li class="nav-list-item"><a href="/changelogs/bitnami/charts/zookeeper" class="nav-list-link">zookeeper</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in grafana/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/grafana/helm-charts" class="nav-list-link">grafana/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/agent-operator" class="nav-list-link">agent-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs" class="nav-list-link">enterprise-logs</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-logs-simple" class="nav-list-link">enterprise-logs-simple</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/enterprise-metrics" class="nav-list-link">enterprise-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/fluent-bit" class="nav-list-link">fluent-bit</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/grafana" class="nav-list-link">grafana</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/lgtm-distributed" class="nav-list-link">lgtm-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-canary" class="nav-list-link">loki-canary</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-distributed" class="nav-list-link">loki-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/loki-stack" class="nav-list-link">loki-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/promtail" class="nav-list-link">promtail</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/rollout-operator" class="nav-list-link">rollout-operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/snyk-exporter" class="nav-list-link">snyk-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/synthetic-monitoring-agent" class="nav-list-link">synthetic-monitoring-agent</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo" class="nav-list-link">tempo</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-distributed" class="nav-list-link">tempo-distributed</a></li>
+<li class="nav-list-item"><a href="/changelogs/grafana/helm-charts/tempo-vulture" class="nav-list-link">tempo-vulture</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in kubernetes/ingress-nginx category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/kubernetes/ingress-nginx" class="nav-list-link">kubernetes/ingress-nginx</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/kubernetes/ingress-nginx/ingress-nginx" class="nav-list-link">ingress-nginx</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in minio/operator category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/minio/operator" class="nav-list-link">minio/operator</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/minio/operator/operator" class="nav-list-link">operator</a></li>
+<li class="nav-list-item"><a href="/changelogs/minio/operator/tenant" class="nav-list-link">tenant</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in prometheus-community/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/prometheus-community/helm-charts" class="nav-list-link">prometheus-community/helm-charts</a><ul class="nav-list">
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager" class="nav-list-link">alertmanager</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/alertmanager-snmp-notifier" class="nav-list-link">alertmanager-snmp-notifier</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/crds" class="nav-list-link">crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/jiralert" class="nav-list-link">jiralert</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-prometheus-stack" class="nav-list-link">kube-prometheus-stack</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/kube-state-metrics" class="nav-list-link">kube-state-metrics</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prom-label-proxy" class="nav-list-link">prom-label-proxy</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus" class="nav-list-link">prometheus</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-adapter" class="nav-list-link">prometheus-adapter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-blackbox-exporter" class="nav-list-link">prometheus-blackbox-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-cloudwatch-exporter" class="nav-list-link">prometheus-cloudwatch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-conntrack-stats-exporter" class="nav-list-link">prometheus-conntrack-stats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-consul-exporter" class="nav-list-link">prometheus-consul-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-couchdb-exporter" class="nav-list-link">prometheus-couchdb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-druid-exporter" class="nav-list-link">prometheus-druid-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-elasticsearch-exporter" class="nav-list-link">prometheus-elasticsearch-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-fastly-exporter" class="nav-list-link">prometheus-fastly-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-ipmi-exporter" class="nav-list-link">prometheus-ipmi-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-json-exporter" class="nav-list-link">prometheus-json-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-kafka-exporter" class="nav-list-link">prometheus-kafka-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-memcached-exporter" class="nav-list-link">prometheus-memcached-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-modbus-exporter" class="nav-list-link">prometheus-modbus-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mongodb-exporter" class="nav-list-link">prometheus-mongodb-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-mysql-exporter" class="nav-list-link">prometheus-mysql-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nats-exporter" class="nav-list-link">prometheus-nats-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-nginx-exporter" class="nav-list-link">prometheus-nginx-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-node-exporter" class="nav-list-link">prometheus-node-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-opencost-exporter" class="nav-list-link">prometheus-opencost-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-admission-webhook" class="nav-list-link">prometheus-operator-admission-webhook</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-operator-crds" class="nav-list-link">prometheus-operator-crds</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pgbouncer-exporter" class="nav-list-link">prometheus-pgbouncer-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingdom-exporter" class="nav-list-link">prometheus-pingdom-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pingmesh-exporter" class="nav-list-link">prometheus-pingmesh-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-postgres-exporter" class="nav-list-link">prometheus-postgres-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-pushgateway" class="nav-list-link">prometheus-pushgateway</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-rabbitmq-exporter" class="nav-list-link">prometheus-rabbitmq-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-redis-exporter" class="nav-list-link">prometheus-redis-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-smartctl-exporter" class="nav-list-link">prometheus-smartctl-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-snmp-exporter" class="nav-list-link">prometheus-snmp-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-stackdriver-exporter" class="nav-list-link">prometheus-stackdriver-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-statsd-exporter" class="nav-list-link">prometheus-statsd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-systemd-exporter" class="nav-list-link">prometheus-systemd-exporter</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-to-sd" class="nav-list-link">prometheus-to-sd</a></li>
+<li class="nav-list-item"><a href="/changelogs/prometheus-community/helm-charts/prometheus-windows-exporter" class="nav-list-link">prometheus-windows-exporter</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in traefik/traefik-helm-chart category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/traefik/traefik-helm-chart" class="nav-list-link">traefik/traefik-helm-chart</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/traefik/traefik-helm-chart/traefik" class="nav-list-link">traefik</a></li></ul>
+</li>
+<li class="nav-list-item">
+<button class="nav-list-expander btn-reset" aria-label="toggle items in vmware-tanzu/helm-charts category" aria-pressed="false"> <svg viewbox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/changelogs/vmware-tanzu/helm-charts" class="nav-list-link">vmware-tanzu/helm-charts</a><ul class="nav-list"><li class="nav-list-item"><a href="/changelogs/vmware-tanzu/helm-charts/velero" class="nav-list-link">velero</a></li></ul>
+</li>
+</ul> </nav> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Changelogs" aria-label="Search Changelogs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/changelogs/prometheus-community/helm-charts">prometheus-community/helm-charts</a></li> <li class="breadcrumb-nav-list-item"><span>prometheus-elasticsearch-exporter</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="prometheus-elasticsearch-exporter"> <a href="#prometheus-elasticsearch-exporter" class="anchor-heading" aria-labelledby="prometheus-elasticsearch-exporter"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> prometheus-elasticsearch-exporter </h1> <h2 id="540"> <a href="#540" class="anchor-heading" aria-labelledby="540"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.4.0 </h2> <p><strong>Release date:</strong> 2023-12-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.7.0&amp;color=success" alt="AppVersion: v1.7.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] bump elasticsearch exporter to 1.7.0 (#4111)</li> </ul> <h3 id="default-value-changes"> <a href="#default-value-changes" class="anchor-heading" aria-labelledby="default-value-changes"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="531"> <a href="#531" class="anchor-heading" aria-labelledby="531"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.3.1 </h2> <p><strong>Release date:</strong> 2023-09-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.0&amp;color=success" alt="AppVersion: v1.6.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix elasticsearch-exporter preStop command (#3838)</li> </ul> <h3 id="default-value-changes-1"> <a href="#default-value-changes-1" class="anchor-heading" aria-labelledby="default-value-changes-1"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="530"> <a href="#530" class="anchor-heading" aria-labelledby="530"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.3.0 </h2> <p><strong>Release date:</strong> 2023-09-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=v1.6.0&amp;color=success" alt="AppVersion: v1.6.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] bump elastic-exporter to 1.6.0 (#3781)</li> </ul> <h3 id="default-value-changes-2"> <a href="#default-value-changes-2" class="anchor-heading" aria-labelledby="default-value-changes-2"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 720070e3..ce15680c 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -14,7 +14,8 @@</span> restartPolicy: Always
+ 
+ image:
+   repository: quay.io/prometheuscommunity/elasticsearch-exporter
+<span class="gd">-  tag: v1.5.0
+</span><span class="gi">+  # if not set appVersion field from Chart.yaml is used
++  tag: ""
+</span>   pullPolicy: IfNotPresent
+   pullSecret: ""
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="520"> <a href="#520" class="anchor-heading" aria-labelledby="520"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.2.0 </h2> <p><strong>Release date:</strong> 2023-06-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Add init containers (#3482)</li> </ul> <h3 id="default-value-changes-3"> <a href="#default-value-changes-3" class="anchor-heading" aria-labelledby="default-value-changes-3"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 0e28b7b1..720070e3 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -67,6 +67,8 @@</span> podLabels: {}
+ 
+ affinity: {}
+ 
+<span class="gi">+initContainers: []
++
+</span> service:
+   type: ClusterIP
+   httpPort: 9108
+<span class="err">
+</span></code></pre></div></div> <h2 id="513"> <a href="#513" class="anchor-heading" aria-labelledby="513"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.1.3 </h2> <p><strong>Release date:</strong> 2023-06-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] fix preStop command (#3466)</li> </ul> <h3 id="default-value-changes-4"> <a href="#default-value-changes-4" class="anchor-heading" aria-labelledby="default-value-changes-4"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="512"> <a href="#512" class="anchor-heading" aria-labelledby="512"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.1.2 </h2> <p><strong>Release date:</strong> 2023-06-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Add a chart maintainer (#3483)</li> </ul> <h3 id="default-value-changes-5"> <a href="#default-value-changes-5" class="anchor-heading" aria-labelledby="default-value-changes-5"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="511"> <a href="#511" class="anchor-heading" aria-labelledby="511"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.1.1 </h2> <p><strong>Release date:</strong> 2023-04-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Set Pod container name to Service port name (#3157)</li> </ul> <h3 id="default-value-changes-6"> <a href="#default-value-changes-6" class="anchor-heading" aria-labelledby="default-value-changes-6"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="510"> <a href="#510" class="anchor-heading" aria-labelledby="510"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.1.0 </h2> <p><strong>Release date:</strong> 2023-03-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] add setters for missed out exporters (#3109)</li> </ul> <h3 id="default-value-changes-7"> <a href="#default-value-changes-7" class="anchor-heading" aria-labelledby="default-value-changes-7"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 4821a2e8..0e28b7b1 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -155,6 +155,10 @@</span> es:
+   ##
+   indices_mappings: true
+ 
+<span class="gi">+  ## If true, query stats for aliases.
++  ##
++  aliases: false
++
+</span>   ## If true, query stats for shards in the cluster.
+   ##
+   shards: true
+<span class="p">@@ -167,6 +171,14 @@</span> es:
+   ##
+   cluster_settings: false
+ 
+<span class="gi">+  ## If true, query stats for SLM snapshots.
++  ##
++  slm: false
++
++  ## If true, query stats for data streams.
++  ##
++  data_stream: false
++
+</span>   ## Timeout for trying to get stats from Elasticsearch. (ex: 20s)
+   ##
+   timeout: 30s
+<span class="err">
+</span></code></pre></div></div> <h2 id="500"> <a href="#500" class="anchor-heading" aria-labelledby="500"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.0.0 </h2> <p><strong>Release date:</strong> 2022-12-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Refactor securityContext configuration (#2694)</li> </ul> <h3 id="default-value-changes-8"> <a href="#default-value-changes-8" class="anchor-heading" aria-labelledby="default-value-changes-8"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 3a2c918a..4821a2e8 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -18,13 +18,18 @@</span> image:
+   pullPolicy: IfNotPresent
+   pullSecret: ""
+ 
+<span class="gd">-## Set enabled to false if you don't want securityContext
+-## in your Deployment.
+-## The below values are the default for kubernetes.
+-## Openshift won't deploy with runAsUser: 1000 without additional permissions.
+-securityContext:
+-  enabled: true  # Should be set to false when running on OpenShift
+</span><span class="gi">+podSecurityContext:
++  runAsNonRoot: true
+</span>   runAsUser: 1000
+<span class="gi">+  seccompProfile:
++    type: "RuntimeDefault"
++
++securityContext:
++  allowPrivilegeEscalation: false
++  capabilities:
++    drop:
++      - ALL
++  readOnlyRootFilesystem: true
+</span> 
+ # Custom DNS configuration to be added to prometheus-elasticsearch-exporter pods
+ dnsConfig: {}
+<span class="err">
+</span></code></pre></div></div> <h2 id="4151"> <a href="#4151" class="anchor-heading" aria-labelledby="4151"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.15.1 </h2> <p><strong>Release date:</strong> 2022-10-16</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Fix PSP deprecation after k8s 1.25+ (#2569)</li> </ul> <h3 id="default-value-changes-9"> <a href="#default-value-changes-9" class="anchor-heading" aria-labelledby="default-value-changes-9"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4150"> <a href="#4150" class="anchor-heading" aria-labelledby="4150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.15.0 </h2> <p><strong>Release date:</strong> 2022-09-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] allow configuration of deployment labels (#2085)</li> </ul> <h3 id="default-value-changes-10"> <a href="#default-value-changes-10" class="anchor-heading" aria-labelledby="default-value-changes-10"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index d0da9a11..3a2c918a 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -72,6 +72,7 @@</span> service:
+ 
+ deployment:
+   annotations: {}
+<span class="gi">+  labels: {}
+</span> 
+ ## Extra environment variables that will be passed into the exporter pod
+ ## example:
+<span class="err">
+</span></code></pre></div></div> <h2 id="4141"> <a href="#4141" class="anchor-heading" aria-labelledby="4141"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.14.1 </h2> <p><strong>Release date:</strong> 2022-09-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feature(prometheus-elasticsearch-exporter): Added option to use tpl to define secret name. (#2423)</li> </ul> <h3 id="default-value-changes-11"> <a href="#default-value-changes-11" class="anchor-heading" aria-labelledby="default-value-changes-11"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4140"> <a href="#4140" class="anchor-heading" aria-labelledby="4140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.14.0 </h2> <p><strong>Release date:</strong> 2022-08-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.5.0&amp;color=success" alt="AppVersion: 1.5.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Bump exporter to 1.5.0 (#2342)</li> </ul> <h3 id="default-value-changes-12"> <a href="#default-value-changes-12" class="anchor-heading" aria-labelledby="default-value-changes-12"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 2a32b714..d0da9a11 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -14,7 +14,7 @@</span> restartPolicy: Always
+ 
+ image:
+   repository: quay.io/prometheuscommunity/elasticsearch-exporter
+<span class="gd">-  tag: v1.3.0
+</span><span class="gi">+  tag: v1.5.0
+</span>   pullPolicy: IfNotPresent
+   pullSecret: ""
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="4130"> <a href="#4130" class="anchor-heading" aria-labelledby="4130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.13.0 </h2> <p><strong>Release date:</strong> 2022-06-13</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Allow to set global imagePullSecrets (#2039)</li> </ul> <h3 id="default-value-changes-13"> <a href="#default-value-changes-13" class="anchor-heading" aria-labelledby="default-value-changes-13"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 9bf17c0f..2a32b714 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -1,3 +1,9 @@</span>
+<span class="gi">+## Global settings for all charts in a tree of dependent charts
++## This allows to set the same values for the imagePullSecrets, obviating the need
++## to set the same values for each chart (and image) separately
++global:
++  imagePullSecrets: []
++
+</span> ## number of exporter instances
+ ##
+ replicaCount: 1
+<span class="err">
+</span></code></pre></div></div> <h2 id="4120"> <a href="#4120" class="anchor-heading" aria-labelledby="4120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.12.0 </h2> <p><strong>Release date:</strong> 2022-05-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Allow jobLabel configuration (#2017)</li> </ul> <h3 id="default-value-changes-14"> <a href="#default-value-changes-14" class="anchor-heading" aria-labelledby="default-value-changes-14"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 7f61fc1e..9bf17c0f 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -74,7 +74,6 @@</span> deployment:
+ ##   KEY_2: value2
+ env: {}
+ 
+<span class="gd">-
+</span> ## Extra arguments to pass to the container's executable
+ ## example:
+ # extraArgs:
+<span class="p">@@ -165,7 +164,6 @@</span> es:
+   ##
+   sslSkipVerify: false
+ 
+<span class="gd">-
+</span>   ssl:
+     ## If true, a secure connection to ES cluster is used
+     ##
+<span class="p">@@ -176,7 +174,6 @@</span> es:
+     useExistingSecrets: false
+ 
+     ca:
+<span class="gd">-
+</span>       ## PEM that contains trusted CAs used for setting up secure Elasticsearch connection
+       ##
+       # pem:
+<span class="p">@@ -214,6 +211,7 @@</span> serviceMonitor:
+   #  namespace: monitoring
+   labels: {}
+   interval: 10s
+<span class="gi">+  jobLabel: ""
+</span>   scrapeTimeout: 10s
+   scheme: http
+   relabelings: []
+<span class="err">
+</span></code></pre></div></div> <h2 id="4112"> <a href="#4112" class="anchor-heading" aria-labelledby="4112"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.11.2 </h2> <p><strong>Release date:</strong> 2022-05-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] remove me from elasticsearch chart (#2040)</li> </ul> <h3 id="default-value-changes-15"> <a href="#default-value-changes-15" class="anchor-heading" aria-labelledby="default-value-changes-15"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4111"> <a href="#4111" class="anchor-heading" aria-labelledby="4111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.11.1 </h2> <p><strong>Release date:</strong> 2022-03-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fixed prometheus-elasticsearch-exporter pre-stop lifecycle hook (#1857)</li> </ul> <h3 id="default-value-changes-16"> <a href="#default-value-changes-16" class="anchor-heading" aria-labelledby="default-value-changes-16"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="4110"> <a href="#4110" class="anchor-heading" aria-labelledby="4110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.11.0 </h2> <p><strong>Release date:</strong> 2022-01-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Support extra arguments to the pod’s container (#1547)</li> </ul> <h3 id="default-value-changes-17"> <a href="#default-value-changes-17" class="anchor-heading" aria-labelledby="default-value-changes-17"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 6727a0ee..7f61fc1e 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -74,6 +74,13 @@</span> deployment:
+ ##   KEY_2: value2
+ env: {}
+ 
+<span class="gi">+
++## Extra arguments to pass to the container's executable
++## example:
++# extraArgs:
++#   - --es.indices_mappings
++extraArgs: []
++
+</span> ## The name of a secret in the same kubernetes namespace which contain values to be added to the environment
+ ## This can be useful for auth tokens, etc
+ envFromSecret: ""
+<span class="err">
+</span></code></pre></div></div> <h2 id="4100"> <a href="#4100" class="anchor-heading" aria-labelledby="4100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.10.0 </h2> <p><strong>Release date:</strong> 2021-12-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Add support for indices mappings (#1610)</li> </ul> <h3 id="default-value-changes-18"> <a href="#default-value-changes-18" class="anchor-heading" aria-labelledby="default-value-changes-18"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index fafd9460..6727a0ee 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -133,6 +133,10 @@</span> es:
+   ##
+   indices_settings: true
+ 
+<span class="gi">+  ## If true, query mapping stats for all indices in the cluster.
++  ##
++  indices_mappings: true
++
+</span>   ## If true, query stats for shards in the cluster.
+   ##
+   shards: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="490"> <a href="#490" class="anchor-heading" aria-labelledby="490"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.9.0 </h2> <p><strong>Release date:</strong> 2021-11-30</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.3.0&amp;color=success" alt="AppVersion: 1.3.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Bump exporter to 1.3.0 (#1546)</li> </ul> <h3 id="default-value-changes-19"> <a href="#default-value-changes-19" class="anchor-heading" aria-labelledby="default-value-changes-19"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 6050825f..fafd9460 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -8,7 +8,7 @@</span> restartPolicy: Always
+ 
+ image:
+   repository: quay.io/prometheuscommunity/elasticsearch-exporter
+<span class="gd">-  tag: v1.2.1
+</span><span class="gi">+  tag: v1.3.0
+</span>   pullPolicy: IfNotPresent
+   pullSecret: ""
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="480"> <a href="#480" class="anchor-heading" aria-labelledby="480"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.8.0 </h2> <p><strong>Release date:</strong> 2021-11-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>add support for serviceaccount annotations (#1529)</li> </ul> <h3 id="default-value-changes-20"> <a href="#default-value-changes-20" class="anchor-heading" aria-labelledby="default-value-changes-20"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index e2af0005..6050825f 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -251,6 +251,7 @@</span> serviceAccount:
+   create: false
+   name: default
+   automountServiceAccountToken: true
+<span class="gi">+  annotations: {}
+</span> 
+ # Creates a PodSecurityPolicy and the role/rolebinding
+ # allowing the serviceaccount to use it
+<span class="err">
+</span></code></pre></div></div> <h2 id="470"> <a href="#470" class="anchor-heading" aria-labelledby="470"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.7.0 </h2> <p><strong>Release date:</strong> 2021-09-24</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Use appropriate apiVersion for rbac (#1146)</li> </ul> <h3 id="default-value-changes-21"> <a href="#default-value-changes-21" class="anchor-heading" aria-labelledby="default-value-changes-21"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="461"> <a href="#461" class="anchor-heading" aria-labelledby="461"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.6.1 </h2> <p><strong>Release date:</strong> 2021-09-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fixes: #1226 by using tpl funcion at es.uri injection (#1227)</li> <li>[prometheus-elasticsearch-exporter] add optional annotations to deployment (#1224)</li> </ul> <h3 id="default-value-changes-22"> <a href="#default-value-changes-22" class="anchor-heading" aria-labelledby="default-value-changes-22"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index fb42ecef..e2af0005 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -64,6 +64,9 @@</span> service:
+   annotations: {}
+   labels: {}
+ 
+<span class="gi">+deployment:
++  annotations: {}
++
+</span> ## Extra environment variables that will be passed into the exporter pod
+ ## example:
+ ## env:
+<span class="err">
+</span></code></pre></div></div> <h2 id="460"> <a href="#460" class="anchor-heading" aria-labelledby="460"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.6.0 </h2> <p><strong>Release date:</strong> 2021-08-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Add ability to use values from secrets for basic-auth (#1182)</li> </ul> <h3 id="default-value-changes-23"> <a href="#default-value-changes-23" class="anchor-heading" aria-labelledby="default-value-changes-23"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="450"> <a href="#450" class="anchor-heading" aria-labelledby="450"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.5.0 </h2> <p><strong>Release date:</strong> 2021-07-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.2.1&amp;color=success" alt="AppVersion: 1.2.1"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] update image version (#1126)</li> </ul> <h3 id="default-value-changes-24"> <a href="#default-value-changes-24" class="anchor-heading" aria-labelledby="default-value-changes-24"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 62f98ad6..fb42ecef 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -7,8 +7,8 @@</span> replicaCount: 1
+ restartPolicy: Always
+ 
+ image:
+<span class="gd">-  repository: justwatch/elasticsearch_exporter
+-  tag: 1.1.0
+</span><span class="gi">+  repository: quay.io/prometheuscommunity/elasticsearch-exporter
++  tag: v1.2.1
+</span>   pullPolicy: IfNotPresent
+   pullSecret: ""
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="440"> <a href="#440" class="anchor-heading" aria-labelledby="440"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.4.0 </h2> <p><strong>Release date:</strong> 2021-04-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Allows to set automountServiceAccountToken on ServiceAccount (#808)</li> </ul> <h3 id="default-value-changes-25"> <a href="#default-value-changes-25" class="anchor-heading" aria-labelledby="default-value-changes-25"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 0da12320..62f98ad6 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -247,6 +247,7 @@</span> prometheusRule:
+ serviceAccount:
+   create: false
+   name: default
+<span class="gi">+  automountServiceAccountToken: true
+</span> 
+ # Creates a PodSecurityPolicy and the role/rolebinding
+ # allowing the serviceaccount to use it
+<span class="err">
+</span></code></pre></div></div> <h2 id="430"> <a href="#430" class="anchor-heading" aria-labelledby="430"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.3.0 </h2> <p><strong>Release date:</strong> 2021-02-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>feat(extraVolume\Mounts): introduction (#698)</li> </ul> <h3 id="default-value-changes-26"> <a href="#default-value-changes-26" class="anchor-heading" aria-labelledby="default-value-changes-26"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 00a22034..0da12320 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -91,6 +91,24 @@</span> secretMounts: []
+ #    secretName: elastic-certs
+ #    path: /ssl
+ 
+<span class="gi">+# A list of additional Volume to add to the deployment
++# this is useful if the volume you need is not a secret (csi volume etc.)
++extraVolumes: []
++#  - name: csi-volume
++#    csi:
++#      driver: secrets-store.csi.k8s.io
++#      readOnly: true
++#      volumeAttributes:
++#        secretProviderClass: my-spc
++
++#  A list of additional VolumeMounts to add to the deployment
++#  this is useful for mounting any other needed resource into
++#  the elasticsearch-exporter pod
++extraVolumeMounts: []
++#  - name: csi-volume
++#    mountPath: /csi/volume
++#    readOnly: true
++
+</span> es:
+   ## Address (host and port) of the Elasticsearch node we should connect to.
+   ## This could be a local node (localhost:9200, for instance), or the address
+<span class="err">
+</span></code></pre></div></div> <h2 id="420"> <a href="#420" class="anchor-heading" aria-labelledby="420"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.2.0 </h2> <p><strong>Release date:</strong> 2021-02-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Ability for custom dnsConfig in prometheus-elasticsearch-exporter (#641)</li> </ul> <h3 id="default-value-changes-27"> <a href="#default-value-changes-27" class="anchor-heading" aria-labelledby="default-value-changes-27"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 00caa62e..00a22034 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -20,6 +20,18 @@</span> securityContext:
+   enabled: true  # Should be set to false when running on OpenShift
+   runAsUser: 1000
+ 
+<span class="gi">+# Custom DNS configuration to be added to prometheus-elasticsearch-exporter pods
++dnsConfig: {}
++# nameservers:
++#   - 1.2.3.4
++# searches:
++#   - ns1.svc.cluster-domain.example
++#   - my.dns.search.suffix
++# options:
++#   - name: ndots
++#     value: "2"
++#   - name: edns0
++
+</span> log:
+   format: logfmt
+   level: info
+<span class="err">
+</span></code></pre></div></div> <h2 id="410"> <a href="#410" class="anchor-heading" aria-labelledby="410"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.1.0 </h2> <p><strong>Release date:</strong> 2021-01-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] Add additional pod labels support (#578)</li> </ul> <h3 id="default-value-changes-28"> <a href="#default-value-changes-28" class="anchor-heading" aria-labelledby="default-value-changes-28"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 82a5f1e2..00caa62e 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -40,6 +40,8 @@</span> tolerations: []
+ 
+ podAnnotations: {}
+ 
+<span class="gi">+podLabels: {}
++
+</span> affinity: {}
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="401"> <a href="#401" class="anchor-heading" aria-labelledby="401"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.0.1 </h2> <p><strong>Release date:</strong> 2020-12-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[prometheus-elasticsearch-exporter] change tolerations from map to list (#476)</li> <li>Update charts/prometheus-elasticsearch-exporter/README.md</li> <li>used fixed name for container</li> </ul> <h3 id="default-value-changes-29"> <a href="#default-value-changes-29" class="anchor-heading" aria-labelledby="default-value-changes-29"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 385ff4e1..82a5f1e2 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -36,7 +36,7 @@</span> priorityClassName: ""
+ 
+ nodeSelector: {}
+ 
+<span class="gd">-tolerations: {}
+</span><span class="gi">+tolerations: []
+</span> 
+ podAnnotations: {}
+ 
+<span class="err">
+</span></code></pre></div></div> <h2 id="400"> <a href="#400" class="anchor-heading" aria-labelledby="400"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.0.0 </h2> <p><strong>Release date:</strong> 2020-10-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Added upgrade instructions to migrate from stable chart</li> <li>Update charts/prometheus-elasticsearch-exporter/README.md</li> <li>Fixed copy &amp; paste mistakes</li> </ul> <h3 id="default-value-changes-30"> <a href="#default-value-changes-30" class="anchor-heading" aria-labelledby="default-value-changes-30"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="380"> <a href="#380" class="anchor-heading" aria-labelledby="380"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.8.0 </h2> <p><strong>Release date:</strong> 2020-10-06</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Bump Chart versions, adjust README</li> </ul> <h3 id="default-value-changes-31"> <a href="#default-value-changes-31" class="anchor-heading" aria-labelledby="default-value-changes-31"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="370"> <a href="#370" class="anchor-heading" aria-labelledby="370"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.7.0 </h2> <p><strong>Release date:</strong> 2020-08-08</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Make sampleLimit adjustable (#23454)</li> </ul> <h3 id="default-value-changes-32"> <a href="#default-value-changes-32" class="anchor-heading" aria-labelledby="default-value-changes-32"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 9b8d524c..385ff4e1 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -173,6 +173,7 @@</span> serviceMonitor:
+   relabelings: []
+   targetLabels: []
+   metricRelabelings: []
+<span class="gi">+  sampleLimit: 0
+</span> 
+ prometheusRule:
+   ## If true, a PrometheusRule CRD is created for a prometheus operator
+<span class="err">
+</span></code></pre></div></div> <h2 id="360"> <a href="#360" class="anchor-heading" aria-labelledby="360"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.6.0 </h2> <p><strong>Release date:</strong> 2020-07-22</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Add ServiceMonitor metricRelabeling (#23291)</li> </ul> <h3 id="default-value-changes-33"> <a href="#default-value-changes-33" class="anchor-heading" aria-labelledby="default-value-changes-33"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 453deef2..9b8d524c 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -172,6 +172,7 @@</span> serviceMonitor:
+   scheme: http
+   relabelings: []
+   targetLabels: []
+<span class="gi">+  metricRelabelings: []
+</span> 
+ prometheusRule:
+   ## If true, a PrometheusRule CRD is created for a prometheus operator
+<span class="err">
+</span></code></pre></div></div> <h2 id="350"> <a href="#350" class="anchor-heading" aria-labelledby="350"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.5.0 </h2> <p><strong>Release date:</strong> 2020-07-17</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-34"> <a href="#default-value-changes-34" class="anchor-heading" aria-labelledby="default-value-changes-34"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 579c8198..453deef2 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -20,6 +20,10 @@</span> securityContext:
+   enabled: true  # Should be set to false when running on OpenShift
+   runAsUser: 1000
+ 
+<span class="gi">+log:
++  format: logfmt
++  level: info
++
+</span> resources: {}
+   # requests:
+   #   cpu: 100m
+<span class="err">
+</span></code></pre></div></div> <h2 id="340"> <a href="#340" class="anchor-heading" aria-labelledby="340"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.4.0 </h2> <p><strong>Release date:</strong> 2020-06-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Add serviceMonitor targetLabels (#22951)</li> </ul> <h3 id="default-value-changes-35"> <a href="#default-value-changes-35" class="anchor-heading" aria-labelledby="default-value-changes-35"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 0fd2a632..579c8198 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -167,6 +167,7 @@</span> serviceMonitor:
+   scrapeTimeout: 10s
+   scheme: http
+   relabelings: []
+<span class="gi">+  targetLabels: []
+</span> 
+ prometheusRule:
+   ## If true, a PrometheusRule CRD is created for a prometheus operator
+<span class="err">
+</span></code></pre></div></div> <h2 id="330"> <a href="#330" class="anchor-heading" aria-labelledby="330"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.3.0 </h2> <p><strong>Release date:</strong> 2020-05-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Add options to set relabel configuration for metrics (#21636)</li> </ul> <h3 id="default-value-changes-36"> <a href="#default-value-changes-36" class="anchor-heading" aria-labelledby="default-value-changes-36"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index bf92a297..0fd2a632 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -166,6 +166,7 @@</span> serviceMonitor:
+   interval: 10s
+   scrapeTimeout: 10s
+   scheme: http
+<span class="gi">+  relabelings: []
+</span> 
+ prometheusRule:
+   ## If true, a PrometheusRule CRD is created for a prometheus operator
+<span class="err">
+</span></code></pre></div></div> <h2 id="320"> <a href="#320" class="anchor-heading" aria-labelledby="320"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.2.0 </h2> <p><strong>Release date:</strong> 2020-05-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Add option to disable client cert auth in Elasticsearch exporter (#21900)</li> </ul> <h3 id="default-value-changes-37"> <a href="#default-value-changes-37" class="anchor-heading" aria-labelledby="default-value-changes-37"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 441b05d3..bf92a297 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -117,7 +117,7 @@</span> es:
+ 
+ 
+   ssl:
+<span class="gd">-    ## If true, a secure connection to ES cluster is used (requires SSL certs below)
+</span><span class="gi">+    ## If true, a secure connection to ES cluster is used
+</span>     ##
+     enabled: false
+ 
+<span class="p">@@ -132,22 +132,25 @@</span> es:
+       # pem:
+ 
+       # Path of ca pem file which should match a secretMount path
+<span class="gd">-      # path: /ssl/ca.pem
+</span><span class="gi">+      path: /ssl/ca.pem
+</span>     client:
+<span class="gi">+      ## if true, client SSL certificate is used for authentication
++      ##
++      enabled: true
+</span> 
+       ## PEM that contains the client cert to connect to Elasticsearch.
+       ##
+       # pem:
+ 
+       # Path of client pem file which should match a secretMount path
+<span class="gd">-      # pemPath: /ssl/client.pem
+</span><span class="gi">+      pemPath: /ssl/client.pem
+</span> 
+       ## Private key for client auth when connecting to Elasticsearch
+       ##
+       # key:
+ 
+       # Path of client key file which should match a secretMount path
+<span class="gd">-      # keyPath: /ssl/client.key
+</span><span class="gi">+      keyPath: /ssl/client.key
+</span> web:
+   ## Path under which to expose metrics.
+   ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="310"> <a href="#310" class="anchor-heading" aria-labelledby="310"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.1.0 </h2> <p><strong>Release date:</strong> 2020-04-28</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> add extraEnvSecrets (#22067)</li> </ul> <h3 id="default-value-changes-38"> <a href="#default-value-changes-38" class="anchor-heading" aria-labelledby="default-value-changes-38"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 4afdcf86..441b05d3 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -57,6 +57,15 @@</span> env: {}
+ ## This can be useful for auth tokens, etc
+ envFromSecret: ""
+ 
+<span class="gi">+## A list of environment variables from secret refs that will be passed into the exporter pod
++## example:
++## This will set ${ES_PASSWORD} to the 'password' key from the 'my-secret' secret
++## extraEnvSecrets:
++##   ES_PASSWORD:
++##     secret: my-secret
++##     key: password
++extraEnvSecrets: {}
++
+</span> # A list of secrets and their paths to mount inside the pod
+ # This is useful for mounting certificates for security
+ secretMounts: []
+<span class="err">
+</span></code></pre></div></div> <h2 id="300"> <a href="#300" class="anchor-heading" aria-labelledby="300"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.0.0 </h2> <p><strong>Release date:</strong> 2020-02-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Allow PrometheusRules to be templated. (#20322)</li> </ul> <h3 id="default-value-changes-39"> <a href="#default-value-changes-39" class="anchor-heading" aria-labelledby="default-value-changes-39"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 4c5ca779..4afdcf86 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -159,32 +159,35 @@</span> prometheusRule:
+   ## If true, a PrometheusRule CRD is created for a prometheus operator
+   ## https://github.com/coreos/prometheus-operator
+   ##
+<span class="gi">+  ## The rules will be processed as Helm template, allowing to set variables in them.
+</span>   enabled: false
+   #  namespace: monitoring
+   labels: {}
+   rules: []
+     # - record: elasticsearch_filesystem_data_used_percent
+<span class="gd">-    #   expr: 100 * (elasticsearch_filesystem_data_size_bytes - elasticsearch_filesystem_data_free_bytes)
+-    #     / elasticsearch_filesystem_data_size_bytes
+</span><span class="gi">+    #   expr: |
++    #     100 * (elasticsearch_filesystem_data_size_bytes{service="{{ template "elasticsearch-exporter.fullname" . }}"} - elasticsearch_filesystem_data_free_bytes{service="{{ template "elasticsearch-exporter.fullname" . }}"})
++    #     / elasticsearch_filesystem_data_size_bytes{service="{{ template "elasticsearch-exporter.fullname" . }}"}
+</span>     # - record: elasticsearch_filesystem_data_free_percent
+<span class="gd">-    #   expr: 100 - elasticsearch_filesystem_data_used_percent
+</span><span class="gi">+    #   expr: 100 - elasticsearch_filesystem_data_used_percent{service="{{ template "elasticsearch-exporter.fullname" . }}"}
+</span>     # - alert: ElasticsearchTooFewNodesRunning
+<span class="gd">-    #   expr: elasticsearch_cluster_health_number_of_nodes &lt; 3
+</span><span class="gi">+    #   expr: elasticsearch_cluster_health_number_of_nodes{service="{{ template "elasticsearch-exporter.fullname" . }}"} &lt; 3
+</span>     #   for: 5m
+     #   labels:
+     #     severity: critical
+     #   annotations:
+<span class="gd">-    #     description: There are only {{$value}} &lt; 3 ElasticSearch nodes running
+</span><span class="gi">+    #     description: There are only {{ "{{ $value }}" }} &lt; 3 ElasticSearch nodes running
+</span>     #     summary: ElasticSearch running on less than 3 nodes
+     # - alert: ElasticsearchHeapTooHigh
+<span class="gd">-    #   expr: elasticsearch_jvm_memory_used_bytes{area="heap"} / elasticsearch_jvm_memory_max_bytes{area="heap"}
+</span><span class="gi">+    #   expr: |
++    #     elasticsearch_jvm_memory_used_bytes{service="{{ template "elasticsearch-exporter.fullname" . }}", area="heap"} / elasticsearch_jvm_memory_max_bytes{service="{{ template "elasticsearch-exporter.fullname" . }}", area="heap"}
+</span>     #     &gt; 0.9
+     #   for: 15m
+     #   labels:
+     #     severity: critical
+     #   annotations:
+     #     description: The heap usage is over 90% for 15m
+<span class="gd">-    #     summary: ElasticSearch node {{$labels.node}} heap usage is high
+</span><span class="gi">+    #     summary: ElasticSearch node {{ "{{ $labels.node }}" }} heap usage is high
+</span> 
+ # Create a service account
+ # To use a service account not handled by the chart, set the name here
+<span class="err">
+</span></code></pre></div></div> <h2 id="230"> <a href="#230" class="anchor-heading" aria-labelledby="230"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.3.0 </h2> <p><strong>Release date:</strong> 2020-02-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Feature flap the flag es.uri (#20589)</li> </ul> <h3 id="default-value-changes-40"> <a href="#default-value-changes-40" class="anchor-heading" aria-labelledby="default-value-changes-40"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="220"> <a href="#220" class="anchor-heading" aria-labelledby="220"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2.0 </h2> <p><strong>Release date:</strong> 2020-01-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Enabling environment from secrets (#19115)</li> </ul> <h3 id="default-value-changes-41"> <a href="#default-value-changes-41" class="anchor-heading" aria-labelledby="default-value-changes-41"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 2ddce73d..4c5ca779 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -51,7 +51,11 @@</span> service:
+ ## env:
+ ##   KEY_1: value1
+ ##   KEY_2: value2
+<span class="gd">-# env:
+</span><span class="gi">+env: {}
++
++## The name of a secret in the same kubernetes namespace which contain values to be added to the environment
++## This can be useful for auth tokens, etc
++envFromSecret: ""
+</span> 
+ # A list of secrets and their paths to mount inside the pod
+ # This is useful for mounting certificates for security
+<span class="err">
+</span></code></pre></div></div> <h2 id="211"> <a href="#211" class="anchor-heading" aria-labelledby="211"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.1 </h2> <p><strong>Release date:</strong> 2019-11-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add option es.indices_settings (#18909)</li> </ul> <h3 id="default-value-changes-42"> <a href="#default-value-changes-42" class="anchor-heading" aria-labelledby="default-value-changes-42"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 69bca7f2..2ddce73d 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -77,6 +77,10 @@</span> es:
+   ##
+   indices: true
+ 
+<span class="gi">+  ## If true, query settings stats for all indices in the cluster.
++  ##
++  indices_settings: true
++
+</span>   ## If true, query stats for shards in the cluster.
+   ##
+   shards: true
+<span class="err">
+</span></code></pre></div></div> <h2 id="210"> <a href="#210" class="anchor-heading" aria-labelledby="210"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1.0 </h2> <p><strong>Release date:</strong> 2019-10-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-43"> <a href="#default-value-changes-43" class="anchor-heading" aria-labelledby="default-value-changes-43"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="200"> <a href="#200" class="anchor-heading" aria-labelledby="200"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.0.0 </h2> <p><strong>Release date:</strong> 2019-10-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Kubernetes&amp;message=&gt;=1.10.0-0&amp;color=informational&amp;logo=kubernetes" alt="Kubernetes: &gt;=1.10.0-0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Update api versions to support k8s 1.16 (#17644)</li> </ul> <h3 id="default-value-changes-44"> <a href="#default-value-changes-44" class="anchor-heading" aria-labelledby="default-value-changes-44"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="1110"> <a href="#1110" class="anchor-heading" aria-labelledby="1110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.11.0 </h2> <p><strong>Release date:</strong> 2019-10-09</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add support for PodSecurityPolicies, ServiceAccounts (#16361)</li> </ul> <h3 id="default-value-changes-45"> <a href="#default-value-changes-45" class="anchor-heading" aria-labelledby="default-value-changes-45"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 1afdf51c..69bca7f2 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -177,3 +177,15 @@</span> prometheusRule:
+     #   annotations:
+     #     description: The heap usage is over 90% for 15m
+     #     summary: ElasticSearch node {{$labels.node}} heap usage is high
+<span class="gi">+
++# Create a service account
++# To use a service account not handled by the chart, set the name here
++# and set create to false
++serviceAccount:
++  create: false
++  name: default
++
++# Creates a PodSecurityPolicy and the role/rolebinding
++# allowing the serviceaccount to use it
++podSecurityPolicies:
++  enabled: false
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="1101"> <a href="#1101" class="anchor-heading" aria-labelledby="1101"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.10.1 </h2> <p><strong>Release date:</strong> 2019-09-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix space issue in volume mount (#17087)</li> </ul> <h3 id="default-value-changes-46"> <a href="#default-value-changes-46" class="anchor-heading" aria-labelledby="default-value-changes-46"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 1abe10cd..1afdf51c 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -56,15 +56,9 @@</span> service:
+ # A list of secrets and their paths to mount inside the pod
+ # This is useful for mounting certificates for security
+ secretMounts: []
+<span class="gd">-#  - name: ca
+-#    secretName: elastic-ca
+-#    path: /ssl/ca.pem
+-#  - name: elastic-client-pem
+-#    secretName: elastic-client-pem
+-#    path: /ssl/client.pem
+-#  - name: elastic-client-key
+-#    secretName: elastic-client-key
+-#    path: /ssl/client.key
+</span><span class="gi">+#  - name: elastic-certs
++#    secretName: elastic-certs
++#    path: /ssl
+</span> 
+ es:
+   ## Address (host and port) of the Elasticsearch node we should connect to.
+<span class="p">@@ -121,7 +115,7 @@</span> es:
+       # pem:
+ 
+       # Path of ca pem file which should match a secretMount path
+<span class="gd">-      # pemPath: /ssl/ca.pem
+</span><span class="gi">+      # path: /ssl/ca.pem
+</span>     client:
+ 
+       ## PEM that contains the client cert to connect to Elasticsearch.
+<span class="err">
+</span></code></pre></div></div> <h2 id="1100"> <a href="#1100" class="anchor-heading" aria-labelledby="1100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.10.0 </h2> <p><strong>Release date:</strong> 2019-09-04</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add ability to use existing secrets for SSL certs (#16817)</li> </ul> <h3 id="default-value-changes-47"> <a href="#default-value-changes-47" class="anchor-heading" aria-labelledby="default-value-changes-47"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 3f156d7b..1abe10cd 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -53,6 +53,19 @@</span> service:
+ ##   KEY_2: value2
+ # env:
+ 
+<span class="gi">+# A list of secrets and their paths to mount inside the pod
++# This is useful for mounting certificates for security
++secretMounts: []
++#  - name: ca
++#    secretName: elastic-ca
++#    path: /ssl/ca.pem
++#  - name: elastic-client-pem
++#    secretName: elastic-client-pem
++#    path: /ssl/client.pem
++#  - name: elastic-client-key
++#    secretName: elastic-client-key
++#    path: /ssl/client.key
++
+</span> es:
+   ## Address (host and port) of the Elasticsearch node we should connect to.
+   ## This could be a local node (localhost:9200, for instance), or the address
+<span class="p">@@ -97,22 +110,33 @@</span> es:
+     ##
+     enabled: false
+ 
+<span class="gi">+    ## If true, certs from secretMounts will be need to be referenced instead of certs below
++    ##
++    useExistingSecrets: false
++
+</span>     ca:
+ 
+       ## PEM that contains trusted CAs used for setting up secure Elasticsearch connection
+       ##
+       # pem:
+ 
+<span class="gi">+      # Path of ca pem file which should match a secretMount path
++      # pemPath: /ssl/ca.pem
+</span>     client:
+ 
+       ## PEM that contains the client cert to connect to Elasticsearch.
+       ##
+       # pem:
+ 
+<span class="gi">+      # Path of client pem file which should match a secretMount path
++      # pemPath: /ssl/client.pem
++
+</span>       ## Private key for client auth when connecting to Elasticsearch
+       ##
+       # key:
+ 
+<span class="gi">+      # Path of client key file which should match a secretMount path
++      # keyPath: /ssl/client.key
+</span> web:
+   ## Path under which to expose metrics.
+   ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="190"> <a href="#190" class="anchor-heading" aria-labelledby="190"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.9.0 </h2> <p><strong>Release date:</strong> 2019-08-23</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-48"> <a href="#default-value-changes-48" class="anchor-heading" aria-labelledby="default-value-changes-48"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 3231d088..3f156d7b 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -36,6 +36,8 @@</span> tolerations: {}
+ 
+ podAnnotations: {}
+ 
+<span class="gi">+affinity: {}
++
+</span> service:
+   type: ClusterIP
+   httpPort: 9108
+<span class="err">
+</span></code></pre></div></div> <h2 id="181"> <a href="#181" class="anchor-heading" aria-labelledby="181"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.8.1 </h2> <p><strong>Release date:</strong> 2019-08-21</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-49"> <a href="#default-value-changes-49" class="anchor-heading" aria-labelledby="default-value-changes-49"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="180"> <a href="#180" class="anchor-heading" aria-labelledby="180"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.8.0 </h2> <p><strong>Release date:</strong> 2019-08-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.1.0&amp;color=success" alt="AppVersion: 1.1.0"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li> </ul> <h3 id="default-value-changes-50"> <a href="#default-value-changes-50" class="anchor-heading" aria-labelledby="default-value-changes-50"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 4a1ebdca..3231d088 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -8,7 +8,7 @@</span> restartPolicy: Always
+ 
+ image:
+   repository: justwatch/elasticsearch_exporter
+<span class="gd">-  tag: 1.0.2
+</span><span class="gi">+  tag: 1.1.0
+</span>   pullPolicy: IfNotPresent
+   pullSecret: ""
+ 
+<span class="p">@@ -68,6 +68,18 @@</span> es:
+   ##
+   indices: true
+ 
+<span class="gi">+  ## If true, query stats for shards in the cluster.
++  ##
++  shards: true
++
++  ## If true, query stats for snapshots in the cluster.
++  ##
++  snapshots: true
++
++  ## If true, query stats for cluster settings.
++  ##
++  cluster_settings: false
++
+</span>   ## Timeout for trying to get stats from Elasticsearch. (ex: 20s)
+   ##
+   timeout: 30s
+<span class="err">
+</span></code></pre></div></div> <h2 id="170"> <a href="#170" class="anchor-heading" aria-labelledby="170"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.7.0 </h2> <p><strong>Release date:</strong> 2019-07-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add possibility to provide a PrometheusRule resource (#15698)</li> </ul> <h3 id="default-value-changes-51"> <a href="#default-value-changes-51" class="anchor-heading" aria-labelledby="default-value-changes-51"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 74b93fa3..4a1ebdca 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -114,3 +114,34 @@</span> serviceMonitor:
+   interval: 10s
+   scrapeTimeout: 10s
+   scheme: http
+<span class="gi">+
++prometheusRule:
++  ## If true, a PrometheusRule CRD is created for a prometheus operator
++  ## https://github.com/coreos/prometheus-operator
++  ##
++  enabled: false
++  #  namespace: monitoring
++  labels: {}
++  rules: []
++    # - record: elasticsearch_filesystem_data_used_percent
++    #   expr: 100 * (elasticsearch_filesystem_data_size_bytes - elasticsearch_filesystem_data_free_bytes)
++    #     / elasticsearch_filesystem_data_size_bytes
++    # - record: elasticsearch_filesystem_data_free_percent
++    #   expr: 100 - elasticsearch_filesystem_data_used_percent
++    # - alert: ElasticsearchTooFewNodesRunning
++    #   expr: elasticsearch_cluster_health_number_of_nodes &lt; 3
++    #   for: 5m
++    #   labels:
++    #     severity: critical
++    #   annotations:
++    #     description: There are only {{$value}} &lt; 3 ElasticSearch nodes running
++    #     summary: ElasticSearch running on less than 3 nodes
++    # - alert: ElasticsearchHeapTooHigh
++    #   expr: elasticsearch_jvm_memory_used_bytes{area="heap"} / elasticsearch_jvm_memory_max_bytes{area="heap"}
++    #     &gt; 0.9
++    #   for: 15m
++    #   labels:
++    #     severity: critical
++    #   annotations:
++    #     description: The heap usage is over 90% for 15m
++    #     summary: ElasticSearch node {{$labels.node}} heap usage is high
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="160"> <a href="#160" class="anchor-heading" aria-labelledby="160"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.6.0 </h2> <p><strong>Release date:</strong> 2019-07-12</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Add envs to deployment template (#13981)</li> </ul> <h3 id="default-value-changes-52"> <a href="#default-value-changes-52" class="anchor-heading" aria-labelledby="default-value-changes-52"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index ff6c48bb..74b93fa3 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -44,6 +44,13 @@</span> service:
+   annotations: {}
+   labels: {}
+ 
+<span class="gi">+## Extra environment variables that will be passed into the exporter pod
++## example:
++## env:
++##   KEY_1: value1
++##   KEY_2: value2
++# env:
++
+</span> es:
+   ## Address (host and port) of the Elasticsearch node we should connect to.
+   ## This could be a local node (localhost:9200, for instance), or the address
+<span class="err">
+</span></code></pre></div></div> <h2 id="150"> <a href="#150" class="anchor-heading" aria-labelledby="150"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.5.0 </h2> <p><strong>Release date:</strong> 2019-06-27</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Add imagePullSecret support (#14887)</li> </ul> <h3 id="default-value-changes-53"> <a href="#default-value-changes-53" class="anchor-heading" aria-labelledby="default-value-changes-53"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 03ac2531..ff6c48bb 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -10,6 +10,7 @@</span> image:
+   repository: justwatch/elasticsearch_exporter
+   tag: 1.0.2
+   pullPolicy: IfNotPresent
+<span class="gi">+  pullSecret: ""
+</span> 
+ ## Set enabled to false if you don't want securityContext
+ ## in your Deployment.
+<span class="err">
+</span></code></pre></div></div> <h2 id="141"> <a href="#141" class="anchor-heading" aria-labelledby="141"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.1 </h2> <p><strong>Release date:</strong> 2019-06-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stable/elastic-exporter] Fix wrong default value (#13996)</li> </ul> <h3 id="default-value-changes-54"> <a href="#default-value-changes-54" class="anchor-heading" aria-labelledby="default-value-changes-54"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 8ace3c3d..03ac2531 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -49,7 +49,7 @@</span> es:
+   ## of a remote Elasticsearch server. When basic auth is needed,
+   ## specify as: &lt;proto&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;. e.g., http://admin:pass@localhost:9200.
+   ##
+<span class="gd">-  uri: localhost:9200
+</span><span class="gi">+  uri: http://localhost:9200
+</span> 
+   ## If true, query stats for all nodes in the cluster, rather than just the
+   ## node we connect to.
+<span class="err">
+</span></code></pre></div></div> <h2 id="140"> <a href="#140" class="anchor-heading" aria-labelledby="140"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.4.0 </h2> <p><strong>Release date:</strong> 2019-06-14</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[elasticsearch-exporter] Support ssl-skip-verify option (and make securitycontext configurable) (#14748)</li> </ul> <h3 id="default-value-changes-55"> <a href="#default-value-changes-55" class="anchor-heading" aria-labelledby="default-value-changes-55"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 0f4cc052..8ace3c3d 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -11,6 +11,14 @@</span> image:
+   tag: 1.0.2
+   pullPolicy: IfNotPresent
+ 
+<span class="gi">+## Set enabled to false if you don't want securityContext
++## in your Deployment.
++## The below values are the default for kubernetes.
++## Openshift won't deploy with runAsUser: 1000 without additional permissions.
++securityContext:
++  enabled: true  # Should be set to false when running on OpenShift
++  runAsUser: 1000
++
+</span> resources: {}
+   # requests:
+   #   cpu: 100m
+<span class="p">@@ -56,6 +64,12 @@</span> es:
+   ##
+   timeout: 30s
+ 
+<span class="gi">+  ## Skip SSL verification when connecting to Elasticsearch
++  ## (only available if image.tag &gt;= 1.0.4rc1)
++  ##
++  sslSkipVerify: false
++
++
+</span>   ssl:
+     ## If true, a secure connection to ES cluster is used (requires SSL certs below)
+     ##
+<span class="err">
+</span></code></pre></div></div> <h2 id="131"> <a href="#131" class="anchor-heading" aria-labelledby="131"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.1 </h2> <p><strong>Release date:</strong> 2019-06-05</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>stable/elasticsearch-exporter: fix bug in template (#14486)</li> </ul> <h3 id="default-value-changes-56"> <a href="#default-value-changes-56" class="anchor-heading" aria-labelledby="default-value-changes-56"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="130"> <a href="#130" class="anchor-heading" aria-labelledby="130"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3.0 </h2> <p><strong>Release date:</strong> 2019-06-03</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[stabled/elasticsearch-exporter] add custom labels to the service and set service http port name (#14395)</li> </ul> <h3 id="default-value-changes-57"> <a href="#default-value-changes-57" class="anchor-heading" aria-labelledby="default-value-changes-57"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 310fc607..0f4cc052 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -30,7 +30,10 @@</span> podAnnotations: {}
+ service:
+   type: ClusterIP
+   httpPort: 9108
+<span class="gi">+  metricsPort:
++    name: http
+</span>   annotations: {}
+<span class="gi">+  labels: {}
+</span> 
+ es:
+   ## Address (host and port) of the Elasticsearch node we should connect to.
+<span class="err">
+</span></code></pre></div></div> <h2 id="120"> <a href="#120" class="anchor-heading" aria-labelledby="120"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2.0 </h2> <p><strong>Release date:</strong> 2019-04-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Extending Prometheus ServiceMonitor configuration (#12711)</li> </ul> <h3 id="default-value-changes-58"> <a href="#default-value-changes-58" class="anchor-heading" aria-labelledby="default-value-changes-58"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 8245f87e..310fc607 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -84,4 +84,8 @@</span> serviceMonitor:
+   ## https://github.com/coreos/prometheus-operator
+   ##
+   enabled: false
+<span class="gi">+  #  namespace: monitoring
+</span>   labels: {}
+<span class="gi">+  interval: 10s
++  scrapeTimeout: 10s
++  scheme: http
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="113"> <a href="#113" class="anchor-heading" aria-labelledby="113"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.3 </h2> <p><strong>Release date:</strong> 2019-03-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Fix ServiceMonitor to use service port name instead of service port number. (#11609)</li> </ul> <h3 id="default-value-changes-59"> <a href="#default-value-changes-59" class="anchor-heading" aria-labelledby="default-value-changes-59"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="112"> <a href="#112" class="anchor-heading" aria-labelledby="112"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.2 </h2> <p><strong>Release date:</strong> 2019-02-20</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Add scheme to the ServiceMonitor. Cannot fetch metrics from exporter if prometheus has a different default scheme. (#11421)</li> </ul> <h3 id="default-value-changes-60"> <a href="#default-value-changes-60" class="anchor-heading" aria-labelledby="default-value-changes-60"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="111"> <a href="#111" class="anchor-heading" aria-labelledby="111"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.1 </h2> <p><strong>Release date:</strong> 2019-02-11</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> ServiceMonitor: set namespace to monitor + Add OWNER and add myself to owners. (#11323)</li> </ul> <h3 id="default-value-changes-61"> <a href="#default-value-changes-61" class="anchor-heading" aria-labelledby="default-value-changes-61"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="110"> <a href="#110" class="anchor-heading" aria-labelledby="110"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1.0 </h2> <p><strong>Release date:</strong> 2019-01-26</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>[elasticsearch-exporter] add ServiceMonitor (#10759)</li> </ul> <h3 id="default-value-changes-62"> <a href="#default-value-changes-62" class="anchor-heading" aria-labelledby="default-value-changes-62"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 16a74f7d..8245f87e 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -78,3 +78,10 @@</span> web:
+   ## Path under which to expose metrics.
+   ##
+   path: /metrics
+<span class="gi">+
++serviceMonitor:
++  ## If true, a ServiceMonitor CRD is created for a prometheus operator
++  ## https://github.com/coreos/prometheus-operator
++  ##
++  enabled: false
++  labels: {}
+</span><span class="err">
+</span></code></pre></div></div> <h2 id="100"> <a href="#100" class="anchor-heading" aria-labelledby="100"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.0.0 </h2> <p><strong>Release date:</strong> 2019-01-18</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>fix fullname (#10752)</li> </ul> <h3 id="default-value-changes-63"> <a href="#default-value-changes-63" class="anchor-heading" aria-labelledby="default-value-changes-63"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="041"> <a href="#041" class="anchor-heading" aria-labelledby="041"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.1 </h2> <p><strong>Release date:</strong> 2018-10-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Fix typo - Add Readiness probe to exporter deployment (#8799)</li> </ul> <h3 id="default-value-changes-64"> <a href="#default-value-changes-64" class="anchor-heading" aria-labelledby="default-value-changes-64"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="040"> <a href="#040" class="anchor-heading" aria-labelledby="040"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.4.0 </h2> <p><strong>Release date:</strong> 2018-09-29</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add support for deployment tolerations and update helpers (#7706)</li> </ul> <h3 id="default-value-changes-65"> <a href="#default-value-changes-65" class="anchor-heading" aria-labelledby="default-value-changes-65"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 949b4415..16a74f7d 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -23,6 +23,8 @@</span> priorityClassName: ""
+ 
+ nodeSelector: {}
+ 
+<span class="gi">+tolerations: {}
++
+</span> podAnnotations: {}
+ 
+ service:
+<span class="err">
+</span></code></pre></div></div> <h2 id="030"> <a href="#030" class="anchor-heading" aria-labelledby="030"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.3.0 </h2> <p><strong>Release date:</strong> 2018-09-25</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> Adding pod annotations (#7960)</li> </ul> <h3 id="default-value-changes-66"> <a href="#default-value-changes-66" class="anchor-heading" aria-labelledby="default-value-changes-66"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index eaa3d442..949b4415 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -23,6 +23,8 @@</span> priorityClassName: ""
+ 
+ nodeSelector: {}
+ 
+<span class="gi">+podAnnotations: {}
++
+</span> service:
+   type: ClusterIP
+   httpPort: 9108
+<span class="err">
+</span></code></pre></div></div> <h2 id="022"> <a href="#022" class="anchor-heading" aria-labelledby="022"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.2 </h2> <p><strong>Release date:</strong> 2018-08-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Fix nodeSelector indent (#7458)</li> </ul> <h3 id="default-value-changes-67"> <a href="#default-value-changes-67" class="anchor-heading" aria-labelledby="default-value-changes-67"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="021"> <a href="#021" class="anchor-heading" aria-labelledby="021"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.1 </h2> <p><strong>Release date:</strong> 2018-08-31</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add nodeSelector to make pods run on specific nodes (#7456)</li> </ul> <h3 id="default-value-changes-68"> <a href="#default-value-changes-68" class="anchor-heading" aria-labelledby="default-value-changes-68"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index 25ec4e69..eaa3d442 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -21,6 +21,8 @@</span> resources: {}
+ 
+ priorityClassName: ""
+ 
+<span class="gi">+nodeSelector: {}
++
+</span> service:
+   type: ClusterIP
+   httpPort: 9108
+<span class="err">
+</span></code></pre></div></div> <h2 id="020"> <a href="#020" class="anchor-heading" aria-labelledby="020"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.2.0 </h2> <p><strong>Release date:</strong> 2018-07-15</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>
+<a href="shards,%20snapshots,%20update%20to%201.1.0%20(#16409)">stable/elasticsearch-exporter</a> add support for priorityClasses (#6584)</li> </ul> <h3 id="default-value-changes-69"> <a href="#default-value-changes-69" class="anchor-heading" aria-labelledby="default-value-changes-69"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index f6572cc9..25ec4e69 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -19,6 +19,8 @@</span> resources: {}
+   #   cpu: 100m
+   #   memory: 128Mi
+ 
+<span class="gi">+priorityClassName: ""
++
+</span> service:
+   type: ClusterIP
+   httpPort: 9108
+<span class="err">
+</span></code></pre></div></div> <h2 id="014"> <a href="#014" class="anchor-heading" aria-labelledby="014"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.4 </h2> <p><strong>Release date:</strong> 2018-04-19</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Typo fix in elasticsearch-exporter/README.md: a-&gt;an (#4988)</li> </ul> <h3 id="default-value-changes-70"> <a href="#default-value-changes-70" class="anchor-heading" aria-labelledby="default-value-changes-70"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="013"> <a href="#013" class="anchor-heading" aria-labelledby="013"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.3 </h2> <p><strong>Release date:</strong> 2018-04-07</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add home key for elasticsearch-exporter (#4756)</li> </ul> <h3 id="default-value-changes-71"> <a href="#default-value-changes-71" class="anchor-heading" aria-labelledby="default-value-changes-71"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="012"> <a href="#012" class="anchor-heading" aria-labelledby="012"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.2 </h2> <p><strong>Release date:</strong> 2018-03-01</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>prometheus service annotations for elastisearch-exporter (#3842)</li> </ul> <h3 id="default-value-changes-72"> <a href="#default-value-changes-72" class="anchor-heading" aria-labelledby="default-value-changes-72"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/charts/prometheus-elasticsearch-exporter/values.yaml b/charts/prometheus-elasticsearch-exporter/values.yaml
+index b603bca1..f6572cc9 100644
+</span><span class="gd">--- a/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="gi">+++ b/charts/prometheus-elasticsearch-exporter/values.yaml
+</span><span class="p">@@ -22,6 +22,7 @@</span> resources: {}
+ service:
+   type: ClusterIP
+   httpPort: 9108
+<span class="gi">+  annotations: {}
+</span> 
+ es:
+   ## Address (host and port) of the Elasticsearch node we should connect to.
+<span class="err">
+</span></code></pre></div></div> <h2 id="011"> <a href="#011" class="anchor-heading" aria-labelledby="011"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.1 </h2> <p><strong>Release date:</strong> 2018-02-10</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Adjust README to use stable chart repo (#3533)</li> </ul> <h3 id="default-value-changes-73"> <a href="#default-value-changes-73" class="anchor-heading" aria-labelledby="default-value-changes-73"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code># No changes in this release
+</code></pre></div></div> <h2 id="010"> <a href="#010" class="anchor-heading" aria-labelledby="010"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 0.1.0 </h2> <p><strong>Release date:</strong> 2018-02-02</p> <p><img src="https://img.shields.io/static/v1?label=AppVersion&amp;message=1.0.2&amp;color=success" alt="AppVersion: 1.0.2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v2&amp;color=inactive&amp;logo=helm" alt="Helm: v2"> <img src="https://img.shields.io/static/v1?label=Helm&amp;message=v3&amp;color=informational&amp;logo=helm" alt="Helm: v3"></p> <ul> <li>Add chart elasticsearch-exporter (#2525)</li> </ul> <h3 id="default-value-changes-74"> <a href="#default-value-changes-74" class="anchor-heading" aria-labelledby="default-value-changes-74"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Default value changes </h3> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## number of exporter instances
+##
+<span class="p">replicaCount: 1
+</span><span class="err">
+</span>## restart policy for all containers
+##
+<span class="p">restartPolicy: Always
+</span><span class="err">
+</span><span class="p">image:
+</span>  repository: justwatch/elasticsearch_exporter
+  tag: 1.0.2
+  pullPolicy: IfNotPresent
+<span class="err">
+</span><span class="p">resources: {}
+</span>  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+<span class="err">
+</span><span class="p">service:
+</span>  type: ClusterIP
+  httpPort: 9108
+<span class="err">
+</span><span class="p">es:
+</span>  ## Address (host and port) of the Elasticsearch node we should connect to.
+  ## This could be a local node (localhost:9200, for instance), or the address
+  ## of a remote Elasticsearch server. When basic auth is needed,
+  ## specify as: &lt;proto&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;. e.g., http://admin:pass@localhost:9200.
+  ##
+  uri: localhost:9200
+<span class="err">
+</span>  ## If true, query stats for all nodes in the cluster, rather than just the
+  ## node we connect to.
+  ##
+  all: true
+<span class="err">
+</span>  ## If true, query stats for all indices in the cluster.
+  ##
+  indices: true
+<span class="err">
+</span>  ## Timeout for trying to get stats from Elasticsearch. (ex: 20s)
+  ##
+  timeout: 30s
+<span class="err">
+</span>  ssl:
+    ## If true, a secure connection to ES cluster is used (requires SSL certs below)
+    ##
+    enabled: false
+<span class="err">
+</span>    ca:
+<span class="err">
+</span>      ## PEM that contains trusted CAs used for setting up secure Elasticsearch connection
+      ##
+      # pem:
+<span class="err">
+</span>    client:
+<span class="err">
+</span>      ## PEM that contains the client cert to connect to Elasticsearch.
+      ##
+      # pem:
+<span class="err">
+</span>      ## Private key for client auth when connecting to Elasticsearch
+      ##
+      # key:
+<span class="err">
+</span><span class="p">web:
+</span>  ## Path under which to expose metrics.
+  ##
+  path: /metrics
+<span class="err">
+</span></code></pre></div></div>
+<hr> <p>Autogenerated from Helm Chart and git history using <a href="https://github.com/mogensen/helm-changelog" target="_blank" rel="noopener noreferrer">helm-changelog</a></p> </main> </div> </div> <div class="search-overlay"></div> </div> </body> </html>
