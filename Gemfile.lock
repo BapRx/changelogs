@@ -19,7 +19,7 @@ GEM
     forwardable-extended (2.6.0)
     google-protobuf (3.25.3)
     http_parser.rb (0.8.0)
-    i18n (1.14.1)
+    i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     jekyll (4.3.3)
       addressable (~> 2.4)
@@ -58,7 +58,7 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    just-the-docs (0.8.0)
+    just-the-docs (0.8.1)
       jekyll (>= 3.8.5)
       jekyll-include-cache
       jekyll-seo-tag (>= 2.0)
